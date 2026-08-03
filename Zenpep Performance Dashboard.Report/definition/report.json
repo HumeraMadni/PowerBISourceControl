@@ -1,0 +1,138 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU07",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Precison8374010156316625.json",
+      "reportVersionAtImport": {
+        "visual": "2.11.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU07",
+          "path": "BaseThemes/CY26SU07.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Abandonment__Icon9766816927933866.png",
+          "path": "Abandonment__Icon9766816927933866.png",
+          "type": "Image"
+        },
+        {
+          "name": "Approval_Rate_Icon14663952131351832.png",
+          "path": "Approval_Rate_Icon14663952131351832.png",
+          "type": "Image"
+        },
+        {
+          "name": "Average_Copay_Icon2673630802429916.png",
+          "path": "Average_Copay_Icon2673630802429916.png",
+          "type": "Image"
+        },
+        {
+          "name": "Average_OOP_Icon26664623852072833.png",
+          "path": "Average_OOP_Icon26664623852072833.png",
+          "type": "Image"
+        },
+        {
+          "name": "Claims_Icon5653181240218124.png",
+          "path": "Claims_Icon5653181240218124.png",
+          "type": "Image"
+        },
+        {
+          "name": "Coverage_Payers_Icon2775370048270053.png",
+          "path": "Coverage_Payers_Icon2775370048270053.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP_Icon12124490594886206.png",
+          "path": "HCP_Icon12124490594886206.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP_Icon7525702981108366.png",
+          "path": "HCP_Icon7525702981108366.png",
+          "type": "Image"
+        },
+        {
+          "name": "High_Priority_Territory_Icon9527948564622044.png",
+          "path": "High_Priority_Territory_Icon9527948564622044.png",
+          "type": "Image"
+        },
+        {
+          "name": "Precison8374010156316625.json",
+          "path": "Precison8374010156316625.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Total_Patients_Icon014116373457162101.png",
+          "path": "Total_Patients_Icon014116373457162101.png",
+          "type": "Image"
+        },
+        {
+          "name": "Total_RX_Icon39244418955042804.png",
+          "path": "Total_RX_Icon39244418955042804.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

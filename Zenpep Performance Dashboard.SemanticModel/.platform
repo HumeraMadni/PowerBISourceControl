@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Zenpep Performance Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ca16e2db-f284-450b-8b93-886d17209c3f"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Precison",
+  "dataColors": [
+    "#24356B",
+    "#3E78B2",
+    "#3EB5E6",
+    "#DAE6F4",
+    "#C8CED6",
+    "#F0E199",
+    "#F4A261",
+    "#8CC9A5"
+  ],
+  "textClasses": {
+    "label": {
+      "fontSize": 12
+    },
+    "callout": {
+      "fontFace": "'Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif",
+      "fontSize": 18
+    },
+    "title": {
+      "fontFace": "'Segoe UI', wf_segoe-ui_normal, helvetica, arial, sans-serif",
+      "fontSize": 25
+    },
+    "header": {
+      "fontSize": 15
+    }
+  },
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#DAE6F4"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "outspacePane": [
+          {
+            "checkboxAndApplyColor": {
+              "solid": {
+                "color": "#DAE6F4"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
