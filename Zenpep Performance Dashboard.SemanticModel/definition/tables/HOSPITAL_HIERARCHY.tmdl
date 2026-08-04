@@ -1,0 +1,66 @@
+table HOSPITAL_HIERARCHY
+	lineageTag: dfd8ac2b-3c83-4de8-9151-29f12b34645c
+
+	column REGION_ID
+		dataType: string
+		lineageTag: a53b42d9-59b1-4805-8541-d18ca033fb93
+		summarizeBy: none
+		sourceColumn: REGION_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: string
+		lineageTag: 880ae62f-f34d-4ea5-9093-7642bc72d0f3
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISTRICT_ID
+		dataType: string
+		lineageTag: 512f1b17-3b92-45c0-8b03-b95616032634
+		summarizeBy: none
+		sourceColumn: DISTRICT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISTRICT
+		dataType: string
+		lineageTag: 22d0a667-bb6f-4966-b76e-42281630a703
+		summarizeBy: none
+		sourceColumn: DISTRICT
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY_ID
+		dataType: string
+		lineageTag: 7f2a68a9-c783-40ea-b9fd-e025f55440c8
+		summarizeBy: none
+		sourceColumn: TERRITORY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY
+		dataType: string
+		lineageTag: e7c7174e-a173-4702-bbf6-0e367fb87a0b
+		summarizeBy: none
+		sourceColumn: TERRITORY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition HOSPITAL_HIERARCHY = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    MAPPING_Schema = RAW_NESTLE_Database{[Name="MAPPING",Kind="Schema"]}[Data],
+				    HOSPITAL_HIERARCHY_Table = MAPPING_Schema{[Name="HOSPITAL_HIERARCHY",Kind="Table"]}[Data]
+				in
+				    HOSPITAL_HIERARCHY_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

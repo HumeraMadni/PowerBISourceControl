@@ -1,0 +1,139 @@
+table SYMPTD_PLAN
+	lineageTag: 50151a78-1f0c-40cd-b765-19df8a322085
+
+	column PLAN_ID
+		dataType: string
+		lineageTag: 45bcad77-be2f-49cb-8efa-ad43181e912c
+		summarizeBy: none
+		sourceColumn: PLAN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLAN_NAME
+		dataType: string
+		lineageTag: 944a5e65-acfa-4966-870d-09b7698cdf71
+		summarizeBy: none
+		sourceColumn: PLAN_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLAN_TYPE
+		dataType: string
+		lineageTag: 63f34af4-6a42-4f2b-92af-5572504e2cbd
+		summarizeBy: none
+		sourceColumn: PLAN_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLAN_TYPE_DESCRIPTION
+		dataType: string
+		lineageTag: 9196bb7d-3bed-47cf-97b5-b4b7a5ef3336
+		summarizeBy: none
+		sourceColumn: PLAN_TYPE_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLAN_SUBTYPE
+		dataType: string
+		lineageTag: cf89a4ba-6fdd-451a-a85d-02b8d27f14c5
+		summarizeBy: none
+		sourceColumn: PLAN_SUBTYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYMENT_TYPE
+		dataType: string
+		lineageTag: 3722f563-3388-4b5d-a520-22d6ab5731fe
+		summarizeBy: none
+		sourceColumn: PAYMENT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column NATIONAL_INSURER_NAME
+		dataType: string
+		lineageTag: 5222223f-79f3-4f32-802d-5367a44ec24a
+		summarizeBy: none
+		sourceColumn: NATIONAL_INSURER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column NATIONAL_TYPE
+		dataType: string
+		lineageTag: a80d692f-001c-4c6c-b264-1ec2474f7dc6
+		summarizeBy: none
+		sourceColumn: NATIONAL_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGIONAL_NAME
+		dataType: string
+		lineageTag: a9c4c5e8-6471-4a99-a9f4-3e0df0f4a993
+		summarizeBy: none
+		sourceColumn: REGIONAL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGIONAL_TYPE
+		dataType: string
+		lineageTag: 76c1250b-084a-4010-82e9-6ac939d61d8f
+		summarizeBy: none
+		sourceColumn: REGIONAL_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORGANIZATION_NAME
+		dataType: string
+		lineageTag: c8e074ff-b6f0-46e9-8adc-d3c3fa955646
+		summarizeBy: none
+		sourceColumn: ORGANIZATION_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORGANIZATION_TYPE
+		dataType: string
+		lineageTag: d22d37f1-c472-48e7-ade2-6d9df7c2f4fb
+		summarizeBy: none
+		sourceColumn: ORGANIZATION_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADMIN_NAME
+		dataType: string
+		lineageTag: 1f53ac89-9fc2-4ac8-8188-63ad6f016640
+		summarizeBy: none
+		sourceColumn: ADMIN_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADMIN_TYPE
+		dataType: string
+		lineageTag: c30d5bfa-33e0-4561-afcb-d6b23d5c5ae0
+		summarizeBy: none
+		sourceColumn: ADMIN_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOAD_TS
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1ddaccf1-9060-4c16-8596-d0cd722e9851
+		summarizeBy: none
+		sourceColumn: LOAD_TS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SYMPTD_PLAN = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    SYMPTD_PLAN_Table = SYMPHONY_ZENPEP_Schema{[Name="SYMPTD_PLAN",Kind="Table"]}[Data]
+				in
+				    SYMPTD_PLAN_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,89 @@
+table HCP
+	lineageTag: f5dc64d6-dc69-4e9d-bf48-7a3569397c61
+
+	column PRACTITIONER_ID
+		dataType: string
+		lineageTag: fd54d95f-978f-4b6e-89bf-ed6d83a340d0
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPI
+		dataType: string
+		lineageTag: 57be3bd2-d88f-4ad7-9f6f-ce1da84678be
+		summarizeBy: none
+		sourceColumn: NPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZIP
+		dataType: string
+		lineageTag: b9d33b9b-ccb2-4f0a-aa2d-951eb5bee2b3
+		summarizeBy: none
+		sourceColumn: ZIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column NO_CONTACT_FLAG
+		dataType: string
+		lineageTag: dc388d53-2eaf-4ccd-862a-771fb2b887cc
+		summarizeBy: none
+		sourceColumn: NO_CONTACT_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY_ID
+		dataType: string
+		lineageTag: 050d9d08-bb29-4917-af23-c56bd2d68e45
+		summarizeBy: none
+		sourceColumn: TERRITORY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZENPEP_TARGET
+		dataType: string
+		lineageTag: 61769b48-50f6-4b99-a40d-69adf6b59fbf
+		summarizeBy: none
+		sourceColumn: ZENPEP_TARGET
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPECIALTY
+		dataType: string
+		lineageTag: 92172b66-aede-4ab9-96c1-59137339458b
+		summarizeBy: none
+		sourceColumn: SPECIALTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column HCP_ZENPEP_TARGET
+		dataType: string
+		lineageTag: 427315f5-e077-4a03-b1ee-01887ff81a94
+		summarizeBy: none
+		sourceColumn: HCP_ZENPEP_TARGET
+
+		annotation SummarizationSetBy = Automatic
+
+	column HCP_SPECIALTY
+		dataType: string
+		lineageTag: 59b04268-86ad-4fe5-83db-143d12467fb9
+		summarizeBy: none
+		sourceColumn: HCP_SPECIALTY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition HCP = m
+		mode: import
+		source =
+				let
+				    Source = Table.NestedJoin(GOLD_LAYER_PHYSICIAN, {"PRACTITIONER_ID"}, GOLD_LAYER_FINAL_STATUS, {"PRACTITIONER_ID"}, "GOLD_LAYER_FINAL_STATUS", JoinKind.LeftOuter),
+				    #"Expanded GOLD_LAYER_FINAL_STATUS" = Table.ExpandTableColumn(Source, "GOLD_LAYER_FINAL_STATUS", {"ZENPEP_TARGET", "SPECIALTY"}, {"GOLD_LAYER_FINAL_STATUS.ZENPEP_TARGET", "GOLD_LAYER_FINAL_STATUS.SPECIALTY"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded GOLD_LAYER_FINAL_STATUS",{{"GOLD_LAYER_FINAL_STATUS.ZENPEP_TARGET", "HCP_ZENPEP_TARGET"}, {"GOLD_LAYER_FINAL_STATUS.SPECIALTY", "HCP_SPECIALTY"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
