@@ -1,0 +1,4 @@
+relationship AutoDetected_b400a209-970a-4fe5-aa4d-a0ffe36f2abb
+	fromColumn: GOLD_LAYER_FINAL_STATUS.DRUG_ID
+	toColumn: GOLD_LAYER_DRUG.DRUG_ID
+

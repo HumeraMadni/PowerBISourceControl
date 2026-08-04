@@ -1,0 +1,14 @@
+expression GOLD_LAYER_PHYSICIAN =
+		let
+		    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+		    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+		    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+		    GOLD_LAYER_PHYSICIAN_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_PHYSICIAN",Kind="Table"]}[Data]
+		in
+		    GOLD_LAYER_PHYSICIAN_Table
+	lineageTag: 8180f7a2-df0c-4595-b3c9-473c6592b30c
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

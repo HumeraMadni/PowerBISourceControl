@@ -1,0 +1,336 @@
+table GOLD_LAYER_FINAL_STATUS
+	lineageTag: 8e22f97e-007f-41da-9d84-37801e16f45d
+
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: 173f1b99-b941-405e-9dc5-a83c7ea05d6c
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PATIENT_ID
+		dataType: string
+		lineageTag: 939ae6fb-4040-45bc-bb9c-4be1e3ee7e27
+		summarizeBy: none
+		sourceColumn: PATIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DRUG_ID
+		dataType: string
+		lineageTag: 691ece1a-cd88-4674-bcbd-f893cfab7b1f
+		summarizeBy: none
+		sourceColumn: DRUG_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: string
+		lineageTag: c89b5a7a-c2bc-4b7e-ae42-879d22ea727a
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_OF_BUSINESS
+		dataType: string
+		lineageTag: c9f77a3e-625c-4e88-bb99-f12be323bc88
+		summarizeBy: none
+		sourceColumn: SOURCE_OF_BUSINESS
+
+		annotation SummarizationSetBy = Automatic
+
+	column PLAN_ID
+		dataType: string
+		lineageTag: addcf5b9-2583-4cd3-95f0-2cd130355387
+		summarizeBy: none
+		sourceColumn: PLAN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECONDARY_PLAN_ID
+		dataType: string
+		lineageTag: d71255ea-456d-418a-a134-c19aca0c51d5
+		summarizeBy: none
+		sourceColumn: SECONDARY_PLAN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EVENT_N
+		dataType: double
+		lineageTag: 43792566-8681-46e4-84ea-e3473a4450cd
+		summarizeBy: sum
+		sourceColumn: EVENT_N
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_0_TX
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8ad06778-aedd-470a-a1f1-691f17d05b44
+		summarizeBy: none
+		sourceColumn: DAY_0_TX
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FINAL_TX
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8fc2a85a-cf3b-4dda-b558-1877467cdc6b
+		summarizeBy: none
+		sourceColumn: FINAL_TX
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NEW_TO_PRODUCT
+		dataType: double
+		lineageTag: 38d27626-c0aa-4447-9130-0e9551e64b5d
+		summarizeBy: sum
+		sourceColumn: NEW_TO_PRODUCT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EVENT_LENGTH
+		dataType: double
+		lineageTag: d8db55b4-2811-44c3-bc75-30cf6e0f378f
+		summarizeBy: sum
+		sourceColumn: EVENT_LENGTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAYS_REJECTION
+		dataType: double
+		lineageTag: 403bcdc4-c805-40d9-bb75-941c43427c09
+		summarizeBy: sum
+		sourceColumn: DAYS_REJECTION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAYS_REVERSAL
+		dataType: double
+		lineageTag: 1c49b879-e622-4356-9fb5-4e39c78caaff
+		summarizeBy: sum
+		sourceColumn: DAYS_REVERSAL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAYS_PAID
+		dataType: double
+		lineageTag: adc10fd7-26f5-4d37-91ca-96b7c7bf7f4c
+		summarizeBy: count
+		sourceColumn: DAYS_PAID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_0_STATUS_NUM
+		dataType: string
+		lineageTag: fb792373-ba1f-4bc5-bc64-921208275eae
+		summarizeBy: none
+		sourceColumn: DAY_0_STATUS_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_STATUS
+		dataType: string
+		lineageTag: b7022dab-5bea-4805-b7eb-4740f5a2472a
+		summarizeBy: none
+		sourceColumn: DAY_0_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_STATUS_NUM
+		dataType: string
+		lineageTag: 763ab383-0787-4b0e-b539-f820260cfd77
+		summarizeBy: none
+		sourceColumn: FINAL_STATUS_NUM
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_STATUS
+		dataType: string
+		lineageTag: 41d07bf2-e18f-4c47-a950-57bb1bd7dec6
+		summarizeBy: none
+		sourceColumn: FINAL_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_REJECT_CODE
+		dataType: string
+		lineageTag: 084e16c3-b4f2-44ac-875e-7497e7f098e4
+		summarizeBy: none
+		sourceColumn: FINAL_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHARMACY_ZIP3
+		dataType: string
+		lineageTag: 77abb868-343b-4c7f-8285-a677a3bfcd6d
+		summarizeBy: none
+		sourceColumn: PHARMACY_ZIP3
+
+		annotation SummarizationSetBy = Automatic
+
+	column RX_NUMBER
+		dataType: string
+		lineageTag: eeaccada-b9a8-4e4c-8365-0a62840ba057
+		summarizeBy: none
+		sourceColumn: RX_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAYS_SUPPLY
+		dataType: double
+		lineageTag: fe66fc90-303d-4f16-8139-d42f61e5aedd
+		summarizeBy: sum
+		sourceColumn: DAYS_SUPPLY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QUANTITY
+		dataType: double
+		lineageTag: f06876cb-3875-4806-aa41-401186c65c90
+		summarizeBy: sum
+		sourceColumn: QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PTD_FINAL_CLAIM
+		dataType: double
+		lineageTag: 25db6926-3f33-4587-9e30-30f222c0bca7
+		summarizeBy: sum
+		sourceColumn: PTD_FINAL_CLAIM
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GROUP_NUMBER
+		dataType: string
+		lineageTag: 8be8944c-c9d3-4121-b2fd-08ec0c4d9db4
+		summarizeBy: none
+		sourceColumn: GROUP_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECONDARY_GROUP_NUMBER
+		dataType: string
+		lineageTag: a3303df1-3834-460a-a3df-bc73b2a90369
+		summarizeBy: none
+		sourceColumn: SECONDARY_GROUP_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column PATIENT_PAY
+		dataType: double
+		lineageTag: 718c4508-712b-4b9d-8d7b-cfc93af187e2
+		summarizeBy: sum
+		sourceColumn: PATIENT_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PLAN_PAY
+		dataType: double
+		lineageTag: e4d590ff-80ad-4eff-a486-69e3b6fac069
+		summarizeBy: sum
+		sourceColumn: PLAN_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SECONDARY_PLAN_PAY
+		dataType: double
+		lineageTag: 49d8bef0-0767-4ef1-a8b9-6d0211cd0119
+		summarizeBy: sum
+		sourceColumn: SECONDARY_PLAN_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PATIENT_OUT_OF_POCKET
+		dataType: double
+		lineageTag: 5a68d9bb-c7b0-41b5-b71d-92f1e84e1082
+		summarizeBy: sum
+		sourceColumn: PATIENT_OUT_OF_POCKET
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COPAY_30
+		dataType: double
+		lineageTag: c8b1c556-6d54-4158-adc6-a7f5f12a40aa
+		summarizeBy: sum
+		sourceColumn: COPAY_30
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ZENPEP_TARGET
+		dataType: string
+		lineageTag: af5f9bd8-4b30-4f6e-87c2-231df6e399d0
+		summarizeBy: none
+		sourceColumn: ZENPEP_TARGET
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPECIALTY
+		dataType: string
+		lineageTag: 13afa3b0-efe1-4725-8ecc-6d7e8ca6b812
+		summarizeBy: none
+		sourceColumn: SPECIALTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column RX_COUNT
+		dataType: double
+		lineageTag: 8a9e62e2-5031-4597-9fa1-a3945b35f609
+		summarizeBy: sum
+		sourceColumn: RX_COUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition GOLD_LAYER_FINAL_STATUS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_FINAL_STATUS_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_FINAL_STATUS",Kind="Table"]}[Data],
+				    #"Removed Duplicates" = Table.Distinct(GOLD_LAYER_FINAL_STATUS_Table),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each ([ZENPEP_TARGET] = "Y"))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

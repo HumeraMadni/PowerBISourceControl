@@ -7,9 +7,18 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["GOLD_LAYER_FINAL_STATUS","GOLD_LAYER_DRUG","GOLD_LAYER_PHYSICIAN","SYMPTD_PLAN","SYMPTD_REJECT_CODES","HCP","HOSPITAL_HIERARCHY"]
+
+ref table GOLD_LAYER_FINAL_STATUS
+ref table GOLD_LAYER_DRUG
+ref table SYMPTD_PLAN
+ref table SYMPTD_REJECT_CODES
+ref table HCP
+ref table HOSPITAL_HIERARCHY
 
 ref cultureInfo en-US
 

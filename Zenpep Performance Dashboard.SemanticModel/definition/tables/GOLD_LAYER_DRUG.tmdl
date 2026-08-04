@@ -1,0 +1,60 @@
+table GOLD_LAYER_DRUG
+	lineageTag: 480c9da6-66a2-4470-9115-2721cf4d578a
+
+	column DRUG_ID
+		dataType: string
+		lineageTag: e69b0d9b-38df-4e6e-ab86-d4e6712df2bb
+		summarizeBy: none
+		sourceColumn: DRUG_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DRUG_NAME
+		dataType: string
+		lineageTag: 874e457a-598c-4a31-884d-87dc778d4632
+		summarizeBy: none
+		sourceColumn: DRUG_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column NDC11
+		dataType: string
+		lineageTag: e225aa58-3489-4815-9873-cb3756b32af2
+		summarizeBy: none
+		sourceColumn: NDC11
+
+		annotation SummarizationSetBy = Automatic
+
+	column DRUG_STRENGTH
+		dataType: string
+		lineageTag: 297e7adf-bb42-4b55-a3f5-4f3ff94accbb
+		summarizeBy: none
+		sourceColumn: DRUG_STRENGTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column PACKAGE_SIZE
+		dataType: double
+		lineageTag: da0ba703-0c6c-4cbc-a87e-4ddfec2f02f1
+		summarizeBy: none
+		sourceColumn: PACKAGE_SIZE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition GOLD_LAYER_DRUG = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_DRUG_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_DRUG",Kind="Table"]}[Data]
+				in
+				    GOLD_LAYER_DRUG_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
