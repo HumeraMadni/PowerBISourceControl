@@ -1,9 +1,10 @@
-table SYMPTD_PLAN
-	lineageTag: 50151a78-1f0c-40cd-b765-19df8a322085
+table GOLD_LAYER_PLAN
+	lineageTag: 0cc2aefe-4be9-46e5-8ec7-c736ea2995f8
 
 	column PLAN_ID
-		dataType: string
-		lineageTag: 45bcad77-be2f-49cb-8efa-ad43181e912c
+		dataType: int64
+		formatString: 0
+		lineageTag: b7c5d452-889f-4776-b3a1-03a7ab64fb56
 		summarizeBy: none
 		sourceColumn: PLAN_ID
 
@@ -11,7 +12,7 @@ table SYMPTD_PLAN
 
 	column PLAN_NAME
 		dataType: string
-		lineageTag: 944a5e65-acfa-4966-870d-09b7698cdf71
+		lineageTag: 47449b27-9288-4cf7-b469-0aa2fcb9294e
 		summarizeBy: none
 		sourceColumn: PLAN_NAME
 
@@ -19,7 +20,7 @@ table SYMPTD_PLAN
 
 	column PLAN_TYPE
 		dataType: string
-		lineageTag: 63f34af4-6a42-4f2b-92af-5572504e2cbd
+		lineageTag: 5f93e7cf-fa39-45d5-8449-41e9906433dd
 		summarizeBy: none
 		sourceColumn: PLAN_TYPE
 
@@ -27,7 +28,7 @@ table SYMPTD_PLAN
 
 	column PLAN_TYPE_DESCRIPTION
 		dataType: string
-		lineageTag: 9196bb7d-3bed-47cf-97b5-b4b7a5ef3336
+		lineageTag: 7298cfe7-65d2-4b73-b166-7243e5ecb811
 		summarizeBy: none
 		sourceColumn: PLAN_TYPE_DESCRIPTION
 
@@ -35,7 +36,7 @@ table SYMPTD_PLAN
 
 	column PLAN_SUBTYPE
 		dataType: string
-		lineageTag: cf89a4ba-6fdd-451a-a85d-02b8d27f14c5
+		lineageTag: a1620e93-ea60-4443-8952-d7077d286709
 		summarizeBy: none
 		sourceColumn: PLAN_SUBTYPE
 
@@ -43,7 +44,7 @@ table SYMPTD_PLAN
 
 	column PAYMENT_TYPE
 		dataType: string
-		lineageTag: 3722f563-3388-4b5d-a520-22d6ab5731fe
+		lineageTag: 958ec96e-95c9-40bb-b21a-82ca05a13963
 		summarizeBy: none
 		sourceColumn: PAYMENT_TYPE
 
@@ -51,7 +52,7 @@ table SYMPTD_PLAN
 
 	column NATIONAL_INSURER_NAME
 		dataType: string
-		lineageTag: 5222223f-79f3-4f32-802d-5367a44ec24a
+		lineageTag: aa60005c-d3f8-4f35-860f-3a07ad32d3ef
 		summarizeBy: none
 		sourceColumn: NATIONAL_INSURER_NAME
 
@@ -59,7 +60,7 @@ table SYMPTD_PLAN
 
 	column NATIONAL_TYPE
 		dataType: string
-		lineageTag: a80d692f-001c-4c6c-b264-1ec2474f7dc6
+		lineageTag: 5f6f9d72-fb3d-4090-89fa-09fc9aab53df
 		summarizeBy: none
 		sourceColumn: NATIONAL_TYPE
 
@@ -67,7 +68,7 @@ table SYMPTD_PLAN
 
 	column REGIONAL_NAME
 		dataType: string
-		lineageTag: a9c4c5e8-6471-4a99-a9f4-3e0df0f4a993
+		lineageTag: 3694a1e1-a760-4d51-a2f4-7977c3230b5a
 		summarizeBy: none
 		sourceColumn: REGIONAL_NAME
 
@@ -75,7 +76,7 @@ table SYMPTD_PLAN
 
 	column REGIONAL_TYPE
 		dataType: string
-		lineageTag: 76c1250b-084a-4010-82e9-6ac939d61d8f
+		lineageTag: 180a7f5f-01a7-42e8-800f-2ac0396d9acf
 		summarizeBy: none
 		sourceColumn: REGIONAL_TYPE
 
@@ -83,7 +84,7 @@ table SYMPTD_PLAN
 
 	column ORGANIZATION_NAME
 		dataType: string
-		lineageTag: c8e074ff-b6f0-46e9-8adc-d3c3fa955646
+		lineageTag: b9b7f5e0-6db1-4d51-9304-49d7bfe763bf
 		summarizeBy: none
 		sourceColumn: ORGANIZATION_NAME
 
@@ -91,7 +92,7 @@ table SYMPTD_PLAN
 
 	column ORGANIZATION_TYPE
 		dataType: string
-		lineageTag: d22d37f1-c472-48e7-ade2-6d9df7c2f4fb
+		lineageTag: 37a88a07-cf24-40da-88c8-ebf6572fcd11
 		summarizeBy: none
 		sourceColumn: ORGANIZATION_TYPE
 
@@ -99,7 +100,7 @@ table SYMPTD_PLAN
 
 	column ADMIN_NAME
 		dataType: string
-		lineageTag: 1f53ac89-9fc2-4ac8-8188-63ad6f016640
+		lineageTag: 44f926d7-b539-4d85-8521-844ceaf87f18
 		summarizeBy: none
 		sourceColumn: ADMIN_NAME
 
@@ -107,7 +108,7 @@ table SYMPTD_PLAN
 
 	column ADMIN_TYPE
 		dataType: string
-		lineageTag: c30d5bfa-33e0-4561-afcb-d6b23d5c5ae0
+		lineageTag: f7ee535b-42e3-4dfd-a34a-b94abb806ec7
 		summarizeBy: none
 		sourceColumn: ADMIN_TYPE
 
@@ -116,22 +117,23 @@ table SYMPTD_PLAN
 	column LOAD_TS
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: 1ddaccf1-9060-4c16-8596-d0cd722e9851
+		lineageTag: 8382d5b0-45fe-46e6-8af2-455120936864
 		summarizeBy: none
 		sourceColumn: LOAD_TS
 
 		annotation SummarizationSetBy = Automatic
 
-	partition SYMPTD_PLAN = m
+	partition GOLD_LAYER_PLAN = m
 		mode: import
 		source =
 				let
 				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
-				    SYMPTD_PLAN_Table = SYMPHONY_ZENPEP_Schema{[Name="SYMPTD_PLAN",Kind="Table"]}[Data]
+				    GOLD_LAYER_PLAN_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_PLAN",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_PLAN_Table,{{"PLAN_ID", Int64.Type}})
 				in
-				    SYMPTD_PLAN_Table
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 
