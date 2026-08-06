@@ -1,9 +1,10 @@
 table GOLD_LAYER_DRUG
-	lineageTag: 480c9da6-66a2-4470-9115-2721cf4d578a
+	lineageTag: 18a5780e-5e4d-463f-b67d-d2d6d1cdbf74
 
 	column DRUG_ID
-		dataType: string
-		lineageTag: e69b0d9b-38df-4e6e-ab86-d4e6712df2bb
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c6de3a7-a893-4456-822d-d14b1a1caa02
 		summarizeBy: none
 		sourceColumn: DRUG_ID
 
@@ -11,7 +12,7 @@ table GOLD_LAYER_DRUG
 
 	column DRUG_NAME
 		dataType: string
-		lineageTag: 874e457a-598c-4a31-884d-87dc778d4632
+		lineageTag: 74fe29ac-89c5-4573-9058-dd15ded31c11
 		summarizeBy: none
 		sourceColumn: DRUG_NAME
 
@@ -19,7 +20,7 @@ table GOLD_LAYER_DRUG
 
 	column NDC11
 		dataType: string
-		lineageTag: e225aa58-3489-4815-9873-cb3756b32af2
+		lineageTag: a42e4ff9-2a1f-425b-993b-39fa8a690763
 		summarizeBy: none
 		sourceColumn: NDC11
 
@@ -27,7 +28,7 @@ table GOLD_LAYER_DRUG
 
 	column DRUG_STRENGTH
 		dataType: string
-		lineageTag: 297e7adf-bb42-4b55-a3f5-4f3ff94accbb
+		lineageTag: f86f856a-a7c0-49eb-a6cb-5374e7b136d9
 		summarizeBy: none
 		sourceColumn: DRUG_STRENGTH
 
@@ -35,13 +36,21 @@ table GOLD_LAYER_DRUG
 
 	column PACKAGE_SIZE
 		dataType: double
-		lineageTag: da0ba703-0c6c-4cbc-a87e-4ddfec2f02f1
+		lineageTag: 5dc9c824-7cd3-4a2d-809b-adde88e0ba06
 		summarizeBy: none
 		sourceColumn: PACKAGE_SIZE
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NEW_DRUG_NAME
+		dataType: string
+		lineageTag: 582d32a8-7cc0-4f08-9072-672cbf1e38f1
+		summarizeBy: none
+		sourceColumn: NEW_DRUG_NAME
+
+		annotation SummarizationSetBy = Automatic
 
 	partition GOLD_LAYER_DRUG = m
 		mode: import
@@ -50,11 +59,12 @@ table GOLD_LAYER_DRUG
 				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
-				    GOLD_LAYER_DRUG_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_DRUG",Kind="Table"]}[Data]
+				    GOLD_LAYER_DRUG_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_DRUG",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_DRUG_Table,{{"DRUG_ID", Int64.Type}})
 				in
-				    GOLD_LAYER_DRUG_Table
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

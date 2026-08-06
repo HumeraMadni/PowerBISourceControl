@@ -1,49 +1,28 @@
 table GOLD_LAYER_FINAL_STATUS
-	lineageTag: 8e22f97e-007f-41da-9d84-37801e16f45d
-
-	column FINAL_CLAIM_ID
-		dataType: string
-		lineageTag: 173f1b99-b941-405e-9dc5-a83c7ea05d6c
-		summarizeBy: none
-		sourceColumn: FINAL_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
+	lineageTag: 6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a
 
 	column PATIENT_ID
-		dataType: string
-		lineageTag: 939ae6fb-4040-45bc-bb9c-4be1e3ee7e27
-		summarizeBy: none
+		dataType: int64
+		formatString: 0
+		lineageTag: 37b5e0c1-e224-4a27-9409-2486b5c2a57b
+		summarizeBy: count
 		sourceColumn: PATIENT_ID
 
 		annotation SummarizationSetBy = Automatic
 
 	column DRUG_ID
-		dataType: string
-		lineageTag: 691ece1a-cd88-4674-bcbd-f893cfab7b1f
+		dataType: int64
+		formatString: 0
+		lineageTag: c07abdf1-4055-4c9e-9bdb-abc2d488d4b3
 		summarizeBy: none
 		sourceColumn: DRUG_ID
 
 		annotation SummarizationSetBy = Automatic
 
-	column PRACTITIONER_ID
-		dataType: string
-		lineageTag: c89b5a7a-c2bc-4b7e-ae42-879d22ea727a
-		summarizeBy: none
-		sourceColumn: PRACTITIONER_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column SOURCE_OF_BUSINESS
-		dataType: string
-		lineageTag: c9f77a3e-625c-4e88-bb99-f12be323bc88
-		summarizeBy: none
-		sourceColumn: SOURCE_OF_BUSINESS
-
-		annotation SummarizationSetBy = Automatic
-
 	column PLAN_ID
-		dataType: string
-		lineageTag: addcf5b9-2583-4cd3-95f0-2cd130355387
+		dataType: int64
+		formatString: 0
+		lineageTag: c5934aee-7f1c-42bc-acb4-3d8b799c5bab
 		summarizeBy: none
 		sourceColumn: PLAN_ID
 
@@ -51,7 +30,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column SECONDARY_PLAN_ID
 		dataType: string
-		lineageTag: d71255ea-456d-418a-a134-c19aca0c51d5
+		lineageTag: fd720df6-dc5e-4689-a0bd-72d1b631f286
 		summarizeBy: none
 		sourceColumn: SECONDARY_PLAN_ID
 
@@ -59,7 +38,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column EVENT_N
 		dataType: double
-		lineageTag: 43792566-8681-46e4-84ea-e3473a4450cd
+		lineageTag: d22e7f0b-3a27-4ee4-bef4-a5922426dc08
 		summarizeBy: sum
 		sourceColumn: EVENT_N
 
@@ -67,21 +46,10 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DAY_0_TX
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 8ad06778-aedd-470a-a1f1-691f17d05b44
-		summarizeBy: none
-		sourceColumn: DAY_0_TX
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column FINAL_TX
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 8fc2a85a-cf3b-4dda-b558-1877467cdc6b
+		lineageTag: 8fc2f83f-dd88-4bab-844d-14e193e48250
 		summarizeBy: none
 		sourceColumn: FINAL_TX
 
@@ -89,19 +57,9 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column NEW_TO_PRODUCT
-		dataType: double
-		lineageTag: 38d27626-c0aa-4447-9130-0e9551e64b5d
-		summarizeBy: sum
-		sourceColumn: NEW_TO_PRODUCT
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column EVENT_LENGTH
 		dataType: double
-		lineageTag: d8db55b4-2811-44c3-bc75-30cf6e0f378f
+		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
 		summarizeBy: sum
 		sourceColumn: EVENT_LENGTH
 
@@ -109,47 +67,25 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DAYS_REJECTION
-		dataType: double
-		lineageTag: 403bcdc4-c805-40d9-bb75-941c43427c09
-		summarizeBy: sum
-		sourceColumn: DAYS_REJECTION
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column DAYS_REVERSAL
-		dataType: double
-		lineageTag: 1c49b879-e622-4356-9fb5-4e39c78caaff
-		summarizeBy: sum
-		sourceColumn: DAYS_REVERSAL
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column DAYS_PAID
-		dataType: double
-		lineageTag: adc10fd7-26f5-4d37-91ca-96b7c7bf7f4c
-		summarizeBy: count
-		sourceColumn: DAYS_PAID
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column DAY_0_STATUS_NUM
+	column DAY_0_CLAIM_ID
 		dataType: string
-		lineageTag: fb792373-ba1f-4bc5-bc64-921208275eae
+		lineageTag: 5068ddcb-0f76-4856-9859-36f4aeb32cb2
 		summarizeBy: none
-		sourceColumn: DAY_0_STATUS_NUM
+		sourceColumn: DAY_0_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
 
 		annotation SummarizationSetBy = Automatic
 
 	column DAY_0_STATUS
 		dataType: string
-		lineageTag: b7022dab-5bea-4805-b7eb-4740f5a2472a
+		lineageTag: 34a5b0aa-3955-45d7-9dc0-abe4d8276874
 		summarizeBy: none
 		sourceColumn: DAY_0_STATUS
 
@@ -157,7 +93,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column FINAL_STATUS_NUM
 		dataType: string
-		lineageTag: 763ab383-0787-4b0e-b539-f820260cfd77
+		lineageTag: 966d9c7a-5599-40e9-af18-2a721d3c8933
 		summarizeBy: none
 		sourceColumn: FINAL_STATUS_NUM
 
@@ -165,23 +101,72 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column FINAL_STATUS
 		dataType: string
-		lineageTag: 41d07bf2-e18f-4c47-a950-57bb1bd7dec6
+		lineageTag: e0f08c68-123a-4e5a-9921-2d8421f72967
 		summarizeBy: none
 		sourceColumn: FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
+	column DAY_0_REJECT_CODE
+		dataType: string
+		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECTION_REASON_CODE
+		dataType: string
+		lineageTag: 435204a2-b486-42cd-831f-0b150d12830a
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECTION_REASON_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECTION_REASON_DESCRIPTION
+		dataType: string
+		lineageTag: 29a8f20d-b32b-47cd-baca-336dc0548cd5
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECTION_REASON_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
 	column FINAL_REJECT_CODE
 		dataType: string
-		lineageTag: 084e16c3-b4f2-44ac-875e-7497e7f098e4
+		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
 
 		annotation SummarizationSetBy = Automatic
 
+	column FINAL_REJECTION_REASON_CODE
+		dataType: string
+		lineageTag: fe2d7082-dc73-48ea-b8a1-cff40c6c572a
+		summarizeBy: none
+		sourceColumn: FINAL_REJECTION_REASON_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_REJECTION_REASON_DESCRIPTION
+		dataType: string
+		lineageTag: 09cf21f3-63e2-41bf-9a48-226ef9a6c1f1
+		summarizeBy: none
+		sourceColumn: FINAL_REJECTION_REASON_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
+
+		annotation SummarizationSetBy = Automatic
+
 	column PHARMACY_ZIP3
 		dataType: string
-		lineageTag: 77abb868-343b-4c7f-8285-a677a3bfcd6d
+		lineageTag: 2b3fd239-fc2c-4f75-b691-d0322580850f
 		summarizeBy: none
 		sourceColumn: PHARMACY_ZIP3
 
@@ -189,7 +174,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column RX_NUMBER
 		dataType: string
-		lineageTag: eeaccada-b9a8-4e4c-8365-0a62840ba057
+		lineageTag: 6c2d8016-b79a-48fb-8b5b-9fa088da75a6
 		summarizeBy: none
 		sourceColumn: RX_NUMBER
 
@@ -197,7 +182,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column DAYS_SUPPLY
 		dataType: double
-		lineageTag: fe66fc90-303d-4f16-8139-d42f61e5aedd
+		lineageTag: ae0ec17b-12fd-4a06-bedc-e1bd0b7ed53e
 		summarizeBy: sum
 		sourceColumn: DAYS_SUPPLY
 
@@ -207,7 +192,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column QUANTITY
 		dataType: double
-		lineageTag: f06876cb-3875-4806-aa41-401186c65c90
+		lineageTag: de14670b-363d-4799-b57c-fa6ad9e0017b
 		summarizeBy: sum
 		sourceColumn: QUANTITY
 
@@ -215,35 +200,19 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PTD_FINAL_CLAIM
+	column NEW_TO_PRODUCT
 		dataType: double
-		lineageTag: 25db6926-3f33-4587-9e30-30f222c0bca7
+		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
 		summarizeBy: sum
-		sourceColumn: PTD_FINAL_CLAIM
+		sourceColumn: NEW_TO_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column GROUP_NUMBER
-		dataType: string
-		lineageTag: 8be8944c-c9d3-4121-b2fd-08ec0c4d9db4
-		summarizeBy: none
-		sourceColumn: GROUP_NUMBER
-
-		annotation SummarizationSetBy = Automatic
-
-	column SECONDARY_GROUP_NUMBER
-		dataType: string
-		lineageTag: a3303df1-3834-460a-a3df-bc73b2a90369
-		summarizeBy: none
-		sourceColumn: SECONDARY_GROUP_NUMBER
-
-		annotation SummarizationSetBy = Automatic
-
 	column PATIENT_PAY
 		dataType: double
-		lineageTag: 718c4508-712b-4b9d-8d7b-cfc93af187e2
+		lineageTag: 5cd89cd6-3fcb-4894-b1f0-228fdd12a766
 		summarizeBy: sum
 		sourceColumn: PATIENT_PAY
 
@@ -253,7 +222,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column PLAN_PAY
 		dataType: double
-		lineageTag: e4d590ff-80ad-4eff-a486-69e3b6fac069
+		lineageTag: 98180d36-1952-4275-a2c5-3ea48b035788
 		summarizeBy: sum
 		sourceColumn: PLAN_PAY
 
@@ -263,7 +232,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column SECONDARY_PLAN_PAY
 		dataType: double
-		lineageTag: 49d8bef0-0767-4ef1-a8b9-6d0211cd0119
+		lineageTag: 11ca519d-ca96-4259-bf09-7159aa9f5aad
 		summarizeBy: sum
 		sourceColumn: SECONDARY_PLAN_PAY
 
@@ -273,7 +242,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column PATIENT_OUT_OF_POCKET
 		dataType: double
-		lineageTag: 5a68d9bb-c7b0-41b5-b71d-92f1e84e1082
+		lineageTag: f6551d9e-b9ee-4970-b2b4-9d336319cf43
 		summarizeBy: sum
 		sourceColumn: PATIENT_OUT_OF_POCKET
 
@@ -283,7 +252,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column COPAY_30
 		dataType: double
-		lineageTag: c8b1c556-6d54-4158-adc6-a7f5f12a40aa
+		lineageTag: f8c252f9-23a1-4990-a9ab-714bc7f6dc3f
 		summarizeBy: sum
 		sourceColumn: COPAY_30
 
@@ -291,25 +260,9 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column ZENPEP_TARGET
-		dataType: string
-		lineageTag: af5f9bd8-4b30-4f6e-87c2-231df6e399d0
-		summarizeBy: none
-		sourceColumn: ZENPEP_TARGET
-
-		annotation SummarizationSetBy = Automatic
-
-	column SPECIALTY
-		dataType: string
-		lineageTag: 13afa3b0-efe1-4725-8ecc-6d7e8ca6b812
-		summarizeBy: none
-		sourceColumn: SPECIALTY
-
-		annotation SummarizationSetBy = Automatic
-
 	column RX_COUNT
 		dataType: double
-		lineageTag: 8a9e62e2-5031-4597-9fa1-a3945b35f609
+		lineageTag: f72bb90e-d966-469e-a0bf-ca08ae74d03e
 		summarizeBy: sum
 		sourceColumn: RX_COUNT
 
@@ -325,10 +278,10 @@ table GOLD_LAYER_FINAL_STATUS
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
 				    GOLD_LAYER_FINAL_STATUS_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_FINAL_STATUS",Kind="Table"]}[Data],
-				    #"Removed Duplicates" = Table.Distinct(GOLD_LAYER_FINAL_STATUS_Table),
-				    #"Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each ([ZENPEP_TARGET] = "Y"))
+				    #"Rounded Off" = Table.TransformColumns(GOLD_LAYER_FINAL_STATUS_Table,{{"RX_COUNT", each Number.Round(_, 1), type number}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Rounded Off",{{"PATIENT_ID", Int64.Type}, {"DRUG_ID", Int64.Type}, {"PLAN_ID", Int64.Type}, {"DAY_0_CLAIM_ID", type text}, {"PRACTITIONER_ID", Int64.Type}})
 				in
-				    #"Filtered Rows"
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 

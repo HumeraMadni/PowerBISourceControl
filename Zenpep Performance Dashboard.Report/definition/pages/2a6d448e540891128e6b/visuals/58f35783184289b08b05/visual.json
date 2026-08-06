@@ -11,6 +11,28 @@
   },
   "visual": {
     "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GOLD_LAYER_HCP"
+                    }
+                  },
+                  "Property": "FIRST_NAME"
+                }
+              },
+              "queryRef": "GOLD_LAYER_HCP.FIRST_NAME",
+              "nativeQueryRef": "FIRST_NAME"
+            }
+          ]
+        }
+      }
+    },
     "drillFilterOtherVisuals": true
   }
 }
