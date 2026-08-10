@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "375948067d0561279b11",
   "position": {
-    "x": 346.63991975927786,
-    "y": 710.50735882799506,
-    "z": 22000,
-    "height": 158.876629889669,
-    "width": 281.64493480441325,
-    "tabOrder": 21000
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 179.36507936507937,
+    "width": 300,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "shape",
@@ -65,7 +65,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -162,9 +162,48 @@
             "id": "default"
           }
         }
+      ],
+      "shadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#33ADE0'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "31582c36ba998ee91539",
   "howCreated": "InsertVisualButton"
 }

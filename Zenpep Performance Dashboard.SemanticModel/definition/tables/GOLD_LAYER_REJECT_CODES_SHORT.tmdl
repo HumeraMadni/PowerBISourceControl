@@ -1,0 +1,43 @@
+table GOLD_LAYER_REJECT_CODES_SHORT
+	lineageTag: 929b1be3-6055-438b-86a5-75deb87a0b30
+
+	column REJECT_CODE
+		dataType: string
+		lineageTag: 7d25bb45-0808-451f-a78c-d0aa8bd613ef
+		summarizeBy: none
+		sourceColumn: REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column REJECT_DESCRIPTION
+		dataType: string
+		lineageTag: 5bbb49c2-fd85-41bb-8025-74c0f01703d2
+		summarizeBy: none
+		sourceColumn: REJECT_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOAD_TS
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b4dda9b2-f6ca-492a-b4ae-4403e615512d
+		summarizeBy: none
+		sourceColumn: LOAD_TS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GOLD_LAYER_REJECT_CODES_SHORT = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_REJECT_CODES_SHORT_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_REJECT_CODES_SHORT",Kind="Table"]}[Data]
+				in
+				    GOLD_LAYER_REJECT_CODES_SHORT_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

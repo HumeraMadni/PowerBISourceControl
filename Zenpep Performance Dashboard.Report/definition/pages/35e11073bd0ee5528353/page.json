@@ -3,8 +3,8 @@
   "name": "35e11073bd0ee5528353",
   "displayName": "HCP ",
   "displayOption": "FitToWidth",
-  "height": 2000,
-  "width": 2400,
+  "height": 1885,
+  "width": 3000,
   "objects": {
     "background": [
       {
@@ -19,5 +19,37 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "dde3c8068ad90580db6b",
+      "target": "19e4a95b4d7873236ace",
+      "type": "DataFilter"
+    },
+    {
+      "source": "dde3c8068ad90580db6b",
+      "target": "2ae3ba74270970329354",
+      "type": "DataFilter"
+    },
+    {
+      "source": "476429d5db1cd62ec798",
+      "target": "19e4a95b4d7873236ace",
+      "type": "DataFilter"
+    },
+    {
+      "source": "476429d5db1cd62ec798",
+      "target": "2ae3ba74270970329354",
+      "type": "DataFilter"
+    },
+    {
+      "source": "483a4966b13e50dce6c4",
+      "target": "19e4a95b4d7873236ace",
+      "type": "DataFilter"
+    },
+    {
+      "source": "483a4966b13e50dce6c4",
+      "target": "2ae3ba74270970329354",
+      "type": "DataFilter"
+    }
+  ]
 }

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "9fa7d1181224622cab6a",
+      "displayName": "Rolling Months Bookmark",
+      "children": [
+        "9d233a10a6160c309809",
+        "92f4f23b0b8d4571a16a",
+        "d03572f820321e8429c2"
+      ]
+    },
+    {
+      "name": "30b8a4004e67ae07be90",
+      "displayName": "Claims Trend Bookmark",
+      "children": [
+        "df02fbb80b8555b324cd",
+        "55a1857814de1d641337"
+      ]
+    },
+    {
+      "name": "587465000da35d11987b",
+      "displayName": "Plans-Payers Bookmark",
+      "children": [
+        "db16fa3e6693e5e33b2c",
+        "8436f9076d9075e038c8"
+      ]
+    }
+  ]
+}

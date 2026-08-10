@@ -75,6 +75,18 @@ table GOLD_LAYER_HCP_SHORT
 
 		annotation SummarizationSetBy = Automatic
 
+	column HCP_FULL_NAME = [FIRST_NAME] & " " & [LAST_NAME]
+		lineageTag: 68ca00f3-40ea-4d9f-b34c-85ce9dfab08f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID_NAME = [PRACTITIONER_ID] & " | " & [HCP_FULL_NAME]
+		lineageTag: 1846457b-8506-4316-b9fe-86e10c058593
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition GOLD_LAYER_HCP_SHORT = m
 		mode: import
 		source =

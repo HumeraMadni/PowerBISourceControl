@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 8.6206896551724146,
-        "y": 20.689655172413794
+        "x": 0,
+        "y": 92.464182476954349
       },
       "nodes": [
         {
           "location": {
-            "x": 332.27586206896552,
-            "y": 0.10344827586206939
+            "x": 325.37931034482762,
+            "y": 60.448275862068975
           },
           "nodeIndex": "GOLD_LAYER_DRUG",
           "nodeLineageTag": "18a5780e-5e4d-463f-b67d-d2d6d1cdbf74",
@@ -19,12 +19,12 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 15.009919697685291,
-            "y": 466.70115161764215
+            "x": 163.28578176665079,
+            "y": 837.3908067900561
           },
           "nodeIndex": "GOLD_LAYER_PDRP",
           "nodeLineageTag": "bbe96394-48b4-4c08-8569-4834c7d75e49",
@@ -32,12 +32,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 1195.8620689655174,
-            "y": 0
+            "x": 1251.0344827586209,
+            "y": 53.448275862068968
           },
           "nodeIndex": "GOLD_LAYER_PLAN",
           "nodeLineageTag": "0cc2aefe-4be9-46e5-8ec7-c736ea2995f8",
@@ -45,12 +45,12 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 744.8275862068964,
-            "y": 129.34482758620697
+            "x": 756.89655172413779,
+            "y": 262.10344827586221
           },
           "nodeIndex": "GOLD_LAYER_FINAL_STATUS",
           "nodeLineageTag": "6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a",
@@ -58,12 +58,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 328.3202645252714,
-            "y": 319.24137931034477
+            "x": 317.97543693906448,
+            "y": 502
           },
           "nodeIndex": "GOLD_LAYER_HCP_SHORT",
           "nodeLineageTag": "df95b65a-7933-4510-893a-94ca04ba00a2",
@@ -71,25 +71,12 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1116.9179481358583,
-            "y": 429.24137931034483
-          },
-          "nodeIndex": "GOLD_LAYER_REJECT_CODES",
-          "nodeLineageTag": "5592976f-52ef-41bb-b2d7-02fdf110c3e8",
-          "size": {
-            "height": 176,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 594.32026452527145,
-            "y": 556.9655172413793
+            "x": 485.699574870099,
+            "y": 820.75862068965512
           },
           "nodeIndex": "GOLD_LAYER_TERRITORY_HIERARCHY",
           "nodeLineageTag": "acfc8150-8491-49d3-a7ec-3d626f2da469",
@@ -97,11 +84,76 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1047.6107699574873,
+            "y": 690.48275862068954
+          },
+          "nodeIndex": "CLAIM_STATUS",
+          "nodeLineageTag": "149ffaf3-32d9-448e-93a2-6a02c7cc4010",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 756.5976836105865,
+            "y": 0
+          },
+          "nodeIndex": "DIM_DATE",
+          "nodeLineageTag": "14a73168-2737-4cf0-97b8-4fa3ec29a1a2",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1647.9769939554142,
+            "y": 691.34482758620686
+          },
+          "nodeIndex": "MEASURES_TABLE",
+          "nodeLineageTag": "c09d6498-62be-4501-b44e-a1a50a1260a3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1344.5532811542807,
+            "y": 499.82758620689657
+          },
+          "nodeIndex": "GOLD_LAYER_REJECT_CODES_SHORT",
+          "nodeLineageTag": "929b1be3-6055-438b-86a5-75deb87a0b30",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1768.6912121887633,
+            "y": 410.37931034482756
+          },
+          "nodeIndex": "TOP N HCP",
+          "nodeLineageTag": "f77507dd-8971-4bd0-a6e7-6f6ed461e23b",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 57.999999999999993,
+      "zoomValue": 44.701992657610354,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

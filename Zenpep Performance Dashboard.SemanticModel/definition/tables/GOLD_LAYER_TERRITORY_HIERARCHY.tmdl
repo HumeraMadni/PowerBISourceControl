@@ -49,6 +49,12 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 
 		annotation SummarizationSetBy = Automatic
 
+	column TERRITORY_ID_NAME = [TERRITORY_ID] & " | " & [TERRITORY_NAME]
+		lineageTag: 29c1ee6b-439c-4cda-8842-2b8670ea2ddd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition GOLD_LAYER_TERRITORY_HIERARCHY = m
 		mode: import
 		source =
