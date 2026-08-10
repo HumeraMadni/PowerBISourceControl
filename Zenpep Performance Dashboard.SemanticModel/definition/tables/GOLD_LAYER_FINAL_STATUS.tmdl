@@ -1,6 +1,14 @@
 table GOLD_LAYER_FINAL_STATUS
 	lineageTag: 6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a
 
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
 	column PATIENT_ID
 		dataType: int64
 		formatString: 0
@@ -16,6 +24,15 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: c07abdf1-4055-4c9e-9bdb-abc2d488d4b3
 		summarizeBy: none
 		sourceColumn: DRUG_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -57,6 +74,16 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column NEW_TO_PRODUCT
+		dataType: double
+		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
+		summarizeBy: sum
+		sourceColumn: NEW_TO_PRODUCT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column EVENT_LENGTH
 		dataType: double
 		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
@@ -66,22 +93,6 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column DAY_0_CLAIM_ID
-		dataType: string
-		lineageTag: 5068ddcb-0f76-4856-9859-36f4aeb32cb2
-		summarizeBy: none
-		sourceColumn: DAY_0_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column FINAL_CLAIM_ID
-		dataType: string
-		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
-		summarizeBy: none
-		sourceColumn: FINAL_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
 
 	column DAY_0_STATUS
 		dataType: string
@@ -107,60 +118,11 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column DAY_0_REJECT_CODE
-		dataType: string
-		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECT_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column DAY_0_REJECTION_REASON_CODE
-		dataType: string
-		lineageTag: 435204a2-b486-42cd-831f-0b150d12830a
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECTION_REASON_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column DAY_0_REJECTION_REASON_DESCRIPTION
-		dataType: string
-		lineageTag: 29a8f20d-b32b-47cd-baca-336dc0548cd5
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECTION_REASON_DESCRIPTION
-
-		annotation SummarizationSetBy = Automatic
-
 	column FINAL_REJECT_CODE
 		dataType: string
 		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column FINAL_REJECTION_REASON_CODE
-		dataType: string
-		lineageTag: fe2d7082-dc73-48ea-b8a1-cff40c6c572a
-		summarizeBy: none
-		sourceColumn: FINAL_REJECTION_REASON_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column FINAL_REJECTION_REASON_DESCRIPTION
-		dataType: string
-		lineageTag: 09cf21f3-63e2-41bf-9a48-226ef9a6c1f1
-		summarizeBy: none
-		sourceColumn: FINAL_REJECTION_REASON_DESCRIPTION
-
-		annotation SummarizationSetBy = Automatic
-
-	column PRACTITIONER_ID
-		dataType: int64
-		formatString: 0
-		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
-		summarizeBy: none
-		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -195,16 +157,6 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: de14670b-363d-4799-b57c-fa6ad9e0017b
 		summarizeBy: sum
 		sourceColumn: QUANTITY
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column NEW_TO_PRODUCT
-		dataType: double
-		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
-		summarizeBy: sum
-		sourceColumn: NEW_TO_PRODUCT
 
 		annotation SummarizationSetBy = Automatic
 
@@ -269,6 +221,54 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_0_CLAIM_ID
+		dataType: string
+		lineageTag: 5068ddcb-0f76-4856-9859-36f4aeb32cb2
+		summarizeBy: none
+		sourceColumn: DAY_0_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECT_CODE
+		dataType: string
+		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECTION_REASON_CODE
+		dataType: string
+		lineageTag: 435204a2-b486-42cd-831f-0b150d12830a
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECTION_REASON_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECTION_REASON_DESCRIPTION
+		dataType: string
+		lineageTag: 29a8f20d-b32b-47cd-baca-336dc0548cd5
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECTION_REASON_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_REJECTION_REASON_CODE
+		dataType: string
+		lineageTag: fe2d7082-dc73-48ea-b8a1-cff40c6c572a
+		summarizeBy: none
+		sourceColumn: FINAL_REJECTION_REASON_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_REJECTION_REASON_DESCRIPTION
+		dataType: string
+		lineageTag: 09cf21f3-63e2-41bf-9a48-226ef9a6c1f1
+		summarizeBy: none
+		sourceColumn: FINAL_REJECTION_REASON_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
 
 	partition GOLD_LAYER_FINAL_STATUS = m
 		mode: import
