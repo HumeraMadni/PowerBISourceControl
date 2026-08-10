@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "bd874487bd4be461304d",
+  "position": {
+    "x": 691.66951799781748,
+    "y": 983.3736190664622,
+    "z": 29000,
+    "height": 763.84372857150277,
+    "width": 760.83646979759919,
+    "tabOrder": 32000
+  },
+  "visualGroup": {
+    "displayName": "Leading Plans and Payers",
+    "groupMode": "ScaleMode"
+  }
+}

@@ -11,10 +11,12 @@ table GOLD_LAYER_PDRP
 		annotation SummarizationSetBy = Automatic
 
 	column PDRP_FLAG
-		dataType: double
+		dataType: int64
 		lineageTag: 62044070-c244-48d3-897c-5cd2280e1722
 		summarizeBy: none
 		sourceColumn: PDRP_FLAG
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 

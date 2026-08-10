@@ -2,37 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "58f35783184289b08b05",
   "position": {
-    "x": 683.65095285857569,
-    "y": 1150.6519558676027,
-    "z": 30000,
-    "height": 705.31594784353058,
-    "width": 1692.2768304914744,
-    "tabOrder": 26000
+    "x": 682.64774167610676,
+    "y": 1085.620417379183,
+    "z": 17000,
+    "height": 769.8582461193098,
+    "width": 2189.2843874017872,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "tableEx",
-    "query": {
-      "queryState": {
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GOLD_LAYER_HCP"
-                    }
-                  },
-                  "Property": "FIRST_NAME"
-                }
-              },
-              "queryRef": "GOLD_LAYER_HCP.FIRST_NAME",
-              "nativeQueryRef": "FIRST_NAME"
-            }
-          ]
-        }
-      }
-    },
     "drillFilterOtherVisuals": true
   }
 }

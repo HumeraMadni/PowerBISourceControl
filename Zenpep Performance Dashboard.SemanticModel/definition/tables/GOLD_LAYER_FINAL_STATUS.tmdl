@@ -28,27 +28,21 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column SECONDARY_PLAN_ID
-		dataType: string
-		lineageTag: fd720df6-dc5e-4689-a0bd-72d1b631f286
-		summarizeBy: none
-		sourceColumn: SECONDARY_PLAN_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column EVENT_N
-		dataType: double
+		dataType: int64
 		lineageTag: d22e7f0b-3a27-4ee4-bef4-a5922426dc08
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: EVENT_N
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column FINAL_TX
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: 8fc2f83f-dd88-4bab-844d-14e193e48250
 		summarizeBy: none
 		sourceColumn: FINAL_TX
@@ -58,22 +52,16 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation UnderlyingDateTimeDataType = Date
 
 	column EVENT_LENGTH
-		dataType: double
+		dataType: int64
 		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: EVENT_LENGTH
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column DAY_0_CLAIM_ID
-		dataType: string
-		lineageTag: 5068ddcb-0f76-4856-9859-36f4aeb32cb2
-		summarizeBy: none
-		sourceColumn: DAY_0_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
 
 	column FINAL_CLAIM_ID
 		dataType: string
@@ -99,14 +87,6 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column FINAL_STATUS
-		dataType: string
-		lineageTag: e0f08c68-123a-4e5a-9921-2d8421f72967
-		summarizeBy: none
-		sourceColumn: FINAL_STATUS
-
-		annotation SummarizationSetBy = Automatic
-
 	column DAY_0_REJECT_CODE
 		dataType: string
 		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
@@ -115,43 +95,11 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column DAY_0_REJECTION_REASON_CODE
-		dataType: string
-		lineageTag: 435204a2-b486-42cd-831f-0b150d12830a
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECTION_REASON_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column DAY_0_REJECTION_REASON_DESCRIPTION
-		dataType: string
-		lineageTag: 29a8f20d-b32b-47cd-baca-336dc0548cd5
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECTION_REASON_DESCRIPTION
-
-		annotation SummarizationSetBy = Automatic
-
 	column FINAL_REJECT_CODE
 		dataType: string
 		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column FINAL_REJECTION_REASON_CODE
-		dataType: string
-		lineageTag: fe2d7082-dc73-48ea-b8a1-cff40c6c572a
-		summarizeBy: none
-		sourceColumn: FINAL_REJECTION_REASON_CODE
-
-		annotation SummarizationSetBy = Automatic
-
-	column FINAL_REJECTION_REASON_DESCRIPTION
-		dataType: string
-		lineageTag: 09cf21f3-63e2-41bf-9a48-226ef9a6c1f1
-		summarizeBy: none
-		sourceColumn: FINAL_REJECTION_REASON_DESCRIPTION
 
 		annotation SummarizationSetBy = Automatic
 
@@ -181,10 +129,12 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = Automatic
 
 	column DAYS_SUPPLY
-		dataType: double
+		dataType: int64
 		lineageTag: ae0ec17b-12fd-4a06-bedc-e1bd0b7ed53e
 		summarizeBy: sum
 		sourceColumn: DAYS_SUPPLY
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -201,12 +151,14 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column NEW_TO_PRODUCT
-		dataType: double
+		dataType: int64
 		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: NEW_TO_PRODUCT
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -262,13 +214,21 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column RX_COUNT
 		dataType: double
+		formatString: 0.0
 		lineageTag: f72bb90e-d966-469e-a0bf-ca08ae74d03e
 		summarizeBy: sum
 		sourceColumn: RX_COUNT
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	column DATE_KEY
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fdd2504-fbca-4ed3-b2d3-1315646cf567
+		summarizeBy: none
+		sourceColumn: DATE_KEY
+
+		annotation SummarizationSetBy = Automatic
 
 	partition GOLD_LAYER_FINAL_STATUS = m
 		mode: import
@@ -278,10 +238,14 @@ table GOLD_LAYER_FINAL_STATUS
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
 				    GOLD_LAYER_FINAL_STATUS_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_FINAL_STATUS",Kind="Table"]}[Data],
-				    #"Rounded Off" = Table.TransformColumns(GOLD_LAYER_FINAL_STATUS_Table,{{"RX_COUNT", each Number.Round(_, 1), type number}}),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Rounded Off",{{"PATIENT_ID", Int64.Type}, {"DRUG_ID", Int64.Type}, {"PLAN_ID", Int64.Type}, {"DAY_0_CLAIM_ID", type text}, {"PRACTITIONER_ID", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_FINAL_STATUS_Table,{{"PATIENT_ID", Int64.Type}, {"DRUG_ID", Int64.Type}, {"PLAN_ID", Int64.Type}, {"DAY_0_CLAIM_ID", type text}, {"PRACTITIONER_ID", Int64.Type}, {"FINAL_TX", type date}, {"FINAL_CLAIM_ID", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"SECONDARY_PLAN_ID", "DAY_0_CLAIM_ID", "DAY_0_REJECTION_REASON_CODE", "DAY_0_REJECTION_REASON_DESCRIPTION", "FINAL_REJECTION_REASON_CODE", "FINAL_REJECTION_REASON_DESCRIPTION", "FINAL_STATUS"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "DATE_KEY", each Date.Year([FINAL_TX]) * 10000
+				        + Date.Month([FINAL_TX]) * 100
+				        + Date.Day([FINAL_TX])),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"DATE_KEY", Int64.Type}})
 				in
-				    #"Changed Type"
+				    #"Changed Type1"
 
 	annotation PBI_NavigationStepName = Navigation
 

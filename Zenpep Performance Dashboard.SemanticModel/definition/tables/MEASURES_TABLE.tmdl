@@ -1,0 +1,669 @@
+table MEASURES_TABLE
+	lineageTag: c09d6498-62be-4501-b44e-a1a50a1260a3
+
+	measure 'Total Claim Count' = COUNTROWS(GOLD_LAYER_FINAL_STATUS)
+		formatString: 0
+		lineageTag: 00443d13-db92-4950-b6f2-d84a37d156e3
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Total RX Count' = SUM ( GOLD_LAYER_FINAL_STATUS[RX_COUNT] ) -- Includes Zenpep and creon both and NTP 0 as well as 1
+		formatString: 0.0
+		lineageTag: 6b092800-d158-4bc6-8ce1-52d1e8858035
+
+	measure 'Total Patients' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PATIENT_ID])
+		formatString: 0
+		lineageTag: b3aca921-9a59-4234-aa5a-135496fe9288
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Paid Claim Count' =
+			
+			CALCULATE(
+			    [Total Claim Count],
+			    'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 1
+			)
+		formatString: 0
+		lineageTag: 2b5945e5-fc20-453e-ad5d-dbb9ae38b66e
+
+	measure 'Paid %' =
+			
+			DIVIDE(
+			    [Paid Claim Count],
+			    [Total Claim Count],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e080c59b-3463-4df8-844a-2889231ec0a6
+
+	measure 'Reversed Claim Count' =
+			
+			CALCULATE(
+			    [Total Claim Count],
+			    'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 2
+			)
+		formatString: 0
+		lineageTag: 98e04e9d-645a-4419-acca-eece41b2c754
+
+	measure 'Reversed %' =
+			
+			DIVIDE(
+			    [Reversed Claim Count],
+			    [Total Claim Count],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 516d9fa5-3cd4-4229-a471-05dc4a274639
+
+	measure 'Average OOP' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_OUT_OF_POCKET])
+		lineageTag: 34aac30a-0ae9-4107-b625-76d13122c9b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Creon 24K RX' =
+			
+			CALCULATE(
+			    [Total RX Count],
+			    'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 24k"
+			)
+		lineageTag: 6fbcd1ef-8100-42b4-987a-3b4cd6c970d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Creon 24K %' =
+			
+			DIVIDE(
+			    [Creon 24K RX],
+			    [Total RX Count],
+			    0
+			)
+		lineageTag: 2c2fcf7b-9bac-4d76-88bd-de7a750d2407
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'High Potential Flag Creon 24K Flag' =
+			
+			IF(
+			    [Creon 24K %] > 0.60,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: a7f43289-8aaa-49ca-bd22-cadf9f994f7a
+
+	measure 'High Potential HCP Count' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
+			        [High Potential Flag Creon 24K Flag] = 1
+			    )
+			)
+		formatString: 0
+		lineageTag: 7ff92761-4133-4097-9267-d432464d63fd
+
+	measure 'Creon 36K RX' =
+			
+			CALCULATE(
+			    [Total RX Count],
+			    'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 36K"
+			)
+		lineageTag: d11597b8-59ff-47c5-a180-26d413461b53
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Creon 36K %' =
+			
+			DIVIDE(
+			    [Creon 36K RX],
+			    [Total RX Count],
+			    0
+			)
+		lineageTag: 872dac0a-386d-40af-a9f0-2a1cb1d226cb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'High Potential Creon 36K Flag' =
+			
+			IF(
+			    [Creon 36K %] > 0.60,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: df3f689f-6f66-494a-95c4-27873a318998
+
+	measure 'High Potential Creon 36K HCP Count' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
+			        [High Potential Creon 36K Flag] = 1
+			    )
+			)
+		formatString: 0
+		lineageTag: ba8e289d-8d55-4480-aabe-77c99291b647
+
+	measure 'Total Zenpep RX' =
+			
+			CALCULATE(
+			    [Total RX Count],
+			    'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP"
+			)
+		formatString: 0.0
+		lineageTag: 93b51893-c8f6-4171-ac0a-784c7b7b02c8
+
+	measure 'Zenpep New to Brand RX' =
+			
+			CALCULATE(
+			    [Total Zenpep RX],
+			    GOLD_LAYER_FINAL_STATUS[NEW_TO_PRODUCT] = 1
+			)
+		formatString: 0.0
+		lineageTag: e7c59ce5-34ca-445f-8ce0-002e58530fc3
+
+	measure 'Zenpep Refill Volume' =
+			
+			[Total Zenpep RX] - [Zenpep New to Brand RX]
+		formatString: 0.0
+		lineageTag: a533dfc8-8318-4100-9ce9-26ebe0837a82
+
+	measure '% Refill' =
+			
+			DIVIDE(
+			    [Zenpep Refill Volume],
+			    [Total Zenpep RX],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e47150cb-4d04-4d12-8713-53601b3c5ed6
+
+	measure 'Claim % (HCP)' =
+			
+			DIVIDE(
+			    [Total Claim Count],
+			    CALCULATE(
+			        [Total Claim Count],
+			        ALL('GOLD_LAYER_HCP_SHORT')
+			    ),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 6f0d1d3b-f725-4c10-a4bb-28d1d2ab1bd6
+
+	measure 'Rejected Claim Count' =
+			
+			CALCULATE(
+			    [Total Claim Count],
+			    'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 0
+			)
+		formatString: 0
+		lineageTag: bac37da1-2c46-4121-8a29-b2c60de1a23e
+
+	measure 'Reversed Claim %' =
+			
+			DIVIDE(
+			    [Reversed Claim Count],
+			    [Total Claim Count],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c6a1b814-b796-46a3-b9be-ed188155aea2
+
+	measure 'Rejected Claim %' =
+			
+			DIVIDE(
+			    [Rejected Claim Count],
+			    [Total Claim Count],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a2547573-dd47-4555-a3e7-f06feb947830
+
+	measure 'HCP Rank' =
+			
+			RANKX(
+			    ALLSELECTED('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
+			    [Total Claim Count],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: 4952fa01-39b1-4ffb-bc77-1006293e6226
+
+	measure 'Show Top N' =
+			
+			IF(
+			    [HCP Rank] <= [TOP N HCP Value],
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: e84310b4-c01a-4f79-a562-39af5d0cc686
+
+	measure 'Tooltip Title' =
+			
+			"Patients with " &
+			SELECTEDVALUE('CLAIM_STATUS'[CLAIM_STATUS]) &
+			" Claims"
+		lineageTag: 12b991cb-6b7b-4118-b8df-79911ff1a0b7
+
+	measure 'Marker Color' =
+			
+			VAR LatestVisibleMonth =
+			    MAXX (
+			        ALLSELECTED ( 'DIM_DATE' ),
+			        'DIM_DATE'[Month Year Sort]
+			    )
+			
+			VAR CurrentMonth =
+			    MAX ( DIM_DATE[Month Year Sort] )
+			
+			RETURN
+			IF (
+			    CurrentMonth = LatestVisibleMonth,
+			    "#F28E2B",
+			    "#808080"
+			)
+		lineageTag: 791cd73e-c156-4438-8982-920f065f0910
+
+	measure 'Latest Selected Month' =
+			
+			CALCULATE(
+			    MAX('DIM_DATE'[Date]),
+			    ALLSELECTED('DIM_DATE')
+			)
+		formatString: General Date
+		lineageTag: a35b062d-8b04-4355-8bd0-5e2a365e55e9
+
+	measure 'Rolling 1M - Current' =
+			
+			VAR LatestMonth = [Latest Selected Month]
+			
+			VAR CurrentMonthStart =
+			    EOMONTH(LatestMonth, -1) + 1
+			
+			VAR CurrentMonthEnd =
+			    EOMONTH(LatestMonth, 0)
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        CurrentMonthStart,
+			        CurrentMonthEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: efee0523-8e95-49dc-abae-f0bd3612988a
+
+	measure 'Rolling 1M - Previous' =
+			
+			VAR LatestMonth = [Latest Selected Month]
+			
+			VAR PreviousMonthStart =
+			    EOMONTH(LatestMonth, -2) + 1
+			
+			VAR PreviousMonthEnd =
+			    EOMONTH(LatestMonth, -1)
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        PreviousMonthStart,
+			        PreviousMonthEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: 5182ea9a-5f8b-4c42-8b81-5b0fbbeb436c
+
+	measure 'Rolling 1M - MoM Display' =
+			
+			VAR CurrentValue =
+			    [Rolling 1M - Current]
+			
+			VAR PreviousValue =
+			    [Rolling 1M - Previous]
+			
+			VAR Change =
+			    CurrentValue - PreviousValue
+			
+			VAR ChangePct =
+			    DIVIDE(Change, PreviousValue)
+			
+			VAR Arrow =
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "▲ ",
+			        Change < 0, "▼ ",
+			        "→ "
+			    )
+			
+			RETURN
+			    IF(
+			        ISBLANK(PreviousValue),
+			        BLANK(),
+			        Arrow &
+			        FORMAT(ABS(Change), "0")
+			        & " ("
+			        & FORMAT(ABS(ChangePct), "0.0%")
+			        & ")"
+			    )
+		lineageTag: 7fc502ac-d75e-4f93-b8d3-fcf98b07cb11
+
+	measure 'Rolling 1M - MoM Color' =
+			
+			VAR Change =
+			    [Rolling 1M - Current]
+			        - [Rolling 1M - Previous]
+			
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "#2E7D32",
+			        Change < 0, "#D64545",
+			        "#6B7280"
+			    )
+		lineageTag: 004a90e5-0e01-4718-ad0e-adea7a018939
+
+	measure 'Rolling 3M - Current' =
+			
+			VAR LatestMonth =
+			    CALCULATE(
+			        MAX('DIM_DATE'[Date]),
+			        ALLSELECTED('DIM_DATE')
+			    )
+			
+			VAR CurrentMonthEnd =
+			    EOMONTH(LatestMonth, 0)
+			
+			VAR CurrentMonthStart =
+			    EOMONTH(LatestMonth, -3) + 1
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        CurrentMonthStart,
+			        CurrentMonthEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: a7955cca-310a-41cc-a33c-85ae169b0f36
+
+	measure 'Rolling 3M - Previous' =
+			
+			VAR LatestMonth =
+			    CALCULATE(
+			        MAX('DIM_DATE'[Date]),
+			        ALLSELECTED('DIM_DATE')
+			    )
+			
+			VAR PreviousMonthEnd =
+			    EOMONTH(LatestMonth, -3)
+			
+			VAR PreviousMonthStart =
+			    EOMONTH(LatestMonth, -6) + 1
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        PreviousMonthStart,
+			        PreviousMonthEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: b508439d-16f3-47ff-a47a-a483d31f78a1
+
+	measure 'Rolling 3M - Change Display' =
+			
+			VAR CurrentValue =
+			    [Rolling 3M - Current]
+			
+			VAR PreviousValue =
+			    [Rolling 3M - Previous]
+			
+			VAR Change =
+			    CurrentValue - PreviousValue
+			
+			VAR ChangePct =
+			    DIVIDE(Change, PreviousValue)
+			
+			VAR Arrow =
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "▲ ",
+			        Change < 0, "▼ ",
+			        "→ "
+			    )
+			
+			RETURN
+			    IF(
+			        ISBLANK(PreviousValue),
+			        BLANK(),
+			        Arrow &
+			        FORMAT(ABS(Change), "0")
+			        & " ("
+			        & FORMAT(ABS(ChangePct), "0.0%")
+			        & ")"
+			    )
+		lineageTag: 08b8c175-7cb2-44fd-b308-1c92e278d393
+
+	measure 'Rolling 3M - Change Color' =
+			
+			VAR Change =
+			    [Rolling 3M - Current] - [Rolling 3M - Previous]
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Change > 0, "#2E7D32",   -- Green
+			    Change < 0, "#D64545",   -- Red
+			    "#6B7280"                -- Grey
+			)
+		lineageTag: 4995a286-fd02-4c1a-b455-30d8c7eec2ea
+
+	measure 'Rolling 12M - Current' =
+			
+			VAR LatestMonth = [Latest Selected Month]
+			
+			VAR CurrentPeriodStart =
+			    EOMONTH(LatestMonth, -12) + 1
+			
+			VAR CurrentPeriodEnd =
+			    EOMONTH(LatestMonth, 0)
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        CurrentPeriodStart,
+			        CurrentPeriodEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: 4bb24e82-223e-46ed-965b-807b1240f7a2
+
+	measure 'Rolling 12M - Previous' =
+			
+			VAR LatestMonth = [Latest Selected Month]
+			
+			VAR PreviousPeriodStart =
+			    EOMONTH(LatestMonth, -24) + 1
+			
+			VAR PreviousPeriodEnd =
+			    EOMONTH(LatestMonth, -12)
+			
+			RETURN
+			CALCULATE(
+			    [Total RX Count],
+			    REMOVEFILTERS('DIM_DATE'),
+			    DATESBETWEEN(
+			        'DIM_DATE'[Date],
+			        PreviousPeriodStart,
+			        PreviousPeriodEnd
+			    )
+			)
+		formatString: 0.0
+		lineageTag: 5a43b338-7afe-4591-9b2e-a44fdb1f2b74
+
+	measure 'Rolling 12M - Change Display' =
+			
+			VAR CurrentValue =
+			    [Rolling 12M - Current]
+			
+			VAR PreviousValue =
+			    [Rolling 12M - Previous]
+			
+			VAR Change =
+			    CurrentValue - PreviousValue
+			
+			VAR ChangePct =
+			    DIVIDE(Change, PreviousValue)
+			
+			VAR Arrow =
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "▲ ",
+			        Change < 0, "▼ ",
+			        "→ "
+			    )
+			
+			RETURN
+			IF(
+			    ISBLANK(PreviousValue),
+			    BLANK(),
+			    Arrow &
+			    FORMAT(ABS(Change), "0")
+			        & " ("
+			        & FORMAT(ABS(ChangePct), "0.0%")
+			        & ")"
+			)
+		lineageTag: 059f4095-f8a9-4500-8a59-1622b5ac12e0
+
+	measure 'Rolling 12M - Change Color' =
+			
+			VAR Change =
+			    [Rolling 12M - Current]
+			        - [Rolling 12M - Previous]
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Change > 0, "#2E7D32", --Green
+			    Change < 0, "#D64545", --Red
+			    "#6B7280" --Grey
+			)
+		lineageTag: 5ee5a44a-9850-4e19-9fb7-eac7e0e9b9c9
+
+	measure 'Average Copay' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_PAY])
+		lineageTag: 205b7b33-50d3-4d53-b949-0f5f9283b758
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'HCP Priority Sort' =
+			
+			VAR Flag24K = [High Potential Flag Creon 24K Flag]
+			VAR Flag36K = [High Potential Creon 36K Flag]
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Flag24K = 1 && Flag36K = 1, 1,
+			    Flag24K = 1 && Flag36K = 0, 2,
+			    Flag24K = 0 && Flag36K = 1, 3,
+			    Flag24K = 0 && Flag36K = 0, 4
+			)
+		formatString: 0
+		lineageTag: 4de12827-3a04-465b-a19e-10147f586237
+
+	measure 'Zenpep Conversion Legend' =
+			
+			"Conversion Potential:" & UNICHAR(10) & UNICHAR(10) &
+			"🟢 High Potential" & UNICHAR(10) &
+			"🔴 Lower Potential"
+		lineageTag: 5f894d0d-03d6-45fb-ae67-3c5f4d131eb8
+
+	measure 'Current Month Bar Color' =
+			
+			IF(
+			    [Rolling 1M - Current] >= [Rolling 1M - Previous],
+			    "#34A853",   -- Green
+			    "#E85D5D"    -- Red
+			)
+		lineageTag: 488b83b4-6f75-4360-b530-ad1816d53bd7
+
+	measure 'New to Product legend' =
+			
+			"New to Product:" & UNICHAR(10) & UNICHAR(10) &
+			"🔵 Yes " & UNICHAR(10) &
+			"🟡 No "
+		lineageTag: 8757ff3c-8eda-45ac-a476-aaaca5927fe2
+
+	measure 'Total HCPs' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PRACTITIONER_ID])
+		formatString: 0
+		lineageTag: 12269f0b-b14f-4a34-9045-e2552689e3a8
+
+	measure 'Unique Payers' = DISTINCTCOUNT(GOLD_LAYER_PLAN[ADMIN_NAME])
+		formatString: 0
+		lineageTag: 225e028c-8e0d-4934-9f31-b799dfcc9827
+
+	measure 'High Potential Territory Flag' =
+			
+			VAR TotalRX =
+			    [Total RX Count]
+			VAR ZenpepRX =
+			    [Total Zenpep RX]
+			RETURN
+			    IF(
+			        TotalRX > ZenpepRX,
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: 9a806f6a-04e7-4eaa-b249-50f80890cb64
+
+	measure 'High Potential Territories' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
+			        [High Potential Territory Flag] = 1
+			    )
+			)
+		formatString: 0
+		lineageTag: 013c9459-9862-4236-8cb9-6fe1bdfa823d
+
+	column MeasureHolder
+		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MeasureHolder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MEASURES_TABLE = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "MeasureHolder", STRING,
+				    {
+				        { " " }
+				    }
+				)
+
+	annotation PBI_Id = df6ecce8949c4c91ad7f54ed4ccc62a6
+
