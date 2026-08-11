@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "514a9ce342190ae60c42",
+  "position": {
+    "x": 2189.9342959899423,
+    "y": 779.86868814030311,
+    "z": 39000,
+    "height": 515.850144092219,
+    "width": 792.507204610951,
+    "tabOrder": 38000
+  },
+  "visualGroup": {
+    "displayName": "HCP Creon Potential",
+    "groupMode": "ScaleMode"
+  }
+}

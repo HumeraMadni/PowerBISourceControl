@@ -38,6 +38,21 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
+                  "Property": "HCP Conversion Icon"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.HCP Conversion Icon",
+              "nativeQueryRef": "High Refill Volume",
+              "displayName": "High Refill Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
                   "Property": "Total Zenpep RX"
                 }
               },
@@ -176,7 +191,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total Claim Count"
+                "Property": "Total Zenpep RX"
               }
             },
             "direction": "Descending"
@@ -654,63 +669,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "dataBars": {
-              "positiveColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'#f3e7ad'"
-                      }
-                    }
-                  }
-                }
-              },
-              "negativeColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'#f3e7ad'"
-                      }
-                    }
-                  }
-                }
-              },
-              "axisColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'foreground'"
-                      }
-                    }
-                  }
-                }
-              },
-              "reverseDirection": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "hideText": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "totalMatchingOption": {
-                "expr": {
-                  "Literal": {
-                    "Value": "1L"
-                  }
+                  "Value": "true"
                 }
               }
             }
@@ -745,63 +704,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "dataBars": {
-              "positiveColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'#f6edc2'"
-                      }
-                    }
-                  }
-                }
-              },
-              "negativeColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'#f6edc2'"
-                      }
-                    }
-                  }
-                }
-              },
-              "axisColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'#FFFFFF'"
-                      }
-                    }
-                  }
-                }
-              },
-              "reverseDirection": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "hideText": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "totalMatchingOption": {
-                "expr": {
-                  "Literal": {
-                    "Value": "1L"
-                  }
+                  "Value": "true"
                 }
               }
             }
@@ -836,7 +739,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -962,7 +865,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -976,7 +879,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1004,7 +907,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1032,7 +935,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1053,6 +956,27 @@
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Rejected Claim %"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.HCP Conversion Icon"
           }
         }
       ],
@@ -1113,7 +1037,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "272.4443186079557D"
+                  "Value": "189.80398369633258D"
                 }
               }
             }
@@ -1127,7 +1051,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "268.98131587472136D"
+                  "Value": "189.38547737208455D"
                 }
               }
             }
@@ -1183,7 +1107,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "177.4791259323892D"
+                  "Value": "152.077725035146D"
                 }
               }
             }
@@ -1225,7 +1149,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "384.3359312903269D"
+                  "Value": "381.155105662749D"
                 }
               }
             }
@@ -1425,7 +1349,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 20 HCPs by Claim Count'"
+                  "Value": "'Top 50 HCPs by Claim Count'"
                 }
               }
             },
@@ -1527,7 +1451,7 @@
                         }
                       }
                     ],
-                    "Top": 20
+                    "Top": 50
                   }
                 }
               },
@@ -1567,130 +1491,52 @@
         }
       },
       {
-        "name": "00b1fd7a60429c2bc6a4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
+        "name": "e8d21fa3899e3cfa409f",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID_NAME"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
               }
-            },
-            "Property": "Total Zenpep RX"
-          }
+            }
+          ]
         },
-        "type": "Advanced"
-      },
-      {
-        "name": "03f4d6e9be3e0cd00ca5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Zenpep New to Brand RX"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ccf72c3db46d66502c12",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Zenpep Refill Volume"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7d24eb92a174ad0b464d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "% Refill"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "dc3a2d4d2aac70c2a9eb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b9839251e526b965661d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Claim % (HCP)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "99ca60141dea9beb94b0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Paid %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "986acb20b72315ea4032",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rejected Claim %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4cdd0d800bc4a0059be0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Reversed Claim %"
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "Exclude"
       }
     ]
   }

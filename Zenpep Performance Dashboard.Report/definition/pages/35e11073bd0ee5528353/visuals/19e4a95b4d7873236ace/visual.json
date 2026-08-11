@@ -929,7 +929,7 @@
         }
       },
       {
-        "name": "5116a40516069889c30b",
+        "name": "9ebb923374d8da107e35",
         "field": {
           "Column": {
             "Expression": {
@@ -940,21 +940,22 @@
             "Property": "PAYMENT_TYPE"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "357b92415e51c5223adb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
+        "type": "Categorical",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
               }
-            },
-            "Property": "Rejected Claim Count"
-          }
-        },
-        "type": "Advanced"
+            }
+          ]
+        }
       }
     ]
   }
