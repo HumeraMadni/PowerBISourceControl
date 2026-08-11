@@ -23,11 +23,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Unique Payers"
+                  "Property": "High Priority Territories"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Unique Payers",
-              "nativeQueryRef": "Unique Payers"
+              "queryRef": "MEASURES_TABLE.High Priority Territories",
+              "nativeQueryRef": "High Priority Territories"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Unique Payers"
+                "Property": "High Priority Territories"
               }
             },
             "direction": "Descending"

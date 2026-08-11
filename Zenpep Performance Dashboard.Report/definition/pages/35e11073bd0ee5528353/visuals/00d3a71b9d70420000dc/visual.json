@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "00d3a71b9d70420000dc",
   "position": {
-    "x": 2687.8671523993144,
-    "y": 787.07221013544734,
-    "z": 37000,
-    "height": 37.331488227768254,
-    "width": 40.442445580082278,
-    "tabOrder": 36000
+    "x": 2491.1437093681507,
+    "y": 788.952237674078,
+    "z": 41000,
+    "height": 35.124585923845942,
+    "width": 37.826477148757164,
+    "tabOrder": 35000
   },
   "visual": {
     "visualType": "actionButton",
@@ -75,7 +75,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Identifies HCPs with Zenpep conversion potential based on Creon 24K and 36K utilization. Green flags indicate high potential, while red flags indicate lower potential.'"
+                  "Value": "'Shows Zenpep conversion potential based on Creon 24K and 36K utilization, segmented by RX volume. Use the buttons to switch between HCPs with RX >300 and RX ≤300.'"
                 }
               }
             }

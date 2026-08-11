@@ -23,7 +23,6 @@ ref table CLAIM_STATUS
 ref table DIM_DATE
 ref table MEASURES_TABLE
 ref table GOLD_LAYER_REJECT_CODES_SHORT
-ref table 'TOP N HCP'
 
 ref cultureInfo en-US
 

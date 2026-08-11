@@ -1281,5 +1281,91 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "65ca34390d6500e3b4bc",
-  "isHidden": true
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6ea8d0c47795e3c643dd",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            },
+            {
+              "Name": "g1",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "HCP_FULL_NAME"
+                          }
+                        },
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "SPECIALTY_DESCRIPTION"
+                          }
+                        },
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g1"
+                              }
+                            },
+                            "Property": "TERRITORY_NAME"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          },
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          },
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      }
+    ]
+  }
 }

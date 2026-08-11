@@ -4066,16 +4066,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "volume": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
 			          "package dimension": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -4087,6 +4077,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "package mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "package bulk": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7744,16 +7744,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.736
 			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -8574,7 +8564,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table.average_OOP_per_patient": {
+			    "measures_table.average_OOP": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "MEASURES_TABLE",
@@ -8584,18 +8574,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "average OOP per patient": {
+			          "average OOP": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
 			          "OOP": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "average OOP": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9996,444 +9980,6 @@ cultureInfo en-US
 			        {
 			          "HCP rank": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "measures_table.show_top_n": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "MEASURES_TABLE",
-			          "ConceptualProperty": "Show Top N"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "show top n": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "n": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "top n": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "show best n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "show first n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "show leading n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "show maximum n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "show peak n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "show upper n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "best n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "first n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "leading n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "maximum n": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "top_n_hcp": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "TOP N HCP"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "top n hcp": {
-			            "State": "Generated",
-			            "Weight": 0.87
-			          }
-			        },
-			        {
-			          "hcp": {
-			            "State": "Generated",
-			            "Weight": 0.8439
-			          }
-			        },
-			        {
-			          "n hcp": {
-			            "State": "Generated",
-			            "Weight": 0.8439
-			          }
-			        },
-			        {
-			          "best n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "first n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "top_n_hcp.top_n_hcp": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "TOP N HCP",
-			          "ConceptualProperty": "TOP N HCP"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "top n hcp": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "hcp": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "n hcp": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "first n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "leading n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "maximum n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "peak n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "upper n hcp": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "top_n_hcp.TOP_n_HCP_value": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "TOP N HCP",
-			          "ConceptualProperty": "TOP N HCP Value"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "TOP n HCP value": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "HCP value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "n HCP value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "best n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "first n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "leading n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "maximum n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "peak n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "upper n hcp value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "top n hcp assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "n hcp assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "hcp assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "top n hcp worth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
 			          }
 			        }
 			      ]
@@ -12235,7 +11781,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table.average_copay_per_patient": {
+			    "measures_table.average_copay": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "MEASURES_TABLE",
@@ -12245,18 +11791,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "average copay per patient": {
+			          "average copay": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
 			          "copay": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "average copay": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -13356,9 +12896,1602 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measures_table.avg_district_RX": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Avg District RX"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg district RX": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average district rx": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.PERT_volume_above_average": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "PERT volume above average"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PERT volume above average": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "volume": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "PERT volume": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pert capacity above average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "pert size above average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "pert bulk above average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "pert tome above average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "pert capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "pert size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "pert bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pert tome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.above_average_PERT_volume": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "% Above Average PERT Volume"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% above average PERT volume": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage above average pert volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "pct above average pert volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.execution_priority": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Execution Priority"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "execution priority": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "priority": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "execution importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "execution precedence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "execution urgency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "execution significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "execution primacy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "precedence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "urgency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "primacy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.selected_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Selected Period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "selected era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "selected epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "selected age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "selected stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "selected phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.zenpep_retail_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Zenpep Retail Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zenpep retail share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zenpep retail part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "zenpep retail piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.top_3_territory_metric": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Top 3 Territory Metric"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 territory metric": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "metric": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "territory metric": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "3 territory metric": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 territory metric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.top_3_territory_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Top 3 Territory Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 territory share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "territory share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "3 territory share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 territory share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "top 3 territory part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "top 3 territory portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "top 3 territory segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "top 3 territory cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.top_3_territories": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Top 3 Territories"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 territories": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "3 territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "peak 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "upper 3 territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "top 3 terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "top 3 region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "3 terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "3 region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.story_insight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Story Insight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "story insight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "insight": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "story awareness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story intuition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story acumen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story comprehension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story discernment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "story perceptiveness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "awareness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intuition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_priority_territories": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "High Priority Territories"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high priority territories": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "priority territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high priority terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high priority region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "priority terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "high priority land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "high priority ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "high priority area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "high priority zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "high priority place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "high priority space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.zenpep_contribution_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Zenpep Contribution %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zenpep contribution %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zenpep contribution percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zenpep contribution pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.HCP_conversion_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "HCP Conversion Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HCP conversion flag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hcp conversion ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion streamer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "conversion ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion streamer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.HCP_conversion_icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "HCP Conversion Icon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HCP conversion icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hcp conversion likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp conversion logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "conversion likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "conversion logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "High Refill Volume": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "gold_layer_final_status_has_measures_table_high_potential_territory_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.high_potential_territory_flag": {
+			          "Target": {
+			            "Entity": "measures_table.high_potential_territory_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_potential_territory_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_high_potential_territory_flag"
+			        }
+			      ]
+			    },
+			    "gold_layer_plan_has_measures_table_unique_payers": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_PLAN"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_plan": {
+			          "Target": {
+			            "Entity": "gold_layer_plan"
+			          }
+			        },
+			        "measures_table.unique_payers": {
+			          "Target": {
+			            "Entity": "measures_table.unique_payers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_plan"
+			            },
+			            "Object": {
+			              "Role": "measures_table.unique_payers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_plans_have_unique_payers"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_total_HCPs": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.total_HCPs": {
+			          "Target": {
+			            "Entity": "measures_table.total_HCPs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_HCPs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_total_HCPs"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_territory_id_name": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "gold_layer_territory_hierarchy.territory_id_name": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy.territory_id_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_territory_hierarchy.territory_id_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_territory_id_names"
+			        }
+			      ]
+			    },
+			    "measures_table_has_new_to_product_legend": {
+			      "Binding": {
+			        "ConceptualEntity": "MEASURES_TABLE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measures_table": {
+			          "Target": {
+			            "Entity": "measures_table"
+			          }
+			        },
+			        "measures_table.new_to_product_legend": {
+			          "Target": {
+			            "Entity": "measures_table.new_to_product_legend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measures_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.new_to_product_legend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_tables_have_new_to_product_legend"
+			        }
+			      ]
+			    },
 			    "gold_layer_final_status_has_measures_table_current_month_bar_color": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
@@ -13511,7 +14644,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_final_status_has_measures_table_average_copay_per_patient": {
+			    "gold_layer_final_status_has_measures_table_average_copay": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
 			      },
@@ -13522,9 +14655,9 @@ cultureInfo en-US
 			            "Entity": "gold_layer_final_status"
 			          }
 			        },
-			        "measures_table.average_copay_per_patient": {
+			        "measures_table.average_copay": {
 			          "Target": {
-			            "Entity": "measures_table.average_copay_per_patient"
+			            "Entity": "measures_table.average_copay"
 			          }
 			        }
 			      },
@@ -13535,12 +14668,12 @@ cultureInfo en-US
 			              "Role": "gold_layer_final_status"
 			            },
 			            "Object": {
-			              "Role": "measures_table.average_copay_per_patient"
+			              "Role": "measures_table.average_copay"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_average_copay_per_patient"
+			          "ID": "gold_layer_final_statuses_have_average_copay"
 			        }
 			      ]
 			    },
@@ -14102,72 +15235,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_dates_have_month_years"
-			        }
-			      ]
-			    },
-			    "top_n_hcp_has_TOP_n_HCP_value": {
-			      "Binding": {
-			        "ConceptualEntity": "TOP N HCP"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "top_n_hcp": {
-			          "Target": {
-			            "Entity": "top_n_hcp"
-			          }
-			        },
-			        "top_n_hcp.TOP_n_HCP_value": {
-			          "Target": {
-			            "Entity": "top_n_hcp.TOP_n_HCP_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "top_n_hcp"
-			            },
-			            "Object": {
-			              "Role": "top_n_hcp.TOP_n_HCP_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "top_n_hcp_have_TOP_n_HCP_value"
-			        }
-			      ]
-			    },
-			    "top_n_hcp_has_top_n_hcp": {
-			      "Binding": {
-			        "ConceptualEntity": "TOP N HCP"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "top_n_hcp": {
-			          "Target": {
-			            "Entity": "top_n_hcp"
-			          }
-			        },
-			        "top_n_hcp.top_n_hcp": {
-			          "Target": {
-			            "Entity": "top_n_hcp.top_n_hcp"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "top_n_hcp"
-			            },
-			            "Object": {
-			              "Role": "top_n_hcp.top_n_hcp"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "top_n_hcp_have_top_n_hcp"
 			        }
 			      ]
 			    },
@@ -14864,7 +15931,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_final_status_has_measures_table_average_OOP_per_patient": {
+			    "gold_layer_final_status_has_measures_table_average_OOP": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
 			      },
@@ -14875,9 +15942,9 @@ cultureInfo en-US
 			            "Entity": "gold_layer_final_status"
 			          }
 			        },
-			        "measures_table.average_OOP_per_patient": {
+			        "measures_table.average_OOP": {
 			          "Target": {
-			            "Entity": "measures_table.average_OOP_per_patient"
+			            "Entity": "measures_table.average_OOP"
 			          }
 			        }
 			      },
@@ -14888,12 +15955,12 @@ cultureInfo en-US
 			              "Role": "gold_layer_final_status"
 			            },
 			            "Object": {
-			              "Role": "measures_table.average_OOP_per_patient"
+			              "Role": "measures_table.average_OOP"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_average_OOP_per_patient"
+			          "ID": "gold_layer_final_statuses_have_average_OOP"
 			        }
 			      ]
 			    },
@@ -17521,171 +18588,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table_has_new_to_product_legend": {
-			      "Binding": {
-			        "ConceptualEntity": "MEASURES_TABLE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measures_table": {
-			          "Target": {
-			            "Entity": "measures_table"
-			          }
-			        },
-			        "measures_table.new_to_product_legend": {
-			          "Target": {
-			            "Entity": "measures_table.new_to_product_legend"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measures_table"
-			            },
-			            "Object": {
-			              "Role": "measures_table.new_to_product_legend"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measures_tables_have_new_to_product_legend"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_territory_id_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.territory_id_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.territory_id_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.territory_id_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_territory_id_names"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_total_HCPs": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.total_HCPs": {
-			          "Target": {
-			            "Entity": "measures_table.total_HCPs"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.total_HCPs"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_total_HCPs"
-			        }
-			      ]
-			    },
-			    "gold_layer_plan_has_measures_table_unique_payers": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_PLAN"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_plan": {
-			          "Target": {
-			            "Entity": "gold_layer_plan"
-			          }
-			        },
-			        "measures_table.unique_payers": {
-			          "Target": {
-			            "Entity": "measures_table.unique_payers"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_plan"
-			            },
-			            "Object": {
-			              "Role": "measures_table.unique_payers"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_plans_have_unique_payers"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_high_potential_territory_flag": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.high_potential_territory_flag": {
-			          "Target": {
-			            "Entity": "measures_table.high_potential_territory_flag"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.high_potential_territory_flag"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_high_potential_territory_flag"
-			        }
-			      ]
-			    },
 			    "gold_layer_territory_hierarchy_has_measures_table_high_potential_territories": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
@@ -17716,6 +18618,666 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gold_layer_territory_hierarchies_have_high_potential_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_copay_bins": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.copay_bins": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.copay_bins"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.copay_bins"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_copay_bins"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_avg_district_RX": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.avg_district_RX": {
+			          "Target": {
+			            "Entity": "measures_table.avg_district_RX"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_district_RX"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_avg_district_RX"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_PERT_volume_above_average": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.PERT_volume_above_average": {
+			          "Target": {
+			            "Entity": "measures_table.PERT_volume_above_average"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.PERT_volume_above_average"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PERT_volume_above_average"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_above_average_PERT_volume": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.above_average_PERT_volume": {
+			          "Target": {
+			            "Entity": "measures_table.above_average_PERT_volume"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.above_average_PERT_volume"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have__above_average_PERT_volume"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_execution_priority": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.execution_priority": {
+			          "Target": {
+			            "Entity": "measures_table.execution_priority"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.execution_priority"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_execution_priority"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_selected_period": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.selected_period": {
+			          "Target": {
+			            "Entity": "measures_table.selected_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.selected_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_selected_period"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_zenpep_retail_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.zenpep_retail_share": {
+			          "Target": {
+			            "Entity": "measures_table.zenpep_retail_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.zenpep_retail_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_zenpep_retail_share"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territory_metric": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territory_metric": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_metric"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_metric"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territory_metric"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_metric": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territory_metric": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_metric"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_metric"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_metric"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territory_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territory_share": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territory_share"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territory_share": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_share"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territories": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territories": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territories"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_story_insight"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_story_insight"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_story_insight"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_high_priority_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.high_priority_territories": {
+			          "Target": {
+			            "Entity": "measures_table.high_priority_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_priority_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_high_priority_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_zenpep_contribution_": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.zenpep_contribution_": {
+			          "Target": {
+			            "Entity": "measures_table.zenpep_contribution_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.zenpep_contribution_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_zenpep_contribution_"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_HCP_conversion_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.HCP_conversion_flag": {
+			          "Target": {
+			            "Entity": "measures_table.HCP_conversion_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.HCP_conversion_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_HCP_conversion_flag"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_HCP_conversion_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.HCP_conversion_icon": {
+			          "Target": {
+			            "Entity": "measures_table.HCP_conversion_icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.HCP_conversion_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_HCP_conversion_icon"
 			        }
 			      ]
 			    },

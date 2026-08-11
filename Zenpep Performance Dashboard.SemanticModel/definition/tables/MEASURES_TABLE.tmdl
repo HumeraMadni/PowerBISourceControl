@@ -66,9 +66,8 @@ table MEASURES_TABLE
 			    [Total RX Count],
 			    'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 24k"
 			)
+		formatString: 0.0
 		lineageTag: 6fbcd1ef-8100-42b4-987a-3b4cd6c970d3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Creon 24K %' =
 			
@@ -77,9 +76,8 @@ table MEASURES_TABLE
 			    [Total RX Count],
 			    0
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 2c2fcf7b-9bac-4d76-88bd-de7a750d2407
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'High Potential Flag Creon 24K Flag' =
 			
@@ -119,9 +117,8 @@ table MEASURES_TABLE
 			    [Total RX Count],
 			    0
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 872dac0a-386d-40af-a9f0-2a1cb1d226cb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'High Potential Creon 36K Flag' =
 			
@@ -231,16 +228,6 @@ table MEASURES_TABLE
 			)
 		formatString: 0
 		lineageTag: 4952fa01-39b1-4ffb-bc77-1006293e6226
-
-	measure 'Show Top N' =
-			
-			IF(
-			    [HCP Rank] <= [TOP N HCP Value],
-			    1,
-			    0
-			)
-		formatString: 0
-		lineageTag: e84310b4-c01a-4f79-a562-39af5d0cc686
 
 	measure 'Tooltip Title' =
 			
@@ -592,9 +579,8 @@ table MEASURES_TABLE
 
 	measure 'Zenpep Conversion Legend' =
 			
-			"Conversion Potential:" & UNICHAR(10) & UNICHAR(10) &
-			"🟢 High Potential" & UNICHAR(10) &
-			"🔴 Lower Potential"
+			"🟢 High: >60% Creon volume" & UNICHAR(10) &
+			"🔴 Low: ≤60% Creon volume"
 		lineageTag: 5f894d0d-03d6-45fb-ae67-3c5f4d131eb8
 
 	measure 'Current Month Bar Color' =
@@ -646,6 +632,209 @@ table MEASURES_TABLE
 			)
 		formatString: 0
 		lineageTag: 013c9459-9862-4236-8cb9-6fe1bdfa823d
+
+	measure 'Avg District RX' =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        ALL(
+			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID]
+			        ),
+			        [Total RX Count]
+			    ),
+			    ALLEXCEPT(
+			        'GOLD_LAYER_TERRITORY_HIERARCHY',
+			        'GOLD_LAYER_TERRITORY_HIERARCHY'[DISTRICT_NAME]
+			    )
+			)
+		lineageTag: 04ac4fe5-ff75-414c-bd0c-02a8679c42d9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PERT volume above average' = [Total RX Count]- [Avg District RX]
+		lineageTag: 96fb3732-5b08-403b-9094-7d65fa97dcd2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Above Average PERT Volume' =
+			
+			DIVIDE(
+			    [PERT volume above average],
+			    [Avg District RX],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 608d0751-ae99-4713-9b54-29579b7d7807
+
+	measure 'Execution Priority' =
+			
+			IF(
+			    [High Potential Territory Flag] = 1,
+			    IF(
+			        [% Above average PERT volume] > 0.25,
+			        "High Priority",
+			        "Medium Priority"
+			    ),
+			    "NA"
+			)
+		lineageTag: 57435313-2f18-4986-9b5c-806f0c8e8f8d
+
+	measure 'Selected Period' =
+			
+			VAR StartDate =
+			    MIN('DIM_DATE'[DATE])
+			VAR EndDate =
+			    MAX('DIM_DATE'[DATE])
+			RETURN
+			    IF(
+			        StartDate = EndDate,
+			        FORMAT(StartDate, "MMM yyyy"),
+			        FORMAT(StartDate, "MMM yyyy") &
+			        " – " &
+			        FORMAT(EndDate, "MMM yyyy")
+			    )
+		lineageTag: 79715c3c-e253-4001-8ece-d2e2f6576894
+
+	measure 'Zenpep Retail Share' =
+			
+			DIVIDE(
+			    [Total Zenpep RX],
+			    [Total RX Count]
+			)
+		lineageTag: 4e5d4268-7311-4bec-8925-3f2f5e083488
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 3 Territory Metric' =
+			
+			VAR TopTerritories =
+			    TOPN(
+			        3,
+			        ALLSELECTED(
+			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]
+			        ),
+			        [Total Zenpep RX],
+			        DESC
+			    )
+			RETURN
+			    SUMX(
+			        TopTerritories,
+			        [Total Zenpep RX]
+			    )
+		lineageTag: b3e8d5d7-edc5-4495-92ab-950514957b76
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 3 Territory Share' =
+			
+			DIVIDE(
+			    [Top 3 Territory Metric],
+			    [Total Zenpep RX]
+			)
+		lineageTag: 98dbef41-3ff1-418a-8aac-1bedf36eebba
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 3 Territories' =
+			
+			VAR TopTerritories =
+			    TOPN(
+			        3,
+			        ALLSELECTED(
+			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]
+			        ),
+			        [Total Zenpep RX],
+			        DESC
+			    )
+			RETURN
+			    CONCATENATEX(
+			        TopTerritories,
+			        'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME],
+			        ", ",
+			        [Total Zenpep RX],
+			        DESC
+			    )
+		lineageTag: 794cea5f-d2dd-4deb-a72d-8d386dc0221d
+
+	measure 'Story Insight' =
+			
+			"For the selected period ("
+			    & [Selected Period]
+			    & "), Zenpep achieved a Retail Metric of "
+			    & FORMAT(
+			        DIVIDE([Total Zenpep RX], 1000000),
+			        "0.00"
+			    )
+			    & "M, representing "
+			    & FORMAT([Zenpep Retail Share], "0.0%")
+			    & " of the total Retail Metric. The strongest performance was driven by "
+			    & [Top 3 Territories]
+			    & ", which together accounted for "
+			    & FORMAT([Top 3 Territory Share], "0.0%")
+			    & " of the total Zenpep Retail Metric."
+		lineageTag: a1be4847-53f2-4183-ade4-bc04de207932
+
+	measure 'High Priority Territories' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID]),
+			        [Execution Priority] = "High Priority"
+			    )
+			)
+		formatString: 0
+		lineageTag: fc1b7b49-1c99-4e6f-a490-62ee797eb6f5
+
+	measure 'Zenpep Contribution %' =
+			
+			DIVIDE(
+			    [Total Zenpep RX],
+			    [Total RX Count],
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 5d170ea6-8b95-4784-91f3-097007540fe9
+
+	measure 'HCP Conversion Flag' =
+			
+			IF(
+			    [Zenpep Contribution %] > 0.70
+			        && [% Refill] > 0.50,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: a6049d39-0434-4430-8159-ba7d5399824b
+
+	measure 'HCP Conversion Icon' =
+			
+			IF(
+			    ISBLANK([Zenpep Contribution %])
+			        || ISBLANK([% Refill]),
+			    "⚪",
+			    IF(
+			        [Zenpep Contribution %] > 0.70
+			            && [% Refill] > 0.50,
+			        "🟢",
+			        "🔴"
+			    )
+			)
+		lineageTag: 432f83a3-4702-47b6-8e70-88adf1510b1b
+
+	measure 'HCP Refill Legend' =
+			
+			"High Refill Volume HCPs: " &
+			"🟢 Zenpep Contribution >70% and Refill >50%   " &
+			"🔴 Zenpep Contribution ≤70% or Refill ≤50%   " &
+			"⚪ No Data"
+		lineageTag: 8a5ed762-b73d-4ac0-a92c-9ffba85582b8
+
+	measure 'Tooltip HCP Name' =
+			
+			SELECTEDVALUE(
+			    'GOLD_LAYER_HCP_SHORT'[HCP_FULL_NAME]
+			)
+		lineageTag: 7ce8e31e-b676-4bd6-8c59-7d1d846a2628
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171
