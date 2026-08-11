@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "57d04d0a353ca00d4670",
   "position": {
-    "x": 678.18870280445663,
-    "y": 245.76563083280769,
-    "z": 17000,
-    "height": 500.86413372255743,
-    "width": 2305.21939806469,
-    "tabOrder": 18000
+    "x": 0,
+    "y": 0,
+    "z": 40500,
+    "height": 502.79329608938548,
+    "width": 2306.1452513966478,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -395,14 +395,14 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#2E8B57'"
+                                "Value": "'#4BBD87'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#2E8B57'"
+                                "Value": "'#4BBD87'"
                               }
                             }
                           },
@@ -513,14 +513,14 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#D9534F'"
+                                "Value": "'#DB3C50'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#D9534F'"
+                                "Value": "'#DB3C50'"
                               }
                             }
                           },
@@ -1383,10 +1383,31 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dc79c9587aea62102007'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "8f39cff03ce0dc5b2a71",
   "filterConfig": {
     "filters": [
       {
@@ -1539,5 +1560,6 @@
         "howCreated": "Exclude"
       }
     ]
-  }
+  },
+  "isHidden": true
 }

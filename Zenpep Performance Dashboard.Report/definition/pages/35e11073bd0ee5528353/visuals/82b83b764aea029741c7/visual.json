@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "82b83b764aea029741c7",
   "position": {
-    "x": 1026.718665466266,
-    "y": 253.97777514165526,
-    "z": 30000,
-    "height": 40.528368373668393,
-    "width": 35.124585923845942,
-    "tabOrder": 22000
+    "x": 1020.7622407159804,
+    "y": 251.00710837278206,
+    "z": 42000,
+    "height": 41.834518062130343,
+    "width": 36.256582320512962,
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "actionButton",
@@ -75,7 +75,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Displays the Top N HCPs based on Claim Count for the selected filters. The table summarizes Zenpep prescribing volume, new vs. refill prescriptions, claim contribution, and the distribution of Paid, Rejected, and Reversed claims.'"
+                  "Value": "'Highlights the Top 30 or Top 50 HCPs by Claim Count, providing visibility into Zenpep prescribing volume, refill behavior, contribution, and claim status. Use the buttons to switch between Top 30 and Top 50 HCPs.'"
                 }
               }
             }

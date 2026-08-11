@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "476429d5db1cd62ec798",
   "position": {
-    "x": 3.110957352314021,
-    "y": 0,
+    "x": 0,
+    "y": 2.6246719160104988,
     "z": 1000,
-    "height": 522.64083518875555,
-    "width": 1474.5937849968461,
-    "tabOrder": 2000
+    "height": 517.06036745406823,
+    "width": 1482.9396325459318,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "HCP_FULL_NAME"
+                  "Property": "PRACTITIONER_ID_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -950,7 +950,7 @@
             "styleValues": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -964,7 +964,14 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'Center'"
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -975,20 +982,6 @@
         }
       ],
       "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "255.65985301816872D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
-          }
-        },
         {
           "properties": {
             "value": {
@@ -1022,7 +1015,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "215.8561412276486D"
+                  "Value": "189.3539228531518D"
                 }
               }
             }
@@ -1036,7 +1029,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "228.295154463702D"
+                  "Value": "196.38870847152094D"
                 }
               }
             }
@@ -1050,7 +1043,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "208.65284066955982D"
+                  "Value": "190.36628109040228D"
                 }
               }
             }
@@ -1298,7 +1291,91 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "63520ad4b6080010d69a",
+        "name": "fcddab20110069710974",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "SPECIALTY_DESCRIPTION"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "33f8651127dad02daab8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "TERRITORY_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "368a13ac5901100e106a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rolling 3M - Current"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2438782ca96bbd10660a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rolling 3M - Previous"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7f95fea873ae2aaee58c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rolling 3M - Change Display"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "db5a4d5e9566419cc813",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3cc881596c7d075ed951",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1328,16 +1405,6 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "HCP_FULL_NAME"
-                          }
-                        },
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "g"
-                              }
-                            },
                             "Property": "SPECIALTY_DESCRIPTION"
                           }
                         },
@@ -1349,6 +1416,16 @@
                               }
                             },
                             "Property": "TERRITORY_NAME"
+                          }
+                        },
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID_NAME"
                           }
                         }
                       ],

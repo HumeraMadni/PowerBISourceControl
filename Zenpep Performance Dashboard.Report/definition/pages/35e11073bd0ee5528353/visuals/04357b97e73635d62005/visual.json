@@ -6,8 +6,7 @@
     "y": 0,
     "z": 39500,
     "height": 515.850144092219,
-    "width": 789.62536023054759,
-    "tabOrder": 21000
+    "width": 789.62536023054759
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,10 +22,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "HCP_FULL_NAME"
+                  "Property": "PRACTITIONER_ID_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -964,34 +963,6 @@
             "styleHeader": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
                   "Value": "true"
                 }
               }
@@ -1031,20 +1002,6 @@
         }
       ],
       "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "227.5470806630346D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
-          }
-        },
         {
           "properties": {
             "value": {
@@ -1092,7 +1049,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "275.97152742770044D"
+                  "Value": "212.04232480258474D"
                 }
               }
             }
@@ -1106,7 +1063,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "237.93458929199807D"
+                  "Value": "219.673409014338D"
                 }
               }
             }
@@ -1127,6 +1084,20 @@
           },
           "selector": {
             "metadata": "MEASURES_TABLE.HCP Priority Sort"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "309.10548460500405D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME"
           }
         }
       ]
@@ -1346,6 +1317,26 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'5a5f040a9ae6c1bcb057'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -1409,6 +1400,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -1473,8 +1465,63 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "4642b7e22b60d7874887",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "HCP Priority Sort"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "208b48073ebacda24600",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Flag Creon 24K Flag"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6b2c443d6eada32de220",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Creon 36K Flag"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fa11aaf0a80cdc6b6a0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID_NAME"
+          }
+        },
+        "type": "Categorical"
       }
     ]
-  },
-  "isHidden": true
+  }
 }
