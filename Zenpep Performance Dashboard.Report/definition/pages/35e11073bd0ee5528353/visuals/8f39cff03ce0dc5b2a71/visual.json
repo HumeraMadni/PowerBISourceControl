@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8f39cff03ce0dc5b2a71",
+  "position": {
+    "x": 679.92242919890839,
+    "y": 244.95677233429396,
+    "z": 40000,
+    "height": 502.79329608938548,
+    "width": 2306.1452513966478,
+    "tabOrder": 40000
+  },
+  "visualGroup": {
+    "displayName": "Prescribing behavior top 30/50",
+    "groupMode": "ScaleMode"
+  }
+}

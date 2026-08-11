@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "65ca34390d6500e3b4bc",
   "position": {
-    "x": 681.836600061802,
-    "y": 780.26864168367933,
+    "x": 1496.8477386008192,
+    "y": 775.4427815495219,
     "z": 31000,
-    "height": 522.64083518875555,
-    "width": 1480.8156997014742,
-    "tabOrder": 38000
+    "height": 521.46500640786678,
+    "width": 1486.0401737011744,
+    "tabOrder": 39000
   },
   "visualGroup": {
     "displayName": "HCP RX Comparisons",
