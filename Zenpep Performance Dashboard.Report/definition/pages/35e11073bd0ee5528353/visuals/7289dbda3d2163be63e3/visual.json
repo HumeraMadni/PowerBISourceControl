@@ -4,7 +4,7 @@
   "position": {
     "x": 1302.8985507246377,
     "y": 73.913043478260875,
-    "z": 7000,
+    "z": 8000,
     "height": 85.5072463768116,
     "width": 240.57971014492756,
     "tabOrder": 7000
@@ -197,5 +197,71 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "df4eda1d4e0079659a32",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_PLAN",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PAYMENT_TYPE"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      },
+      {
+        "name": "5d896f70900eb481e05c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_PLAN"
+              }
+            },
+            "Property": "PAYMENT_TYPE"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

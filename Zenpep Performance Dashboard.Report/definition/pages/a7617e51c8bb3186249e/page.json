@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "a7617e51c8bb3186249e",
+  "displayName": "Histogram",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "d1c28c74b88c9e3e9ac5",
+      "target": "66b7dc0458b9981673c5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "d1c28c74b88c9e3e9ac5",
+      "target": "33bec93e1b30ed385832",
+      "type": "DataFilter"
+    },
+    {
+      "source": "66b7dc0458b9981673c5",
+      "target": "33bec93e1b30ed385832",
+      "type": "DataFilter"
+    },
+    {
+      "source": "66b7dc0458b9981673c5",
+      "target": "d1c28c74b88c9e3e9ac5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "33bec93e1b30ed385832",
+      "target": "d1c28c74b88c9e3e9ac5",
+      "type": "DataFilter"
+    },
+    {
+      "source": "33bec93e1b30ed385832",
+      "target": "66b7dc0458b9981673c5",
+      "type": "DataFilter"
+    }
+  ]
+}

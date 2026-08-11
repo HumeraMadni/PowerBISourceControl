@@ -8245,16 +8245,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.484
 			          }
-			        },
-			        {
-			          "HCPs": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -14324,9 +14314,944 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measures_table.HCP_refill_legend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "HCP Refill Legend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "HCP refill legend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "legend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "refill legend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "hcp refill myth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp refill tale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp refill lore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp refill folklore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "hcp refill folktale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "refill myth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refill tale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refill lore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refill folklore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refill folktale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.tooltip_HCP_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Tooltip HCP Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tooltip HCP name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HCP": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tooltip HCP": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "HCP name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tooltip hcp nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "tooltip hcp title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "tooltip hcp label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "tooltip hcp tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hcp nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hcp title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hcp label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "hcp tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "measures_table_has_HCP_refill_legend": {
+			      "Binding": {
+			        "ConceptualEntity": "MEASURES_TABLE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measures_table": {
+			          "Target": {
+			            "Entity": "measures_table"
+			          }
+			        },
+			        "measures_table.HCP_refill_legend": {
+			          "Target": {
+			            "Entity": "measures_table.HCP_refill_legend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measures_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.HCP_refill_legend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_tables_have_HCP_refill_legend"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_HCP_conversion_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.HCP_conversion_icon": {
+			          "Target": {
+			            "Entity": "measures_table.HCP_conversion_icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.HCP_conversion_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_HCP_conversion_icon"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_HCP_conversion_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.HCP_conversion_flag": {
+			          "Target": {
+			            "Entity": "measures_table.HCP_conversion_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.HCP_conversion_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_HCP_conversion_flag"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_zenpep_contribution_": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.zenpep_contribution_": {
+			          "Target": {
+			            "Entity": "measures_table.zenpep_contribution_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.zenpep_contribution_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_zenpep_contribution_"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_high_priority_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.high_priority_territories": {
+			          "Target": {
+			            "Entity": "measures_table.high_priority_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_priority_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_high_priority_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_story_insight"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_story_insight"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_story_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.story_insight": {
+			          "Target": {
+			            "Entity": "measures_table.story_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_story_insight"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territories": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territories": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territories"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territory_share": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_share"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territory_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territory_share": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territory_share"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_metric": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.top_3_territory_metric": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_metric"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_metric"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_metric"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_top_3_territory_metric": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.top_3_territory_metric": {
+			          "Target": {
+			            "Entity": "measures_table.top_3_territory_metric"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.top_3_territory_metric"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_top_3_territory_metric"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_zenpep_retail_share": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.zenpep_retail_share": {
+			          "Target": {
+			            "Entity": "measures_table.zenpep_retail_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.zenpep_retail_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_zenpep_retail_share"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_selected_period": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.selected_period": {
+			          "Target": {
+			            "Entity": "measures_table.selected_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.selected_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_selected_period"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_execution_priority": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.execution_priority": {
+			          "Target": {
+			            "Entity": "measures_table.execution_priority"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.execution_priority"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_execution_priority"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_above_average_PERT_volume": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.above_average_PERT_volume": {
+			          "Target": {
+			            "Entity": "measures_table.above_average_PERT_volume"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.above_average_PERT_volume"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have__above_average_PERT_volume"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_PERT_volume_above_average": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.PERT_volume_above_average": {
+			          "Target": {
+			            "Entity": "measures_table.PERT_volume_above_average"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.PERT_volume_above_average"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PERT_volume_above_average"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_avg_district_RX": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.avg_district_RX": {
+			          "Target": {
+			            "Entity": "measures_table.avg_district_RX"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_district_RX"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_avg_district_RX"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_high_potential_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.high_potential_territories": {
+			          "Target": {
+			            "Entity": "measures_table.high_potential_territories"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_potential_territories"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_high_potential_territories"
+			        }
+			      ]
+			    },
 			    "gold_layer_final_status_has_measures_table_high_potential_territory_flag": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
@@ -15235,39 +16160,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_dates_have_month_years"
-			        }
-			      ]
-			    },
-			    "measures_table_has_show_top_n": {
-			      "Binding": {
-			        "ConceptualEntity": "MEASURES_TABLE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measures_table": {
-			          "Target": {
-			            "Entity": "measures_table"
-			          }
-			        },
-			        "measures_table.show_top_n": {
-			          "Target": {
-			            "Entity": "measures_table.show_top_n"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measures_table"
-			            },
-			            "Object": {
-			              "Role": "measures_table.show_top_n"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measures_tables_have_show_top_n"
 			        }
 			      ]
 			    },
@@ -18588,20 +19480,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_high_potential_territories": {
+			    "gold_layer_hcp_short_has_measures_table_tooltip_HCP_name": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "gold_layer_hcp_short": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "gold_layer_hcp_short"
 			          }
 			        },
-			        "measures_table.high_potential_territories": {
+			        "measures_table.tooltip_HCP_name": {
 			          "Target": {
-			            "Entity": "measures_table.high_potential_territories"
+			            "Entity": "measures_table.tooltip_HCP_name"
 			          }
 			        }
 			      },
@@ -18609,675 +19501,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "gold_layer_hcp_short"
 			            },
 			            "Object": {
-			              "Role": "measures_table.high_potential_territories"
+			              "Role": "measures_table.tooltip_HCP_name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_high_potential_territories"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_copay_bins": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "gold_layer_final_status.copay_bins": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status.copay_bins"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status.copay_bins"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_copay_bins"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_avg_district_RX": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.avg_district_RX": {
-			          "Target": {
-			            "Entity": "measures_table.avg_district_RX"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.avg_district_RX"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_avg_district_RX"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_PERT_volume_above_average": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.PERT_volume_above_average": {
-			          "Target": {
-			            "Entity": "measures_table.PERT_volume_above_average"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.PERT_volume_above_average"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_PERT_volume_above_average"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_above_average_PERT_volume": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.above_average_PERT_volume": {
-			          "Target": {
-			            "Entity": "measures_table.above_average_PERT_volume"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.above_average_PERT_volume"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have__above_average_PERT_volume"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_execution_priority": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.execution_priority": {
-			          "Target": {
-			            "Entity": "measures_table.execution_priority"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.execution_priority"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_execution_priority"
-			        }
-			      ]
-			    },
-			    "dim_date_has_measures_table_selected_period": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_DATE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "measures_table.selected_period": {
-			          "Target": {
-			            "Entity": "measures_table.selected_period"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "measures_table.selected_period"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_selected_period"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_zenpep_retail_share": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.zenpep_retail_share": {
-			          "Target": {
-			            "Entity": "measures_table.zenpep_retail_share"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.zenpep_retail_share"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_zenpep_retail_share"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_top_3_territory_metric": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.top_3_territory_metric": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territory_metric"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_metric"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_top_3_territory_metric"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_metric": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.top_3_territory_metric": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territory_metric"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_metric"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_metric"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_top_3_territory_share": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.top_3_territory_share": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territory_share"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_share"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_top_3_territory_share"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territory_share": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.top_3_territory_share": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territory_share"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_share"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_share"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_top_3_territories": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.top_3_territories": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territories"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_top_3_territories"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territories": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.top_3_territories": {
-			          "Target": {
-			            "Entity": "measures_table.top_3_territories"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territories"
-			        }
-			      ]
-			    },
-			    "dim_date_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_DATE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_story_insight"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_story_insight"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_story_insight"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_high_priority_territories": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.high_priority_territories": {
-			          "Target": {
-			            "Entity": "measures_table.high_priority_territories"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.high_priority_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_high_priority_territories"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_zenpep_contribution_": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.zenpep_contribution_": {
-			          "Target": {
-			            "Entity": "measures_table.zenpep_contribution_"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.zenpep_contribution_"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_zenpep_contribution_"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_HCP_conversion_flag": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.HCP_conversion_flag": {
-			          "Target": {
-			            "Entity": "measures_table.HCP_conversion_flag"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.HCP_conversion_flag"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_HCP_conversion_flag"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_HCP_conversion_icon": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.HCP_conversion_icon": {
-			          "Target": {
-			            "Entity": "measures_table.HCP_conversion_icon"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.HCP_conversion_icon"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_HCP_conversion_icon"
+			          "ID": "gold_layer_hcp_shorts_have_tooltip_HCP_name"
 			        }
 			      ]
 			    },

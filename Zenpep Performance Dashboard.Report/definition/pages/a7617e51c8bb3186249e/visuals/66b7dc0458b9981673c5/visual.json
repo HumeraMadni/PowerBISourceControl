@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "66b7dc0458b9981673c5",
+  "position": {
+    "x": 375,
+    "y": 51.666666666666671,
+    "z": 2000,
+    "height": 96.666666666666671,
+    "width": 213.33333333333334,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GOLD_LAYER_FINAL_STATUS"
+                    }
+                  },
+                  "Property": "PATIENT_OUT_OF_POCKET (bins)"
+                }
+              },
+              "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_OUT_OF_POCKET (bins)",
+              "nativeQueryRef": "PATIENT_OUT_OF_POCKET (bins)",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "15797.703821181794D"
+                }
+              }
+            },
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "g",
+                    "Entity": "GOLD_LAYER_FINAL_STATUS",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 4,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PATIENT_OUT_OF_POCKET (bins)"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "15797.703821181794D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

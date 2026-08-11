@@ -4,7 +4,7 @@
   "position": {
     "x": 524.63768115942037,
     "y": 73.913043478260875,
-    "z": 4000,
+    "z": 5000,
     "height": 85.5072463768116,
     "width": 240.57971014492756,
     "tabOrder": 4000
@@ -197,5 +197,71 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3dfbba8557e03009d481",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "TERRITORY_NAME"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      },
+      {
+        "name": "83d195ecd7dd06990e04",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "TERRITORY_NAME"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

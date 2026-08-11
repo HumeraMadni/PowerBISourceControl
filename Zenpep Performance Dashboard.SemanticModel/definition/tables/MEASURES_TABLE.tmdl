@@ -62,9 +62,12 @@ table MEASURES_TABLE
 
 	measure 'Creon 24K RX' =
 			
-			CALCULATE(
-			    [Total RX Count],
-			    'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 24k"
+			COALESCE(
+			    CALCULATE(
+			        [Total RX Count],
+			        'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 24k"
+			    ),
+			    0
 			)
 		formatString: 0.0
 		lineageTag: 6fbcd1ef-8100-42b4-987a-3b4cd6c970d3
@@ -102,9 +105,12 @@ table MEASURES_TABLE
 
 	measure 'Creon 36K RX' =
 			
-			CALCULATE(
-			    [Total RX Count],
-			    'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 36K"
+			COALESCE(
+			    CALCULATE(
+			        [Total RX Count],
+			        'GOLD_LAYER_DRUG'[NEW_DRUG_NAME] = "Creon 36K"
+			    ),
+			    0
 			)
 		lineageTag: d11597b8-59ff-47c5-a180-26d413461b53
 
@@ -336,9 +342,9 @@ table MEASURES_TABLE
 			    IF(
 			        ISBLANK(PreviousValue),
 			        BLANK(),
-			        Arrow &
 			        FORMAT(ABS(Change), "0")
 			        & " ("
+			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
 			        & ")"
 			    )
@@ -353,9 +359,9 @@ table MEASURES_TABLE
 			RETURN
 			    SWITCH(
 			        TRUE(),
-			        Change > 0, "#2E7D32",
-			        Change < 0, "#D64545",
-			        "#6B7280"
+			        Change > 0, "#4BBD87",
+			        Change < 0, "#DB3C50",
+			        "#CECECE"
 			    )
 		lineageTag: 004a90e5-0e01-4718-ad0e-adea7a018939
 
@@ -439,9 +445,9 @@ table MEASURES_TABLE
 			    IF(
 			        ISBLANK(PreviousValue),
 			        BLANK(),
-			        Arrow &
 			        FORMAT(ABS(Change), "0")
 			        & " ("
+			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
 			        & ")"
 			    )
@@ -455,9 +461,9 @@ table MEASURES_TABLE
 			RETURN
 			SWITCH(
 			    TRUE(),
-			    Change > 0, "#2E7D32",   -- Green
-			    Change < 0, "#D64545",   -- Red
-			    "#6B7280"                -- Grey
+			    Change > 0, "#4BBD87",
+			    Change < 0, "#DB3C50",
+			    "#CECECE"
 			)
 		lineageTag: 4995a286-fd02-4c1a-b455-30d8c7eec2ea
 
@@ -530,18 +536,18 @@ table MEASURES_TABLE
 			    )
 			
 			RETURN
-			IF(
-			    ISBLANK(PreviousValue),
-			    BLANK(),
-			    Arrow &
-			    FORMAT(ABS(Change), "0")
+			    IF(
+			        ISBLANK(PreviousValue),
+			        BLANK(),
+			        FORMAT(ABS(Change), "0")
 			        & " ("
+			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
 			        & ")"
-			)
+			    )
 		lineageTag: 059f4095-f8a9-4500-8a59-1622b5ac12e0
 
-	measure 'Rolling 12M - Change Color' =
+	measure 'Rolling 12M - Change Color' = ```
 			
 			VAR Change =
 			    [Rolling 12M - Current]
@@ -550,10 +556,11 @@ table MEASURES_TABLE
 			RETURN
 			SWITCH(
 			    TRUE(),
-			    Change > 0, "#2E7D32", --Green
-			    Change < 0, "#D64545", --Red
-			    "#6B7280" --Grey
+			    Change > 0, "#4BBD87", 
+			    Change < 0, "#DB3C50", 
+			    "#CECECE" 
 			)
+			```
 		lineageTag: 5ee5a44a-9850-4e19-9fb7-eac7e0e9b9c9
 
 	measure 'Average Copay' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_PAY])
@@ -835,6 +842,22 @@ table MEASURES_TABLE
 			    'GOLD_LAYER_HCP_SHORT'[HCP_FULL_NAME]
 			)
 		lineageTag: 7ce8e31e-b676-4bd6-8c59-7d1d846a2628
+
+	measure 'Average of PATIENT_PAY average per PATIENT_ID' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('GOLD_LAYER_FINAL_STATUS'[PATIENT_ID])),
+				CALCULATE(AVERAGE('GOLD_LAYER_FINAL_STATUS'[PATIENT_PAY]))
+			)
+		lineageTag: df000208-ee8d-499a-bf42-adabfa477c55
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171
