@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "04357b97e73635d62005",
   "position": {
-    "x": 2196.6375658528268,
-    "y": 778.14467277443316,
-    "z": 20000,
-    "height": 516.06122395804414,
-    "width": 788.952237674078,
+    "x": 0,
+    "y": 0,
+    "z": 39500,
+    "height": 515.850144092219,
+    "width": 789.62536023054759,
     "tabOrder": 21000
   },
   "visual": {
@@ -1184,7 +1184,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'HCPs with Potential for Zenpep Conversion'"
+                  "Value": "'HCP Conversion Potential'"
                 }
               }
             }
@@ -1350,6 +1350,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "514a9ce342190ae60c42",
   "filterConfig": {
     "filters": [
       {
@@ -1423,7 +1424,57 @@
             }
           ]
         }
+      },
+      {
+        "name": "0dc05eb3cbe3ac013987",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total RX Count"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "MEASURES_TABLE",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 4,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Total RX Count"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "300L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
-  }
+  },
+  "isHidden": true
 }

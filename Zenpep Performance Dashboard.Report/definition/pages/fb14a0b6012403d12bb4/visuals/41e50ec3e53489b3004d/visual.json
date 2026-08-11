@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "41e50ec3e53489b3004d",
   "position": {
-    "x": 101.79910251984811,
-    "y": 100.20849154297548,
+    "x": 0,
+    "y": 90.7093589240813,
     "z": 0,
-    "height": 571.029340697273,
-    "width": 828.7083189506385,
+    "height": 570.71304989734483,
+    "width": 1177.3318877021386,
     "tabOrder": 0
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "TERRITORY_ID"
+                  "Property": "DISTRICT_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID",
-              "nativeQueryRef": "TERRITORY_ID"
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
+              "nativeQueryRef": "DISTRICT_NAME"
             },
             {
               "field": {
@@ -84,11 +84,124 @@
               },
               "queryRef": "MEASURES_TABLE.High Potential Territory Flag",
               "nativeQueryRef": "High Potential Territory Flag"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "Avg District RX"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.Avg District RX",
+              "nativeQueryRef": "Avg District RX"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "PERT volume above average"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.PERT volume above average",
+              "nativeQueryRef": "PERT volume above average"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "% Above Average PERT Volume"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.% Above Average PERT Volume",
+              "nativeQueryRef": "% Above Average PERT Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "Execution Priority"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.Execution Priority",
+              "nativeQueryRef": "Execution Priority"
             }
           ]
         }
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ed3e5f3e87ea26d67c4d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "DISTRICT_NAME"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "g"
+                          }
+                        },
+                        "Property": "DISTRICT_NAME"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'FLORIDA'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

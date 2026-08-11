@@ -270,7 +270,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'inside'"
+                  "Value": "'outside'"
                 }
               }
             },
@@ -336,7 +336,7 @@
             "innerRadiusRatio": {
               "expr": {
                 "Literal": {
-                  "Value": "50L"
+                  "Value": "60L"
                 }
               }
             }
@@ -527,5 +527,39 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62ca066559b0b06c133d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

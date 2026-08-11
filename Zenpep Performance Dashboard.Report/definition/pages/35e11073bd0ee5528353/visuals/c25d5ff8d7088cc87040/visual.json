@@ -148,23 +148,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9ac50fd9cb794c7b0a87",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6a7b25968c81a4bde30b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Average OOP"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "9ac50fd9cb794c7b0a87"
 }
