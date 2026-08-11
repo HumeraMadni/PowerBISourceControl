@@ -836,6 +836,22 @@ table MEASURES_TABLE
 			)
 		lineageTag: 7ce8e31e-b676-4bd6-8c59-7d1d846a2628
 
+	measure 'Average of PATIENT_PAY average per PATIENT_ID' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('GOLD_LAYER_FINAL_STATUS'[PATIENT_ID])),
+				CALCULATE(AVERAGE('GOLD_LAYER_FINAL_STATUS'[PATIENT_PAY]))
+			)
+		lineageTag: df000208-ee8d-499a-bf42-adabfa477c55
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171
 		summarizeBy: none

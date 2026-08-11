@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "260de6dcbc80072d4954",
+  "name": "c2132c436611e69e3062",
   "position": {
-    "x": 784.05797101449286,
-    "y": 73.913043478260875,
-    "z": 6000,
-    "height": 85,
-    "width": 240,
-    "tabOrder": 5000
+    "x": 2706.666666666667,
+    "y": 1371.6666666666667,
+    "z": 41000,
+    "height": 100,
+    "width": 268.33333333333337,
+    "tabOrder": 41000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_HCP_SHORT"
+                      "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "SPECIALTY_DESCRIPTION"
+                  "Property": "PATIENT_PAY (bins)"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.SPECIALTY_DESCRIPTION",
-              "nativeQueryRef": "SPECIALTY",
-              "active": true,
-              "displayName": "SPECIALTY"
+              "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_PAY (bins)",
+              "nativeQueryRef": "PATIENT_PAY (bins)",
+              "active": true
             }
           ]
         }
@@ -42,8 +41,57 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Between'"
                 }
+              }
+            },
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "13598.74724290047D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "g",
+                    "Entity": "GOLD_LAYER_FINAL_STATUS",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 4,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PATIENT_PAY (bins)"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "13598.74724290047D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -52,10 +100,37 @@
       "header": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Select the Bins (cost bucket) '"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "date": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
                 }
               }
             },
@@ -63,19 +138,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
                 }
               }
             },
@@ -94,23 +156,10 @@
           }
         }
       ],
-      "selection": [
+      "slider": [
         {
           "properties": {
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "general": [
-        {
-          "properties": {
-            "selfFilterEnabled": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -195,6 +244,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "PATIENT_PAY (bins)",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

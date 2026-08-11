@@ -959,12 +959,6 @@
               "objects": {}
             }
           },
-          "902244023701031dac14": {
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {}
-            }
-          },
           "96e0318e0bd9ba84adc2": {
             "filters": {
               "byExpr": [
