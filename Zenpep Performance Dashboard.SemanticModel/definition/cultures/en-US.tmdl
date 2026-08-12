@@ -7186,6 +7186,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
 			          "region": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -7291,7 +7297,8 @@ cultureInfo en-US
 			            "Weight": 0.714
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "claim_status": {
 			      "Definition": {
@@ -8352,6 +8359,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Total RX": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -13763,128 +13780,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table.story_insight": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "MEASURES_TABLE",
-			          "ConceptualProperty": "Story Insight"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "story insight": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "insight": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "story awareness": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story intuition": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story perception": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story acumen": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story comprehension": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story discernment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "story perceptiveness": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "awareness": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "intuition": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "perception": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        }
-			      ]
-			    },
 			    "measures_table.high_priority_territories": {
 			      "Definition": {
 			        "Binding": {
@@ -14556,9 +14451,1138 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "gold_layer_final_status.PATIENT_PAY_bins": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PATIENT_PAY (bins)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PATIENT_PAY (bins)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PATIENT_PAY (bin)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "PATIENT_PAY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status.PATIENT_PAY_bin_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PATIENT_PAY Bin Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PATIENT_PAY bin label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "patient_pay bin sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "patient_pay bin tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "patient_pay bin decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "patient_pay bin name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status.PATIENT_OUT_OF_POCKET_bins": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PATIENT_OUT_OF_POCKET (bins)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PATIENT_OUT_OF_POCKET (bins)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PATIENT_OUT_OF_POCKET (bin)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "PATIENT_OUT_OF_POCKET": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status.PATIENT_OOP_bin_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PATIENT_OOP Bin Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PATIENT_OOP bin label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "patient_oop bin sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "patient_oop bin tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "patient_oop bin decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "patient_oop bin name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status.PLAN_PAY_bins": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PLAN_PAY (bins)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PLAN_PAY (bins)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PLAN_PAY (bin)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "PLAN_PAY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status.PLAN_PAY_bin_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "PLAN_PAY Bin Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PLAN_PAY bin label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "plan_pay bin sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "plan_pay bin tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "plan_pay bin decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "plan_pay bin name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy.district_id_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+			          "ConceptualProperty": "DISTRICT_ID_NAME"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district id name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DISTRICT_ID_NAME": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "district": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "id name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "district id nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "district id title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "district id label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "district id tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "id nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "id tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "district identification name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "district identity name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.average_of_PATIENT_PAY_average_per_PATIENT_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Average of PATIENT_PAY average per PATIENT_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average of PATIENT_PAY average per PATIENT_ID": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.execution_priority_icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Execution Priority Icon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "execution priority icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "priority icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "execution priority likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "priority likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Execution Priority": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.execution_priority_legend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Execution Priority Legend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "execution priority legend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "legend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "priority legend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "execution priority myth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority tale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority lore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority folklore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "execution priority folktale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "priority myth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority tale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority lore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority folklore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "priority folktale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.story_insights_HTML": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Story Insights HTML"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "story insights HTML": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HTML": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "insights HTML": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "gold_layer_final_status_has_measures_table_story_insights_HTML": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.story_insights_HTML": {
+			          "Target": {
+			            "Entity": "measures_table.story_insights_HTML"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insights_HTML"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_story_insights_HTML"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_story_insights_HTML": {
+			      "Binding": {
+			        "ConceptualEntity": "DIM_DATE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.story_insights_HTML": {
+			          "Target": {
+			            "Entity": "measures_table.story_insights_HTML"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.story_insights_HTML"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_story_insights_HTML"
+			        }
+			      ]
+			    },
+			    "measures_table_has_execution_priority_legend": {
+			      "Binding": {
+			        "ConceptualEntity": "MEASURES_TABLE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measures_table": {
+			          "Target": {
+			            "Entity": "measures_table"
+			          }
+			        },
+			        "measures_table.execution_priority_legend": {
+			          "Target": {
+			            "Entity": "measures_table.execution_priority_legend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measures_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.execution_priority_legend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_tables_have_execution_priority_legend"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_execution_priority_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.execution_priority_icon": {
+			          "Target": {
+			            "Entity": "measures_table.execution_priority_icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.execution_priority_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_execution_priority_icon"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_measures_table_average_of_PATIENT_PAY_average_per_PATIENT_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "measures_table.average_of_PATIENT_PAY_average_per_PATIENT_ID": {
+			          "Target": {
+			            "Entity": "measures_table.average_of_PATIENT_PAY_average_per_PATIENT_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "measures_table.average_of_PATIENT_PAY_average_per_PATIENT_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_average_of_PATIENT_PAY_average_per_PATIENT_ID"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_district_id_name": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "gold_layer_territory_hierarchy.district_id_name": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy.district_id_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_territory_hierarchy.district_id_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_have_district_id_names"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PLAN_PAY_bin_label": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PLAN_PAY_bin_label": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PLAN_PAY_bin_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PLAN_PAY_bin_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PLAN_PAY_bin_labels"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PLAN_PAY_bins": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PLAN_PAY_bins": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PLAN_PAY_bins"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PLAN_PAY_bins"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PLAN_PAY_bins"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PATIENT_OOP_bin_label": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PATIENT_OOP_bin_label": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PATIENT_OOP_bin_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PATIENT_OOP_bin_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PATIENT_OOP_bin_labels"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PATIENT_OUT_OF_POCKET_bins": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PATIENT_OUT_OF_POCKET_bins": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PATIENT_OUT_OF_POCKET_bins"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PATIENT_OUT_OF_POCKET_bins"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PATIENT_OUT_OF_POCKET_bins"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PATIENT_PAY_bin_label": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PATIENT_PAY_bin_label": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PATIENT_PAY_bin_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PATIENT_PAY_bin_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PATIENT_PAY_bin_labels"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_PATIENT_PAY_bins": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.PATIENT_PAY_bins": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.PATIENT_PAY_bins"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.PATIENT_PAY_bins"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_PATIENT_PAY_bins"
+			        }
+			      ]
+			    },
+			    "gold_layer_hcp_short_has_measures_table_tooltip_HCP_name": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_hcp_short": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short"
+			          }
+			        },
+			        "measures_table.tooltip_HCP_name": {
+			          "Target": {
+			            "Entity": "measures_table.tooltip_HCP_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_hcp_short"
+			            },
+			            "Object": {
+			              "Role": "measures_table.tooltip_HCP_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_hcp_shorts_have_tooltip_HCP_name"
+			        }
+			      ]
+			    },
 			    "measures_table_has_HCP_refill_legend": {
 			      "Binding": {
 			        "ConceptualEntity": "MEASURES_TABLE"
@@ -19258,6 +20282,51 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "gold_layer_territory_hierarchy_in_district_id_name": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "gold_layer_territory_hierarchy.district_id_name": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy.district_id_name"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "gold_layer_territory_hierarchy.district_id_name"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "gold_layer_territory_hierarchy"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "gold_layer_territory_hierarchy.district_id_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_territory_hierarchies_are_in_district_id_names"
+			        }
+			      ]
+			    },
 			    "gold_layer_territory_hierarchy_in_region_name": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
@@ -19480,20 +20549,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_hcp_short_has_measures_table_tooltip_HCP_name": {
+			    "gold_layer_territory_hierarchy_has_measures_table_story_insights_HTML": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_hcp_short": {
+			        "gold_layer_territory_hierarchy": {
 			          "Target": {
-			            "Entity": "gold_layer_hcp_short"
+			            "Entity": "gold_layer_territory_hierarchy"
 			          }
 			        },
-			        "measures_table.tooltip_HCP_name": {
+			        "measures_table.story_insights_HTML": {
 			          "Target": {
-			            "Entity": "measures_table.tooltip_HCP_name"
+			            "Entity": "measures_table.story_insights_HTML"
 			          }
 			        }
 			      },
@@ -19501,15 +20570,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "gold_layer_hcp_short"
+			              "Role": "gold_layer_territory_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "measures_table.tooltip_HCP_name"
+			              "Role": "measures_table.story_insights_HTML"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_hcp_shorts_have_tooltip_HCP_name"
+			          "ID": "gold_layer_territory_hierarchies_have_story_insights_HTML"
 			        }
 			      ]
 			    },

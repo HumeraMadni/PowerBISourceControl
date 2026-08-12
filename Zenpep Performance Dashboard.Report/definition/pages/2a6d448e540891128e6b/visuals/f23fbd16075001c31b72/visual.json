@@ -4,10 +4,10 @@
   "position": {
     "x": 2114.1029180541987,
     "y": 243.58796068618787,
-    "z": 22000,
+    "z": 17000,
     "height": 802.938092632249,
     "width": 757.82921102369562,
-    "tabOrder": 22000
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "barChart",
@@ -576,18 +576,13 @@
                   "expr": {
                     "FillRule": {
                       "Input": {
-                        "Aggregation": {
+                        "Measure": {
                           "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "GOLD_LAYER_REJECT_CODES_SHORT"
-                                }
-                              },
-                              "Property": "REJECT_DESCRIPTION"
+                            "SourceRef": {
+                              "Entity": "MEASURES_TABLE"
                             }
                           },
-                          "Function": 5
+                          "Property": "Rejected Claim Count"
                         }
                       },
                       "FillRule": {
@@ -595,7 +590,7 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#E8C84A'"
+                                "Value": "'#f3e7ad'"
                               }
                             }
                           },

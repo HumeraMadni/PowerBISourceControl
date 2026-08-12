@@ -1809,56 +1809,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7675571a59d2c3ea7db4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4787d20b58715283d379",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
-              }
-            },
-            "Property": "PLAN_PAY Bin Label"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1c6810889b623562182c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GOLD_LAYER_FINAL_STATUS"
-                  }
-                },
-                "Property": "PLAN_PAY Bin Label"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "46b434d550090738284b"
 }

@@ -6,7 +6,8 @@
     "y": 108.26131586052794,
     "z": 15000,
     "height": 45.108881608553311,
-    "width": 189.45730275592391
+    "width": 189.45730275592391,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -222,20 +223,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "75b39df396939202d482",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

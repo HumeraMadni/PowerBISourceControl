@@ -2,90 +2,79 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c51798d057e4b0039ad0",
   "position": {
-    "x": 685.65500045001033,
-    "y": 243.58796068618787,
-    "z": 8000,
-    "height": 802.938092632249,
-    "width": 1401.3825886390562,
-    "tabOrder": 8000
+    "x": 681.68715604510237,
+    "y": 248.12367748768094,
+    "z": 7000,
+    "height": 804.44308069690237,
+    "width": 1402.5517348514175,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "azureMap",
+    "visualType": "shapeMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                    }
+                  },
+                  "Property": "TERRITORY_NAME"
+                }
+              },
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
+              "nativeQueryRef": "TERRITORY_NAME"
+            }
+          ]
+        }
+      }
+    },
     "objects": {
-      "mapControls": [
+      "shape": [
         {
           "properties": {
-            "defaultStyle": {
+            "datasourceType": {
               "expr": {
                 "Literal": {
-                  "Value": "'road'"
+                  "Value": "'file_upload'"
                 }
               }
             },
-            "showStylePicker": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "map": {
+              "geoJson": {
+                "type": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'shared'"
+                    }
+                  }
+                },
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'usa.states.topo'"
+                    }
+                  }
+                },
+                "content": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "SharedResources",
+                      "PackageType": 2,
+                      "ItemName": "usa.states.topo"
+                    }
+                  }
                 }
               }
             },
-            "showNavigationControls": {
+            "projectionEnum": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showSelectionControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "bubbleLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "filledMap": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "mapTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "40L"
+                  "Value": "'albersUsa'"
                 }
               }
             }

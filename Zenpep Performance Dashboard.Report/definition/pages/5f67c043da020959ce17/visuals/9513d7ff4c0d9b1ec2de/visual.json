@@ -497,51 +497,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9e48b200733787a01060",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_DATE"
-              }
-            },
-            "Property": "Month Year"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a87689ea78b356898d7d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
-              }
-            },
-            "Property": "NEW_TO_PRODUCT"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2b237643e02c23598952",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Patients"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -610,7 +610,15 @@ table MEASURES_TABLE
 		formatString: 0
 		lineageTag: 12269f0b-b14f-4a34-9045-e2552689e3a8
 
-	measure 'Unique Payers' = DISTINCTCOUNT(GOLD_LAYER_PLAN[ADMIN_NAME])
+	measure 'Unique Payers' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(GOLD_LAYER_PLAN[ADMIN_NAME]),
+			    TREATAS(
+			        VALUES(GOLD_LAYER_FINAL_STATUS[PLAN_ID]),
+			        GOLD_LAYER_PLAN[PLAN_ID]
+			    )
+			)
 		formatString: 0
 		lineageTag: 225e028c-8e0d-4934-9f31-b799dfcc9827
 
@@ -682,7 +690,7 @@ table MEASURES_TABLE
 			        "High Priority",
 			        "Medium Priority"
 			    ),
-			    "NA"
+			    "Low Priority"
 			)
 		lineageTag: 57435313-2f18-4986-9b5c-806f0c8e8f8d
 
@@ -756,36 +764,20 @@ table MEASURES_TABLE
 			RETURN
 			    CONCATENATEX(
 			        TopTerritories,
-			        'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME],
+			        "(" &
+			        'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME] &
+			        ")",
 			        ", ",
 			        [Total Zenpep RX],
 			        DESC
 			    )
 		lineageTag: 794cea5f-d2dd-4deb-a72d-8d386dc0221d
 
-	measure 'Story Insight' =
-			
-			"For the selected period ("
-			    & [Selected Period]
-			    & "), Zenpep achieved a Retail Metric of "
-			    & FORMAT(
-			        DIVIDE([Total Zenpep RX], 1000000),
-			        "0.00"
-			    )
-			    & "M, representing "
-			    & FORMAT([Zenpep Retail Share], "0.0%")
-			    & " of the total Retail Metric. The strongest performance was driven by "
-			    & [Top 3 Territories]
-			    & ", which together accounted for "
-			    & FORMAT([Top 3 Territory Share], "0.0%")
-			    & " of the total Zenpep Retail Metric."
-		lineageTag: a1be4847-53f2-4183-ade4-bc04de207932
-
 	measure 'High Priority Territories' =
 			
 			COUNTROWS(
 			    FILTER(
-			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID]),
+			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
 			        [Execution Priority] = "High Priority"
 			    )
 			)
@@ -858,6 +850,68 @@ table MEASURES_TABLE
 				}
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Execution Priority Icon' =
+			
+			SWITCH(
+			    [Execution Priority],
+			    "High Priority", "🟢",
+			    "Medium Priority", "🟡",
+			    "Low Priority", "🔴",
+			    "⚪"
+			)
+		lineageTag: 4dcba2e1-ba09-4f87-bf9e-a52718f72919
+
+	measure 'Execution Priority Legend' =
+			
+			"Execution Priority" & UNICHAR(10) & UNICHAR(10) &
+			"🟢 High Priority" & UNICHAR(10) &
+			"🟡 Medium Priority" & UNICHAR(10) &
+			"🔴 Low Priority" & UNICHAR(10) &
+			"⚪ No data"
+		lineageTag: 6c26c2fb-ce48-46d9-8993-5fb285ed8ff5
+
+	measure 'Story Insights HTML' =
+			
+			VAR PeriodTxt =
+			    "<b>" & [Selected Period] & "</b>"
+			
+			VAR RetailMetricTxt =
+			    "<b>" &
+			    FORMAT(
+			        DIVIDE([Total Zenpep RX], 1000000),
+			        "0.00"
+			    ) &
+			    "M</b>"
+			
+			VAR RetailShareTxt =
+			    "<b>" &
+			    FORMAT([Zenpep Retail Share], "0.0%") &
+			    "</b>"
+			
+			VAR Top3Txt =
+			    "<b>" &
+			    [Top 3 Territories] &
+			    "</b>"
+			
+			VAR Top3ShareTxt =
+			    "<b>" &
+			    FORMAT([Top 3 Territory Share], "0.0%") &
+			    "</b>"
+			
+			RETURN
+			    "For the selected period (" &
+			    PeriodTxt &
+			    "), Zenpep achieved a Retail Metric of " &
+			    RetailMetricTxt &
+			    ", representing " &
+			    RetailShareTxt &
+			    " of the total Retail Metric. The strongest performance was driven by " &
+			    Top3Txt &
+			    ", which together accounted for " &
+			    Top3ShareTxt &
+			    " of the total Zenpep Retail Metric."
+		lineageTag: 87539bec-865f-49d2-89bb-0d2f42189e09
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171

@@ -612,51 +612,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "3ad1a6c37413aed8800d",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4f24439cd1286c880d50",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DIM_DATE"
-              }
-            },
-            "Property": "Month Year"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cb4260b5b556a57a004d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CLAIM_STATUS"
-              }
-            },
-            "Property": "CLAIM_STATUS"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "434cf11e780b88611e60",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  },
   "isHidden": true
 }
