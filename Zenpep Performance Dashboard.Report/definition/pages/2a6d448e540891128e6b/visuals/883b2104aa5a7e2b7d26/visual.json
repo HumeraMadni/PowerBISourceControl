@@ -641,7 +641,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
@@ -1020,6 +1020,34 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "dc110eb55856559e924d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "TERRITORY_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "076dab0721bc0927eaca",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Zenpep RX"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
