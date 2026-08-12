@@ -1,0 +1,42 @@
+table GOLD_LAYER_PDRP
+	lineageTag: bbe96394-48b4-4c08-8569-4834c7d75e49
+
+	column NPI
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d26b00c-5986-45f8-a177-ccb0efe1fbec
+		summarizeBy: none
+		sourceColumn: NPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column PDRP_FLAG
+		dataType: int64
+		lineageTag: 62044070-c244-48d3-897c-5cd2280e1722
+		summarizeBy: none
+		sourceColumn: PDRP_FLAG
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition GOLD_LAYER_PDRP = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_PDRP_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_PDRP",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_PDRP_Table,{{"NPI", Int64.Type}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Changed Type", {"NPI"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each ([NPI] <> null and [NPI] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

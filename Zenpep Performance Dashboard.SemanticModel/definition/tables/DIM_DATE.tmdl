@@ -1,0 +1,55 @@
+table DIM_DATE
+	lineageTag: 14a73168-2737-4cf0-97b8-4fa3ec29a1a2
+
+	column Date
+		formatString: Short Date
+		lineageTag: a2b5b9cb-11a3-4a35-8720-24a2543a8450
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DATE_KEY
+		formatString: 0
+		lineageTag: 486664e4-829d-4aaa-b3d9-2c2e631aa2d6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DATE_KEY]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year' =
+			
+			FORMAT('DIM_DATE'[DATE], "MMM-yy")
+		lineageTag: ef7cb3fc-b61a-48ca-9f98-a7ade7281f37
+		summarizeBy: none
+		sortByColumn: 'Month Year Sort'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Year Sort' =
+			
+			YEAR('DIM_DATE'[DATE]) * 100 + MONTH('DIM_DATE'[DATE])
+		formatString: 0
+		lineageTag: efc39202-29d4-46c8-a36a-8974fd42e569
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_DATE = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        MIN('GOLD_LAYER_FINAL_STATUS'[FINAL_TX]),
+				        MAX('GOLD_LAYER_FINAL_STATUS'[FINAL_TX])
+				    ),
+				    "DATE_KEY", YEAR([Date]) * 10000 + MONTH([Date]) * 100 + DAY([Date])
+				)
+
+	annotation PBI_Id = 50e9ba59faf34d20969e74af407551d7
+

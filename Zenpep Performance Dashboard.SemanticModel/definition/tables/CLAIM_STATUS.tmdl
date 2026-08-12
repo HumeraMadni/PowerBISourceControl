@@ -1,0 +1,36 @@
+table CLAIM_STATUS
+	lineageTag: 149ffaf3-32d9-448e-93a2-6a02c7cc4010
+
+	column CLAIM_STATUS_NUM
+		formatString: 0
+		lineageTag: f8126dff-94d8-4cf1-8568-d46bc08e3217
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CLAIM_STATUS_NUM]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CLAIM_STATUS
+		lineageTag: e04ff7f1-4c7a-4663-91e9-5ba039edc2ac
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [CLAIM_STATUS]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CLAIM_STATUS = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "CLAIM_STATUS_NUM", INTEGER,
+				    "CLAIM_STATUS", STRING,
+				    {
+				        {0, "REJECTED"},
+				        {1, "PAID"},
+				        {2, "REVERSED"}
+				    }
+				)
+
+	annotation PBI_Id = 4c0d8eeb381a4749b07f947442fdcbb2
+

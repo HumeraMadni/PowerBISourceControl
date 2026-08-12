@@ -1,0 +1,105 @@
+table GOLD_LAYER_HCP_SHORT
+	lineageTag: df95b65a-7933-4510-893a-94ca04ba00a2
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 62700865-9982-404c-b5cf-ea3c50022939
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPI
+		dataType: int64
+		formatString: 0
+		lineageTag: f70b683a-4277-47dd-8760-b408e8fc9707
+		summarizeBy: none
+		sourceColumn: NPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIRST_NAME
+		dataType: string
+		lineageTag: 21d1dd59-9643-4d2c-85f2-802fffc48c05
+		summarizeBy: none
+		sourceColumn: FIRST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_NAME
+		dataType: string
+		lineageTag: 5495dfca-a66b-4d17-aac7-43e15193802e
+		summarizeBy: none
+		sourceColumn: LAST_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZIP
+		dataType: string
+		lineageTag: eb33ccc6-6905-4642-9fd9-413494416950
+		summarizeBy: none
+		sourceColumn: ZIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZENPEP_TARGET
+		dataType: string
+		lineageTag: 04e19cc6-7657-42c2-acce-edd7e691a5a4
+		summarizeBy: none
+		sourceColumn: ZENPEP_TARGET
+
+		annotation SummarizationSetBy = Automatic
+
+	column SPECIALTY_DESCRIPTION
+		dataType: string
+		lineageTag: 6d2b7126-a1e1-4666-a3f3-ed8bd71d224f
+		summarizeBy: none
+		sourceColumn: SPECIALTY_DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column NO_CONTACT_FLAG
+		dataType: string
+		lineageTag: 23b61d94-fb3d-4ecd-900b-8c788d86eaaa
+		summarizeBy: none
+		sourceColumn: NO_CONTACT_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY_ID
+		dataType: string
+		lineageTag: 98acd33b-7d17-4dae-8ce7-58d3e6724815
+		summarizeBy: none
+		sourceColumn: TERRITORY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HCP_FULL_NAME = [FIRST_NAME] & " " & [LAST_NAME]
+		lineageTag: 68ca00f3-40ea-4d9f-b34c-85ce9dfab08f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID_NAME = [PRACTITIONER_ID] & " | " & [HCP_FULL_NAME]
+		lineageTag: 1846457b-8506-4316-b9fe-86e10c058593
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GOLD_LAYER_HCP_SHORT = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_HCP_SHORT_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_HCP_SHORT",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_HCP_SHORT_Table,{{"PRACTITIONER_ID", Int64.Type}, {"NPI", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "fcda69bd20a70054e717",
   "position": {
-    "x": 1591.1735205616851,
-    "y": 7.2216649949849554,
-    "z": 16000,
-    "height": 57.773319959879643,
-    "width": 796.79037111334,
-    "tabOrder": 24000
+    "x": 2172.3205448286258,
+    "y": 5.4037824498224518,
+    "z": 14000,
+    "height": 45.932150823490844,
+    "width": 813.269258698279,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -15,17 +15,17 @@
       "text": [
         {
           "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
             "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }
@@ -105,6 +105,19 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showHiddenPages": {
               "expr": {
                 "Literal": {
                   "Value": "false"

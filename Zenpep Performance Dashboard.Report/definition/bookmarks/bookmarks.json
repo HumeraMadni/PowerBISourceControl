@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "30b8a4004e67ae07be90",
+      "displayName": "Claims Trend Bookmark",
+      "children": [
+        "df02fbb80b8555b324cd",
+        "55a1857814de1d641337"
+      ]
+    },
+    {
+      "name": "587465000da35d11987b",
+      "displayName": "Plans-Payers Bookmark",
+      "children": [
+        "db16fa3e6693e5e33b2c",
+        "8436f9076d9075e038c8"
+      ]
+    },
+    {
+      "name": "a25308d9cbe806a6c0d1",
+      "displayName": "Top 30/50 Bookmark",
+      "children": [
+        "67579db3e9d13de1e201",
+        "f2627f569e1095027539"
+      ]
+    },
+    {
+      "name": "49da8d00dd3b18c5d01d",
+      "displayName": "High Conversion Potential Bookmark",
+      "children": [
+        "7b80e5ad67b84d0709e2",
+        "02d9eb388863aa834074"
+      ]
+    },
+    {
+      "name": "aa0b46e62a7907a32b62",
+      "displayName": "Rolling Bookmark",
+      "children": [
+        "93dba564a6280b0ea3ce",
+        "f228665ce1e089c6e765",
+        "60c987c09e65630184ba"
+      ]
+    },
+    {
+      "name": "1c7672d132090757dee8",
+      "displayName": "Cost Breakdown Bookmark",
+      "children": [
+        "f0d7143395e9d04d0bc2",
+        "785a180e9d0b30e3a45d",
+        "b4d7b4460e3c010dac1a"
+      ]
+    },
+    {
+      "name": "1a04543cbe2a33c44c41",
+      "displayName": "Cost Breakdown Plan View",
+      "children": [
+        "704adbac785abd651648",
+        "e418a9d3ea2eea7b527a",
+        "e3fc3309ecbb002a7300"
+      ]
+    }
+  ]
+}

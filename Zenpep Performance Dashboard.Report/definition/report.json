@@ -65,28 +65,58 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Abandonment__Icon9766816927933866.png",
-          "path": "Abandonment__Icon9766816927933866.png",
+          "name": "Abandonment01657496553672977.png",
+          "path": "Abandonment01657496553672977.png",
           "type": "Image"
         },
         {
-          "name": "Approval_Rate_Icon14663952131351832.png",
-          "path": "Approval_Rate_Icon14663952131351832.png",
+          "name": "Abandonment35381767437151335.png",
+          "path": "Abandonment35381767437151335.png",
           "type": "Image"
         },
         {
-          "name": "Average_Copay_Icon2673630802429916.png",
-          "path": "Average_Copay_Icon2673630802429916.png",
+          "name": "Abandonment6619391165021692.png",
+          "path": "Abandonment6619391165021692.png",
           "type": "Image"
         },
         {
-          "name": "Average_OOP_Icon26664623852072833.png",
-          "path": "Average_OOP_Icon26664623852072833.png",
+          "name": "Abandonment9617140725405938.png",
+          "path": "Abandonment9617140725405938.png",
           "type": "Image"
         },
         {
-          "name": "Claims_Icon5653181240218124.png",
-          "path": "Claims_Icon5653181240218124.png",
+          "name": "Approval43342669588672467.png",
+          "path": "Approval43342669588672467.png",
+          "type": "Image"
+        },
+        {
+          "name": "Approval4806107501470589.png",
+          "path": "Approval4806107501470589.png",
+          "type": "Image"
+        },
+        {
+          "name": "Approval6779597965810359.png",
+          "path": "Approval6779597965810359.png",
+          "type": "Image"
+        },
+        {
+          "name": "Approval7224340341671329.png",
+          "path": "Approval7224340341671329.png",
+          "type": "Image"
+        },
+        {
+          "name": "Claims6495274400305513.png",
+          "path": "Claims6495274400305513.png",
+          "type": "Image"
+        },
+        {
+          "name": "Claims7916621402557424.png",
+          "path": "Claims7916621402557424.png",
+          "type": "Image"
+        },
+        {
+          "name": "Claims9986784413485202.png",
+          "path": "Claims9986784413485202.png",
           "type": "Image"
         },
         {
@@ -100,8 +130,28 @@
           "type": "Image"
         },
         {
-          "name": "HCP_Icon7525702981108366.png",
-          "path": "HCP_Icon7525702981108366.png",
+          "name": "HCP_Tooltip_Icon6755058674270732.png",
+          "path": "HCP_Tooltip_Icon6755058674270732.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP14312092861719594.png",
+          "path": "HCP14312092861719594.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP16583866400140246.png",
+          "path": "HCP16583866400140246.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP7031807373023121.png",
+          "path": "HCP7031807373023121.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP9977600411442606.png",
+          "path": "HCP9977600411442606.png",
           "type": "Image"
         },
         {
@@ -110,18 +160,73 @@
           "type": "Image"
         },
         {
+          "name": "OOP010729025382669066.png",
+          "path": "OOP010729025382669066.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP12008225840669262.png",
+          "path": "OOP12008225840669262.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP19958537870530435.png",
+          "path": "OOP19958537870530435.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP45120323163917697.png",
+          "path": "OOP45120323163917697.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP6419986071222935.png",
+          "path": "OOP6419986071222935.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP6831603806070713.png",
+          "path": "OOP6831603806070713.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP9428370913589713.png",
+          "path": "OOP9428370913589713.png",
+          "type": "Image"
+        },
+        {
+          "name": "OOP9979876619044648.png",
+          "path": "OOP9979876619044648.png",
+          "type": "Image"
+        },
+        {
+          "name": "Patients17451066915837143.png",
+          "path": "Patients17451066915837143.png",
+          "type": "Image"
+        },
+        {
+          "name": "Patients6539760273010654.png",
+          "path": "Patients6539760273010654.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pills_Icon5714065669917348.png",
+          "path": "Pills_Icon5714065669917348.png",
+          "type": "Image"
+        },
+        {
           "name": "Precison8374010156316625.json",
           "path": "Precison8374010156316625.json",
           "type": "CustomTheme"
         },
         {
-          "name": "Total_Patients_Icon014116373457162101.png",
-          "path": "Total_Patients_Icon014116373457162101.png",
+          "name": "RX6282084446187017.png",
+          "path": "RX6282084446187017.png",
           "type": "Image"
         },
         {
-          "name": "Total_RX_Icon39244418955042804.png",
-          "path": "Total_RX_Icon39244418955042804.png",
+          "name": "RX9516460254878144.png",
+          "path": "RX9516460254878144.png",
           "type": "Image"
         }
       ]

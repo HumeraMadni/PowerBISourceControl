@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "65ca34390d6500e3b4bc",
+  "position": {
+    "x": 1498.5354050259643,
+    "y": 774.012112116771,
+    "z": 19000,
+    "height": 523,
+    "width": 1472.4409448818897,
+    "tabOrder": 35000
+  },
+  "visualGroup": {
+    "displayName": "HCP RX Comparisons",
+    "groupMode": "ScaleMode"
+  }
+}
