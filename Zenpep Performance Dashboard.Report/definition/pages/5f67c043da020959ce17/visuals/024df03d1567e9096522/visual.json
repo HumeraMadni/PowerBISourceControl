@@ -1471,7 +1471,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
@@ -1848,7 +1848,36 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "f84a2a590ba3d1a1c6c4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_PLAN"
+              }
+            },
+            "Property": "PLAN_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "34652210604863a7ca3b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -1058,7 +1058,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
@@ -1438,5 +1438,6 @@
         }
       }
     ]
-  }
+  },
+  "isHidden": true
 }
