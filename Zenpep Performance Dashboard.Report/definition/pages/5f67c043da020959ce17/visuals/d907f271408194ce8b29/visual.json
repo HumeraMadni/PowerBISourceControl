@@ -6,7 +6,8 @@
     "y": 99.861111111111114,
     "z": 41003,
     "height": 60,
-    "width": 166.66666666666666
+    "width": 166.66666666666666,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "card",
@@ -150,20 +151,6 @@
   "parentGroupName": "05d8529836c543124b80",
   "filterConfig": {
     "filters": [
-      {
-        "name": "aba3668a8c6b5982ea04",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Average Copay"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "5c9cf23178a7d922328d",
         "field": {

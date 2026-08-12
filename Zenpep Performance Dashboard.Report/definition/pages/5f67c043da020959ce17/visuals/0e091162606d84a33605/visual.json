@@ -6,7 +6,8 @@
     "y": 100,
     "z": 6000,
     "height": 64.444444444444443,
-    "width": 165.55555555555554
+    "width": 165.55555555555554,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -222,20 +223,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "ff02559b4ebbaa46c148",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Average OOP"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

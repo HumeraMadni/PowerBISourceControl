@@ -48,6 +48,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6865"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -57,6 +60,11 @@
           "name": "CY26SU07",
           "path": "BaseThemes/CY26SU07.json",
           "type": "BaseTheme"
+        },
+        {
+          "name": "usa.states.topo",
+          "path": "Shapemaps/usa.states.topo.json",
+          "type": "ShapeMap"
         }
       ]
     },
@@ -120,16 +128,6 @@
           "type": "Image"
         },
         {
-          "name": "Coverage_Payers_Icon2775370048270053.png",
-          "path": "Coverage_Payers_Icon2775370048270053.png",
-          "type": "Image"
-        },
-        {
-          "name": "HCP_Icon12124490594886206.png",
-          "path": "HCP_Icon12124490594886206.png",
-          "type": "Image"
-        },
-        {
           "name": "HCP_Tooltip_Icon6755058674270732.png",
           "path": "HCP_Tooltip_Icon6755058674270732.png",
           "type": "Image"
@@ -152,11 +150,6 @@
         {
           "name": "HCP9977600411442606.png",
           "path": "HCP9977600411442606.png",
-          "type": "Image"
-        },
-        {
-          "name": "High_Priority_Territory_Icon9527948564622044.png",
-          "path": "High_Priority_Territory_Icon9527948564622044.png",
           "type": "Image"
         },
         {
@@ -210,6 +203,26 @@
           "type": "Image"
         },
         {
+          "name": "Payers047068534762827796.png",
+          "path": "Payers047068534762827796.png",
+          "type": "Image"
+        },
+        {
+          "name": "Payers5994958198392637.png",
+          "path": "Payers5994958198392637.png",
+          "type": "Image"
+        },
+        {
+          "name": "Payers7330814261061838.png",
+          "path": "Payers7330814261061838.png",
+          "type": "Image"
+        },
+        {
+          "name": "Payers8940936352874693.png",
+          "path": "Payers8940936352874693.png",
+          "type": "Image"
+        },
+        {
           "name": "Pills_Icon5714065669917348.png",
           "path": "Pills_Icon5714065669917348.png",
           "type": "Image"
@@ -227,6 +240,26 @@
         {
           "name": "RX9516460254878144.png",
           "path": "RX9516460254878144.png",
+          "type": "Image"
+        },
+        {
+          "name": "Territory_2239295707627884.png",
+          "path": "Territory_2239295707627884.png",
+          "type": "Image"
+        },
+        {
+          "name": "Territory_4310529986912591.png",
+          "path": "Territory_4310529986912591.png",
+          "type": "Image"
+        },
+        {
+          "name": "Territory_8083309848377923.png",
+          "path": "Territory_8083309848377923.png",
+          "type": "Image"
+        },
+        {
+          "name": "Territory_9276213033395858.png",
+          "path": "Territory_9276213033395858.png",
           "type": "Image"
         }
       ]

@@ -6,7 +6,8 @@
     "y": 102.2881355932203,
     "z": 8500,
     "height": 57.627118644067785,
-    "width": 174.96720745598893
+    "width": 174.96720745598893,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "card",
@@ -222,20 +223,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "eeea20002580423776b9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Patients"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

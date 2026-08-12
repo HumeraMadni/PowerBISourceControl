@@ -1802,56 +1802,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9fd9936d0150ed098b95",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0bc3ba0e6049d220e776",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
-              }
-            },
-            "Property": "PATIENT_OOP Bin Label"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "85065138d0907584b353",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "GOLD_LAYER_FINAL_STATUS"
-                  }
-                },
-                "Property": "PATIENT_OOP Bin Label"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "46b434d550090738284b"
 }

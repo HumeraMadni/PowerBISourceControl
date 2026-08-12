@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f95303289724b9d03793",
   "position": {
-    "x": 697.35812514958741,
-    "y": 1044.7312736323408,
-    "z": 27000,
+    "x": 685.65500045001033,
+    "y": 1082.6131586052795,
+    "z": 18000,
     "height": 772.86550489321337,
-    "width": 2186.2771286278839,
-    "tabOrder": 27000
+    "width": 2183.2698698539803,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "tableEx",
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME",
-              "nativeQueryRef": "REGION_NAME"
+              "nativeQueryRef": "Region",
+              "displayName": "Region"
             },
             {
               "field": {
@@ -37,11 +38,12 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "DISTRICT_NAME"
+                  "Property": "DISTRICT_ID_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
-              "nativeQueryRef": "DISTRICT_NAME"
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME",
+              "nativeQueryRef": "District",
+              "displayName": "District"
             },
             {
               "field": {
@@ -51,25 +53,12 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "TERRITORY_ID"
+                  "Property": "TERRITORY_ID_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID",
-              "nativeQueryRef": "TERRITORY_ID"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "MEASURES_TABLE"
-                    }
-                  },
-                  "Property": "Total Zenpep RX"
-                }
-              },
-              "queryRef": "MEASURES_TABLE.Total Zenpep RX",
-              "nativeQueryRef": "Total Zenpep RX"
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME",
+              "nativeQueryRef": "Territory",
+              "displayName": "Territory"
             },
             {
               "field": {
@@ -83,7 +72,23 @@
                 }
               },
               "queryRef": "MEASURES_TABLE.Total RX Count",
-              "nativeQueryRef": "Total RX Count"
+              "nativeQueryRef": "Total RX",
+              "displayName": "Total RX"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "Total Zenpep RX"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.Total Zenpep RX",
+              "nativeQueryRef": "Zenpep RX",
+              "displayName": "Zenpep RX"
             },
             {
               "field": {
@@ -107,11 +112,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Execution Priority"
+                  "Property": "Execution Priority Icon"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Execution Priority",
-              "nativeQueryRef": "Execution Priority"
+              "queryRef": "MEASURES_TABLE.Execution Priority Icon",
+              "nativeQueryRef": "Execution Priority",
+              "displayName": "Execution Priority"
             }
           ]
         }
@@ -190,17 +196,17 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
             "fontFamily": {
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
                 }
               }
             }
@@ -345,6 +351,304 @@
             }
           }
         }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "124.77073503721655D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "401.38489152394015D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "386.12243706732215D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "295.66593152818723D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Total Zenpep RX"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "389.7029542523998D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.% Above Average PERT Volume"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "314.1297105613498D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Total RX Count"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "220.71790232928146D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Execution Priority Icon"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "dataBars": {
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#F0E199'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#F0E199'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'foreground'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Total RX Count"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "dataBars": {
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#f3e7ad'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#f3e7ad'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'foreground'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Total Zenpep RX"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.% Above Average PERT Volume"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Execution Priority Icon"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -361,7 +665,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Prescribing Behaviour by HCP'"
+                  "Value": "'Territory Performance Details'"
                 }
               }
             },
@@ -536,7 +840,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 20 HCPs by Claim Count'"
+                  "Value": "'Detailed view of RX volume, Zenpep prescribing, PERT utilization, and execution priority'"
                 }
               }
             },
@@ -573,57 +877,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "dd8574679c6056d42e8d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Execution Priority"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "MEASURES_TABLE",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 0,
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "m"
-                        }
-                      },
-                      "Property": "Execution Priority"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "'High Priority'"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
   }
 }
