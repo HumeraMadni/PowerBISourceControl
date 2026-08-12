@@ -5,8 +5,8 @@
     "x": 0,
     "y": 0,
     "z": 0,
-    "height": 521.19827363536911,
-    "width": 1486.0401737011744,
+    "height": 516.90676052530137,
+    "width": 1472.4409448818897,
     "tabOrder": 2000
   },
   "visual": {
@@ -1001,7 +1001,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "242.5900267419653D"
+                  "Value": "230.53323959100692D"
                 }
               }
             }
@@ -1290,90 +1290,6 @@
   "parentGroupName": "65ca34390d6500e3b4bc",
   "filterConfig": {
     "filters": [
-      {
-        "name": "e585ffa2a3bc6ab016d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "SPECIALTY_DESCRIPTION"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "32ab677890564a606104",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-              }
-            },
-            "Property": "TERRITORY_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0eb86bd538043e3ebbd7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 1M - Current"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6309473d2e3b0db05d5d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 1M - Previous"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "386fe4b48a4008734e15",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 1M - MoM Display"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6a773da91adde8d5bb1c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "PRACTITIONER_ID_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "b8c352c8a86ebc148dc5",
         "type": "Exclude",

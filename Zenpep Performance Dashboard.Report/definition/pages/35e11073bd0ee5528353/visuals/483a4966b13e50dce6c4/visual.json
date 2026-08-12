@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "483a4966b13e50dce6c4",
   "position": {
-    "x": 0,
-    "y": 0.26673277249762317,
+    "x": 3.0090270812437314,
+    "y": 5.2212804093464777,
     "z": 2000,
-    "height": 521.19827363536911,
-    "width": 1480.6363912513518,
+    "height": 517.77871959065362,
+    "width": 1465.3961885656972,
     "tabOrder": 1000
   },
   "visual": {
@@ -986,7 +986,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "294.2896968477867D"
+                  "Value": "279.2589427366681D"
                 }
               }
             }
@@ -1371,90 +1371,6 @@
           ]
         },
         "howCreated": "Exclude"
-      },
-      {
-        "name": "8ad4dd9dd831d0b83e44",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "SPECIALTY_DESCRIPTION"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dd248f7d28709e7de0b7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-              }
-            },
-            "Property": "TERRITORY_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "133efcd88c795a77112c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 12M - Current"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3761930167dbd13e507e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 12M - Previous"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "18df44954e5b06ac3200",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rolling 12M - Change Display"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fa6956e666201dc026d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "PRACTITIONER_ID_NAME"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   },

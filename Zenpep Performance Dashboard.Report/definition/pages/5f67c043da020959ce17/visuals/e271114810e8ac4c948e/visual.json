@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e271114810e8ac4c948e",
   "position": {
-    "x": 1.4606599501937967,
-    "y": 2.8001234305088785,
+    "x": 0,
+    "y": 0,
     "z": 27250,
-    "height": 704.59661047919326,
-    "width": 1420.4270219235304,
+    "height": 705.19360970183,
+    "width": 1418.2227039559025,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "hundredPercentStackedColumnChart",
+    "visualType": "ribbonChart",
     "query": {
       "queryState": {
         "Category": {
@@ -346,6 +346,39 @@
                   "Value": "false"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -579,5 +612,51 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "3ad1a6c37413aed8800d",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4f24439cd1286c880d50",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_DATE"
+              }
+            },
+            "Property": "Month Year"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cb4260b5b556a57a004d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CLAIM_STATUS"
+              }
+            },
+            "Property": "CLAIM_STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "434cf11e780b88611e60",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  },
   "isHidden": true
 }

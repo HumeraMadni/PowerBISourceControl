@@ -1,18 +1,6 @@
 table GOLD_LAYER_FINAL_STATUS
 	lineageTag: 6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a
 
-	measure 'Count Of Claims' = count(GOLD_LAYER_FINAL_STATUS[FINAL_CLAIM_ID])
-		formatString: 0
-		lineageTag: 3dcfa60e-1f45-4db3-bb42-915c0d57887c
-
-	column FINAL_CLAIM_ID
-		dataType: string
-		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
-		summarizeBy: none
-		sourceColumn: FINAL_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column PATIENT_ID
 		dataType: int64
 		formatString: 0
@@ -28,15 +16,6 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: c07abdf1-4055-4c9e-9bdb-abc2d488d4b3
 		summarizeBy: none
 		sourceColumn: DRUG_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column PRACTITIONER_ID
-		dataType: int64
-		formatString: 0
-		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
-		summarizeBy: none
-		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -72,18 +51,6 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column NEW_TO_PRODUCT
-		dataType: int64
-		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
-		summarizeBy: none
-		sourceColumn: NEW_TO_PRODUCT
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column EVENT_LENGTH
 		dataType: int64
 		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
@@ -95,6 +62,14 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column DAY_0_STATUS
 		dataType: string
@@ -112,11 +87,28 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
+	column DAY_0_REJECT_CODE
+		dataType: string
+		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
 	column FINAL_REJECT_CODE
 		dataType: string
 		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -158,6 +150,18 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column NEW_TO_PRODUCT
+		dataType: int64
+		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
+		summarizeBy: none
+		sourceColumn: NEW_TO_PRODUCT
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column PATIENT_PAY
 		dataType: double
 		lineageTag: 5cd89cd6-3fcb-4894-b1f0-228fdd12a766
@@ -179,6 +183,8 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"GOLD_LAYER_FINAL_STATUS","TableItemName":"PLAN_PAY (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
 
 	column SECONDARY_PLAN_PAY
 		dataType: double
@@ -218,14 +224,6 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: f72bb90e-d966-469e-a0bf-ca08ae74d03e
 		summarizeBy: sum
 		sourceColumn: RX_COUNT
-
-		annotation SummarizationSetBy = Automatic
-
-	column DAY_0_REJECT_CODE
-		dataType: string
-		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECT_CODE
 
 		annotation SummarizationSetBy = Automatic
 
@@ -333,6 +331,72 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PATIENT_OOP Bin Label' =
+			
+			VAR BinStart = GOLD_LAYER_FINAL_STATUS[PATIENT_OUT_OF_POCKET (bins)]
+			VAR BinEnd = BinStart + 1000
+			RETURN
+			    FORMAT(BinStart / 1000, "0") & "K - " &
+			    FORMAT(BinEnd / 1000, "0") & "K"
+		lineageTag: d87bc1e6-44f3-42e4-86f2-aecfdad4e4a7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PLAN_PAY (bins)' =
+			IF(
+				ISBLANK('GOLD_LAYER_FINAL_STATUS'[PLAN_PAY]),
+				BLANK(),
+				IF(
+					'GOLD_LAYER_FINAL_STATUS'[PLAN_PAY] >= 0,
+					ROUNDDOWN('GOLD_LAYER_FINAL_STATUS'[PLAN_PAY] / 1000, 0) * 1000,
+					ROUNDUP('GOLD_LAYER_FINAL_STATUS'[PLAN_PAY] / 1000, 0) * 1000
+				)
+			)
+		lineageTag: a5d99c46-c04a-4dbd-a274-403251a0b719
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "GOLD_LAYER_FINAL_STATUS"
+				          }
+				        },
+				        "Property": "PLAN_PAY"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 1000.0,
+				      "unit": 0
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"g","Entity":"GOLD_LAYER_FINAL_STATUS"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"PLAN_PAY"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"PLAN_PAY"}},"Size":1000.0}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PLAN_PAY Bin Label' =
+			
+			VAR BinStart = GOLD_LAYER_FINAL_STATUS[PLAN_PAY (bins)]
+			VAR BinEnd = BinStart + 1000
+			RETURN
+			    FORMAT(BinStart / 1000, "0") & "K - " &
+			    FORMAT(BinEnd / 1000, "0") & "K"
+		lineageTag: 33df6d3e-029c-48fb-b642-29365e7c3ba5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition GOLD_LAYER_FINAL_STATUS = m
 		mode: import

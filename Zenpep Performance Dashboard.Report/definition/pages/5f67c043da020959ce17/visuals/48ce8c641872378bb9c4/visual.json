@@ -4,10 +4,10 @@
   "position": {
     "x": 1708.5714285714287,
     "y": 255.71428571428572,
-    "z": 27000,
+    "z": 22000,
     "height": 51.428571428571431,
     "width": 370,
-    "tabOrder": 27000
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "bookmarkNavigator",
@@ -72,7 +72,14 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -93,7 +100,14 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

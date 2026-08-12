@@ -5,9 +5,9 @@
     "x": 0,
     "y": 0,
     "z": 40500,
-    "height": 502.79329608938548,
-    "width": 2306.1452513966478,
-    "tabOrder": 1000
+    "height": 510,
+    "width": 2286.8605817452358,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -1149,7 +1149,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "381.155105662749D"
+                  "Value": "370.6604342819482D"
                 }
               }
             }

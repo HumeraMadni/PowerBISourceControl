@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d4867f9018c2b9496481",
   "position": {
-    "x": 1943.3333333333335,
-    "y": 1333.3333333333335,
-    "z": 40000,
-    "height": 513.33333333333337,
-    "width": 1043.3333333333335,
-    "tabOrder": 40000
+    "x": 0,
+    "y": 0,
+    "z": 45500,
+    "height": 516.06122395804414,
+    "width": 1129.3905320128924,
+    "tabOrder": 37000
   },
   "visual": {
     "visualType": "columnChart",
@@ -29,24 +29,6 @@
               "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_PAY Bin Label",
               "nativeQueryRef": "PATIENT_PAY Bin Label",
               "active": true
-            }
-          ]
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GOLD_LAYER_FINAL_STATUS"
-                    }
-                  },
-                  "Property": "PATIENT_PAY Bin Label"
-                }
-              },
-              "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_PAY Bin Label",
-              "nativeQueryRef": "PATIENT_PAY Bin Label"
             }
           ]
         },
@@ -76,14 +58,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_FINAL_STATUS"
+                      "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Count Of Claims"
+                  "Property": "Total Claim Count"
                 }
               },
-              "queryRef": "GOLD_LAYER_FINAL_STATUS.Count Of Claims",
-              "nativeQueryRef": "Count Of Claims"
+              "queryRef": "MEASURES_TABLE.Total Claim Count",
+              "nativeQueryRef": "Total Claim Count"
             }
           ]
         },
@@ -94,14 +76,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_FINAL_STATUS"
+                      "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Count Of Claims"
+                  "Property": "Total Claim Count"
                 }
               },
-              "queryRef": "GOLD_LAYER_FINAL_STATUS.Count Of Claims",
-              "nativeQueryRef": "Count Of Claims"
+              "queryRef": "MEASURES_TABLE.Total Claim Count",
+              "nativeQueryRef": "Total Claim Count"
             }
           ]
         }
@@ -113,15 +95,16 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "GOLD_LAYER_FINAL_STATUS"
+                    "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Count Of Claims"
+                "Property": "Total Claim Count"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -149,13 +132,6 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -172,6 +148,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -219,7 +202,7 @@
             "enableBackground": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -618,8 +601,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#F4A261'"
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
                     }
                   }
                 }
@@ -660,7 +644,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
+                      "ColorId": 8,
                       "Percent": 0
                     }
                   }
@@ -694,6 +678,623 @@
               }
             ]
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "roles": [
+                  "Series"
+                ]
+              }
+            ],
+            "hierarchyMatching": 1
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'2K - 3K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'4K - 5K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'6K - 7K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'8K - 9K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'10K - 11K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'14K - 15K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'22K - 23K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'16K - 17K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'18K - 19K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'32K - 33K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'24K - 25K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'44K - 45K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          }
+                        },
+                        "Property": "PATIENT_PAY Bin Label"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'80K - 81K'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "MEASURES_TABLE"
+                            }
+                          },
+                          "Property": "Total Claim Count"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#f8c7a0'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#F4A261'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
         }
       ],
       "totals": [
@@ -710,6 +1311,13 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -776,7 +1384,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cost Breakdown with Claims Frequency'"
+                  "Value": "'Copay Cost Breakdown'"
                 }
               }
             }
@@ -817,7 +1425,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Count of Claims Histogram showing OOP, Copay and Benefits '"
+                  "Value": "'Claim frequency across copay ranges'"
                 }
               }
             }
@@ -1023,7 +1631,7 @@
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'Number of claims falling under Copay bucket of {PATIENT_PAY Bin Label} is {Count Of Claims}'"
+                  "Value": "'{Total Claim Count} claims are within the {PATIENT_PAY Bin Label} Copay range.'"
                 }
               }
             },
@@ -1051,6 +1659,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "a85c23ec090ccaa50934",
   "filterConfig": {
     "filters": [
       {

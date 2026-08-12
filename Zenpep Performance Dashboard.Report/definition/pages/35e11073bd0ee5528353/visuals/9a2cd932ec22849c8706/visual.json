@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9a2cd932ec22849c8706",
   "position": {
-    "x": 1821.0746855901664,
-    "y": 72.9510630726031,
+    "x": 2215.5555555555557,
+    "y": 74.444444444444443,
     "z": 10000,
-    "height": 86.460519197159229,
-    "width": 240.46831901709913,
-    "tabOrder": 9000
+    "height": 88.888888888888886,
+    "width": 300,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -126,6 +126,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "PDRP_FLAG",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
@@ -177,20 +182,6 @@
           ]
         },
         "howCreated": "Exclude"
-      },
-      {
-        "name": "da3d486a29598280390a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_PDRP"
-              }
-            },
-            "Property": "PDRP_FLAG"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

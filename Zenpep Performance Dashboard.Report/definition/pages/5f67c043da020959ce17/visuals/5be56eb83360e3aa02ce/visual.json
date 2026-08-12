@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5be56eb83360e3aa02ce",
   "position": {
-    "x": 1784.3620902683624,
-    "y": 69.627001229720108,
-    "z": 17000,
-    "height": 87.272727272727266,
-    "width": 239.99999999999997,
+    "x": 2161.1111111111109,
+    "y": 70,
+    "z": 16000,
+    "height": 86.666666666666671,
+    "width": 290,
     "tabOrder": 17000
   },
   "visual": {
@@ -126,6 +126,63 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "PDRP_FLAG",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a20a5c5ee7dc082b20c5",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_PDRP",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PDRP_FLAG"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      }
+    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 1201.4409646771919,
     "y": 995.10653813480462,
-    "z": 30000,
+    "z": 25000,
     "height": 39.177422761212782,
     "width": 219.39356746279157,
-    "tabOrder": 30000
+    "tabOrder": 26000
   },
   "visual": {
     "visualType": "bookmarkNavigator",
