@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c2132c436611e69e3062",
   "position": {
-    "x": 2706.666666666667,
-    "y": 1371.6666666666667,
-    "z": 41000,
-    "height": 100,
-    "width": 268.33333333333337,
-    "tabOrder": 41000
+    "x": 834.88438849756892,
+    "y": 105.37375777153781,
+    "z": 48000,
+    "height": 99.969975321715367,
+    "width": 286.40046984058995,
+    "tabOrder": 38000
   },
   "visual": {
     "visualType": "slicer",
@@ -38,17 +38,120 @@
       "data": [
         {
           "properties": {
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "15000D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
                 }
               }
-            },
-            "numericEnd": {
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "13598.74724290047D"
+                  "Value": "'Select the Bins (cost bucket) '"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "numericInputStyle": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DAE6F4'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -85,85 +188,13 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "13598.74724290047D"
+                            "Value": "15000D"
                           }
                         }
                       }
                     }
                   }
                 ]
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Select the Bins (cost bucket) '"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "date": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "13D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "slider": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
               }
             }
           }
@@ -178,6 +209,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Copay bins Slicer'"
                 }
               }
             }
@@ -251,5 +289,6 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "a85c23ec090ccaa50934"
 }

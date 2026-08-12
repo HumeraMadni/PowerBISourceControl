@@ -6,7 +6,8 @@
     "y": 0,
     "z": 40000,
     "height": 516.06122395804414,
-    "width": 791.65412889898926
+    "width": 791.65412889898926,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -1392,62 +1393,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "cc648774e9484c022d00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "HCP Priority Sort"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "669a08b2b0aae3944e3d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "High Potential Flag Creon 24K Flag"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2ffb3e6049c05710a0e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "High Potential Creon 36K Flag"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c4572d20736b617e9220",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "PRACTITIONER_ID_NAME"
-          }
-        },
-        "type": "Categorical"
       },
       {
         "name": "437eddb1ddd3e75d6d6a",

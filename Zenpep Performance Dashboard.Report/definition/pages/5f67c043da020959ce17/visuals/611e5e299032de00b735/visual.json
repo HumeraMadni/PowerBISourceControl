@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "611e5e299032de00b735",
   "position": {
-    "x": 6.301174662694895,
-    "y": 69.361176334791239,
-    "z": 10000,
-    "height": 86.460519197159229,
-    "width": 240,
-    "tabOrder": 10000
+    "x": 5.5555555555555554,
+    "y": 70,
+    "z": 9000,
+    "height": 86.666666666666671,
+    "width": 290,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -121,6 +121,63 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "REGION_NAME",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8478f637dce591108480",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "REGION_NAME"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      }
+    ]
   }
 }

@@ -4,9 +4,10 @@
   "position": {
     "x": 683.57847990254015,
     "y": 775.4427815495219,
-    "z": 36000,
+    "z": 23000,
     "height": 516.06122395804414,
-    "width": 791.65412889898926
+    "width": 791.65412889898926,
+    "tabOrder": 34000
   },
   "visualGroup": {
     "displayName": "HCP Creon Potential",

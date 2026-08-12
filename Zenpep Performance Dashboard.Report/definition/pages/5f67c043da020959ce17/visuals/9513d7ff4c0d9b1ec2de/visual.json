@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9513d7ff4c0d9b1ec2de",
   "position": {
-    "x": 24.058070191228431,
-    "y": 1136.7438165355434,
+    "x": 24.444444444444443,
+    "y": 1155.5555555555554,
     "z": 7000,
-    "height": 613.480789876325,
-    "width": 610.47353110242148,
+    "height": 613.33333333333337,
+    "width": 610,
     "tabOrder": 7000
   },
   "visual": {
@@ -497,5 +497,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9e48b200733787a01060",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_DATE"
+              }
+            },
+            "Property": "Month Year"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a87689ea78b356898d7d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "NEW_TO_PRODUCT"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b237643e02c23598952",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Patients"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -41,6 +41,24 @@
         "f228665ce1e089c6e765",
         "60c987c09e65630184ba"
       ]
+    },
+    {
+      "name": "1c7672d132090757dee8",
+      "displayName": "Cost Breakdown Bookmark",
+      "children": [
+        "f0d7143395e9d04d0bc2",
+        "785a180e9d0b30e3a45d",
+        "b4d7b4460e3c010dac1a"
+      ]
+    },
+    {
+      "name": "1a04543cbe2a33c44c41",
+      "displayName": "Cost Breakdown Plan View",
+      "children": [
+        "704adbac785abd651648",
+        "e418a9d3ea2eea7b527a",
+        "e3fc3309ecbb002a7300"
+      ]
     }
   ]
 }

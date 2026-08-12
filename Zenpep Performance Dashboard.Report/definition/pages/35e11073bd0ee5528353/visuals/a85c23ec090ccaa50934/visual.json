@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "a85c23ec090ccaa50934",
+  "position": {
+    "x": 1833.5195530726257,
+    "y": 1320.8503442169447,
+    "z": 32000,
+    "height": 521.43387969753383,
+    "width": 1132.7901677067009,
+    "tabOrder": 31000
+  },
+  "visualGroup": {
+    "displayName": "Cost Breakdown Visuals",
+    "groupMode": "ScaleMode"
+  }
+}

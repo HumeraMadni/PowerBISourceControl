@@ -137,32 +137,6 @@
             "width": 234
           },
           "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 1768.6912121887633,
-            "y": 410.37931034482756
-          },
-          "nodeIndex": "BinSize",
-          "nodeLineageTag": "44fb8225-7cba-484b-8001-2e3bc009ae88",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 11
-        },
-        {
-          "location": {
-            "x": 1543.23612416056,
-            "y": 220.00263182703955
-          },
-          "nodeIndex": "Bin",
-          "nodeLineageTag": "d0f114ad-e7e0-4932-a802-c34305cb553a",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 12
         }
       ],
       "name": "All tables",
@@ -178,34 +152,7 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [
-        {
-          "location": {
-            "x": -27,
-            "y": 77
-          },
-          "nodeIndex": "Bin",
-          "nodeLineageTag": "d0f114ad-e7e0-4932-a802-c34305cb553a",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 324,
-            "y": 91
-          },
-          "nodeIndex": "BinSize",
-          "nodeLineageTag": "44fb8225-7cba-484b-8001-2e3bc009ae88",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 0
-        }
-      ],
+      "nodes": [],
       "name": "Layout 1",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,

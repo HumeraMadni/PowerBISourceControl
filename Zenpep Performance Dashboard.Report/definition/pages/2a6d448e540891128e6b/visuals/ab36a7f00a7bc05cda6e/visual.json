@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ab36a7f00a7bc05cda6e",
   "position": {
-    "x": 2532.9670707133223,
-    "y": 77.1159808826378,
+    "x": 2471.25,
+    "y": 76.25,
     "z": 19000,
-    "height": 85.714285714285722,
-    "width": 361.42857142857144,
+    "height": 87.5,
+    "width": 413.75,
     "tabOrder": 19000
   },
   "visual": {
@@ -59,7 +59,7 @@
             "startDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2025-01-01T00:00:00'"
+                  "Value": "datetime'2025-10-01T00:00:00'"
                 }
               }
             },
@@ -177,7 +177,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2025-01-01T00:00:00'"
+                                "Value": "datetime'2025-10-01T00:00:00'"
                               }
                             }
                           }
@@ -211,6 +211,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Date",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

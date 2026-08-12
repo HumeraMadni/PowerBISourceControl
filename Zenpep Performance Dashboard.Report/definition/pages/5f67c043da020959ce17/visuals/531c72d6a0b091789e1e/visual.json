@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "531c72d6a0b091789e1e",
   "position": {
-    "x": 1278.9075448138169,
-    "y": 69.627001229720108,
-    "z": 15000,
-    "height": 87.272727272727266,
-    "width": 239.99999999999997,
+    "x": 1543.3333333333333,
+    "y": 70,
+    "z": 14000,
+    "height": 86.666666666666671,
+    "width": 290,
     "tabOrder": 15000
   },
   "visual": {
@@ -196,6 +196,63 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "PAYMENT_TYPE",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "df4eda1d4e0079659a32",
+        "type": "Exclude",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_PLAN",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PAYMENT_TYPE"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      }
+    ]
   }
 }

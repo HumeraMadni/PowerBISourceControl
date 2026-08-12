@@ -3,11 +3,11 @@
   "name": "f9756090d4d25533e801",
   "position": {
     "x": 0,
-    "y": 0.10659324427853349,
+    "y": 0.10812108077985912,
     "z": 41000,
-    "height": 500.42549707123311,
-    "width": 2305.6683488990748,
-    "tabOrder": 0
+    "height": 507.598262529254,
+    "width": 2286.3876672476017,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -1149,7 +1149,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "381.155105662749D"
+                  "Value": "372.13147833977865D"
                 }
               }
             }
@@ -1558,146 +1558,6 @@
           ]
         },
         "howCreated": "Exclude"
-      },
-      {
-        "name": "38ab72850b640bce172a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "HCP Conversion Icon"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "09bdbb4a344dd4895c06",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Zenpep RX"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fa2780c2468c0a7beb0b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Zenpep New to Brand RX"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d4afef7594663e01341a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Zenpep Refill Volume"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0d146a8a3db483061105",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "% Refill"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "607e599914187ecd0ca8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0a1db086c72dc8506353",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Claim % (HCP)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ee00517a3e4b5b44ee16",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Paid %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c6578286e5032203d32a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Reversed Claim %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "282f8c46454558000448",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rejected Claim %"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
