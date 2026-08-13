@@ -18,14 +18,6 @@ table GOLD_LAYER_FINAL_STATUS
 
 		changedProperty = FormatString
 
-	column FINAL_CLAIM_ID
-		dataType: string
-		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
-		summarizeBy: none
-		sourceColumn: FINAL_CLAIM_ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column PATIENT_ID
 		dataType: int64
 		formatString: 0
@@ -41,15 +33,6 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: c07abdf1-4055-4c9e-9bdb-abc2d488d4b3
 		summarizeBy: none
 		sourceColumn: DRUG_ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column PRACTITIONER_ID
-		dataType: int64
-		formatString: 0
-		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
-		summarizeBy: none
-		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -85,18 +68,6 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column NEW_TO_PRODUCT
-		dataType: int64
-		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
-		summarizeBy: none
-		sourceColumn: NEW_TO_PRODUCT
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column EVENT_LENGTH
 		dataType: int64
 		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
@@ -108,6 +79,14 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
+
+		annotation SummarizationSetBy = Automatic
 
 	column DAY_0_STATUS
 		dataType: string
@@ -125,11 +104,28 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
+	column DAY_0_REJECT_CODE
+		dataType: string
+		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
 	column FINAL_REJECT_CODE
 		dataType: string
 		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -168,6 +164,18 @@ table GOLD_LAYER_FINAL_STATUS
 		sourceColumn: QUANTITY
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NEW_TO_PRODUCT
+		dataType: int64
+		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
+		summarizeBy: none
+		sourceColumn: NEW_TO_PRODUCT
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -233,14 +241,6 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: f72bb90e-d966-469e-a0bf-ca08ae74d03e
 		summarizeBy: sum
 		sourceColumn: RX_COUNT
-
-		annotation SummarizationSetBy = Automatic
-
-	column DAY_0_REJECT_CODE
-		dataType: string
-		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECT_CODE
 
 		annotation SummarizationSetBy = Automatic
 
