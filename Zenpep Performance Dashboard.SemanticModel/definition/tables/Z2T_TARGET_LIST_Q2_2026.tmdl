@@ -1,0 +1,131 @@
+table Z2T_TARGET_LIST_Q2_2026
+	lineageTag: 81d88b37-f7bb-4f04-acfb-57b1b167201a
+
+	column ZIP
+		dataType: string
+		lineageTag: 66a255b8-37a2-40e9-8517-b97edbceb0d5
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: ZIP
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		lineageTag: 93bc022b-8a9d-4999-b1eb-75675e592475
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: CITY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		lineageTag: 97ec1fd0-c78e-41e5-b3fd-742f596ca762
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: STATE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY_ID
+		dataType: string
+		lineageTag: aee5b925-c9e2-45fd-942e-44befc9106cc
+		summarizeBy: none
+		sourceColumn: TERRITORY_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TERRITORY
+		dataType: string
+		lineageTag: 77b08d93-25be-4c55-ba1d-a771a580042e
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: TERRITORY
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISTRICT_ID
+		dataType: string
+		lineageTag: f673b611-134a-4395-80d3-cf0f2470a99d
+		summarizeBy: none
+		sourceColumn: DISTRICT_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DISTRICT
+		dataType: string
+		lineageTag: 2ee8e765-2976-45d7-a3c5-ab413bdb6387
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: DISTRICT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION_ID
+		dataType: string
+		lineageTag: 39c29b82-df00-4016-b4e3-1d054dd9d7ae
+		summarizeBy: none
+		sourceColumn: REGION_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: string
+		lineageTag: 39235762-b098-420f-9ec6-7ead37689fc8
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: REGION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'DISTRICT Hierarchy'
+		lineageTag: 35f65f3d-a3a5-42dd-bff8-beb2a0ee45b8
+
+		level DISTRICT
+			lineageTag: ddd1f2b0-b83d-4202-a93b-50e2120daa10
+			column: DISTRICT
+
+		level STATE
+			lineageTag: bc4bcf82-6fe1-49d6-a7c1-015f97f34a54
+			column: STATE
+
+		level TERRITORY
+			lineageTag: d489016e-85c5-4790-ab77-3ef63edde9c5
+			column: TERRITORY
+
+		level CITY
+			lineageTag: 524e569a-077f-4905-a3a3-4d8b767a5e3f
+			column: CITY
+
+	partition Z2T_TARGET_LIST_Q2_2026 = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    MAPPING_Schema = RAW_NESTLE_Database{[Name="MAPPING",Kind="Schema"]}[Data],
+				    Z2T_TARGET_LIST_Q2_2026_Table = MAPPING_Schema{[Name="Z2T_TARGET_LIST_Q2_2026",Kind="Table"]}[Data]
+				in
+				    Z2T_TARGET_LIST_Q2_2026_Table
+
+	changedProperty = IsHidden
+

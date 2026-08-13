@@ -1020,20 +1020,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "b839440959e54c352e64",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Rejected Claim Count"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

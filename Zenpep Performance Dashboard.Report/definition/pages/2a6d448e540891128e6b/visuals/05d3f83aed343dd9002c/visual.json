@@ -1,162 +1,103 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "f23fbd16075001c31b72",
+  "name": "05d3f83aed343dd9002c",
   "position": {
-    "x": 2094,
-    "y": 244,
-    "z": 16000,
-    "height": 802,
-    "width": 758,
-    "tabOrder": 16000
+    "x": 682,
+    "y": 242,
+    "z": 27000,
+    "height": 804,
+    "width": 1364,
+    "tabOrder": 22000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "GOLD_LAYER_REJECT_CODES_SHORT"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Hierarchy": "DISTRICT Hierarchy"
                     }
                   },
-                  "Property": "REJECT_DESCRIPTION"
+                  "Level": "STATE"
                 }
               },
-              "queryRef": "GOLD_LAYER_REJECT_CODES_SHORT.REJECT_DESCRIPTION",
-              "nativeQueryRef": "REJECT_DESCRIPTION",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.STATE",
+              "nativeQueryRef": "DISTRICT Hierarchy STATE",
               "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Hierarchy": "DISTRICT Hierarchy"
+                    }
+                  },
+                  "Level": "TERRITORY"
+                }
+              },
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.TERRITORY",
+              "nativeQueryRef": "DISTRICT Hierarchy TERRITORY",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Hierarchy": "DISTRICT Hierarchy"
+                    }
+                  },
+                  "Level": "CITY"
+                }
+              },
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.CITY",
+              "nativeQueryRef": "DISTRICT Hierarchy CITY",
+              "active": false
             }
           ]
         },
-        "Y": {
+        "Size": {
           "projections": [
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "MEASURES_TABLE"
+                      "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "Rejected Claim Count"
+                  "Property": "Average PERT Volume"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Rejected Claim Count",
-              "nativeQueryRef": "Rejected Claim Count"
+              "queryRef": "GOLD_LAYER_FINAL_STATUS.Average PERT Volume",
+              "nativeQueryRef": "Average PERT Volume"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MEASURES_TABLE"
-                  }
-                },
-                "Property": "Rejected Claim Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "valueAxis": [
-        {
-          "properties": {
-            "gridlineShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#252423'"
-                    }
-                  }
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "50L"
-                }
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -625,71 +566,132 @@
               }
             ]
           }
+        },
+        {
+          "properties": {}
         }
       ],
-      "labels": [
+      "legend": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "13D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "legend": [
+      "mapControls": [
         {
           "properties": {
-            "showGradientLegend": {
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "2.26D"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "13.354529846967992D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-56.62083196640015D"
+                }
+              }
+            },
+            "pitch": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbleLayer": [
+        {
+          "properties": {
+            "bubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "9L"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "minBubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "7L"
+                }
+              }
+            },
+            "maxRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "30L"
+                }
+              }
+            },
+            "strokeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "autoStrokeColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "barChart": [
+        {
+          "properties": {
+            "showModern": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
+            }
+          }
+        }
+      ],
+      "heatMapLayer": [
+        {
+          "properties": {
             "show": {
               "expr": {
                 "Literal": {
@@ -708,14 +710,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Claim Rejection Drivers'"
+                  "Value": "'Average District PERT Volume'"
                 }
               }
             },
-            "fontSize": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "true"
                 }
               }
             },
@@ -727,6 +729,13 @@
                       "Value": "'#09124F'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             },
@@ -747,13 +756,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Top 10 rejection reasons by rejected claim count'"
                 }
               }
             },
@@ -784,6 +786,40 @@
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'High Potential Territories and High Priority Territories by State and District'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "spaceAboveDivider": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
             }
           }
         }
@@ -791,6 +827,13 @@
       "background": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "color": {
               "solid": {
                 "color": {
@@ -799,6 +842,13 @@
                       "Value": "'#F8F9FA'"
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -831,6 +881,13 @@
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -872,6 +929,20 @@
                 }
               }
             },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
             "themedBackground": {
               "solid": {
                 "color": {
@@ -895,17 +966,57 @@
                 }
               }
             },
-            "bold": {
+            "showChartSpecificTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "sentenceTemplate": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "showSentenceFormat": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "fontFamily": {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "showActionsInTooltips": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTooltipFieldsOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -918,76 +1029,91 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "495f995be1883486ee2d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_REJECT_CODES_SHORT"
-              }
-            },
-            "Property": "REJECT_DESCRIPTION"
-          }
-        },
-        "type": "TopN",
+        "name": "1deb170d44b31db71e0c",
+        "type": "Exclude",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_REJECT_CODES_SHORT",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "m",
-                        "Entity": "MEASURES_TABLE",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "g"
-                            }
-                          },
-                          "Property": "REJECT_DESCRIPTION"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "m"
+                                "Source": "z"
                               }
                             },
-                            "Property": "Rejected Claim Count"
+                            "Property": "STATE"
                           }
                         }
-                      }
-                    ],
-                    "Top": 10
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'HI'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'VI'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'IL'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
                   }
                 }
-              },
-              "Type": 2
+              }
+            }
+          ]
+        },
+        "howCreated": "Exclude"
+      },
+      {
+        "name": "1ea63f80045008945574",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                  }
+                },
+                "Hierarchy": "DISTRICT Hierarchy"
+              }
             },
+            "Level": "STATE"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
             {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_REJECT_CODES_SHORT",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -1000,23 +1126,28 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "g"
+                            "Source": "z"
                           }
                         },
-                        "Property": "REJECT_DESCRIPTION"
+                        "Property": "STATE"
                       }
                     }
                   ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'CA'"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }
           ]
-        }
+        },
+        "howCreated": "Drill"
       }
     ]
   }

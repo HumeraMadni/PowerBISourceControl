@@ -884,12 +884,6 @@
               }
             }
           },
-          "c51798d057e4b0039ad0": {
-            "singleVisual": {
-              "visualType": "azureMap",
-              "objects": {}
-            }
-          },
           "f23fbd16075001c31b72": {
             "filters": {
               "byExpr": [

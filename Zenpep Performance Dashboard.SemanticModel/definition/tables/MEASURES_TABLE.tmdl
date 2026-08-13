@@ -913,6 +913,17 @@ table MEASURES_TABLE
 			    " of the total Zenpep Retail Metric."
 		lineageTag: 87539bec-865f-49d2-89bb-0d2f42189e09
 
+	measure 'Low Potential Territories' =
+			
+			COUNTROWS(
+			    FILTER(
+			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
+			        [High Potential Territory Flag] = 0
+			    )
+			)
+		formatString: 0
+		lineageTag: 98b29850-86b1-4e54-afed-b898dbe80154
+
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171
 		summarizeBy: none
