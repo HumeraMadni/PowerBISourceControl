@@ -1,0 +1,50 @@
+table 'Drug Parameter'
+	lineageTag: b9943c62-c86b-457a-91b0-756bf5e3aba2
+
+	column 'Drug Parameter'
+		lineageTag: 4ff20854-c018-4cc9-b40c-a342dfffad06
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Drug Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Drug Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Drug Parameter Fields'
+		isHidden
+		lineageTag: 011d81bd-349c-47ea-aec5-571d6450a206
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Drug Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Drug Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: e609a18f-8cf9-44f1-a51c-3a7c86584233
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Drug Parameter' = calculated
+		mode: import
+		source =
+				{
+				    ("NEW DRUG NAME", NAMEOF('GOLD_LAYER_DRUG'[NEW_DRUG_NAME]), 0),
+				    ("NDC11", NAMEOF('GOLD_LAYER_DRUG'[NDC11]), 1),
+				    ("DRUG STRENGTH", NAMEOF('GOLD_LAYER_DRUG'[DRUG_STRENGTH]), 2),
+				    ("PACKAGE SIZE", NAMEOF('GOLD_LAYER_DRUG'[PACKAGE_SIZE]), 3)
+				}
+
+	annotation PBI_Id = 494db73527c24bbcacfdb58bcf13a2e7
+

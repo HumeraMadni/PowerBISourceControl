@@ -123,6 +123,26 @@
           "type": "Image"
         },
         {
+          "name": "Coverage_Payers_Icon2775370048270053.png",
+          "path": "Coverage_Payers_Icon2775370048270053.png",
+          "type": "Image"
+        },
+        {
+          "name": "Drug2257318880862328.png",
+          "path": "Drug2257318880862328.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP_(1)5712842818154357.png",
+          "path": "HCP_(1)5712842818154357.png",
+          "type": "Image"
+        },
+        {
+          "name": "HCP_Icon12124490594886206.png",
+          "path": "HCP_Icon12124490594886206.png",
+          "type": "Image"
+        },
+        {
           "name": "HCP_Tooltip_Icon6755058674270732.png",
           "path": "HCP_Tooltip_Icon6755058674270732.png",
           "type": "Image"
@@ -223,6 +243,11 @@
           "type": "Image"
         },
         {
+          "name": "Plan9360033390445589.png",
+          "path": "Plan9360033390445589.png",
+          "type": "Image"
+        },
+        {
           "name": "Precison8374010156316625.json",
           "path": "Precison8374010156316625.json",
           "type": "CustomTheme"
@@ -235,6 +260,11 @@
         {
           "name": "RX9516460254878144.png",
           "path": "RX9516460254878144.png",
+          "type": "Image"
+        },
+        {
+          "name": "Territory_14806250774386653.png",
+          "path": "Territory_14806250774386653.png",
           "type": "Image"
         },
         {
