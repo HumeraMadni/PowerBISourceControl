@@ -1,0 +1,52 @@
+table 'Plan Parameter'
+	lineageTag: 3b5d6c46-7456-4890-a3cd-d269b05c61cb
+
+	column 'Plan Parameter'
+		lineageTag: a01616af-9e71-4a77-816a-42bd957baaf0
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Plan Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Plan Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plan Parameter Fields'
+		isHidden
+		lineageTag: d0c3d66f-dbc8-4e12-8052-d2fb88e26370
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Plan Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Plan Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 16f96c78-22e5-4510-984d-3cc0e9124644
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Plan Parameter' = calculated
+		mode: import
+		source =
+				{
+				    ("PLAN NAME", NAMEOF('GOLD_LAYER_PLAN'[PLAN_NAME]), 0),
+				    ("PLAN TYPE", NAMEOF('GOLD_LAYER_PLAN'[PLAN_TYPE]), 1),
+				    ("ADMIN NAME", NAMEOF('GOLD_LAYER_PLAN'[ADMIN_NAME]), 2),
+				    ("ADMIN TYPE", NAMEOF('GOLD_LAYER_PLAN'[ADMIN_TYPE]), 3),
+				    ("PAYMENT TYPE", NAMEOF('GOLD_LAYER_PLAN'[PAYMENT_TYPE]), 4),
+				    ("REJECT DESC", NAMEOF('GOLD_LAYER_REJECT_CODES_SHORT'[REJECT_DESCRIPTION]), 5)
+				}
+
+	annotation PBI_Id = ba4f2f342ead43428a265e52bde7fef8
+

@@ -4,10 +4,10 @@
   "position": {
     "x": 24.058070191228431,
     "y": 598.4444960068073,
-    "z": 20000,
+    "z": 17000,
     "height": 538.29932052873619,
     "width": 610.47353110242148,
-    "tabOrder": 21000
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "donutChart",
@@ -647,20 +647,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "0602ce2b1aa97320097a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Patients"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -1,0 +1,55 @@
+table 'Measures Parameter'
+	lineageTag: cf4a00aa-de49-4b02-8779-4b2e63227a4e
+
+	column 'Measures Parameter'
+		lineageTag: 18415ca3-3b15-4c26-a633-34bfe34e5f93
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Measures Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Measures Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Measures Parameter Fields'
+		isHidden
+		lineageTag: d342a256-8742-4f64-b03e-d97f4c54b18f
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Measures Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Measures Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 4fb3289d-9e73-4127-9e41-b97b0db5eecc
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measures Parameter' = calculated
+		mode: import
+		source =
+				{
+				    ("TOTAL CLAIMS", NAMEOF('MEASURES_TABLE'[Total Claim Count]), 0),
+				    ("TOTAL PATIENTS", NAMEOF('MEASURES_TABLE'[Total Patients]), 1),
+				    ("TOTAL RX COUNT", NAMEOF('MEASURES_TABLE'[Total RX Count]), 2),
+				    ("TOTAL ZENPEP RX", NAMEOF('MEASURES_TABLE'[Total Zenpep RX]), 3),
+				    ("AVERAGE COPAY", NAMEOF('MEASURES_TABLE'[Average Copay]), 4),
+				    ("AVERAGE OOP", NAMEOF('MEASURES_TABLE'[Average OOP]), 5),
+				    ("PAID %", NAMEOF('MEASURES_TABLE'[Paid %]), 6),
+				    ("REJECTED CLAIM %", NAMEOF('MEASURES_TABLE'[Rejected Claim %]), 7),
+				    ("REVERSED CLAIM %", NAMEOF('MEASURES_TABLE'[Reversed Claim %]), 8)
+				}
+
+	annotation PBI_Id = 5cbf1f9b66744f8384348f80930a6884
+

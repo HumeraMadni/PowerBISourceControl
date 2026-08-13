@@ -1,0 +1,49 @@
+table 'Territory Parameter'
+	lineageTag: 8de01b99-6783-4082-af14-8a71917e73eb
+
+	column 'Territory Parameter'
+		lineageTag: f85b9f75-a55b-4c71-8313-9fa19887e2dd
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Territory Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Territory Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Territory Parameter Fields'
+		isHidden
+		lineageTag: 23046696-5433-40a7-9474-0203ea3c50de
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Territory Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Territory Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 82cce444-8b2a-4f6e-80e5-b7e333e8c481
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Territory Parameter' = calculated
+		mode: import
+		source =
+				{
+				    ("REGION NAME", NAMEOF('GOLD_LAYER_TERRITORY_HIERARCHY'[REGION_NAME]), 0),
+				    ("DISTRICT NAME", NAMEOF('GOLD_LAYER_TERRITORY_HIERARCHY'[DISTRICT_NAME]), 1),
+				    ("TERRITORY NAME", NAMEOF('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]), 2)
+				}
+
+	annotation PBI_Id = d7b2c81f7ff74955949a641d71b21c91
+

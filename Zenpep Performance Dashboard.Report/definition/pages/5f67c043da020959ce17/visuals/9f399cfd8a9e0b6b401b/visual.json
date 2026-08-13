@@ -159,23 +159,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "53fc9475730cbb15eec7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
-              }
-            },
-            "Property": "PATIENT_PAY (bins)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "46b434d550090738284b"
 }

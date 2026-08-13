@@ -2,17 +2,19 @@ table MEASURES_TABLE
 	lineageTag: c09d6498-62be-4501-b44e-a1a50a1260a3
 
 	measure 'Total Claim Count' = COUNTROWS(GOLD_LAYER_FINAL_STATUS)
-		formatString: 0
+		formatString: #,0
 		lineageTag: 00443d13-db92-4950-b6f2-d84a37d156e3
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Total RX Count' = SUM ( GOLD_LAYER_FINAL_STATUS[RX_COUNT] ) -- Includes Zenpep and creon both and NTP 0 as well as 1
-		formatString: 0.0
+		formatString: #,0
 		lineageTag: 6b092800-d158-4bc6-8ce1-52d1e8858035
 
+		annotation PBI_FormatHint = {"isDecimal":true}
+
 	measure 'Total Patients' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PATIENT_ID])
-		formatString: 0
+		formatString: #,0
 		lineageTag: b3aca921-9a59-4234-aa5a-135496fe9288
 
 		annotation PBI_FormatHint = {"isDecimal":true}
@@ -149,12 +151,17 @@ table MEASURES_TABLE
 
 	measure 'Total Zenpep RX' =
 			
-			CALCULATE(
-			    [Total RX Count],
-			    'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP"
+			COALESCE(
+			    CALCULATE(
+			        [Total RX Count],
+			        'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP"
+			    ),
+			    0
 			)
-		formatString: 0.0
+		formatString: #,0
 		lineageTag: 93b51893-c8f6-4171-ac0a-784c7b7b02c8
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Zenpep New to Brand RX' =
 			
@@ -564,9 +571,10 @@ table MEASURES_TABLE
 		lineageTag: 5ee5a44a-9850-4e19-9fb7-eac7e0e9b9c9
 
 	measure 'Average Copay' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_PAY])
+		formatString: 0
 		lineageTag: 205b7b33-50d3-4d53-b949-0f5f9283b758
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'HCP Priority Sort' =
 			
@@ -858,6 +866,60 @@ table MEASURES_TABLE
 				}
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Claim Count Display' =
+			
+			FORMAT([Total Claim Count], "#,##0")
+		lineageTag: 01bb1661-750b-44b7-b8bf-95eb51cf75c9
+
+	measure 'Total Patients Display' =
+			
+			FORMAT([Total Patients], "#,##0")
+		lineageTag: 6bac4ed3-b513-4936-bf09-38e26138d8d7
+
+	measure 'Total RX Count Display' =
+			
+			FORMAT([Total RX Count], "#,##0")
+		lineageTag: d2570e07-0950-4b05-a922-62be8773b1a7
+
+	measure 'Total Zenpep RX Display' =
+			
+			FORMAT([Total Zenpep RX], "#,##0")
+		lineageTag: b5b66e95-e559-470f-a32d-7fb056ca2d28
+
+	measure 'Paid % Display' =
+			
+			FORMAT(
+			    [Paid %],
+			    "0.00%"
+			)
+		lineageTag: 7d9df360-5ebe-47ed-bd95-156718fc14e2
+
+	measure 'Rejected Claim % Display' =
+			
+			FORMAT(
+			    [Rejected Claim %],
+			    "0.00%"
+			)
+		lineageTag: f4088595-4a5f-48d1-9ae6-8e352cb52213
+
+	measure 'Reversed Claim % Display' =
+			
+			FORMAT(
+			    [Reversed Claim %],
+			    "0.00%"
+			)
+		lineageTag: 4a399bcd-2860-4e83-abc2-aaa5c8f27f0b
+
+	measure 'Average Copay Display' =
+			
+			FORMAT([Average Copay], "#,##0")
+		lineageTag: 18dba199-b07d-44d4-a3f5-3799e97f2bd4
+
+	measure 'Average OOP Display' =
+			
+			FORMAT([Average OOP], "#,##0")
+		lineageTag: 1693028b-ad64-4a72-b47f-42d98d2c8b4f
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171

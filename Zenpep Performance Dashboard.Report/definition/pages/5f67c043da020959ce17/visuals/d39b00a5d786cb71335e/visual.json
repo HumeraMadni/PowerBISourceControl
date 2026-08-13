@@ -670,34 +670,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "3358164ece995cab9693",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "CLAIM_STATUS"
-              }
-            },
-            "Property": "CLAIM_STATUS"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a273affd3b0005909598",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
