@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "PRACTITIONER_ID_NAME"
+                  "Property": "HCP_FULL_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -1093,7 +1093,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "177.6719907122377D"
+                  "Value": "196.03470552637896D"
                 }
               }
             }
@@ -1107,7 +1107,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "152.077725035146D"
+                  "Value": "170.39884609264078D"
                 }
               }
             }
@@ -1121,7 +1121,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "179.35475338736794D"
+                  "Value": "197.6484976486159D"
                 }
               }
             }
@@ -1149,13 +1149,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "370.6604342819482D"
+                  "Value": "310.99185434359583D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME"
+            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
           }
         }
       ]
@@ -1174,7 +1174,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Prescribing Behaviour by HCP'"
+                  "Value": "'Prescribing Behavior by HCP'"
                 }
               }
             },
@@ -1411,7 +1411,127 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "436fcb90a1840701d5ea",
+        "name": "db68db673cda94b82c03",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "% Refill"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a64389fc793146988b96",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Claim % (HCP)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f567b521dbd97924d169",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1fd0b80d79dac07c315e",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_FINAL_STATUS",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "771b870806b9bd269383",
+        "ordinal": 4,
         "field": {
           "Column": {
             "Expression": {
@@ -1419,7 +1539,7 @@
                 "Entity": "GOLD_LAYER_HCP_SHORT"
               }
             },
-            "Property": "PRACTITIONER_ID_NAME"
+            "Property": "HCP_FULL_NAME"
           }
         },
         "type": "TopN",
@@ -1452,7 +1572,7 @@
                               "Source": "g"
                             }
                           },
-                          "Property": "PRACTITIONER_ID_NAME"
+                          "Property": "HCP_FULL_NAME"
                         },
                         "Name": "field"
                       }
@@ -1496,7 +1616,7 @@
                             "Source": "g"
                           }
                         },
-                        "Property": "PRACTITIONER_ID_NAME"
+                        "Property": "HCP_FULL_NAME"
                       }
                     }
                   ],
@@ -1512,54 +1632,112 @@
         }
       },
       {
-        "name": "e8d21fa3899e3cfa409f",
-        "type": "Exclude",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_HCP_SHORT",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "g"
-                              }
-                            },
-                            "Property": "PRACTITIONER_ID_NAME"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
+        "name": "c5d98ff47a61615be1a0",
+        "ordinal": 5,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
               }
-            }
-          ]
+            },
+            "Property": "HCP Conversion Icon"
+          }
         },
-        "howCreated": "Exclude"
+        "type": "Advanced"
+      },
+      {
+        "name": "361d3067a6c974aa8051",
+        "ordinal": 6,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Paid %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e68a2d00904dd1074eeb",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rejected Claim %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6953cfe3be23dbc74ec3",
+        "ordinal": 8,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Reversed Claim %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3658c9de65c270e64eeb",
+        "ordinal": 9,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Zenpep New to Brand RX"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "421f3667884d2b30550e",
+        "ordinal": 10,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Zenpep Refill Volume"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f5e6b70bea30a8b3e111",
+        "ordinal": 11,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Zenpep RX"
+          }
+        },
+        "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   },
   "isHidden": true
 }

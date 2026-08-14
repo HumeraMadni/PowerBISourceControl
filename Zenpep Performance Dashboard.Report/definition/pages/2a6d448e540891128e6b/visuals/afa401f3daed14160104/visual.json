@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "DISTRICT_ID_NAME"
+                  "Property": "DISTRICT_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
               "nativeQueryRef": "DISTRICT",
               "active": true,
               "displayName": "DISTRICT"

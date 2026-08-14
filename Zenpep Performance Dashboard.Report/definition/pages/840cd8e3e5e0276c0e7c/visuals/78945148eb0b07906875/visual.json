@@ -42,11 +42,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total Patients"
+                  "Property": "Total Claim Count"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total Patients",
-              "nativeQueryRef": "Total Patients"
+              "queryRef": "MEASURES_TABLE.Total Claim Count",
+              "nativeQueryRef": "Total Claim Count"
             }
           ]
         }
@@ -122,13 +122,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -152,6 +145,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -238,7 +238,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -281,13 +281,6 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -303,6 +296,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }

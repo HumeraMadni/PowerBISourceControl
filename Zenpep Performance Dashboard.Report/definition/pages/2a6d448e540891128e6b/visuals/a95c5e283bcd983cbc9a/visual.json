@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "TERRITORY_ID_NAME"
+                  "Property": "TERRITORY_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
               "nativeQueryRef": "TERRITORY",
               "active": true,
               "displayName": "TERRITORY"
@@ -206,7 +206,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1f451c86884720c3aeab",
+        "name": "b46a6d2aa7563e7e9e97",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -231,7 +231,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "TERRITORY_ID_NAME"
+                            "Property": "TERRITORY_NAME"
                           }
                         }
                       ],

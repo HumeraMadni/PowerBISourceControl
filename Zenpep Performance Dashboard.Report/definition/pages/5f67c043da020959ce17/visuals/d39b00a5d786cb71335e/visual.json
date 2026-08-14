@@ -670,6 +670,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "687cb0c3f2ad59c721ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CLAIM_STATUS"
+              }
+            },
+            "Property": "CLAIM_STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3c55b41e914ea7d983e6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

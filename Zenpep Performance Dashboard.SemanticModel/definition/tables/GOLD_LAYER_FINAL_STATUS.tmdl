@@ -59,7 +59,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column FINAL_TX
 		dataType: dateTime
-		formatString: Short Date
+		formatString: Long Date
 		lineageTag: 8fc2f83f-dd88-4bab-844d-14e193e48250
 		summarizeBy: none
 		sourceColumn: FINAL_TX

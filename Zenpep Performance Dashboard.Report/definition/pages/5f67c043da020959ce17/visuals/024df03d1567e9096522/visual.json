@@ -1699,7 +1699,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -1850,6 +1850,34 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "16f68b050ca8d6331bc2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_PLAN"
+              }
+            },
+            "Property": "PLAN_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e8abd3610dbcdbb22cc1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

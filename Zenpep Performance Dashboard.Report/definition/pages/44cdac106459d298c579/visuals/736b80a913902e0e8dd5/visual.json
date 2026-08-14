@@ -206,7 +206,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total Patients"
+                "Property": "Total Claim Count"
               }
             },
             "direction": "Descending"
@@ -1189,6 +1189,20 @@
           "selector": {
             "metadata": "MEASURES_TABLE.Average Copay"
           }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Average OOP"
+          }
         }
       ],
       "columnWidth": [
@@ -1461,51 +1475,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4e6111fbc0100a170510",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_DRUG"
-              }
-            },
-            "Property": "NEW_DRUG_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ebceb0a585173cdc2ebc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "HCP_FULL_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5b3e902a8d3e5e543471",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_HCP_SHORT"
-              }
-            },
-            "Property": "NPI"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

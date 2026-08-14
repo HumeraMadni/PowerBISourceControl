@@ -1802,5 +1802,56 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b"
+  "parentGroupName": "46b434d550090738284b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b791da5d71a0c445a1c4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PATIENT_PAY Bin Label"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4185fcc61f2c9a25a99e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GOLD_LAYER_FINAL_STATUS"
+                  }
+                },
+                "Property": "PATIENT_PAY Bin Label"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "99e835cf4e9a019f50bc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

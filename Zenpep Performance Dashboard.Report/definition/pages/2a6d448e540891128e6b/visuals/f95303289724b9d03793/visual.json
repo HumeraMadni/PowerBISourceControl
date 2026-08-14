@@ -38,10 +38,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "DISTRICT_ID_NAME"
+                  "Property": "DISTRICT_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
               "nativeQueryRef": "District",
               "displayName": "District"
             },
@@ -53,10 +53,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "TERRITORY_ID_NAME"
+                  "Property": "TERRITORY_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
               "nativeQueryRef": "Territory",
               "displayName": "Territory"
             },
@@ -98,11 +98,41 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
+                  "Property": "High Potential Territory Flag"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.High Potential Territory Flag",
+              "nativeQueryRef": "Territory Potential",
+              "displayName": "Territory Potential"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
                   "Property": "% Above Average PERT Volume"
                 }
               },
               "queryRef": "MEASURES_TABLE.% Above Average PERT Volume",
               "nativeQueryRef": "% Above Average PERT Volume"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "Execution Priority Sort"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.Execution Priority Sort",
+              "nativeQueryRef": "  ",
+              "displayName": "  "
             },
             {
               "field": {
@@ -132,10 +162,10 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "% Above Average PERT Volume"
+                "Property": "Execution Priority Sort"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -313,6 +343,99 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'IconOnly'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Middle'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "MEASURES_TABLE"
+                                  }
+                                },
+                                "Property": "High Potential Territory Flag"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'FlagLow'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 0,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "MEASURES_TABLE"
+                                  }
+                                },
+                                "Property": "High Potential Territory Flag"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'FlagGreenPatternFill'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "MEASURES_TABLE.High Potential Territory Flag"
+          }
         }
       ],
       "total": [
@@ -372,35 +495,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "401.38489152394015D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "386.12243706732215D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "295.66593152818723D"
+                  "Value": "245.5539129404484D"
                 }
               }
             }
@@ -428,7 +523,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "314.1297105613498D"
+                  "Value": "314.13802149714456D"
                 }
               }
             }
@@ -442,13 +537,69 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "220.71790232928146D"
+                  "Value": "192.33010146687457D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Execution Priority Icon"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "345.00022426356287D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "301.90432834364384D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Execution Priority Sort"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "222.05808200752108D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.High Potential Territory Flag"
           }
         }
       ],
@@ -647,6 +798,90 @@
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Execution Priority Icon"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.High Potential Territory Flag"
           }
         }
       ]
@@ -877,5 +1112,81 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ec2335c2809e64e14604",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "TERRITORY_NAME"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "TERRITORY_NAME"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

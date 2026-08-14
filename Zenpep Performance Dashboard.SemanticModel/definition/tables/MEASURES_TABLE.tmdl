@@ -7,11 +7,11 @@ table MEASURES_TABLE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Total RX Count' = SUM ( GOLD_LAYER_FINAL_STATUS[RX_COUNT] ) -- Includes Zenpep and creon both and NTP 0 as well as 1
-		formatString: #,0
+	measure 'Total RX Count' = SUM(GOLD_LAYER_FINAL_STATUS[RX_COUNT]) -- Includes Zenpep and creon both and NTP 0 as well as 1
+		formatString: #,##0.0
 		lineageTag: 6b092800-d158-4bc6-8ce1-52d1e8858035
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Total Patients' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PATIENT_ID])
 		formatString: #,0
@@ -19,12 +19,7 @@ table MEASURES_TABLE
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Paid Claim Count' =
-			
-			CALCULATE(
-			    [Total Claim Count],
-			    'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 1
-			)
+	measure 'Paid Claim Count' = CALCULATE([Total Claim Count],'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 1)
 		formatString: 0
 		lineageTag: 2b5945e5-fc20-453e-ad5d-dbb9ae38b66e
 
@@ -38,12 +33,13 @@ table MEASURES_TABLE
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: e080c59b-3463-4df8-844a-2889231ec0a6
 
-	measure 'Reversed Claim Count' =
+	measure 'Reversed Claim Count' = ```
 			
-			CALCULATE(
-			    [Total Claim Count],
-			    'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 2
-			)
+			    CALCULATE(
+			        [Total Claim Count],
+			        'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 2
+			    )
+			```
 		formatString: 0
 		lineageTag: 98e04e9d-645a-4419-acca-eece41b2c754
 
@@ -58,9 +54,10 @@ table MEASURES_TABLE
 		lineageTag: 516d9fa5-3cd4-4229-a471-05dc4a274639
 
 	measure 'Average OOP' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_OUT_OF_POCKET])
+		formatString: $#,##0.0
 		lineageTag: 34aac30a-0ae9-4107-b625-76d13122c9b1
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Creon 24K RX' =
 			
@@ -71,8 +68,10 @@ table MEASURES_TABLE
 			    ),
 			    0
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: 6fbcd1ef-8100-42b4-987a-3b4cd6c970d3
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Creon 24K %' =
 			
@@ -96,11 +95,14 @@ table MEASURES_TABLE
 
 	measure 'High Potential HCP Count' =
 			
-			COUNTROWS(
-			    FILTER(
-			        VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
-			        [High Potential Flag Creon 24K Flag] = 1
-			    )
+			COALESCE(
+			    COUNTROWS(
+			        FILTER(
+			            VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
+			            [High Potential Flag Creon 24K Flag] = 1
+			        )
+			    ),
+			    0
 			)
 		formatString: 0
 		lineageTag: 7ff92761-4133-4097-9267-d432464d63fd
@@ -114,9 +116,10 @@ table MEASURES_TABLE
 			    ),
 			    0
 			)
+		formatString: #,##0.0
 		lineageTag: d11597b8-59ff-47c5-a180-26d413461b53
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Creon 36K %' =
 			
@@ -140,28 +143,23 @@ table MEASURES_TABLE
 
 	measure 'High Potential Creon 36K HCP Count' =
 			
-			COUNTROWS(
-			    FILTER(
-			        VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
-			        [High Potential Creon 36K Flag] = 1
-			    )
+			COALESCE(
+			    COUNTROWS(
+			        FILTER(
+			            VALUES('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
+			            [High Potential Creon 36K Flag] = 1
+			        )
+			    ),
+			    0
 			)
 		formatString: 0
 		lineageTag: ba8e289d-8d55-4480-aabe-77c99291b647
 
-	measure 'Total Zenpep RX' =
-			
-			COALESCE(
-			    CALCULATE(
-			        [Total RX Count],
-			        'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP"
-			    ),
-			    0
-			)
-		formatString: #,0
+	measure 'Total Zenpep RX' = CALCULATE([Total RX Count],'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP" )
+		formatString: #,##0.0
 		lineageTag: 93b51893-c8f6-4171-ac0a-784c7b7b02c8
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Zenpep New to Brand RX' =
 			
@@ -244,9 +242,8 @@ table MEASURES_TABLE
 
 	measure 'Tooltip Title' =
 			
-			"Patients with " &
 			SELECTEDVALUE('CLAIM_STATUS'[CLAIM_STATUS]) &
-			" Claims"
+			" Claims Trend"
 		lineageTag: 12b991cb-6b7b-4118-b8df-79911ff1a0b7
 
 	measure 'Marker Color' =
@@ -297,8 +294,10 @@ table MEASURES_TABLE
 			        CurrentMonthEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: efee0523-8e95-49dc-abae-f0bd3612988a
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 1M - Previous' =
 			
@@ -320,8 +319,10 @@ table MEASURES_TABLE
 			        PreviousMonthEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: 5182ea9a-5f8b-4c42-8b81-5b0fbbeb436c
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 1M - MoM Display' =
 			
@@ -349,7 +350,7 @@ table MEASURES_TABLE
 			    IF(
 			        ISBLANK(PreviousValue),
 			        BLANK(),
-			        FORMAT(ABS(Change), "0")
+			        FORMAT(ABS(Change), "#,##0.0")
 			        & " ("
 			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
@@ -396,8 +397,10 @@ table MEASURES_TABLE
 			        CurrentMonthEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: a7955cca-310a-41cc-a33c-85ae169b0f36
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 3M - Previous' =
 			
@@ -423,8 +426,10 @@ table MEASURES_TABLE
 			        PreviousMonthEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: b508439d-16f3-47ff-a47a-a483d31f78a1
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 3M - Change Display' =
 			
@@ -452,7 +457,7 @@ table MEASURES_TABLE
 			    IF(
 			        ISBLANK(PreviousValue),
 			        BLANK(),
-			        FORMAT(ABS(Change), "0")
+			        FORMAT(ABS(Change), "#,##0.0")
 			        & " ("
 			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
@@ -494,8 +499,10 @@ table MEASURES_TABLE
 			        CurrentPeriodEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: 4bb24e82-223e-46ed-965b-807b1240f7a2
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 12M - Previous' =
 			
@@ -517,8 +524,10 @@ table MEASURES_TABLE
 			        PreviousPeriodEnd
 			    )
 			)
-		formatString: 0.0
+		formatString: #,##0.0
 		lineageTag: 5a43b338-7afe-4591-9b2e-a44fdb1f2b74
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Rolling 12M - Change Display' =
 			
@@ -546,7 +555,7 @@ table MEASURES_TABLE
 			    IF(
 			        ISBLANK(PreviousValue),
 			        BLANK(),
-			        FORMAT(ABS(Change), "0")
+			        FORMAT(ABS(Change), "#,##0.0")
 			        & " ("
 			        & Arrow
 			        & FORMAT(ABS(ChangePct), "0.0%")
@@ -571,10 +580,10 @@ table MEASURES_TABLE
 		lineageTag: 5ee5a44a-9850-4e19-9fb7-eac7e0e9b9c9
 
 	measure 'Average Copay' = AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_PAY])
-		formatString: 0
+		formatString: $#,##0.0
 		lineageTag: 205b7b33-50d3-4d53-b949-0f5f9283b758
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'HCP Priority Sort' =
 			
@@ -614,18 +623,26 @@ table MEASURES_TABLE
 			"🟡 No "
 		lineageTag: 8757ff3c-8eda-45ac-a476-aaaca5927fe2
 
-	measure 'Total HCPs' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PRACTITIONER_ID])
+	measure 'Total HCPs' =
+			
+			COALESCE(
+			    DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PRACTITIONER_ID]),
+			    0
+			)
 		formatString: 0
 		lineageTag: 12269f0b-b14f-4a34-9045-e2552689e3a8
 
 	measure 'Unique Payers' =
 			
-			CALCULATE(
-			    DISTINCTCOUNT(GOLD_LAYER_PLAN[ADMIN_NAME]),
-			    TREATAS(
-			        VALUES(GOLD_LAYER_FINAL_STATUS[PLAN_ID]),
-			        GOLD_LAYER_PLAN[PLAN_ID]
-			    )
+			COALESCE(
+			    CALCULATE(
+			        DISTINCTCOUNT(GOLD_LAYER_PLAN[ADMIN_NAME]),
+			        TREATAS(
+			            VALUES(GOLD_LAYER_FINAL_STATUS[PLAN_ID]),
+			            GOLD_LAYER_PLAN[PLAN_ID]
+			        )
+			    ),
+			    0
 			)
 		formatString: 0
 		lineageTag: 225e028c-8e0d-4934-9f31-b799dfcc9827
@@ -647,11 +664,14 @@ table MEASURES_TABLE
 
 	measure 'High Potential Territories' =
 			
-			COUNTROWS(
-			    FILTER(
-			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
-			        [High Potential Territory Flag] = 1
-			    )
+			COALESCE(
+			    COUNTROWS(
+			        FILTER(
+			            VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
+			            [High Potential Territory Flag] = 1
+			        )
+			    ),
+			    0
 			)
 		formatString: 0
 		lineageTag: 013c9459-9862-4236-8cb9-6fe1bdfa823d
@@ -698,7 +718,7 @@ table MEASURES_TABLE
 			        "High Priority",
 			        "Medium Priority"
 			    ),
-			    "Low Priority"
+			    "NA"
 			)
 		lineageTag: 57435313-2f18-4986-9b5c-806f0c8e8f8d
 
@@ -783,11 +803,14 @@ table MEASURES_TABLE
 
 	measure 'High Priority Territories' =
 			
-			COUNTROWS(
-			    FILTER(
-			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
-			        [Execution Priority] = "High Priority"
-			    )
+			COALESCE(
+			    COUNTROWS(
+			        FILTER(
+			            VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
+			            [Execution Priority] = "High Priority"
+			        )
+			    ),
+			    0
 			)
 		formatString: 0
 		lineageTag: fc1b7b49-1c99-4e6f-a490-62ee797eb6f5
@@ -832,8 +855,7 @@ table MEASURES_TABLE
 			
 			"High Refill Volume HCPs: " &
 			"🟢 Zenpep Contribution >70% and Refill >50%   " &
-			"🔴 Zenpep Contribution ≤70% or Refill ≤50%   " &
-			"⚪ No Data"
+			"🔴 Zenpep Contribution ≤70% or Refill ≤50% "
 		lineageTag: 8a5ed762-b73d-4ac0-a92c-9ffba85582b8
 
 	measure 'Tooltip HCP Name' =
@@ -843,94 +865,24 @@ table MEASURES_TABLE
 			)
 		lineageTag: 7ce8e31e-b676-4bd6-8c59-7d1d846a2628
 
-	measure 'Average of PATIENT_PAY average per PATIENT_ID' =
-			
-			AVERAGEX(
-				KEEPFILTERS(VALUES('GOLD_LAYER_FINAL_STATUS'[PATIENT_ID])),
-				CALCULATE(AVERAGE('GOLD_LAYER_FINAL_STATUS'[PATIENT_PAY]))
-			)
-		lineageTag: df000208-ee8d-499a-bf42-adabfa477c55
-
-		extendedProperty MeasureTemplate =
-				{
-				  "version": 0,
-				  "daxTemplateName": "AveragePerCategory"
-				}
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Total Claim Count Display' =
-			
-			FORMAT([Total Claim Count], "#,##0")
-		lineageTag: 01bb1661-750b-44b7-b8bf-95eb51cf75c9
-
-	measure 'Total Patients Display' =
-			
-			FORMAT([Total Patients], "#,##0")
-		lineageTag: 6bac4ed3-b513-4936-bf09-38e26138d8d7
-
-	measure 'Total RX Count Display' =
-			
-			FORMAT([Total RX Count], "#,##0")
-		lineageTag: d2570e07-0950-4b05-a922-62be8773b1a7
-
-	measure 'Total Zenpep RX Display' =
-			
-			FORMAT([Total Zenpep RX], "#,##0")
-		lineageTag: b5b66e95-e559-470f-a32d-7fb056ca2d28
-
-	measure 'Paid % Display' =
-			
-			FORMAT(
-			    [Paid %],
-			    "0.00%"
-			)
-		lineageTag: 7d9df360-5ebe-47ed-bd95-156718fc14e2
-
-	measure 'Rejected Claim % Display' =
-			
-			FORMAT(
-			    [Rejected Claim %],
-			    "0.00%"
-			)
-		lineageTag: f4088595-4a5f-48d1-9ae6-8e352cb52213
-
-	measure 'Reversed Claim % Display' =
-			
-			FORMAT(
-			    [Reversed Claim %],
-			    "0.00%"
-			)
-		lineageTag: 4a399bcd-2860-4e83-abc2-aaa5c8f27f0b
-
-	measure 'Average Copay Display' =
-			
-			FORMAT([Average Copay], "#,##0")
-		lineageTag: 18dba199-b07d-44d4-a3f5-3799e97f2bd4
-
-	measure 'Average OOP Display' =
-			
-			FORMAT([Average OOP], "#,##0")
-		lineageTag: 1693028b-ad64-4a72-b47f-42d98d2c8b4f
-
 	measure 'Execution Priority Icon' =
 			
 			SWITCH(
 			    [Execution Priority],
 			    "High Priority", "🟢",
 			    "Medium Priority", "🟡",
-			    "Low Priority", "🔴",
-			    "⚪"
+			    "NA", "🔴"
 			)
 		lineageTag: 4dcba2e1-ba09-4f87-bf9e-a52718f72919
 
-	measure 'Execution Priority Legend' =
+	measure 'Execution Priority Legend' = ```
 			
 			"Execution Priority" & UNICHAR(10) & UNICHAR(10) &
-			"🟢 High Priority" & UNICHAR(10) &
-			"🟡 Medium Priority" & UNICHAR(10) &
-			"🔴 Low Priority" & UNICHAR(10) &
-			"⚪ No data"
+			"🟢 High Priority: High Potential & >25% PERT volume" & UNICHAR(10) &
+			"🟡 Medium Priority: High Potential & ≤25% PERT volume" & UNICHAR(10) &
+			"🔴 NA"
+			
+			```
 		lineageTag: 6c26c2fb-ce48-46d9-8993-5fb285ed8ff5
 
 	measure 'Story Insights HTML' =
@@ -979,12 +931,93 @@ table MEASURES_TABLE
 			
 			COUNTROWS(
 			    FILTER(
-			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID_NAME]),
+			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
 			        [High Potential Territory Flag] = 0
 			    )
 			)
 		formatString: 0
 		lineageTag: 98b29850-86b1-4e54-afed-b898dbe80154
+
+	measure 'Total Claim Count Display' =
+			
+			FORMAT([Total Claim Count], "#,##0")
+		lineageTag: 01bb1661-750b-44b7-b8bf-95eb51cf75c9
+
+	measure 'Total Patients Display' =
+			
+			FORMAT([Total Patients], "#,##0")
+		lineageTag: 6bac4ed3-b513-4936-bf09-38e26138d8d7
+
+	measure 'Total RX Count Display' =
+			
+			FORMAT([Total RX Count], "#,##0")
+		lineageTag: d2570e07-0950-4b05-a922-62be8773b1a7
+
+	measure 'Total Zenpep RX Display' =
+			
+			FORMAT([Total Zenpep RX], "#,##0")
+		lineageTag: b5b66e95-e559-470f-a32d-7fb056ca2d28
+
+	measure 'Paid % Display' =
+			
+			FORMAT(
+			    [Paid %],
+			    "0.00%"
+			)
+		lineageTag: 7d9df360-5ebe-47ed-bd95-156718fc14e2
+
+	measure 'Rejected Claim % Display' =
+			
+			FORMAT(
+			    [Rejected Claim %],
+			    "0.00%"
+			)
+		lineageTag: f4088595-4a5f-48d1-9ae6-8e352cb52213
+
+	measure 'Reversed Claim % Display' =
+			
+			FORMAT(
+			    [Reversed Claim %],
+			    "0.00%"
+			)
+		lineageTag: 4a399bcd-2860-4e83-abc2-aaa5c8f27f0b
+
+	measure 'Average Copay Display' =
+			
+			FORMAT([Average Copay], "$#,##0.0")
+		lineageTag: 18dba199-b07d-44d4-a3f5-3799e97f2bd4
+
+	measure 'Average OOP Display' =
+			
+			FORMAT([Average OOP], "$#,##0.0")
+		lineageTag: 1693028b-ad64-4a72-b47f-42d98d2c8b4f
+
+	measure 'Execution Priority Sort' =
+			
+			VAR PriorityRank =
+			    SWITCH(
+			        [Execution Priority],
+			        "High Priority", 1,
+			        "Medium Priority", 2,
+			        "NA", 3,
+			        4
+			    )
+			
+			VAR PERTPercent =
+			    [% Above Average PERT Volume]
+			
+			RETURN
+			    PriorityRank * 100000
+			        - PERTPercent
+		formatString: 0
+		lineageTag: 0a517098-0ab8-4bd9-a6ee-c043b281e4ea
+
+	measure 'Territory Potential Legend' =
+			
+			"Territory Potential:" & UNICHAR(10) & UNICHAR(10) &
+			"🟢 High Potential" & UNICHAR(10) &
+			"🔴 Low Potential"
+		lineageTag: 8fb3dbfd-1ba5-4cd1-9ca5-4a528e3d1b2a
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "476429d5db1cd62ec798",
   "position": {
-    "x": 0,
-    "y": 7.8273982644619844,
+    "x": 2.8818443804034586,
+    "y": 2.8818443804034586,
     "z": 1000,
-    "height": 513.4052174577547,
-    "width": 1468.344217774131,
+    "height": 515,
+    "width": 1469.7406340057637,
     "tabOrder": 0
   },
   "visual": {
@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "PRACTITIONER_ID_NAME"
+                  "Property": "HCP_FULL_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -68,12 +68,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Rolling 3M - Current"
+                  "Property": "Rolling 3M - Previous"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Rolling 3M - Current",
-              "nativeQueryRef": "Current 3M RX",
-              "displayName": "Current 3M RX"
+              "queryRef": "MEASURES_TABLE.Rolling 3M - Previous",
+              "nativeQueryRef": "Previous 3M RX",
+              "displayName": "Previous 3M RX"
             },
             {
               "field": {
@@ -83,12 +83,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Rolling 3M - Previous"
+                  "Property": "Rolling 3M - Current"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Rolling 3M - Previous",
-              "nativeQueryRef": "Previous 3M RX",
-              "displayName": "Previous 3M RX"
+              "queryRef": "MEASURES_TABLE.Rolling 3M - Current",
+              "nativeQueryRef": "Current 3M RX",
+              "displayName": "Current 3M RX"
             },
             {
               "field": {
@@ -1015,7 +1015,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "189.3539228531518D"
+                  "Value": "222.28786315420572D"
                 }
               }
             }
@@ -1029,7 +1029,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "196.38870847152094D"
+                  "Value": "218.34146595599142D"
                 }
               }
             }
@@ -1050,6 +1050,20 @@
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Rolling 3M - Change Display"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "277.3279027842391D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
           }
         }
       ]
@@ -1291,7 +1305,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3cc881596c7d075ed951",
+        "name": "ef55c010e3380e9d080d",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1341,7 +1355,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "PRACTITIONER_ID_NAME"
+                            "Property": "HCP_FULL_NAME"
                           }
                         }
                       ],

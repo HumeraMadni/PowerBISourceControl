@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "101b28dd05400c6ac017",
   "position": {
-    "x": 2470,
-    "y": 70,
+    "x": 2470.9894332372719,
+    "y": 66.858789625360231,
     "z": 10000,
-    "height": 86,
-    "width": 422.22222222222223,
+    "height": 86.359269932756959,
+    "width": 420.65321805955813,
     "tabOrder": 10000
   },
   "visual": {
@@ -60,13 +60,6 @@
               "expr": {
                 "Literal": {
                   "Value": "datetime'2025-10-01T00:00:00'"
-                }
-              }
-            },
-            "endDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2025-12-31T00:00:00'"
                 }
               }
             },
@@ -161,45 +154,21 @@
                 "Where": [
                   {
                     "Condition": {
-                      "And": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
                         "Left": {
-                          "Comparison": {
-                            "ComparisonKind": 2,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "d"
-                                  }
-                                },
-                                "Property": "Date"
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
                               }
                             },
-                            "Right": {
-                              "Literal": {
-                                "Value": "datetime'2025-10-01T00:00:00'"
-                              }
-                            }
+                            "Property": "Date"
                           }
                         },
                         "Right": {
-                          "Comparison": {
-                            "ComparisonKind": 3,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "d"
-                                  }
-                                },
-                                "Property": "Date"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "datetime'2026-01-01T00:00:00'"
-                              }
-                            }
+                          "Literal": {
+                            "Value": "datetime'2025-10-01T00:00:00'"
                           }
                         }
                       }
