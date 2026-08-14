@@ -2840,6 +2840,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "zip": {
@@ -3293,9 +3296,6 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "territory id": {
@@ -3307,12 +3307,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "territory": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -3353,66 +3347,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "terrain": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "land": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ground": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "area": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "zone": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "place": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        }
 			      ]
@@ -6386,6 +6320,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "gold layer territory hierarchy": {
@@ -6527,6 +6464,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "territory id": {
@@ -6538,12 +6478,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "territory": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -6585,66 +6519,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "terrain": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "land": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ground": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "area": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "zone": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "place": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
@@ -6656,6 +6530,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "territory name": {
@@ -6667,12 +6544,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "territory": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -6716,66 +6587,17 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "terrain": {
-			            "Type": "Noun",
+			          "Territory": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "land": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ground": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "area": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "zone": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "place": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
+			            "Weight": 0.9
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "gold_layer_territory_hierarchy.district_id": {
 			      "Definition": {
@@ -6785,6 +6607,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "district id": {
@@ -6796,12 +6621,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "district": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -6843,66 +6662,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "constituency": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "locality": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "area": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "borough": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ward": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
@@ -6914,6 +6673,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "district name": {
@@ -6925,12 +6687,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "district": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -6972,68 +6728,9 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "constituency": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "locality": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "area": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "quarter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "borough": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ward": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "gold_layer_territory_hierarchy.region_id": {
 			      "Definition": {
@@ -7043,6 +6740,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "region id": {
@@ -7054,22 +6754,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "region": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
 			          }
 			        },
 			        {
@@ -7103,16 +6787,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
 			          "region credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -7123,43 +6797,63 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "area": {
+			          "location id": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.667
 			          }
 			        },
 			        {
-			          "section": {
+			          "province id": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.6
 			          }
 			        },
 			        {
-			          "zone": {
+			          "area id": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.582
 			          }
 			        },
 			        {
-			          "continent": {
+			          "section id": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "zone id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "continent id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -7172,6 +6866,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "region name": {
@@ -7183,38 +6880,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "country": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "region": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.818
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -7258,43 +6923,73 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "area": {
+			          "location name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.667
 			          }
 			        },
 			        {
-			          "section": {
+			          "province name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.6
 			          }
 			        },
 			        {
-			          "zone": {
+			          "area name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.582
 			          }
 			        },
 			        {
-			          "continent": {
+			          "section name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "zone name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "continent name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "REGION": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -12457,6 +12152,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "territory id name": {
@@ -12468,12 +12166,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "territory": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -12580,6 +12272,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "Territory": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -14715,6 +14417,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "district id name": {
@@ -14726,12 +14431,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "district": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -14838,6 +14537,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "DISTRICT": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -15151,9 +14860,2404 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "gold_layer_final_status.average_PERT_volume": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS",
+			          "ConceptualProperty": "Average PERT Volume"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average PERT volume": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "volume": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "PERT volume": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average pert capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average pert size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average pert bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "pert capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "pert size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "pert bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "average pert tome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pert tome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.low_potential_territories": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "MEASURES_TABLE",
+			          "ConceptualProperty": "Low Potential Territories"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "low potential territories": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "potential territories": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "low potential terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "low potential region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "potential terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "potential region": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "low potential land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "low potential ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "low potential area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "low potential zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "low potential place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "low potential space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "z 2t target list q 2 2026": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Z2T_TARGET_LIST_Q2_2026": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026.zip": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "ZIP"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zip": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "postal code": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "energy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vigor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vitality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dynamism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "spunk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "punch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "go": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pep": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fastener": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "zippo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "CITY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "STATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state or province": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.territory_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "TERRITORY_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "territory id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TERRITORY_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "territory identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "territory identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "territory identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "territory credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026.territory": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "TERRITORY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "territory": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "domain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.district_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "DISTRICT_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DISTRICT_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "district identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "district identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "district identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "district credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026.district": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "DISTRICT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "county": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "constituency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "borough": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "neighborhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "canton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.region_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "REGION_ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "region id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "REGION_ID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "region identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "region identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "region identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "region credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "location id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        },
+			        {
+			          "province id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "area id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "section id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "zone id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "continent id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026.region": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "REGION"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "region": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "ConceptualProperty": "Country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "nation hierarchy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "location hierarchy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "country ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "country grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "country order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "country pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy",
+			          "HierarchyLevel": "Country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy",
+			          "HierarchyLevel": "STATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy.territory": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy",
+			          "HierarchyLevel": "TERRITORY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "territory": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "terrain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "land": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "domain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy.city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy",
+			          "HierarchyLevel": "CITY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "z_2t_target_list_q_2_2026.country_hierarchy.district": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026",
+			          "Hierarchy": "Country Hierarchy",
+			          "HierarchyLevel": "DISTRICT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "district": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "constituency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "locality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "borough": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "neighborhood": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "canton": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
 			    }
 			  },
 			  "Relationships": {
+			    "gold_layer_hcp_short_has_gold_layer_territory_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_hcp_short": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short"
+			          }
+			        },
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        }
+			      }
+			    },
+			    "gold_layer_final_status_has_claim_status": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "claim_status": {
+			          "Target": {
+			            "Entity": "claim_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "claim_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_claim_statuses"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "claim_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "claim_statuses_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_gold_layer_reject_codes_short": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_reject_codes_short": {
+			          "Target": {
+			            "Entity": "gold_layer_reject_codes_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_reject_codes_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_gold_layer_reject_codes_shorts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_reject_codes_short"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_reject_codes_shorts_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_dim_date": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "dim_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_dim_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_gold_layer_plan": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_plan": {
+			          "Target": {
+			            "Entity": "gold_layer_plan"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_plan"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_gold_layer_plans"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_plan"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_plans_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_gold_layer_drug": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_drug": {
+			          "Target": {
+			            "Entity": "gold_layer_drug"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_drug"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_gold_layer_drugs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_drug"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_drugs_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_gold_layer_hcp_short": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_hcp_short": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short"
+			          },
+			          "Nouns": [
+			            {
+			              "practitioner": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_hcp_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_gold_layer_hcp_shorts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_hcp_short"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_hcp_shorts_have_gold_layer_final_statuses"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_country_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_country_hierarchies"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_countries"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Adjective": {
+			              "Role": "z_2t_target_list_q_2_2026.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_describe_z_2t_target_list_q_2_2026"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_region": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.region": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.region"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_regions"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Adjective": {
+			              "Role": "z_2t_target_list_q_2_2026.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "regions_describe_z_2t_target_list_q_2_2026"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_region_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.region_id": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.region_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.region_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_region_ids"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_district": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.district": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.district"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.district"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_districts"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_district_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.district_id": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.district_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.district_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_district_ids"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_territory": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.territory": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.territory"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_territories"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_territory_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.territory_id": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.territory_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.territory_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_territory_ids"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.state": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_states"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.city": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_cities"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_has_zip": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.zip": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.zip"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.zip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_zips"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_low_potential_territories": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.low_potential_territories": {
+			          "Target": {
+			            "Entity": "measures_table.low_potential_territories"
+			          }
+			        }
+			      }
+			    },
+			    "z_2t_target_list_q_2_2026_has_gold_layer_final_status_average_PERT_volume": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "gold_layer_final_status.average_PERT_volume": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.average_PERT_volume"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.average_PERT_volume"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_average_PERT_volume"
+			        }
+			      ]
+			    },
+			    "gold_layer_final_status_has_average_PERT_volume": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_final_status": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status"
+			          }
+			        },
+			        "gold_layer_final_status.average_PERT_volume": {
+			          "Target": {
+			            "Entity": "gold_layer_final_status.average_PERT_volume"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_final_status"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_final_status.average_PERT_volume"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_final_statuses_have_average_PERT_volume"
+			        }
+			      ]
+			    },
+			    "gold_layer_territory_hierarchy_has_measures_table_story_insights_HTML": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_territory_hierarchy": {
+			          "Target": {
+			            "Entity": "gold_layer_territory_hierarchy"
+			          }
+			        },
+			        "measures_table.story_insights_HTML": {
+			          "Target": {
+			            "Entity": "measures_table.story_insights_HTML"
+			          }
+			        }
+			      }
+			    },
 			    "gold_layer_final_status_has_measures_table_story_insights_HTML": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
@@ -15316,39 +17420,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gold_layer_final_statuses_have_average_of_PATIENT_PAY_average_per_PATIENT_ID"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_district_id_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.district_id_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_id_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_id_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_district_id_names"
 			        }
 			      ]
 			    },
@@ -15731,121 +17802,7 @@ cultureInfo en-US
 			            "Entity": "measures_table.high_priority_territories"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.high_priority_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_high_priority_territories"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_story_insight"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_story_insight"
-			        }
-			      ]
-			    },
-			    "dim_date_has_measures_table_story_insight": {
-			      "Binding": {
-			        "ConceptualEntity": "DIM_DATE"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "measures_table.story_insight": {
-			          "Target": {
-			            "Entity": "measures_table.story_insight"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insight"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_story_insight"
-			        }
-			      ]
+			      }
 			    },
 			    "gold_layer_territory_hierarchy_has_measures_table_top_3_territories": {
 			      "Binding": {
@@ -15863,22 +17820,7 @@ cultureInfo en-US
 			            "Entity": "measures_table.top_3_territories"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territories"
-			        }
-			      ]
+			      }
 			    },
 			    "gold_layer_final_status_has_measures_table_top_3_territories": {
 			      "Binding": {
@@ -15929,22 +17871,7 @@ cultureInfo en-US
 			            "Entity": "measures_table.top_3_territory_share"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_share"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_share"
-			        }
-			      ]
+			      }
 			    },
 			    "gold_layer_final_status_has_measures_table_top_3_territory_share": {
 			      "Binding": {
@@ -15995,22 +17922,7 @@ cultureInfo en-US
 			            "Entity": "measures_table.top_3_territory_metric"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.top_3_territory_metric"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_top_3_territory_metric"
-			        }
-			      ]
+			      }
 			    },
 			    "gold_layer_final_status_has_measures_table_top_3_territory_metric": {
 			      "Binding": {
@@ -16259,22 +18171,7 @@ cultureInfo en-US
 			            "Entity": "measures_table.high_potential_territories"
 			          }
 			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.high_potential_territories"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_high_potential_territories"
-			        }
-			      ]
+			      }
 			    },
 			    "gold_layer_final_status_has_measures_table_high_potential_territory_flag": {
 			      "Binding": {
@@ -16372,39 +18269,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gold_layer_final_statuses_have_total_HCPs"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_territory_id_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.territory_id_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.territory_id_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.territory_id_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_territory_id_names"
 			        }
 			      ]
 			    },
@@ -18355,204 +20219,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_has_region_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.region_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.region_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.region_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_region_names"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_region_id": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.region_id": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.region_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.region_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_region_ids"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_district_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.district_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_district_names"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_district_id": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.district_id": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_district_ids"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_territory_name": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.territory_name": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.territory_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.territory_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_territory_names"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_territory_id": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy.territory_id": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.territory_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.territory_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_territory_ids"
-			        }
-			      ]
-			    },
 			    "gold_layer_plan_has_load_ts": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_PLAN"
@@ -19417,6 +21083,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "gold_layer_hcp_short_has_territory_id": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_hcp_short": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short"
+			          }
+			        },
+			        "gold_layer_hcp_short.territory_id": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short.territory_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_hcp_short"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_hcp_short.territory_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_hcp_shorts_have_territory_ids"
+			        }
+			      ]
+			    },
 			    "gold_layer_hcp_short_has_no_contact_flag": {
 			      "Binding": {
 			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
@@ -19513,39 +21212,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gold_layer_hcp_shorts_have_zenpep_targets"
-			        }
-			      ]
-			    },
-			    "gold_layer_hcp_short_has_zip": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_hcp_short": {
-			          "Target": {
-			            "Entity": "gold_layer_hcp_short"
-			          }
-			        },
-			        "gold_layer_hcp_short.zip": {
-			          "Target": {
-			            "Entity": "gold_layer_hcp_short.zip"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_hcp_short"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_hcp_short.zip"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_hcp_shorts_have_zips"
 			        }
 			      ]
 			    },
@@ -20282,33 +21948,33 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_in_district_id_name": {
+			    "z_2t_target_list_q_2_2026_in_country_hierarchy_district": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "z_2t_target_list_q_2_2026": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "z_2t_target_list_q_2_2026"
 			          }
 			        },
-			        "gold_layer_territory_hierarchy.district_id_name": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.district": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_id_name"
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.district"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "gold_layer_territory_hierarchy.district_id_name"
+			          "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "z_2t_target_list_q_2_2026"
 			            },
 			            "Prepositions": [
 			              {
@@ -20318,42 +21984,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_id_name"
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_are_in_district_id_names"
+			          "ID": "z_2t_target_list_q_2_2026_are_in_districts"
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_in_region_name": {
+			    "z_2t_target_list_q_2_2026_in_country_hierarchy_city": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "z_2t_target_list_q_2_2026": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "z_2t_target_list_q_2_2026"
 			          }
 			        },
-			        "gold_layer_territory_hierarchy.region_name": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.city": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.region_name"
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.city"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "gold_layer_territory_hierarchy.region_name"
+			          "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "z_2t_target_list_q_2_2026"
 			            },
 			            "Prepositions": [
 			              {
@@ -20363,42 +22029,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.region_name"
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_are_in_region_names"
+			          "ID": "z_2t_target_list_q_2_2026_are_in_cities"
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_in_region_id": {
+			    "z_2t_target_list_q_2_2026_in_country_hierarchy_state": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "z_2t_target_list_q_2_2026": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "z_2t_target_list_q_2_2026"
 			          }
 			        },
-			        "gold_layer_territory_hierarchy.region_id": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.state": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.region_id"
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "gold_layer_territory_hierarchy.region_id"
+			          "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "z_2t_target_list_q_2_2026"
 			            },
 			            "Prepositions": [
 			              {
@@ -20408,42 +22074,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.region_id"
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_are_in_region_ids"
+			          "ID": "z_2t_target_list_q_2_2026_are_in_states"
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_in_district_name": {
+			    "z_2t_target_list_q_2_2026_in_country_hierarchy_country": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "z_2t_target_list_q_2_2026": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "z_2t_target_list_q_2_2026"
 			          }
 			        },
-			        "gold_layer_territory_hierarchy.district_name": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.country": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_name"
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.country"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "gold_layer_territory_hierarchy.district_name"
+			          "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "z_2t_target_list_q_2_2026"
 			            },
 			            "Prepositions": [
 			              {
@@ -20453,42 +22119,42 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_name"
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_are_in_district_names"
+			          "ID": "z_2t_target_list_q_2_2026_are_in_countries"
 			        }
 			      ]
 			    },
-			    "gold_layer_territory_hierarchy_in_district_id": {
+			    "z_2t_target_list_q_2_2026_in_country_hierarchy": {
 			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
+			        "z_2t_target_list_q_2_2026": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
+			            "Entity": "z_2t_target_list_q_2_2026"
 			          }
 			        },
-			        "gold_layer_territory_hierarchy.district_id": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
 			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy.district_id"
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "gold_layer_territory_hierarchy.district_id"
+			          "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
+			              "Role": "z_2t_target_list_q_2_2026"
 			            },
 			            "Prepositions": [
 			              {
@@ -20498,12 +22164,417 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy.district_id"
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_are_in_district_ids"
+			          "ID": "z_2t_target_list_q_2_2026_are_in_country_hierarchies"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_countries1"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_region": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.region": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.region"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.region"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_regions"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_region_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.region_id": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.region_id"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.region_id"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.region_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_region_ids"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_district": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.district": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.district"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.district"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.district"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_districts1"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_district_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.district_id": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.district_id"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.district_id"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.district_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_district_ids"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_territory": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.territory": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.territory"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.territory"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_territories"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.state": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_states1"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.city": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_cities1"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_in_zip": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.zip": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.zip"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "z_2t_target_list_q_2_2026.zip"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.zip"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_are_in_zips"
 			        }
 			      ]
 			    },
@@ -20546,375 +22617,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "dim_dates_are_selected_on_latest_selected_month"
-			        }
-			      ]
-			    },
-			    "gold_layer_territory_hierarchy_has_measures_table_story_insights_HTML": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          }
-			        },
-			        "measures_table.story_insights_HTML": {
-			          "Target": {
-			            "Entity": "measures_table.story_insights_HTML"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "measures_table.story_insights_HTML"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_story_insights_HTML"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_gold_layer_hcp_short": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "gold_layer_hcp_short": {
-			          "Target": {
-			            "Entity": "gold_layer_hcp_short"
-			          },
-			          "Nouns": [
-			            {
-			              "practitioner": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_hcp_short"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_gold_layer_hcp_shorts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_hcp_short"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_hcp_shorts_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_gold_layer_drug": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "gold_layer_drug": {
-			          "Target": {
-			            "Entity": "gold_layer_drug"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_drug"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_gold_layer_drugs"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_drug"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_drugs_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_gold_layer_plan": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "gold_layer_plan": {
-			          "Target": {
-			            "Entity": "gold_layer_plan"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_plan"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_gold_layer_plans"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_plan"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_plans_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_dim_date": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "dim_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_dim_dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_gold_layer_reject_codes_short": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "gold_layer_reject_codes_short": {
-			          "Target": {
-			            "Entity": "gold_layer_reject_codes_short"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_reject_codes_short"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_gold_layer_reject_codes_shorts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_reject_codes_short"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_reject_codes_shorts_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_final_status_has_claim_status": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_FINAL_STATUS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_final_status": {
-			          "Target": {
-			            "Entity": "gold_layer_final_status"
-			          }
-			        },
-			        "claim_status": {
-			          "Target": {
-			            "Entity": "claim_status"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_final_status"
-			            },
-			            "Object": {
-			              "Role": "claim_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_final_statuses_have_claim_statuses"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "claim_status"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_final_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "claim_statuses_have_gold_layer_final_statuses"
-			        }
-			      ]
-			    },
-			    "gold_layer_hcp_short_has_gold_layer_territory_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "gold_layer_hcp_short": {
-			          "Target": {
-			            "Entity": "gold_layer_hcp_short"
-			          }
-			        },
-			        "gold_layer_territory_hierarchy": {
-			          "Target": {
-			            "Entity": "gold_layer_territory_hierarchy"
-			          },
-			          "Nouns": [
-			            {
-			              "territory": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_hcp_short"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_hcp_shorts_have_gold_layer_territory_hierarchies"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "gold_layer_territory_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "gold_layer_hcp_short"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_layer_territory_hierarchies_have_gold_layer_hcp_shorts"
 			        }
 			      ]
 			    },
@@ -20961,6 +22663,481 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "gold_layer_pdrps_have_gold_layer_hcp_shorts"
+			        }
+			      ]
+			    },
+			    "gold_layer_hcp_short_has_z_2t_target_list_q_2_2026": {
+			      "Binding": {
+			        "ConceptualEntity": "GOLD_LAYER_HCP_SHORT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "gold_layer_hcp_short": {
+			          "Target": {
+			            "Entity": "gold_layer_hcp_short"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "gold_layer_hcp_short"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_layer_hcp_shorts_have_z_2t_target_list_q_2_2026"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026"
+			            },
+			            "Object": {
+			              "Role": "gold_layer_hcp_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z_2t_target_list_q_2_2026_have_gold_layer_hcp_shorts"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.country": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_hierarchies_have_countries"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.state": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_hierarchies_have_states"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_has_territory": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.territory": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_hierarchies_have_territories"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_has_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.city": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_hierarchies_have_cities"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_has_district": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.district": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_hierarchies_have_districts"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_country_has_z_2t_target_list_q_2_2026_country_hierarchy_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.country": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.state": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "countries_have_states"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "states_have_countries"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "states_are_in_countries"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_state_has_z_2t_target_list_q_2_2026_country_hierarchy_territory": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.state": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.territory": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "states_have_territories"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "territories_have_states"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "territories_are_in_states"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_territory_has_z_2t_target_list_q_2_2026_country_hierarchy_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.territory": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.city": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "territories_have_cities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cities_have_territories"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.territory"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cities_are_in_territories"
+			        }
+			      ]
+			    },
+			    "z_2t_target_list_q_2_2026_country_hierarchy_city_has_z_2t_target_list_q_2_2026_country_hierarchy_district": {
+			      "Binding": {
+			        "ConceptualEntity": "Z2T_TARGET_LIST_Q2_2026"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z_2t_target_list_q_2_2026.country_hierarchy.city": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			          }
+			        },
+			        "z_2t_target_list_q_2_2026.country_hierarchy.district": {
+			          "Target": {
+			            "Entity": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cities_have_districts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			            },
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "districts_have_cities"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.district"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "z_2t_target_list_q_2_2026.country_hierarchy.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "districts_are_in_cities"
 			        }
 			      ]
 			    }
