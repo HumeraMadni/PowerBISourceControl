@@ -1,2 +1,2 @@
 # PowerBISourceControl
-This repo to store PowerBI artifact
+This repo to store PowerBI artifacts

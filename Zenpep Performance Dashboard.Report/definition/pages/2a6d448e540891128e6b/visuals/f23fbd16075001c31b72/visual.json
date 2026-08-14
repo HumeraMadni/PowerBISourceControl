@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f23fbd16075001c31b72",
   "position": {
-    "x": 685,
-    "y": 1107.5,
+    "x": 684.29898422918325,
+    "y": 1086.5205245776344,
     "z": 16000,
-    "height": 725,
-    "width": 502.5,
+    "height": 770.4893143038513,
+    "width": 605.9441387067576,
     "tabOrder": 16000
   },
   "visual": {
@@ -1018,6 +1018,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "855dee8e077b1b3651e8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rejected Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

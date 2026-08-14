@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f95303289724b9d03793",
   "position": {
-    "x": 1217.5,
-    "y": 1102.5,
+    "x": 1303.302263856345,
+    "y": 1083.9086963935536,
     "z": 17000,
-    "height": 752.5,
-    "width": 1652.5,
+    "height": 770.4893143038513,
+    "width": 1564.4850822644303,
     "tabOrder": 17000
   },
   "visual": {
@@ -208,7 +208,7 @@
             "wordWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -495,7 +495,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "245.5539129404484D"
+                  "Value": "172.28930520245675D"
                 }
               }
             }
@@ -509,7 +509,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "389.7029542523998D"
+                  "Value": "259.0103515270192D"
                 }
               }
             }
@@ -523,7 +523,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "314.13802149714456D"
+                  "Value": "186.2135894272836D"
                 }
               }
             }
@@ -537,7 +537,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "192.33010146687457D"
+                  "Value": "114.10687869065912D"
                 }
               }
             }
@@ -551,7 +551,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "345.00022426356287D"
+                  "Value": "274.4808473942822D"
                 }
               }
             }
@@ -565,7 +565,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "301.90432834364384D"
+                  "Value": "226.13517567369092D"
                 }
               }
             }
@@ -593,7 +593,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "222.05808200752108D"
+                  "Value": "159.41371953728134D"
                 }
               }
             }
@@ -1075,7 +1075,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Detailed view of RX volume, Zenpep prescribing, PERT utilization, and execution priority'"
+                  "Value": "'  '"
                 }
               }
             },

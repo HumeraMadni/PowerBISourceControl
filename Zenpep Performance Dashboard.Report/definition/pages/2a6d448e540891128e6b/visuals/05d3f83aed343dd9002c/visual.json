@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "05d3f83aed343dd9002c",
   "position": {
-    "x": 682.5,
-    "y": 242.5,
-    "z": 27000,
-    "height": 825,
-    "width": 1030,
-    "tabOrder": 22000
+    "x": 691.66951799781748,
+    "y": 249.602478233995,
+    "z": 25000,
+    "height": 802.938092632249,
+    "width": 1058.5550884140509,
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "shapeMap",
@@ -17,17 +17,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Hierarchy": "DISTRICT Hierarchy"
                     }
                   },
-                  "Property": "STATE"
+                  "Level": "STATE"
                 }
               },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.STATE",
-              "nativeQueryRef": "STATE"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.STATE",
+              "nativeQueryRef": "DISTRICT Hierarchy STATE"
             }
           ]
         },
@@ -35,49 +40,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Hierarchy": "DISTRICT Hierarchy"
                     }
                   },
-                  "Property": "DISTRICT"
+                  "Level": "TERRITORY"
                 }
               },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT",
-              "nativeQueryRef": "DISTRICT"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "MEASURES_TABLE"
-                    }
-                  },
-                  "Property": "High Potential Territories"
-                }
-              },
-              "queryRef": "MEASURES_TABLE.High Potential Territories",
-              "nativeQueryRef": "High Potential Territories"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "MEASURES_TABLE"
-                    }
-                  },
-                  "Property": "High Priority Territories"
-                }
-              },
-              "queryRef": "MEASURES_TABLE.High Priority Territories",
-              "nativeQueryRef": "High Priority Territories"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.TERRITORY",
+              "nativeQueryRef": "DISTRICT Hierarchy TERRITORY"
             }
           ]
         },
@@ -95,8 +73,7 @@
                 }
               },
               "queryRef": "GOLD_LAYER_FINAL_STATUS.Average PERT Volume",
-              "nativeQueryRef": "Average PERT Volume",
-              "format": "0"
+              "nativeQueryRef": "Average PERT Volume"
             }
           ]
         }
@@ -614,28 +591,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "37.16287603873134D"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "13D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -682,34 +638,7 @@
             "projectionEnum": {
               "expr": {
                 "Literal": {
-                  "Value": "'mercator'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "zoom": [
-        {
-          "properties": {
-            "autoZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectionZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "manualZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'albersUsa'"
                 }
               }
             }
@@ -983,21 +912,21 @@
             "showChartSpecificTooltips": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'District {DISTRICT} has {High Potential Territories} High potential territories and {High Priority Territories} High priority territories with Average PERT volume of {Average PERT Volume}'"
+                  "Value": "''"
                 }
               }
             },
             "showSentenceFormat": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -1030,7 +959,7 @@
             "showTooltipFieldsOnly": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -1103,76 +1032,6 @@
           ]
         },
         "howCreated": "Exclude"
-      },
-      {
-        "name": "b2ab4ba67a8305b5e08d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
-              }
-            },
-            "Property": "Average PERT Volume"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "19653fe3b4b465503cdc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "High Potential Territories"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "61f0038cd5d49a7606cd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "High Priority Territories"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4cccab8e18049003e74d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Z2T_TARGET_LIST_Q2_2026"
-              }
-            },
-            "Property": "STATE"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4dac5e6d50604408e14d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Z2T_TARGET_LIST_Q2_2026"
-              }
-            },
-            "Property": "DISTRICT"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

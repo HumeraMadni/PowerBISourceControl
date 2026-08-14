@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "fd6e0e07280cb16789be",
+  "name": "f48a1ca701cb40490ecd",
   "position": {
-    "x": 1745,
-    "y": 242.5,
-    "z": 28000,
-    "height": 825,
-    "width": 1125,
-    "tabOrder": 23000
+    "x": 1780.297194150904,
+    "y": 246.59521946009144,
+    "z": 31001,
+    "height": 802.938092632249,
+    "width": 1085.620417379183,
+    "tabOrder": 24001
   },
   "visual": {
     "visualType": "azureMap",
@@ -25,34 +25,14 @@
                           "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Hierarchy": "Country Hierarchy"
-                    }
-                  },
-                  "Level": "Country"
-                }
-              },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.Country Hierarchy.Country",
-              "nativeQueryRef": "Country Hierarchy Country",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                        }
-                      },
-                      "Hierarchy": "Country Hierarchy"
+                      "Hierarchy": "DISTRICT Hierarchy"
                     }
                   },
                   "Level": "STATE"
                 }
               },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.Country Hierarchy.STATE",
-              "nativeQueryRef": "Country Hierarchy STATE",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.STATE",
+              "nativeQueryRef": "DISTRICT Hierarchy STATE",
               "active": true
             },
             {
@@ -65,14 +45,14 @@
                           "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Hierarchy": "Country Hierarchy"
+                      "Hierarchy": "DISTRICT Hierarchy"
                     }
                   },
-                  "Level": "CITY"
+                  "Level": "TERRITORY"
                 }
               },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.Country Hierarchy.CITY",
-              "nativeQueryRef": "Country Hierarchy CITY",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.TERRITORY",
+              "nativeQueryRef": "DISTRICT Hierarchy TERRITORY",
               "active": false
             }
           ]
@@ -84,396 +64,20 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "MEASURES_TABLE"
+                      "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "Total Claim Count"
+                  "Property": "Average PERT Volume"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total Claim Count",
-              "nativeQueryRef": "Total Claim Count"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                            }
-                          },
-                          "Hierarchy": "Country Hierarchy"
-                        }
-                      },
-                      "Level": "TERRITORY"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(Z2T_TARGET_LIST_Q2_2026.Country Hierarchy.TERRITORY)",
-              "nativeQueryRef": "TERRITORY",
-              "displayName": "TERRITORY"
+              "queryRef": "GOLD_LAYER_FINAL_STATUS.Average PERT Volume",
+              "nativeQueryRef": "Average PERT Volume"
             }
           ]
         }
       }
     },
     "objects": {
-      "mapControls": [
-        {
-          "properties": {
-            "zoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "3.09D"
-                }
-              }
-            },
-            "centerLongitude": {
-              "expr": {
-                "Literal": {
-                  "Value": "-110.74799346923828D"
-                }
-              }
-            },
-            "centerLatitude": {
-              "expr": {
-                "Literal": {
-                  "Value": "49.472422804305666D"
-                }
-              }
-            },
-            "geocodingCulture": {
-              "expr": {
-                "Literal": {
-                  "Value": "'en-US'"
-                }
-              }
-            },
-            "worldWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "pitch": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "heading": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "defaultStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'grayscale_light'"
-                }
-              }
-            },
-            "showAdminDistrictBorders": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAdminDistrict2Borders": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showCountryRegionBorders": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showRoadDetails": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showBuildingFootprints": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "backgroundTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "76D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "bubbleLayer": [
-        {
-          "properties": {
-            "clusteringEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "iconId": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Circle'"
-                }
-              }
-            },
-            "markerType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'icon'"
-                }
-              }
-            },
-            "sizeByValue": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "minBubbleRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "7L"
-                }
-              }
-            },
-            "maxRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "26L"
-                }
-              }
-            },
-            "maxDataScalingRange": {
-              "expr": {
-                "Literal": {
-                  "Value": "9829D"
-                }
-              }
-            },
-            "autoStrokeColor": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strokeTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "36D"
-                }
-              }
-            },
-            "blur": {
-              "expr": {
-                "Literal": {
-                  "Value": "11D"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "minDataScalingRange": {
-              "expr": {
-                "Literal": {
-                  "Value": "100D"
-                }
-              }
-            },
-            "mapTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "maxZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "22L"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "GOLD_LAYER_FINAL_STATUS"
-                                }
-                              },
-                              "Property": "RX_COUNT"
-                            }
-                          },
-                          "Function": 0
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient3": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#F4A261'"
-                              }
-                            },
-                            "value": {
-                              "Literal": {
-                                "Value": "100D"
-                              }
-                            }
-                          },
-                          "mid": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'midColor'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'maxColor'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "barChart": [
-        {
-          "properties": {
-            "showModern": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -942,99 +546,9 @@
               }
             ]
           }
-        }
-      ],
-      "filledMap": [
+        },
         {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "commonDataOptions": [
-        {
-          "properties": {
-            "unselectedTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "22D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "heatMapLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "heatMapRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "heatMapRadiusUnit": {
-              "expr": {
-                "Literal": {
-                  "Value": "'pixels'"
-                }
-              }
-            },
-            "heatMapIntensity": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "heatMapUseSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "referenceLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "tileLayer": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "legend": [
@@ -1043,28 +557,34 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "2.02D"
                 }
               }
             },
-            "position": {
+            "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "'RightCenter'"
+                  "Value": "27.84079669993112D"
                 }
               }
             },
-            "fontSize": {
+            "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "-100.78217887878418D"
                 }
               }
             }
@@ -1291,20 +811,6 @@
       "visualTooltip": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showActionsInTooltips": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -1323,18 +829,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "themedTitleFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             },
@@ -1361,17 +855,10 @@
                 }
               }
             },
-            "showTooltipFieldsOnly": {
+            "showChartSpecificTooltips": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showSentenceFormat": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1382,10 +869,43 @@
                 }
               }
             },
-            "showChartSpecificTooltips": {
+            "showSentenceFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "showActionsInTooltips": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showTooltipFieldsOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -1398,7 +918,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "76360533296900557021",
+        "name": "1deb170d44b31db71e0c",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1434,62 +954,18 @@
                               "Value": "'HI'"
                             }
                           }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "Exclude"
-      },
-      {
-        "name": "b94db274389750519b95",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Z2T_TARGET_LIST_Q2_2026"
-              }
-            },
-            "Property": "REGION"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "z",
-              "Entity": "Z2T_TARGET_LIST_Q2_2026",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "z"
-                              }
-                            },
-                            "Property": "REGION"
-                          }
-                        }
-                      ],
-                      "Values": [
+                        ],
                         [
                           {
                             "Literal": {
-                              "Value": "null"
+                              "Value": "'VI'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'IL'"
                             }
                           }
                         ]
@@ -1501,176 +977,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "00a476c94b001a2a0723",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                  }
-                },
-                "Hierarchy": "Country Hierarchy"
-              }
-            },
-            "Level": "Country"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "z",
-              "Entity": "Z2T_TARGET_LIST_Q2_2026",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "z"
-                          }
-                        },
-                        "Property": "Country"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'UNITED STATES'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "Drill"
-      },
-      {
-        "name": "ef9273209383794005d1",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                  }
-                },
-                "Hierarchy": "Country Hierarchy"
-              }
-            },
-            "Level": "Country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6434a99d95922c0ec09a",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                  }
-                },
-                "Hierarchy": "Country Hierarchy"
-              }
-            },
-            "Level": "STATE"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "37ab77761b4b01853867",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                  }
-                },
-                "Hierarchy": "Country Hierarchy"
-              }
-            },
-            "Level": "CITY"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "28e9431e59004c7d0bdd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Claim Count"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6da5752a35761a332706",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                      }
-                    },
-                    "Hierarchy": "Country Hierarchy"
-                  }
-                },
-                "Level": "TERRITORY"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "Exclude"
       }
     ]
   }
