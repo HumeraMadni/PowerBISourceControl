@@ -2,82 +2,86 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "05d3f83aed343dd9002c",
   "position": {
-    "x": 685.65500045001033,
-    "y": 246.59521946009144,
-    "z": 25000,
-    "height": 804,
-    "width": 1364,
-    "tabOrder": 21000
+    "x": 682.5,
+    "y": 242.5,
+    "z": 27000,
+    "height": 825,
+    "width": 1030,
+    "tabOrder": 22000
   },
   "visual": {
-    "visualType": "azureMap",
+    "visualType": "shapeMap",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                        }
-                      },
-                      "Hierarchy": "DISTRICT Hierarchy"
+                    "SourceRef": {
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Level": "STATE"
+                  "Property": "STATE"
                 }
               },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.STATE",
-              "nativeQueryRef": "DISTRICT Hierarchy STATE",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                        }
-                      },
-                      "Hierarchy": "DISTRICT Hierarchy"
-                    }
-                  },
-                  "Level": "TERRITORY"
-                }
-              },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.TERRITORY",
-              "nativeQueryRef": "DISTRICT Hierarchy TERRITORY",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
-                        }
-                      },
-                      "Hierarchy": "DISTRICT Hierarchy"
-                    }
-                  },
-                  "Level": "CITY"
-                }
-              },
-              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT Hierarchy.CITY",
-              "nativeQueryRef": "DISTRICT Hierarchy CITY",
-              "active": false
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.STATE",
+              "nativeQueryRef": "STATE"
             }
           ]
         },
-        "Size": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                    }
+                  },
+                  "Property": "DISTRICT"
+                }
+              },
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT",
+              "nativeQueryRef": "DISTRICT"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "High Potential Territories"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.High Potential Territories",
+              "nativeQueryRef": "High Potential Territories"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "High Priority Territories"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.High Priority Territories",
+              "nativeQueryRef": "High Priority Territories"
+            }
+          ]
+        },
+        "Value": {
           "projections": [
             {
               "field": {
@@ -91,7 +95,8 @@
                 }
               },
               "queryRef": "GOLD_LAYER_FINAL_STATUS.Average PERT Volume",
-              "nativeQueryRef": "Average PERT Volume"
+              "nativeQueryRef": "Average PERT Volume",
+              "format": "0"
             }
           ]
         }
@@ -568,7 +573,39 @@
           }
         },
         {
-          "properties": {}
+          "properties": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       ],
       "legend": [
@@ -577,96 +614,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "mapControls": [
-        {
-          "properties": {
-            "zoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "4.75D"
+                  "Value": "true"
                 }
               }
             },
-            "centerLatitude": {
+            "position": {
               "expr": {
                 "Literal": {
                   "Value": "37.16287603873134D"
                 }
               }
             },
-            "centerLongitude": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "-85.13208016817663D"
+                  "Value": "13D"
                 }
               }
             },
-            "pitch": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "bubbleLayer": [
-        {
-          "properties": {
-            "bubbleRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "9L"
-                }
-              }
-            },
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.4
-                    }
-                  }
-                }
-              }
-            },
-            "minBubbleRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "7L"
-                }
-              }
-            },
-            "maxRadius": {
-              "expr": {
-                "Literal": {
-                  "Value": "30L"
-                }
-              }
-            },
-            "strokeColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.4
-                    }
-                  }
-                }
-              }
-            },
-            "autoStrokeColor": {
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -676,26 +642,74 @@
           }
         }
       ],
-      "barChart": [
+      "shape": [
         {
           "properties": {
-            "showModern": {
+            "datasourceType": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'file_upload'"
+                }
+              }
+            },
+            "map": {
+              "geoJson": {
+                "type": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'shared'"
+                    }
+                  }
+                },
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'usa.states.topo'"
+                    }
+                  }
+                },
+                "content": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "SharedResources",
+                      "PackageType": 2,
+                      "ItemName": "usa.states.topo"
+                    }
+                  }
+                }
+              }
+            },
+            "projectionEnum": {
+              "expr": {
+                "Literal": {
+                  "Value": "'mercator'"
                 }
               }
             }
           }
         }
       ],
-      "heatMapLayer": [
+      "zoom": [
         {
           "properties": {
-            "show": {
+            "autoZoom": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "selectionZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "manualZoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -969,21 +983,21 @@
             "showChartSpecificTooltips": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "''"
+                  "Value": "'District {DISTRICT} has {High Potential Territories} High potential territories and {High Priority Territories} High priority territories with Average PERT volume of {Average PERT Volume}'"
                 }
               }
             },
             "showSentenceFormat": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1016,7 +1030,7 @@
             "showTooltipFieldsOnly": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -1089,6 +1103,76 @@
           ]
         },
         "howCreated": "Exclude"
+      },
+      {
+        "name": "b2ab4ba67a8305b5e08d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "Average PERT Volume"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "19653fe3b4b465503cdc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Territories"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61f0038cd5d49a7606cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Priority Territories"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4cccab8e18049003e74d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
+              }
+            },
+            "Property": "STATE"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4dac5e6d50604408e14d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
+              }
+            },
+            "Property": "DISTRICT"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
