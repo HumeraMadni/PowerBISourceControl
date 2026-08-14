@@ -4,7 +4,7 @@
   "position": {
     "x": 1158.4754262788365,
     "y": 1329.9899699097293,
-    "z": 22000,
+    "z": 21000,
     "height": 39.117352056168507,
     "width": 36.108324974924777,
     "tabOrder": 24000
@@ -75,7 +75,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Shows the Top 5 rejection reasons by rejected claim volume, segmented by channels. Higher volume indicates greater rejection severity.'"
+                  "Value": "'Shows the Top 10 rejection reasons by rejected claim volume, segmented by channels. Higher volume indicates greater rejection severity.'"
                 }
               }
             }

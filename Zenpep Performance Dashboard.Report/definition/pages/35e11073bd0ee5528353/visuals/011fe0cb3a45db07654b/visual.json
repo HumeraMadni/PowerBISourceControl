@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "011fe0cb3a45db07654b",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 40000,
-    "height": 516.06122395804414,
-    "width": 791.65412889898926,
+    "x": 686.92307692307691,
+    "y": 773.84615384615381,
+    "z": 36000,
+    "height": 514.61538461538464,
+    "width": 790.76923076923072,
     "tabOrder": 0
   },
   "visual": {
@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "PRACTITIONER_ID_NAME"
+                  "Property": "HCP_FULL_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -1050,7 +1050,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "214.98949557668726D"
+                  "Value": "229.6548674660733D"
                 }
               }
             }
@@ -1064,7 +1064,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "210.54283090156162D"
+                  "Value": "232.58663098634284D"
                 }
               }
             }
@@ -1092,13 +1092,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "310.18053118202374D"
+                  "Value": "273.6619149362092D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME"
+            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
           }
         }
       ]
@@ -1342,7 +1342,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "514a9ce342190ae60c42",
   "filterConfig": {
     "filters": [
       {
@@ -1384,7 +1383,7 @@
                   },
                   "Right": {
                     "Literal": {
-                      "Value": "300L"
+                      "Value": "200L"
                     }
                   }
                 }
@@ -1395,14 +1394,24 @@
         "howCreated": "User"
       },
       {
-        "name": "437eddb1ddd3e75d6d6a",
-        "type": "Exclude",
+        "name": "296d5eb40c0ed4e9a805",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
             {
               "Name": "g",
-              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Entity": "GOLD_LAYER_FINAL_STATUS",
               "Type": 0
             }
           ],
@@ -1420,7 +1429,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "PRACTITIONER_ID_NAME"
+                            "Property": "PRACTITIONER_ID"
                           }
                         }
                       ],
@@ -1440,7 +1449,78 @@
             }
           ]
         },
-        "howCreated": "Exclude"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "98337fb2061d2ca36c69",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "HCP_FULL_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "401ce3212d93942f5947",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "HCP Priority Sort"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f5db4a588ba2cc96f335",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Flag Creon 24K Flag"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f35a796a5a553541a7f1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Creon 36K Flag"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

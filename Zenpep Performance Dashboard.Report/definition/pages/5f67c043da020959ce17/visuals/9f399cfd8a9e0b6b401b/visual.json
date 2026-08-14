@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9f399cfd8a9e0b6b401b",
   "position": {
-    "x": 1074.3521783712629,
-    "y": 156.44581168914772,
+    "x": 1073.4209175198721,
+    "y": 131.11701132851178,
     "z": 38000,
-    "height": 113.40121635726196,
-    "width": 297.67819293781264,
+    "height": 110.53609327971772,
+    "width": 299.25625253777235,
     "tabOrder": 28000
   },
   "visual": {
@@ -159,5 +159,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b"
+  "parentGroupName": "46b434d550090738284b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "15ca516d96b5a963e2e4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PATIENT_PAY (bins)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

@@ -1581,7 +1581,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OOP Cost Breakdown'"
+                  "Value": "'Patient OOP Breakdown'"
                 }
               }
             },
@@ -1741,7 +1741,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -1802,5 +1802,57 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b"
+  "parentGroupName": "46b434d550090738284b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "38e6dbd150d935d53186",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PATIENT_OOP Bin Label"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2fe833f1bb04e0509a6c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GOLD_LAYER_FINAL_STATUS"
+                  }
+                },
+                "Property": "PATIENT_OOP Bin Label"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5248d965ba2c8840bb76",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  },
+  "isHidden": true
 }

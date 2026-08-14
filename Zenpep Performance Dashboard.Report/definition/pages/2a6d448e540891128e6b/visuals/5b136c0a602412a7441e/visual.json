@@ -4,10 +4,10 @@
   "position": {
     "x": 1235.5555555555554,
     "y": 76.666666666666671,
-    "z": 12000,
+    "z": 11000,
     "height": 86.666666666666671,
     "width": 290,
-    "tabOrder": 12000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,12 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "PRACTITIONER_ID_NAME"
+                  "Property": "HCP_FULL_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
-              "nativeQueryRef": "HCPs",
-              "active": true,
-              "displayName": "HCPs"
+              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
+              "nativeQueryRef": "HCP_FULL_NAME",
+              "active": true
             }
           ]
         }
@@ -138,7 +137,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "436bd7ea210bc056d042",
+        "name": "24491aa4c67e10e0bc3b",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -163,7 +162,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "PRACTITIONER_ID_NAME"
+                            "Property": "HCP_FULL_NAME"
                           }
                         }
                       ],

@@ -7,6 +7,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		summarizeBy: none
 		sourceColumn: TERRITORY_ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column TERRITORY_NAME
@@ -16,6 +18,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		summarizeBy: none
 		sourceColumn: TERRITORY_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column DISTRICT_ID
@@ -23,6 +27,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		lineageTag: e91a7114-44aa-42e0-868a-3f4b625a16d9
 		summarizeBy: none
 		sourceColumn: DISTRICT_ID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -33,6 +39,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		summarizeBy: none
 		sourceColumn: DISTRICT_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column REGION_ID
@@ -40,6 +48,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		lineageTag: 4cdef669-43aa-4502-8c9b-739db8c0240c
 		summarizeBy: none
 		sourceColumn: REGION_ID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -50,17 +60,7 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 		summarizeBy: none
 		sourceColumn: REGION_NAME
 
-		annotation SummarizationSetBy = Automatic
-
-	column TERRITORY_ID_NAME = [TERRITORY_ID] & " | " & [TERRITORY_NAME]
-		lineageTag: 29c1ee6b-439c-4cda-8842-2b8670ea2ddd
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column DISTRICT_ID_NAME = [DISTRICT_ID] & " | " & [DISTRICT_NAME]
-		lineageTag: 2637cbaa-8bce-409b-b2e2-89f6ed0fd584
-		summarizeBy: none
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -74,6 +74,8 @@ table GOLD_LAYER_TERRITORY_HIERARCHY
 				    GOLD_LAYER_TERRITORY_HIERARCHY_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_TERRITORY_HIERARCHY",Kind="Table"]}[Data]
 				in
 				    GOLD_LAYER_TERRITORY_HIERARCHY_Table
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navigation
 

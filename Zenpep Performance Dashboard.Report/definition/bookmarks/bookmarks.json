@@ -2,44 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
   "items": [
     {
-      "name": "30b8a4004e67ae07be90",
-      "displayName": "Claims Trend Bookmark",
-      "children": [
-        "df02fbb80b8555b324cd",
-        "55a1857814de1d641337"
-      ]
-    },
-    {
-      "name": "587465000da35d11987b",
-      "displayName": "Plans-Payers Bookmark",
-      "children": [
-        "db16fa3e6693e5e33b2c",
-        "8436f9076d9075e038c8"
-      ]
-    },
-    {
       "name": "a25308d9cbe806a6c0d1",
       "displayName": "Top 30/50 Bookmark",
       "children": [
         "67579db3e9d13de1e201",
         "f2627f569e1095027539"
-      ]
-    },
-    {
-      "name": "49da8d00dd3b18c5d01d",
-      "displayName": "High Conversion Potential Bookmark",
-      "children": [
-        "7b80e5ad67b84d0709e2",
-        "02d9eb388863aa834074"
-      ]
-    },
-    {
-      "name": "aa0b46e62a7907a32b62",
-      "displayName": "Rolling Bookmark",
-      "children": [
-        "93dba564a6280b0ea3ce",
-        "f228665ce1e089c6e765",
-        "60c987c09e65630184ba"
       ]
     },
     {
@@ -61,11 +28,36 @@
       ]
     },
     {
-      "name": "72cd4f050ea56002eb06",
-      "displayName": "Territory Top/Bottom",
+      "name": "ef0584eebdb20590943b",
+      "displayName": "Top/Bottom 10",
       "children": [
-        "31e8039282d71b164e65",
-        "6ce3450b5e540d863ab1"
+        "d13bc51002e0ba6c0077",
+        "4153d7266e3da1a65a44"
+      ]
+    },
+    {
+      "name": "747e5e04bce0bd56b559",
+      "displayName": "Rolling Bookmark",
+      "children": [
+        "b381ce7c6a6cb11b41e8",
+        "6ad747080d0220d6eebd",
+        "0c30d2070368c8070975"
+      ]
+    },
+    {
+      "name": "f952e2e4de0bc4a562ae",
+      "displayName": "Plans/Payers",
+      "children": [
+        "5fe5cd6a6866ceb86b26",
+        "a728f63a3d6669787aa3"
+      ]
+    },
+    {
+      "name": "3236afd0303090064de1",
+      "displayName": "Claims Trends",
+      "children": [
+        "88b2ef705e80b2a6400a",
+        "58b7469db03a04d5036e"
       ]
     }
   ]

@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "PRACTITIONER_ID_NAME"
+                  "Property": "HCP_FULL_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID_NAME",
+              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
               "nativeQueryRef": "HCPs",
               "displayName": "HCPs"
             },
@@ -68,12 +68,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Rolling 1M - Current"
+                  "Property": "Rolling 1M - Previous"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Rolling 1M - Current Month",
-              "nativeQueryRef": "Current Month RX",
-              "displayName": "Current Month RX"
+              "queryRef": "MEASURES_TABLE.Rolling 1M - Previous Month",
+              "nativeQueryRef": "Previous Month RX",
+              "displayName": "Previous Month RX"
             },
             {
               "field": {
@@ -83,12 +83,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Rolling 1M - Previous"
+                  "Property": "Rolling 1M - Current"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Rolling 1M - Previous Month",
-              "nativeQueryRef": "Previous Month RX",
-              "displayName": "Previous Month RX"
+              "queryRef": "MEASURES_TABLE.Rolling 1M - Current Month",
+              "nativeQueryRef": "Current Month RX",
+              "displayName": "Current Month RX"
             },
             {
               "field": {
@@ -987,7 +987,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "285.84621888568205D"
+                  "Value": "263.23026948147856D"
                 }
               }
             }
@@ -1015,7 +1015,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "176.21918548991283D"
+                  "Value": "206.31985565004143D"
                 }
               }
             }
@@ -1029,7 +1029,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "189.2084299762031D"
+                  "Value": "229.48990318837707D"
                 }
               }
             }
@@ -1043,13 +1043,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "199.45294971516603D"
+                  "Value": "221.39948248131108D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Rolling 1M - Current Month"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "275.5929767333297D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
           }
         }
       ]
@@ -1291,7 +1305,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b8c352c8a86ebc148dc5",
+        "name": "b79b28085e98be355030",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1341,7 +1355,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "PRACTITIONER_ID_NAME"
+                            "Property": "HCP_FULL_NAME"
                           }
                         }
                       ],

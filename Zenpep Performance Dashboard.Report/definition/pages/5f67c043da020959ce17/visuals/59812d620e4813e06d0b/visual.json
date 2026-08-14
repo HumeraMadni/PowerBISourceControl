@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "59812d620e4813e06d0b",
   "position": {
-    "x": 1077.5471838082783,
-    "y": 156.44581168914772,
+    "x": 1075.7049077709114,
+    "y": 134.80011375575333,
     "z": 38500,
-    "height": 113.40121635726196,
-    "width": 297.67819293781264,
+    "height": 113.23209555483278,
+    "width": 296.56025026265729,
     "tabOrder": 29000
   },
   "visual": {
@@ -159,5 +159,24 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "46b434d550090738284b"
+  "parentGroupName": "46b434d550090738284b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cbb4d95cd012813bcc28",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_FINAL_STATUS"
+              }
+            },
+            "Property": "PLAN_PAY (bins)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  },
+  "isHidden": true
 }

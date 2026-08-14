@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e9ee20a10ca64040137b",
   "position": {
-    "x": 642.85714285714289,
+    "x": 570,
     "y": 74.285714285714292,
-    "z": 49001,
+    "z": 41000,
     "height": 85.714285714285722,
-    "width": 290,
-    "tabOrder": 44001
+    "width": 260,
+    "tabOrder": 42000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "TERRITORY_ID_NAME"
+                  "Property": "TERRITORY_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
               "nativeQueryRef": "TERRITORY",
               "active": true,
               "displayName": "TERRITORY"
@@ -206,7 +206,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1f451c86884720c3aeab",
+        "name": "b46a6d2aa7563e7e9e97",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -231,7 +231,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "TERRITORY_ID_NAME"
+                            "Property": "TERRITORY_NAME"
                           }
                         }
                       ],

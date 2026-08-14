@@ -3,8 +3,8 @@
   "name": "dc79c9587aea62102007",
   "displayName": "Tooltip HCP Refill",
   "displayOption": "ActualSize",
-  "height": 80,
-  "width": 184,
+  "height": 119,
+  "width": 259,
   "objects": {
     "background": [
       {

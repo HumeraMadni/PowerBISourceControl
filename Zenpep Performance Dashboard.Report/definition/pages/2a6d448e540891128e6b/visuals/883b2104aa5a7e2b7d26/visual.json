@@ -4,9 +4,9 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 26000,
-    "height": 756,
-    "width": 600,
+    "z": 0,
+    "height": 669.8795180722891,
+    "width": 598.27586206896547,
     "tabOrder": 1000
   },
   "visual": {
@@ -869,7 +869,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -916,11 +916,11 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f1f071c03bd288070307",
+  "parentGroupName": "7dc41212680c410224a0",
   "filterConfig": {
     "filters": [
       {
-        "name": "75087578de5de2659a70",
+        "name": "a361059941e2c6356ec4",
         "field": {
           "Column": {
             "Expression": {
@@ -928,7 +928,7 @@
                 "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
               }
             },
-            "Property": "TERRITORY_ID_NAME"
+            "Property": "TERRITORY_NAME"
           }
         },
         "type": "TopN",
@@ -961,7 +961,7 @@
                               "Source": "g"
                             }
                           },
-                          "Property": "TERRITORY_ID_NAME"
+                          "Property": "TERRITORY_NAME"
                         },
                         "Name": "field"
                       }
@@ -1005,7 +1005,7 @@
                             "Source": "g"
                           }
                         },
-                        "Property": "TERRITORY_ID_NAME"
+                        "Property": "TERRITORY_NAME"
                       }
                     }
                   ],
@@ -1018,36 +1018,7 @@
               }
             }
           ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "dc110eb55856559e924d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-              }
-            },
-            "Property": "TERRITORY_NAME"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "076dab0721bc0927eaca",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MEASURES_TABLE"
-              }
-            },
-            "Property": "Total Zenpep RX"
-          }
-        },
-        "type": "Advanced"
+        }
       }
     ]
   }

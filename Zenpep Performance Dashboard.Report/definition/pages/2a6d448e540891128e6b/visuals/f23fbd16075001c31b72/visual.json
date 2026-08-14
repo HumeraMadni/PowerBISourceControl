@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f23fbd16075001c31b72",
   "position": {
-    "x": 2114.1029180541987,
-    "y": 243.58796068618787,
-    "z": 17000,
-    "height": 802.938092632249,
-    "width": 757.82921102369562,
-    "tabOrder": 17000
+    "x": 684.29898422918325,
+    "y": 1086.5205245776344,
+    "z": 16000,
+    "height": 770.4893143038513,
+    "width": 605.9441387067576,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "barChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "GOLD_LAYER_REJECT_CODES_SHORT.REJECT_DESCRIPTION",
-              "nativeQueryRef": "REJECT_DESCRIPTION",
-              "active": true
+              "nativeQueryRef": "Rejected Reason",
+              "active": true,
+              "displayName": "Rejected Reason"
             }
           ]
         },
@@ -865,13 +866,6 @@
       "visualTooltip": [
         {
           "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
             "themedBackground": {
               "solid": {
                 "color": {
@@ -906,6 +900,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -1017,6 +1018,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "855dee8e077b1b3651e8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rejected Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -4,9 +4,10 @@
   "position": {
     "x": 74.758715913013475,
     "y": 114.47789575588433,
-    "z": 32001,
+    "z": 3000,
     "height": 74.168777531981419,
-    "width": 173.3765964791163
+    "width": 173.3765964791163,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "card",
@@ -147,5 +148,82 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "30c693ce4d213d87abbb"
+  "parentGroupName": "30c693ce4d213d87abbb",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e5c88bf0b1a579c0e8bb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+              }
+            },
+            "Property": "TERRITORY_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "TERRITORY_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

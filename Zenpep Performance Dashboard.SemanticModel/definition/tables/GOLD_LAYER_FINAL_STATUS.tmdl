@@ -1,6 +1,23 @@
 table GOLD_LAYER_FINAL_STATUS
 	lineageTag: 6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a
 
+	measure 'Average PERT Volume' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('Z2T_TARGET_LIST_Q2_2026'[DISTRICT])),
+				CALCULATE(SUM('GOLD_LAYER_FINAL_STATUS'[RX_COUNT]))
+			)
+		formatString: 0.0
+		lineageTag: 1892d86b-e5db-4de1-8569-1bb69b670e66
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
 	column PATIENT_ID
 		dataType: int64
 		formatString: 0
@@ -42,7 +59,7 @@ table GOLD_LAYER_FINAL_STATUS
 
 	column FINAL_TX
 		dataType: dateTime
-		formatString: Short Date
+		formatString: Long Date
 		lineageTag: 8fc2f83f-dd88-4bab-844d-14e193e48250
 		summarizeBy: none
 		sourceColumn: FINAL_TX

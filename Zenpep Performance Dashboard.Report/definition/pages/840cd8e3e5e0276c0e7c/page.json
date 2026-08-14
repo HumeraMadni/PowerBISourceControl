@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "840cd8e3e5e0276c0e7c",
-  "displayName": "Tooltip-Patients Trend",
+  "displayName": "Tooltip-Claims Trend",
   "displayOption": "FitToWidth",
   "height": 208,
   "width": 684,

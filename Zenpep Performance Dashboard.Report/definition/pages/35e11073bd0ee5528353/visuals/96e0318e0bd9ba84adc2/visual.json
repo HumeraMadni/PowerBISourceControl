@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "96e0318e0bd9ba84adc2",
   "position": {
-    "x": 324.44444444444446,
-    "y": 74.444444444444443,
+    "x": 290,
+    "y": 74.285714285714292,
     "z": 4000,
-    "height": 85.555555555555557,
-    "width": 300,
-    "tabOrder": 3000
+    "height": 85.714285714285722,
+    "width": 260,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,10 +23,10 @@
                       "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
                     }
                   },
-                  "Property": "DISTRICT_ID_NAME"
+                  "Property": "DISTRICT_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_ID_NAME",
+              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
               "nativeQueryRef": "DISTRICT",
               "active": true,
               "displayName": "DISTRICT"

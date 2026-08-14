@@ -409,7 +409,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Patient Distribution by Channel Type'"
+                  "Value": "'Patient Distribution by Channel'"
                 }
               }
             },
@@ -505,13 +505,6 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
             "themedBackground": {
               "solid": {
                 "color": {
@@ -547,6 +540,13 @@
                       "Percent": -0.6
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -647,6 +647,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "1d297819bbd38029dd7b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Patients"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

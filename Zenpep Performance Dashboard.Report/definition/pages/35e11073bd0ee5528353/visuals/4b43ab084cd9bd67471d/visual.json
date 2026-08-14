@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4b43ab084cd9bd67471d",
   "position": {
-    "x": 489.04231170893195,
-    "y": 1145.6018793623598,
-    "z": 18000,
-    "height": 40.528368373668393,
-    "width": 37.826477148757164,
+    "x": 485.30934696098728,
+    "y": 849.29135718172779,
+    "z": 17000,
+    "height": 40.442445580082278,
+    "width": 37.331488227768254,
     "tabOrder": 21000
   },
   "visual": {
@@ -75,7 +75,7 @@
             "tooltip": {
               "expr": {
                 "Literal": {
-                  "Value": "'Displays the distribution of claims across different claim statuses. Hover over a claim status segment to view the monthly trend of unique patients associated with the selected claim status.'"
+                  "Value": "'Displays the distribution of claims across different claim statuses. Select a Rejected segment to view the Top Rejection Reasons. Hover over a claim status segment to view the monthly trend of claims within the selected claim status.'"
                 }
               }
             }
