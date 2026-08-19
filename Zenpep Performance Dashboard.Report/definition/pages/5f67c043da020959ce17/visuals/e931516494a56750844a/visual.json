@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e931516494a56750844a",
   "position": {
-    "x": 0.85941289365700868,
+    "x": 0.85868081661264972,
     "y": 0,
     "z": 35000,
-    "height": 763.81153821233579,
-    "width": 1383.2440661528276,
-    "tabOrder": 32000
+    "height": 772.49295603945575,
+    "width": 1382.0657719533222,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "columnChart",
@@ -23,7 +23,7 @@
                       "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "PLAN_PAY Bin Label"
+                  "Property": "PLAN_PAY Bin"
                 }
               },
               "queryRef": "GOLD_LAYER_FINAL_STATUS.PLAN_PAY Bin Label",
@@ -44,7 +44,7 @@
                           "Entity": "GOLD_LAYER_FINAL_STATUS"
                         }
                       },
-                      "Property": "PLAN_PAY Bin Label"
+                      "Property": "PLAN_PAY Bin"
                     }
                   },
                   "Function": 3
@@ -87,24 +87,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MEASURES_TABLE"
-                  }
-                },
-                "Property": "Total Claim Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -1532,7 +1514,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
                 }
               }
             },
@@ -1547,6 +1529,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -1799,7 +1788,7 @@
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'{Total Claim Count} claims are within the {PLAN_PAY Bin Label} Copay range.'"
+                  "Value": "'{Total Claim Count} claims are within the {PLAN_PAY Bin} Plan Pay range.'"
                 }
               }
             }
@@ -1813,7 +1802,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b7d79456d57c72c64ee0",
+        "name": "4072e9ef9c466cd92431",
         "field": {
           "Column": {
             "Expression": {
@@ -1821,13 +1810,71 @@
                 "Entity": "GOLD_LAYER_FINAL_STATUS"
               }
             },
-            "Property": "PLAN_PAY Bin Label"
+            "Property": "PLAN_PAY Bin"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_FINAL_STATUS",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PLAN_PAY Bin"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
-        "name": "a44ddb4d352bc6cdd02c",
+        "name": "5f1f558c9fe91f9fd6d3",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1837,7 +1884,7 @@
                     "Entity": "GOLD_LAYER_FINAL_STATUS"
                   }
                 },
-                "Property": "PLAN_PAY Bin Label"
+                "Property": "PLAN_PAY Bin"
               }
             },
             "Function": 3
@@ -1846,7 +1893,7 @@
         "type": "Advanced"
       },
       {
-        "name": "3d39c49484add022dc04",
+        "name": "422bf351a668034245dd",
         "field": {
           "Measure": {
             "Expression": {
@@ -1858,6 +1905,79 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "3033fbb97b2d9332ef29",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

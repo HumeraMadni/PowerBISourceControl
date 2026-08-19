@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f95303289724b9d03793",
   "position": {
-    "x": 1303.302263856345,
-    "y": 1083.9086963935536,
+    "x": 691.66951799781748,
+    "y": 1082.6131586052795,
     "z": 17000,
-    "height": 770.4893143038513,
-    "width": 1564.4850822644303,
-    "tabOrder": 17000
+    "height": 772.86550489321337,
+    "width": 2177.2553523061733,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "REGION_NAME"
+                  "Property": "REGION"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.REGION",
               "nativeQueryRef": "Region",
               "displayName": "Region"
             },
@@ -35,13 +35,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "DISTRICT_NAME"
+                  "Property": "DISTRICT"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT",
               "nativeQueryRef": "District",
               "displayName": "District"
             },
@@ -50,13 +50,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "TERRITORY"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.TERRITORY",
               "nativeQueryRef": "Territory",
               "displayName": "Territory"
             },
@@ -89,6 +89,21 @@
               "queryRef": "MEASURES_TABLE.Total Zenpep RX",
               "nativeQueryRef": "Zenpep RX",
               "displayName": "Zenpep RX"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MEASURES_TABLE"
+                    }
+                  },
+                  "Property": "Total Claim Count"
+                }
+              },
+              "queryRef": "MEASURES_TABLE.Total Claim Count",
+              "nativeQueryRef": "Claims",
+              "displayName": "Claims"
             },
             {
               "field": {
@@ -215,7 +230,7 @@
             "columnAdjustment": {
               "expr": {
                 "Literal": {
-                  "Value": "'fitToContent'"
+                  "Value": "'growToFit'"
                 }
               }
             },
@@ -237,6 +252,13 @@
               "expr": {
                 "Literal": {
                   "Value": "17D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
                 }
               }
             }
@@ -481,21 +503,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "124.77073503721655D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "172.28930520245675D"
+                  "Value": "259.3573993718227D"
                 }
               }
             }
@@ -509,7 +517,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "259.0103515270192D"
+                  "Value": "325.17006180377183D"
                 }
               }
             }
@@ -523,7 +531,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "186.2135894272836D"
+                  "Value": "254.03674615606582D"
                 }
               }
             }
@@ -537,41 +545,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "114.10687869065912D"
+                  "Value": "138.14296126749656D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "MEASURES_TABLE.Execution Priority Icon"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "274.4808473942822D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "226.13517567369092D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
           }
         },
         {
@@ -593,13 +573,55 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "159.41371953728134D"
+                  "Value": "252.4011504412208D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "MEASURES_TABLE.High Potential Territory Flag"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "288.1142461990118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.TERRITORY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132.01294003534056D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.REGION"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "260.821831551638D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.DISTRICT"
           }
         }
       ],
@@ -609,7 +631,7 @@
             "styleHeader": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -686,7 +708,7 @@
             "styleHeader": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -818,70 +840,140 @@
             }
           },
           "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            }
-          },
-          "selector": {
             "metadata": "MEASURES_TABLE.High Potential Territory Flag"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.TERRITORY"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.DISTRICT"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.REGION"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "dataBars": {
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#f8c7a0'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#f8c7a0'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#FFFFFF'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Total Claim Count"
           }
         }
       ]
@@ -1116,15 +1208,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ec2335c2809e64e14604",
+        "name": "99298d5250d4f82518da",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
               }
             },
-            "Property": "TERRITORY_NAME"
+            "Property": "TERRITORY_ID"
           }
         },
         "type": "Categorical",
@@ -1132,8 +1224,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -1148,10 +1240,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "g"
+                                "Source": "z"
                               }
                             },
-                            "Property": "TERRITORY_NAME"
+                            "Property": "TERRITORY_ID"
                           }
                         }
                       ],
@@ -1171,6 +1263,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -1186,6 +1279,146 @@
             }
           ]
         }
+      },
+      {
+        "name": "f32948e4a82774dc2e7b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
+              }
+            },
+            "Property": "REGION"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1d8b9a543b8487e25efb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
+              }
+            },
+            "Property": "DISTRICT"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aedbb2c63276c4a8e09e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z2T_TARGET_LIST_Q2_2026"
+              }
+            },
+            "Property": "TERRITORY"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7e27343b3a42c48e1912",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total RX Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "873064373e13490aafd7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Zenpep RX"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6bafe9160a32aea18c1e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "274187b7aa7610bea89e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential Territory Flag"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2b73905ced4847a0e4df",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "% Above Average PERT Volume"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8bc63a87d1431a69b7bd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Execution Priority Sort"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "916695654705c606dba0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Execution Priority Icon"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

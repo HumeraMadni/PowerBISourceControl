@@ -2,7 +2,7 @@ table DIM_DATE
 	lineageTag: 14a73168-2737-4cf0-97b8-4fa3ec29a1a2
 
 	column Date
-		formatString: MM-dd-yyyy
+		formatString: Short Date
 		lineageTag: a2b5b9cb-11a3-4a35-8720-24a2543a8450
 		summarizeBy: none
 		isNameInferred
@@ -11,8 +11,6 @@ table DIM_DATE
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
-
-		annotation PBI_FormatHint = {"isCustom":true}
 
 	column DATE_KEY
 		formatString: 0

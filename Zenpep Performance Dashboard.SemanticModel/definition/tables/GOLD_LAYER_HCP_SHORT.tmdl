@@ -8,6 +8,8 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: PRACTITIONER_ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NPI
@@ -17,6 +19,8 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: NPI
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column FIRST_NAME
@@ -24,6 +28,8 @@ table GOLD_LAYER_HCP_SHORT
 		lineageTag: 21d1dd59-9643-4d2c-85f2-802fffc48c05
 		summarizeBy: none
 		sourceColumn: FIRST_NAME
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -33,6 +39,8 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: LAST_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ZIP
@@ -40,6 +48,8 @@ table GOLD_LAYER_HCP_SHORT
 		lineageTag: eb33ccc6-6905-4642-9fd9-413494416950
 		summarizeBy: none
 		sourceColumn: ZIP
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -49,6 +59,8 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: ZENPEP_TARGET
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column SPECIALTY_DESCRIPTION
@@ -56,6 +68,8 @@ table GOLD_LAYER_HCP_SHORT
 		lineageTag: 6d2b7126-a1e1-4666-a3f3-ed8bd71d224f
 		summarizeBy: none
 		sourceColumn: SPECIALTY_DESCRIPTION
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -65,6 +79,8 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: NO_CONTACT_FLAG
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column TERRITORY_ID
@@ -73,11 +89,15 @@ table GOLD_LAYER_HCP_SHORT
 		summarizeBy: none
 		sourceColumn: TERRITORY_ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column HCP_FULL_NAME = [FIRST_NAME] & " " & [LAST_NAME]
 		lineageTag: 68ca00f3-40ea-4d9f-b34c-85ce9dfab08f
 		summarizeBy: none
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

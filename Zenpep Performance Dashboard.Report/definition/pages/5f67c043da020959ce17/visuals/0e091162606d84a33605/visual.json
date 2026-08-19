@@ -6,8 +6,7 @@
     "y": 100,
     "z": 6000,
     "height": 64.444444444444443,
-    "width": 165.55555555555554,
-    "tabOrder": 0
+    "width": 165.55555555555554
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +22,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Average OOP"
+                  "Property": "Average OOP (Coalesce)"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Average OOP per Patient",
-              "nativeQueryRef": "Average OOP"
+              "queryRef": "MEASURES_TABLE.Average OOP (Coalesce)",
+              "nativeQueryRef": "Average OOP (Coalesce)"
             }
           ]
         }
@@ -42,7 +41,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Average OOP"
+                "Property": "Average OOP (Coalesce)"
               }
             },
             "direction": "Descending"
@@ -223,6 +222,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "03beb286270639963136",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Average OOP (Coalesce)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "46b434d550090738284b",
   "position": {
-    "x": 1484.8471766778987,
-    "y": 987.36613476228774,
-    "z": 29000,
-    "height": 763.81153821233579,
-    "width": 1384.1034790464846,
-    "tabOrder": 25000
+    "x": 1485.5633769989533,
+    "y": 983.17285314112553,
+    "z": 33250,
+    "height": 769.7919317176395,
+    "width": 1382.9244527699348,
+    "tabOrder": 34000
   },
   "visualGroup": {
     "displayName": "Cost breakdown plan view",

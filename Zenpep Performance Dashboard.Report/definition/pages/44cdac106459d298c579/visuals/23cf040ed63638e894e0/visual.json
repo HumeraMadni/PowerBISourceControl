@@ -4,10 +4,10 @@
   "position": {
     "x": 1923.1846019247594,
     "y": 317.14785651793528,
-    "z": 35000,
+    "z": 26000,
     "height": 65.966754155730541,
     "width": 317.14785651793528,
-    "tabOrder": 35000
+    "tabOrder": 26000
   },
   "visual": {
     "visualType": "shape",
@@ -105,7 +105,7 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Paid % Display"
+                  "Property": "Paid Claim Count Display"
                 }
               }
             },

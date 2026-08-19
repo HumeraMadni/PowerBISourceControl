@@ -23,11 +23,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total RX Count"
+                  "Property": "Total RX Count (Coalesce)"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total RX Count",
-              "nativeQueryRef": "Total RX Count"
+              "queryRef": "MEASURES_TABLE.Total RX Count (Coalesce)",
+              "nativeQueryRef": "Total RX Count (Coalesce)"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total RX Count"
+                "Property": "Total RX Count (Coalesce)"
               }
             },
             "direction": "Descending"

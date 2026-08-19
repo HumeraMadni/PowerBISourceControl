@@ -46,9 +46,9 @@ table 'Measures Parameter'
 				    ("TOTAL ZENPEP RX", NAMEOF('MEASURES_TABLE'[Total Zenpep RX]), 3),
 				    ("AVERAGE COPAY", NAMEOF('MEASURES_TABLE'[Average Copay]), 4),
 				    ("AVERAGE OOP", NAMEOF('MEASURES_TABLE'[Average OOP]), 5),
-				    ("PAID %", NAMEOF('MEASURES_TABLE'[Paid %]), 6),
-				    ("REJECTED CLAIM %", NAMEOF('MEASURES_TABLE'[Rejected Claim %]), 7),
-				    ("REVERSED CLAIM %", NAMEOF('MEASURES_TABLE'[Reversed Claim %]), 8)
+				    ("PAID CLAIMS", NAMEOF('MEASURES_TABLE'[Paid Claim Count]), 6),
+				    ("REJECTED CLAIMS", NAMEOF('MEASURES_TABLE'[Rejected Claim Count]), 7),
+				    ("REVERSED CLAIMS", NAMEOF('MEASURES_TABLE'[Reversed Claim Count]), 8)
 				}
 
 	annotation PBI_Id = 5cbf1f9b66744f8384348f80930a6884

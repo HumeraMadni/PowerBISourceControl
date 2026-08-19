@@ -68,7 +68,7 @@ table Z2T_TARGET_LIST_Q2_2026
 	column DISTRICT
 		dataType: string
 		lineageTag: 2ee8e765-2976-45d7-a3c5-ab413bdb6387
-		dataCategory: County
+		dataCategory: Place
 		summarizeBy: none
 		sourceColumn: DISTRICT
 
@@ -97,6 +97,17 @@ table Z2T_TARGET_LIST_Q2_2026
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'COUNTRY '
+		dataType: string
+		lineageTag: 74563b68-8aa6-4b0c-971b-bdc40dd9c27f
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: "COUNTRY "
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy 'DISTRICT Hierarchy'
 		lineageTag: 35f65f3d-a3a5-42dd-bff8-beb2a0ee45b8
 
@@ -116,6 +127,25 @@ table Z2T_TARGET_LIST_Q2_2026
 			lineageTag: 524e569a-077f-4905-a3a3-4d8b767a5e3f
 			column: CITY
 
+		changedProperty = IsHidden
+
+	hierarchy 'COUNTRY  Hierarchy'
+		lineageTag: 77657c18-70ca-48a8-acfb-58d45978d4ef
+
+		level 'COUNTRY '
+			lineageTag: a5ddff60-18ae-48b0-afe5-1b1825197d86
+			column: 'COUNTRY '
+
+		level STATE
+			lineageTag: b7c5b28d-5e5f-4b0e-8b24-d274c0131a93
+			column: STATE
+
+		level CITY
+			lineageTag: 57818a21-e412-4c22-8901-47ec9c8474e0
+			column: CITY
+
+		changedProperty = IsHidden
+
 	partition Z2T_TARGET_LIST_Q2_2026 = m
 		mode: import
 		source =
@@ -123,11 +153,15 @@ table Z2T_TARGET_LIST_Q2_2026
 				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    MAPPING_Schema = RAW_NESTLE_Database{[Name="MAPPING",Kind="Schema"]}[Data],
-				    Z2T_TARGET_LIST_Q2_2026_Table = MAPPING_Schema{[Name="Z2T_TARGET_LIST_Q2_2026",Kind="Table"]}[Data]
+				    Z2T_TARGET_LIST_Q2_2026_Table = MAPPING_Schema{[Name="Z2T_TARGET_LIST_Q2_2026",Kind="Table"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(Z2T_TARGET_LIST_Q2_2026_Table, each [TERRITORY] <> "PUERTO RICO" and [TERRITORY] <> "WAKE ISLANDS" and [TERRITORY] <> "U.S. VIRGINIA ISLANDS"),
+				    #"Inserted Literal" = Table.AddColumn(#"Filtered Rows", "COUNTRY ", each "UNITED STATES", type text)
 				in
-				    Z2T_TARGET_LIST_Q2_2026_Table
+				    #"Inserted Literal"
 
 	changedProperty = IsHidden
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

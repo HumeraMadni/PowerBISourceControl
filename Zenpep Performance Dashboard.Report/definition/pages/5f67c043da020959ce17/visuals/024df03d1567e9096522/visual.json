@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "024df03d1567e9096522",
   "position": {
-    "x": 1.2075108489679229,
-    "y": 0,
+    "x": 0,
+    "y": 1.4808591288549648,
     "z": 30000,
     "height": 763.39619674202424,
     "width": 759.62895894863129,
@@ -1852,7 +1852,7 @@
         "howCreated": "User"
       },
       {
-        "name": "16f68b050ca8d6331bc2",
+        "name": "de12c87392129f4e57ab",
         "field": {
           "Column": {
             "Expression": {
@@ -1866,7 +1866,7 @@
         "type": "Categorical"
       },
       {
-        "name": "e8abd3610dbcdbb22cc1",
+        "name": "a45e1f9cc5e3594a02ca",
         "field": {
           "Measure": {
             "Expression": {
@@ -1878,7 +1878,81 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "2552076978a06dee46f9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
-  }
+  },
+  "isHidden": true
 }

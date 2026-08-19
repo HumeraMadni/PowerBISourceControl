@@ -5,8 +5,8 @@
     "x": 0,
     "y": 0,
     "z": 27500,
-    "height": 705.24921803263635,
-    "width": 1422.8626320845344,
+    "height": 705.51250885600632,
+    "width": 1422.9156779736306,
     "tabOrder": 0
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "GOLD_LAYER_PLAN.PAYMENT_TYPE",
-              "nativeQueryRef": "PAYMENT_TYPE",
-              "active": true
+              "nativeQueryRef": "Channel Type",
+              "active": true,
+              "displayName": "Channel Type"
             }
           ]
         },
@@ -556,7 +557,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -672,7 +673,7 @@
         }
       },
       {
-        "name": "687cb0c3f2ad59c721ee",
+        "name": "ad2afa5b5ac87dbc7196",
         "field": {
           "Column": {
             "Expression": {
@@ -686,7 +687,7 @@
         "type": "Categorical"
       },
       {
-        "name": "3c55b41e914ea7d983e6",
+        "name": "be26a49ff80a6ee1a4a9",
         "field": {
           "Measure": {
             "Expression": {
@@ -698,6 +699,79 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "f3671008bb1bb8497966",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

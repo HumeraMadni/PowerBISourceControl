@@ -298,7 +298,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "15D"
                 }
               }
             }
@@ -602,6 +602,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "d42564e926315080f407",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CLAIM_STATUS"
+              }
+            },
+            "Property": "CLAIM_STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9c69d7247626d84960b1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

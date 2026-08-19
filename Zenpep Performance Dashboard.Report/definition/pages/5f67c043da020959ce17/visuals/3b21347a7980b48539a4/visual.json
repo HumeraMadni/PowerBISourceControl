@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "3b21347a7980b48539a4",
   "position": {
-    "x": 0,
+    "x": 0.48740273495148156,
     "y": 0,
     "z": 29000,
-    "height": 763.84372857150277,
-    "width": 759.541891941189,
+    "height": 768.92936358463612,
+    "width": 761.00225674355738,
     "tabOrder": 0
   },
   "visual": {
@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "GOLD_LAYER_PLAN.ADMIN_NAME",
-              "nativeQueryRef": "Payer",
+              "nativeQueryRef": "Payer Name",
               "active": true,
-              "displayName": "Payer"
+              "displayName": "Payer Name"
             }
           ]
         },
@@ -1286,7 +1286,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -1435,9 +1435,110 @@
               }
             }
           ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "8eedbe9eb7e11100dacf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_PLAN"
+              }
+            },
+            "Property": "ADMIN_NAME"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6a78c943ef2359cc5db6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "019eba26db7bd9ded884",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
       }
     ]
-  },
-  "isHidden": true
+  }
 }

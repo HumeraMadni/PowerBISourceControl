@@ -1,0 +1,54 @@
+table GOLD_LAYER_MEDICARE_PATIENTS
+	lineageTag: b693ff3b-5d14-4de7-a935-bbae0f261575
+
+	column PATIENT_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e97777dc-ab67-4b4b-9b59-543a9dd70753
+		summarizeBy: none
+		sourceColumn: PATIENT_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MPD_YEAR
+		dataType: double
+		lineageTag: 9a3d85b7-ee81-4d87-aae0-368cb4ef07aa
+		summarizeBy: none
+		sourceColumn: MPD_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LIS_FLAG
+		dataType: string
+		lineageTag: 81ac91d9-46d1-4dd0-a3e3-8051777c28cf
+		summarizeBy: none
+		sourceColumn: LIS_FLAG
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Patient Year Key' = GOLD_LAYER_MEDICARE_PATIENTS[PATIENT_ID] * 10000 + GOLD_LAYER_MEDICARE_PATIENTS[MPD_YEAR]
+		lineageTag: 8b8bdb7f-bd41-438c-b30e-e19ecfb3ed40
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition GOLD_LAYER_MEDICARE_PATIENTS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMG-PATIENTLENS_EXTENDED.snowflakecomputing.com","PRECISION_ADVISORS_WH",[Implementation="2.0"]),
+				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
+				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
+				    GOLD_LAYER_MEDICARE_PATIENTS_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_MEDICARE_PATIENTS",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_MEDICARE_PATIENTS_Table,{{"PATIENT_ID", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

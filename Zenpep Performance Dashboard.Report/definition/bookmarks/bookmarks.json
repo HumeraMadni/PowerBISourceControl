@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
   "items": [
     {
-      "name": "a25308d9cbe806a6c0d1",
-      "displayName": "Top 30/50 Bookmark",
+      "name": "1663a13e8d0d181d5666",
+      "displayName": "TOP 30/50",
       "children": [
         "67579db3e9d13de1e201",
         "f2627f569e1095027539"
@@ -19,23 +19,6 @@
       ]
     },
     {
-      "name": "1a04543cbe2a33c44c41",
-      "displayName": "Cost Breakdown Plan View",
-      "children": [
-        "704adbac785abd651648",
-        "e418a9d3ea2eea7b527a",
-        "e3fc3309ecbb002a7300"
-      ]
-    },
-    {
-      "name": "ef0584eebdb20590943b",
-      "displayName": "Top/Bottom 10",
-      "children": [
-        "d13bc51002e0ba6c0077",
-        "4153d7266e3da1a65a44"
-      ]
-    },
-    {
       "name": "747e5e04bce0bd56b559",
       "displayName": "Rolling Bookmark",
       "children": [
@@ -45,19 +28,36 @@
       ]
     },
     {
-      "name": "f952e2e4de0bc4a562ae",
-      "displayName": "Plans/Payers",
+      "name": "c5478c70696042545b84",
+      "displayName": "Channels/Months",
       "children": [
-        "5fe5cd6a6866ceb86b26",
-        "a728f63a3d6669787aa3"
+        "3451250e73f72f62432c",
+        "82a1a8f078afc4da3678"
       ]
     },
     {
-      "name": "3236afd0303090064de1",
-      "displayName": "Claims Trends",
+      "name": "d2efb9b9da9142ac0c5c",
+      "displayName": "Plans/Payers",
       "children": [
-        "88b2ef705e80b2a6400a",
-        "58b7469db03a04d5036e"
+        "802ef4af708e8168ae44",
+        "b1447020e915a87eb95f"
+      ]
+    },
+    {
+      "name": "369d408a4e55c7442796",
+      "displayName": "Cost Breakdown Plan View",
+      "children": [
+        "9ba774374495b4b5a716",
+        "d97a9bd7c641e26301aa",
+        "f484133c3e93d156bebd"
+      ]
+    },
+    {
+      "name": "7fcca91e4bf107e94d34",
+      "displayName": "Plans/Payers - Territory View",
+      "children": [
+        "2bcf8e5061fa0adc548f",
+        "f736478eeeac8ce9d964"
       ]
     }
   ]

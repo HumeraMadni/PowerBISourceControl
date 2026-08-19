@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 740.72978303747527,
-    "z": 26000,
+    "z": 17000,
     "height": 1150,
     "width": 2882.84023668639,
-    "tabOrder": 26000
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "REGION"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
-              "nativeQueryRef": "TERRITORY NAME",
-              "displayName": "TERRITORY NAME"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.REGION",
+              "nativeQueryRef": "REGION NAME",
+              "displayName": "REGION NAME"
             },
             {
               "field": {
@@ -65,6 +65,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "GOLD_LAYER_PLAN"
+                    }
+                  },
+                  "Property": "PLAN_NAME"
+                }
+              },
+              "queryRef": "GOLD_LAYER_PLAN.PLAN_NAME",
+              "nativeQueryRef": "PLAN NAME",
+              "displayName": "PLAN NAME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "GOLD_LAYER_DRUG"
                     }
                   },
@@ -72,8 +87,8 @@
                 }
               },
               "queryRef": "GOLD_LAYER_DRUG.NEW_DRUG_NAME",
-              "nativeQueryRef": "NEW DRUG NAME",
-              "displayName": "NEW DRUG NAME"
+              "nativeQueryRef": "DRUG NAME",
+              "displayName": "DRUG NAME"
             },
             {
               "field": {
@@ -162,7 +177,7 @@
                 }
               },
               "index": 2,
-              "length": 0
+              "length": 1
             },
             {
               "parameterExpr": {
@@ -1203,6 +1218,160 @@
           "selector": {
             "metadata": "MEASURES_TABLE.Average OOP"
           }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.REGION"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.DISTRICT"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.TERRITORY"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.ZIP"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Paid Claim Count"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Rejected Claim Count"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "MEASURES_TABLE.Reversed Claim Count"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_FINAL_STATUS.FINAL_CLAIM_ID"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "GOLD_LAYER_FINAL_STATUS.PATIENT_ID"
+          }
         }
       ],
       "columnWidth": [
@@ -1467,6 +1636,36 @@
               "expr": {
                 "Literal": {
                   "Value": "'Default'"
+                }
+              }
+            },
+            "themedValueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "themedBackground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F0F5FB'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

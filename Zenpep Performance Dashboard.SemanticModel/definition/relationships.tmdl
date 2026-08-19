@@ -1,7 +1,3 @@
-relationship AutoDetected_4e629a3d-46e9-4a0a-9728-79b7aa03e5f0
-	fromColumn: GOLD_LAYER_HCP_SHORT.TERRITORY_ID
-	toColumn: GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_ID
-
 relationship 6bc47859-8a8e-756e-f16a-23bcbec678ae
 	fromColumn: GOLD_LAYER_FINAL_STATUS.PRACTITIONER_ID
 	toColumn: GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID
@@ -33,4 +29,8 @@ relationship 165dc218-ac31-9540-595b-c4c0179d06cd
 relationship 432f7c17-9d72-4c42-6b48-def039f129db
 	fromColumn: GOLD_LAYER_HCP_SHORT.ZIP
 	toColumn: Z2T_TARGET_LIST_Q2_2026.ZIP
+
+relationship 5c8d60be-48f1-09bd-2171-19b8b57e0e3a
+	fromColumn: GOLD_LAYER_FINAL_STATUS.'Patient Year Key'
+	toColumn: GOLD_LAYER_MEDICARE_PATIENTS.'Patient Year Key'
 

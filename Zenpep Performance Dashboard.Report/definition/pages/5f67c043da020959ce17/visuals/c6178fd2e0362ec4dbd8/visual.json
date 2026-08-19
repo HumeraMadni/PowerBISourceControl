@@ -5,9 +5,9 @@
     "x": 0,
     "y": 0,
     "z": 37000,
-    "height": 763.23524687202575,
-    "width": 1380.8822674621044,
-    "tabOrder": 33000
+    "height": 771.910114620147,
+    "width": 1379.7059851228091,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -23,7 +23,7 @@
                       "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "PATIENT_OOP Bin Label"
+                  "Property": "PATIENT_OOP Bin"
                 }
               },
               "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_OOP Bin Label",
@@ -44,7 +44,7 @@
                           "Entity": "GOLD_LAYER_FINAL_STATUS"
                         }
                       },
-                      "Property": "PATIENT_OOP Bin Label"
+                      "Property": "PATIENT_OOP Bin"
                     }
                   },
                   "Function": 3
@@ -87,24 +87,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MEASURES_TABLE"
-                  }
-                },
-                "Property": "Total Claim Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -1532,7 +1514,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
                 }
               }
             },
@@ -1547,6 +1529,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -1792,7 +1781,7 @@
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'{Total Claim Count} claims are within the {PATIENT_OOP Bin Label} Copay range.'"
+                  "Value": "'{Total Claim Count} claims are within the {PATIENT_OOP Bin} OOP range.'"
                 }
               }
             }
@@ -1806,7 +1795,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "38e6dbd150d935d53186",
+        "name": "662e64adaff837c07581",
         "field": {
           "Column": {
             "Expression": {
@@ -1814,13 +1803,71 @@
                 "Entity": "GOLD_LAYER_FINAL_STATUS"
               }
             },
-            "Property": "PATIENT_OOP Bin Label"
+            "Property": "PATIENT_OOP Bin"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_FINAL_STATUS",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PATIENT_OOP Bin"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
-        "name": "2fe833f1bb04e0509a6c",
+        "name": "f0ef7674af904a6347b2",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -1830,7 +1877,7 @@
                     "Entity": "GOLD_LAYER_FINAL_STATUS"
                   }
                 },
-                "Property": "PATIENT_OOP Bin Label"
+                "Property": "PATIENT_OOP Bin"
               }
             },
             "Function": 3
@@ -1839,7 +1886,7 @@
         "type": "Advanced"
       },
       {
-        "name": "5248d965ba2c8840bb76",
+        "name": "662ada35eb1172f3400b",
         "field": {
           "Measure": {
             "Expression": {
@@ -1851,6 +1898,79 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "37c859b7b90d9db8ddb3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

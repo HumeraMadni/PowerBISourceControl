@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ad642726be090b8824ba",
   "position": {
-    "x": 10.807564899644904,
-    "y": 8.6460519197159229,
+    "x": 10.447312736323408,
+    "y": 10.447312736323408,
     "z": 1000,
-    "height": 43.230259598579615,
-    "width": 897.027886670527,
+    "height": 44.40107912937448,
+    "width": 898.46889532381306,
     "tabOrder": 1000
   },
   "visual": {
@@ -55,7 +55,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ZENPEP - PAYER PERFORMANCE DASHBOARD'"
+                  "Value": "'ZENPEP - DETAILED VIEW'"
                 }
               }
             },

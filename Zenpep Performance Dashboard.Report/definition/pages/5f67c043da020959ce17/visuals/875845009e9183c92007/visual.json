@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "875845009e9183c92007",
   "position": {
-    "x": 618.57142857142856,
-    "y": 70,
-    "z": 33000,
-    "height": 85.714285714285722,
-    "width": 290,
-    "tabOrder": 29000
+    "x": 495.77464788732397,
+    "y": 71.83098591549296,
+    "z": 29000,
+    "height": 87.323943661971839,
+    "width": 229.57746478873241,
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "TERRITORY"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
-              "nativeQueryRef": "TERRITORY",
-              "active": true,
-              "displayName": "TERRITORY"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.TERRITORY",
+              "nativeQueryRef": "TERRITORY1",
+              "active": true
             }
           ]
         }
@@ -206,14 +205,14 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b46a6d2aa7563e7e9e97",
+        "name": "dfb41c158b362a0b1072",
         "type": "Exclude",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -228,10 +227,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "g"
+                                "Source": "z"
                               }
                             },
-                            "Property": "TERRITORY_NAME"
+                            "Property": "TERRITORY"
                           }
                         }
                       ],
