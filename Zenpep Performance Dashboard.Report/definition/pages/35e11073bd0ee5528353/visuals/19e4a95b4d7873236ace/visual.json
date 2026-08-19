@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "GOLD_LAYER_REJECT_CODES_SHORT.REJECT_DESCRIPTION",
-              "nativeQueryRef": "Rejected Reasons",
+              "nativeQueryRef": "Rejected Reason",
               "active": true,
-              "displayName": "Rejected Reasons"
+              "displayName": "Rejected Reason"
             }
           ]
         },
@@ -315,6 +315,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
                 }
               }
             }
@@ -1072,6 +1079,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "b11470b50e154cf78160",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Rejected Claim Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

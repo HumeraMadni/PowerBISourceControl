@@ -23,11 +23,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Average Copay"
+                  "Property": "Average Copay (Coalesce)"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Average Copay per Patient",
-              "nativeQueryRef": "Average Copay per Patient"
+              "queryRef": "MEASURES_TABLE.Average Copay (Coalesce)",
+              "nativeQueryRef": "Average Copay (Coalesce)"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Average Copay"
+                "Property": "Average Copay (Coalesce)"
               }
             },
             "direction": "Descending"
@@ -223,6 +223,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "d6bdba8c7c6369fe422a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Average Copay (Coalesce)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

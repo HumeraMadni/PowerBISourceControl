@@ -223,6 +223,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "4faeb2ee8cad0afc382f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "High Potential HCP Count"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

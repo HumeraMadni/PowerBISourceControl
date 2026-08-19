@@ -23,11 +23,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Unique Payers"
+                  "Property": "Coverage Payers"
                 }
               },
               "queryRef": "MEASURES_TABLE.Unique Payers",
-              "nativeQueryRef": "Unique Payers"
+              "nativeQueryRef": "Coverage Payers"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Unique Payers"
+                "Property": "Coverage Payers"
               }
             },
             "direction": "Descending"
@@ -148,5 +148,96 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c6fac00161044aaad6a6"
+  "parentGroupName": "c6fac00161044aaad6a6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "478851f7fb6a642a9ac9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Coverage Payers"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6a82c6fb709c2365cd10",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

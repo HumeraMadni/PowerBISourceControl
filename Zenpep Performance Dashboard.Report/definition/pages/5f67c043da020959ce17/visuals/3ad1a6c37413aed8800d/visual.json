@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "3ad1a6c37413aed8800d",
   "position": {
-    "x": 680.49951969260326,
-    "y": 247.45437079731028,
-    "z": 18000,
-    "height": 705.24921803263635,
-    "width": 1422.8626320845344,
-    "tabOrder": 19000
+    "x": 681.7311883327701,
+    "y": 245.74031207344041,
+    "z": 33375,
+    "height": 705.51250885600632,
+    "width": 1422.9156779736306,
+    "tabOrder": 33000
   },
   "visualGroup": {
     "displayName": "Claims Trend",

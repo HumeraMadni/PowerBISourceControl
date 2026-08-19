@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "611e5e299032de00b735",
   "position": {
-    "x": 5.5555555555555554,
-    "y": 70,
+    "x": 5.88235294117647,
+    "y": 72.058823529411754,
     "z": 9000,
-    "height": 86.666666666666671,
-    "width": 290,
+    "height": 86.764705882352942,
+    "width": 230,
     "tabOrder": 9000
   },
   "visual": {
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "REGION_NAME"
+                  "Property": "REGION"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.REGION_NAME",
-              "nativeQueryRef": "REGION",
-              "active": true,
-              "displayName": "REGION"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.REGION",
+              "nativeQueryRef": "REGION1",
+              "active": true
             }
           ]
         }
@@ -131,14 +130,14 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8478f637dce591108480",
+        "name": "5f5fb306d07302742194",
         "type": "Exclude",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -153,10 +152,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "g"
+                                "Source": "z"
                               }
                             },
-                            "Property": "REGION_NAME"
+                            "Property": "REGION"
                           }
                         }
                       ],

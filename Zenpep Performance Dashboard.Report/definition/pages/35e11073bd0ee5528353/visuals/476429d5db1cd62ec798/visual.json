@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "476429d5db1cd62ec798",
   "position": {
-    "x": 2.8818443804034586,
-    "y": 2.8818443804034586,
+    "x": 0.73715728908946132,
+    "y": 2.7414334116486518,
     "z": 1000,
-    "height": 515,
-    "width": 1469.7406340057637,
-    "tabOrder": 0
+    "height": 513.8352003823062,
+    "width": 1470
   },
   "visual": {
     "visualType": "tableEx",
@@ -50,13 +49,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "TERRITORY"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.TERRITORY",
               "nativeQueryRef": "Territory",
               "displayName": "Territory"
             },
@@ -280,53 +279,7 @@
           }
         },
         {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "MEASURES_TABLE"
-                            }
-                          },
-                          "Property": "Paid Claim % (HCP)"
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#2E8B57'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#2E8B57'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -1001,20 +954,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "240.47174760030083D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "222.28786315420572D"
                 }
               }
@@ -1064,6 +1003,20 @@
           },
           "selector": {
             "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "246.54930975310992D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.TERRITORY"
           }
         }
       ]
@@ -1305,7 +1258,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ef55c010e3380e9d080d",
+        "name": "c9ce737cef7eb9c83e7b",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1316,8 +1269,8 @@
               "Type": 0
             },
             {
-              "Name": "g1",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -1335,17 +1288,7 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "SPECIALTY_DESCRIPTION"
-                          }
-                        },
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "g1"
-                              }
-                            },
-                            "Property": "TERRITORY_NAME"
+                            "Property": "HCP_FULL_NAME"
                           }
                         },
                         {
@@ -1355,7 +1298,17 @@
                                 "Source": "g"
                               }
                             },
-                            "Property": "HCP_FULL_NAME"
+                            "Property": "SPECIALTY_DESCRIPTION"
+                          }
+                        },
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "z"
+                              }
+                            },
+                            "Property": "TERRITORY"
                           }
                         }
                       ],

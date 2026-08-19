@@ -1484,7 +1484,7 @@
         }
       },
       {
-        "name": "3957459d97b21ca794e4",
+        "name": "699dc48a6d2a745d1a68",
         "field": {
           "Column": {
             "Expression": {
@@ -1495,10 +1495,97 @@
             "Property": "HCP_FULL_NAME"
           }
         },
-        "type": "Categorical"
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "m",
+                        "Entity": "MEASURES_TABLE",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "g"
+                            }
+                          },
+                          "Property": "HCP_FULL_NAME"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "Total Claim Count"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 30
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "g"
+                          }
+                        },
+                        "Property": "HCP_FULL_NAME"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
-        "name": "3fb04725c767cfe77bfd",
+        "name": "6252ce9e0bb8933172e2",
         "field": {
           "Measure": {
             "Expression": {
@@ -1512,7 +1599,7 @@
         "type": "Advanced"
       },
       {
-        "name": "e45c458fd9f848c78b63",
+        "name": "796e547ce9de85a4266c",
         "field": {
           "Measure": {
             "Expression": {
@@ -1526,7 +1613,7 @@
         "type": "Advanced"
       },
       {
-        "name": "2fcdd357e2242c97b418",
+        "name": "3018c10677d9240844b5",
         "field": {
           "Measure": {
             "Expression": {
@@ -1540,7 +1627,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d48af77ea4560aee73c4",
+        "name": "b98d10152b8efa23b068",
         "field": {
           "Measure": {
             "Expression": {
@@ -1554,7 +1641,7 @@
         "type": "Advanced"
       },
       {
-        "name": "302208687fcb9120950e",
+        "name": "67e56d5047bdc6f193e2",
         "field": {
           "Measure": {
             "Expression": {
@@ -1568,7 +1655,7 @@
         "type": "Advanced"
       },
       {
-        "name": "f0618ad8f1bcf6dbc2a6",
+        "name": "4045cb0bf2f3e489d48d",
         "field": {
           "Measure": {
             "Expression": {
@@ -1582,7 +1669,7 @@
         "type": "Advanced"
       },
       {
-        "name": "2ce0d799d615534169e0",
+        "name": "fddf26f99a71b8ac0f45",
         "field": {
           "Measure": {
             "Expression": {
@@ -1596,7 +1683,7 @@
         "type": "Advanced"
       },
       {
-        "name": "c4bd3b302b110cb7f37a",
+        "name": "437fa086e4bd95c42259",
         "field": {
           "Measure": {
             "Expression": {
@@ -1610,7 +1697,7 @@
         "type": "Advanced"
       },
       {
-        "name": "9550023ef7fff9f9cd89",
+        "name": "03b95810e1d386d8760d",
         "field": {
           "Measure": {
             "Expression": {
@@ -1624,7 +1711,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4b7f3c469306e637578b",
+        "name": "4a77d53592587e64dd7b",
         "field": {
           "Measure": {
             "Expression": {

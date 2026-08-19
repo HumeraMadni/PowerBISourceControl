@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d4867f9018c2b9496481",
   "position": {
-    "x": 0,
+    "x": 2.8571428571428572,
     "y": 0,
     "z": 45500,
-    "height": 516.06122395804414,
-    "width": 1129.3905320128924,
+    "height": 517.14285714285722,
+    "width": 1127.1428571428571,
     "tabOrder": 37000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "PATIENT_PAY Bin Label"
+                  "Property": "PATIENT_PAY Bin"
                 }
               },
-              "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_PAY Bin Label",
-              "nativeQueryRef": "PATIENT_PAY Bin Label",
+              "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_PAY Bin",
+              "nativeQueryRef": "PATIENT_PAY Bin",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "GOLD_LAYER_FINAL_STATUS"
                         }
                       },
-                      "Property": "PATIENT_PAY Bin Label"
+                      "Property": "PATIENT_PAY Bin"
                     }
                   },
                   "Function": 3
                 }
               },
               "queryRef": "Min(GOLD_LAYER_FINAL_STATUS.PATIENT_PAY Bin Label)",
-              "nativeQueryRef": "First PATIENT_PAY Bin Label"
+              "nativeQueryRef": "First PATIENT_PAY Bin"
             },
             {
               "field": {
@@ -87,24 +87,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MEASURES_TABLE"
-                  }
-                },
-                "Property": "Total Claim Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -261,6 +243,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -623,7 +612,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -665,7 +654,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -720,7 +709,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -762,7 +751,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -804,7 +793,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -846,7 +835,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -888,7 +877,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -930,7 +919,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -972,7 +961,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1014,7 +1003,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1056,7 +1045,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1098,7 +1087,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1140,7 +1129,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1182,7 +1171,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1224,7 +1213,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1631,7 +1620,7 @@
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'{Total Claim Count} claims are within the {PATIENT_PAY Bin Label} Copay range.'"
+                  "Value": "'{Total Claim Count} claims are within the {PATIENT_PAY Bin} Copay range.'"
                 }
               }
             },
@@ -1663,7 +1652,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eeff1a80cb02506343e2",
+        "name": "8cb5907777c5c3e9c3cc",
         "field": {
           "Column": {
             "Expression": {
@@ -1671,11 +1660,53 @@
                 "Entity": "GOLD_LAYER_FINAL_STATUS"
               }
             },
-            "Property": "PATIENT_PAY (bins)"
+            "Property": "PATIENT_PAY Bin"
           }
         },
         "type": "Categorical",
-        "howCreated": "User",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_FINAL_STATUS",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PATIENT_PAY Bin"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "objects": {
           "general": [
             {
@@ -1693,45 +1724,87 @@
         }
       },
       {
-        "name": "a423ff9266a60778c9ab",
+        "name": "75238a2b16704c599a5f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GOLD_LAYER_FINAL_STATUS"
+                  }
+                },
+                "Property": "PATIENT_PAY Bin"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ad904db02e18d46f141b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "abf6fe4ea8e6cd171902",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "GOLD_LAYER_FINAL_STATUS"
+                "Entity": "GOLD_LAYER_HCP_SHORT"
               }
             },
-            "Property": "PATIENT_PAY"
+            "Property": "PRACTITIONER_ID"
           }
         },
-        "type": "Advanced",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
             {
               "Name": "g",
-              "Entity": "GOLD_LAYER_FINAL_STATUS",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "g"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
                         }
-                      },
-                      "Property": "PATIENT_PAY"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "100L"
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
                     }
                   }
                 }
@@ -1739,7 +1812,22 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

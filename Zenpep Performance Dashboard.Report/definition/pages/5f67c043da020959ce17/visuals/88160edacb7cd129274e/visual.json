@@ -6,8 +6,7 @@
     "y": 108.26131586052794,
     "z": 15000,
     "height": 45.108881608553311,
-    "width": 189.45730275592391,
-    "tabOrder": 2000
+    "width": 189.45730275592391
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +22,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total Claim Count"
+                  "Property": "Total Claim Count (Coalesce)"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total Claim Count",
-              "nativeQueryRef": "Total Claim Count"
+              "queryRef": "MEASURES_TABLE.Total Claim Count (Coalesce)",
+              "nativeQueryRef": "Total Claim Count (Coalesce)"
             }
           ]
         }
@@ -42,7 +41,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total Claim Count"
+                "Property": "Total Claim Count (Coalesce)"
               }
             },
             "direction": "Descending"
@@ -223,6 +222,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "a3919d4bc52890e06871",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count (Coalesce)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -8,6 +8,8 @@ table GOLD_LAYER_DRUG
 		summarizeBy: none
 		sourceColumn: DRUG_ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column DRUG_NAME
@@ -15,6 +17,8 @@ table GOLD_LAYER_DRUG
 		lineageTag: 74fe29ac-89c5-4573-9058-dd15ded31c11
 		summarizeBy: none
 		sourceColumn: DRUG_NAME
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table GOLD_LAYER_DRUG
 		summarizeBy: none
 		sourceColumn: NDC11
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column DRUG_STRENGTH
@@ -32,6 +38,8 @@ table GOLD_LAYER_DRUG
 		summarizeBy: none
 		sourceColumn: DRUG_STRENGTH
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PACKAGE_SIZE
@@ -39,6 +47,8 @@ table GOLD_LAYER_DRUG
 		lineageTag: 5dc9c824-7cd3-4a2d-809b-adde88e0ba06
 		summarizeBy: none
 		sourceColumn: PACKAGE_SIZE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -49,6 +59,21 @@ table GOLD_LAYER_DRUG
 		lineageTag: 582d32a8-7cc0-4f08-9072-672cbf1e38f1
 		summarizeBy: none
 		sourceColumn: NEW_DRUG_NAME
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DRUG_BRAND =
+			
+			SWITCH(
+			    TRUE(),
+			    CONTAINSSTRING(UPPER('GOLD_LAYER_DRUG'[DRUG_NAME]), "CREON"), "CREON",
+			    CONTAINSSTRING(UPPER('GOLD_LAYER_DRUG'[DRUG_NAME]), "ZENPEP"), "ZENPEP",
+			    "OTHER"
+			)
+		lineageTag: 7840fa14-38fb-4a97-8e39-28fbba246500
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

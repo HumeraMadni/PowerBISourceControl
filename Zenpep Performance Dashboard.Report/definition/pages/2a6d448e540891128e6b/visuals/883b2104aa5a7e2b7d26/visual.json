@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "883b2104aa5a7e2b7d26",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 0,
-    "height": 669.8795180722891,
-    "width": 598.27586206896547,
-    "tabOrder": 1000
+    "x": 27.909011373578302,
+    "y": 1151.8810148731409,
+    "z": 29000,
+    "height": 700.2624671916011,
+    "width": 601.31233595800529,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "GOLD_LAYER_PLAN"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "PLAN_NAME"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
-              "nativeQueryRef": "Territory Name",
+              "queryRef": "GOLD_LAYER_PLAN.PLAN_NAME",
+              "nativeQueryRef": "Plan Name",
               "active": true,
-              "displayName": "Territory Name"
+              "displayName": "Plan Name"
             }
           ]
         },
@@ -43,11 +43,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total Zenpep RX"
+                  "Property": "Total Claim Count"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total Zenpep RX",
-              "nativeQueryRef": "Total Zenpep RX"
+              "queryRef": "MEASURES_TABLE.Total Claim Count",
+              "nativeQueryRef": "Total Claim Count"
             }
           ]
         }
@@ -62,7 +62,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total Zenpep RX"
+                "Property": "Total Claim Count"
               }
             },
             "direction": "Descending"
@@ -583,7 +583,7 @@
                               "Entity": "MEASURES_TABLE"
                             }
                           },
-                          "Property": "Total Zenpep RX"
+                          "Property": "Total Claim Count"
                         }
                       },
                       "FillRule": {
@@ -709,7 +709,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Zenpep Retail Performance by Territory'"
+                  "Value": "'Leading Plans'"
                 }
               }
             },
@@ -754,7 +754,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 territories ranked by Zenpep prescription volume'"
+                  "Value": "'Top 10 Plans ranked by Claim Count'"
                 }
               }
             },
@@ -916,19 +916,18 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "7dc41212680c410224a0",
   "filterConfig": {
     "filters": [
       {
-        "name": "a361059941e2c6356ec4",
+        "name": "885d6050ec489896b02a",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                "Entity": "GOLD_LAYER_PLAN"
               }
             },
-            "Property": "TERRITORY_NAME"
+            "Property": "PLAN_NAME"
           }
         },
         "type": "TopN",
@@ -944,7 +943,7 @@
                     "From": [
                       {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Entity": "GOLD_LAYER_PLAN",
                         "Type": 0
                       },
                       {
@@ -961,7 +960,7 @@
                               "Source": "g"
                             }
                           },
-                          "Property": "TERRITORY_NAME"
+                          "Property": "PLAN_NAME"
                         },
                         "Name": "field"
                       }
@@ -976,7 +975,7 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "Total Zenpep RX"
+                            "Property": "Total Claim Count"
                           }
                         }
                       }
@@ -989,7 +988,7 @@
             },
             {
               "Name": "g",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Entity": "GOLD_LAYER_PLAN",
               "Type": 0
             }
           ],
@@ -1005,7 +1004,7 @@
                             "Source": "g"
                           }
                         },
-                        "Property": "TERRITORY_NAME"
+                        "Property": "PLAN_NAME"
                       }
                     }
                   ],
@@ -1019,7 +1018,95 @@
             }
           ]
         }
+      },
+      {
+        "name": "69d6e4a8af3d0dc0c431",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1c09c153ce1cb2060379",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
-  }
+  },
+  "isHidden": true
 }

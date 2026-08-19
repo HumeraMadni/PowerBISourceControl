@@ -2,10 +2,10 @@ table MEASURES_TABLE
 	lineageTag: c09d6498-62be-4501-b44e-a1a50a1260a3
 
 	measure 'Total Claim Count' = COUNTROWS(GOLD_LAYER_FINAL_STATUS)
-		formatString: #,0
+		formatString: #,##0
 		lineageTag: 00443d13-db92-4950-b6f2-d84a37d156e3
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Total RX Count' = SUM(GOLD_LAYER_FINAL_STATUS[RX_COUNT]) -- Includes Zenpep and creon both and NTP 0 as well as 1
 		formatString: #,##0.0
@@ -14,20 +14,22 @@ table MEASURES_TABLE
 		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Total Patients' = DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PATIENT_ID])
-		formatString: #,0
+		formatString: #,##0
 		lineageTag: b3aca921-9a59-4234-aa5a-135496fe9288
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Paid Claim Count' = CALCULATE([Total Claim Count],'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 1)
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 2b5945e5-fc20-453e-ad5d-dbb9ae38b66e
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Paid %' =
 			
 			DIVIDE(
-			    [Paid Claim Count],
-			    [Total Claim Count],
+			    [Paid Claim Count (Coalesce)],
+			    [Total Claim Count (Coalesce)],
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
@@ -40,14 +42,16 @@ table MEASURES_TABLE
 			        'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 2
 			    )
 			```
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 98e04e9d-645a-4419-acca-eece41b2c754
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Reversed %' =
 			
 			DIVIDE(
-			    [Reversed Claim Count],
-			    [Total Claim Count],
+			    [Reversed Claim Count (Coalesce)],
+			    [Total Claim Count (Coalesce)],
 			    0
 			)
 		formatString: 0.0%;-0.0%;0.0%
@@ -228,18 +232,6 @@ table MEASURES_TABLE
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: a2547573-dd47-4555-a3e7-f06feb947830
 
-	measure 'HCP Rank' =
-			
-			RANKX(
-			    ALLSELECTED('GOLD_LAYER_HCP_SHORT'[PRACTITIONER_ID]),
-			    [Total Claim Count],
-			    ,
-			    DESC,
-			    DENSE
-			)
-		formatString: 0
-		lineageTag: 4952fa01-39b1-4ffb-bc77-1006293e6226
-
 	measure 'Tooltip Title' =
 			
 			SELECTEDVALUE('CLAIM_STATUS'[CLAIM_STATUS]) &
@@ -375,17 +367,13 @@ table MEASURES_TABLE
 
 	measure 'Rolling 3M - Current' =
 			
-			VAR LatestMonth =
-			    CALCULATE(
-			        MAX('DIM_DATE'[Date]),
-			        ALLSELECTED('DIM_DATE')
-			    )
+			VAR LatestMonth = [Latest Selected Month]
 			
-			VAR CurrentMonthEnd =
-			    EOMONTH(LatestMonth, 0)
-			
-			VAR CurrentMonthStart =
+			VAR CurrentPeriodStart =
 			    EOMONTH(LatestMonth, -3) + 1
+			
+			VAR CurrentPeriodEnd =
+			    EOMONTH(LatestMonth, 0)
 			
 			RETURN
 			CALCULATE(
@@ -393,8 +381,8 @@ table MEASURES_TABLE
 			    REMOVEFILTERS('DIM_DATE'),
 			    DATESBETWEEN(
 			        'DIM_DATE'[Date],
-			        CurrentMonthStart,
-			        CurrentMonthEnd
+			        CurrentPeriodStart,
+			        CurrentPeriodEnd
 			    )
 			)
 		formatString: #,##0.0
@@ -404,17 +392,13 @@ table MEASURES_TABLE
 
 	measure 'Rolling 3M - Previous' =
 			
-			VAR LatestMonth =
-			    CALCULATE(
-			        MAX('DIM_DATE'[Date]),
-			        ALLSELECTED('DIM_DATE')
-			    )
+			VAR LatestMonth = [Latest Selected Month]
 			
-			VAR PreviousMonthEnd =
-			    EOMONTH(LatestMonth, -3)
-			
-			VAR PreviousMonthStart =
+			VAR PreviousPeriodStart =
 			    EOMONTH(LatestMonth, -6) + 1
+			
+			VAR PreviousPeriodEnd =
+			    EOMONTH(LatestMonth, -3)
 			
 			RETURN
 			CALCULATE(
@@ -422,8 +406,8 @@ table MEASURES_TABLE
 			    REMOVEFILTERS('DIM_DATE'),
 			    DATESBETWEEN(
 			        'DIM_DATE'[Date],
-			        PreviousMonthStart,
-			        PreviousMonthEnd
+			        PreviousPeriodStart,
+			        PreviousPeriodEnd
 			    )
 			)
 		formatString: #,##0.0
@@ -607,15 +591,6 @@ table MEASURES_TABLE
 			"🔴 Low: ≤60% Creon volume"
 		lineageTag: 5f894d0d-03d6-45fb-ae67-3c5f4d131eb8
 
-	measure 'Current Month Bar Color' =
-			
-			IF(
-			    [Rolling 1M - Current] >= [Rolling 1M - Previous],
-			    "#34A853",   -- Green
-			    "#E85D5D"    -- Red
-			)
-		lineageTag: 488b83b4-6f75-4360-b530-ad1816d53bd7
-
 	measure 'New to Product legend' =
 			
 			"New to Product:" & UNICHAR(10) & UNICHAR(10) &
@@ -629,10 +604,12 @@ table MEASURES_TABLE
 			    DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PRACTITIONER_ID]),
 			    0
 			)
-		formatString: 0
+		formatString: #,##0
 		lineageTag: 12269f0b-b14f-4a34-9045-e2552689e3a8
 
-	measure 'Unique Payers' =
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Coverage Payers' =
 			
 			COALESCE(
 			    CALCULATE(
@@ -667,7 +644,7 @@ table MEASURES_TABLE
 			COALESCE(
 			    COUNTROWS(
 			        FILTER(
-			            VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
+			            VALUES(Z2T_TARGET_LIST_Q2_2026[TERRITORY_ID]),
 			            [High Potential Territory Flag] = 1
 			        )
 			    ),
@@ -681,13 +658,13 @@ table MEASURES_TABLE
 			CALCULATE(
 			    AVERAGEX(
 			        ALL(
-			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_ID]
+			            'Z2T_TARGET_LIST_Q2_2026'[TERRITORY]
 			        ),
 			        [Total RX Count]
 			    ),
 			    ALLEXCEPT(
-			        'GOLD_LAYER_TERRITORY_HIERARCHY',
-			        'GOLD_LAYER_TERRITORY_HIERARCHY'[DISTRICT_NAME]
+			        'Z2T_TARGET_LIST_Q2_2026',
+			        'Z2T_TARGET_LIST_Q2_2026'[DISTRICT]
 			    )
 			)
 		lineageTag: 04ac4fe5-ff75-414c-bd0c-02a8679c42d9
@@ -706,7 +683,7 @@ table MEASURES_TABLE
 			    [Avg District RX],
 			    0
 			)
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 608d0751-ae99-4713-9b54-29579b7d7807
 
 	measure 'Execution Priority' =
@@ -738,11 +715,12 @@ table MEASURES_TABLE
 			    )
 		lineageTag: 79715c3c-e253-4001-8ece-d2e2f6576894
 
-	measure 'Zenpep Retail Share' =
+	measure 'Zenpep RX Share' =
 			
 			DIVIDE(
 			    [Total Zenpep RX],
-			    [Total RX Count]
+			    [Total RX Count],
+			    0
 			)
 		lineageTag: 4e5d4268-7311-4bec-8925-3f2f5e083488
 
@@ -754,7 +732,7 @@ table MEASURES_TABLE
 			    TOPN(
 			        3,
 			        ALLSELECTED(
-			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]
+			            'Z2T_TARGET_LIST_Q2_2026'[TERRITORY]
 			        ),
 			        [Total Zenpep RX],
 			        DESC
@@ -772,7 +750,8 @@ table MEASURES_TABLE
 			
 			DIVIDE(
 			    [Top 3 Territory Metric],
-			    [Total Zenpep RX]
+			    [Total Zenpep RX],
+			    0
 			)
 		lineageTag: 98dbef41-3ff1-418a-8aac-1bedf36eebba
 
@@ -784,7 +763,7 @@ table MEASURES_TABLE
 			    TOPN(
 			        3,
 			        ALLSELECTED(
-			            'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]
+			            'Z2T_TARGET_LIST_Q2_2026'[TERRITORY]
 			        ),
 			        [Total Zenpep RX],
 			        DESC
@@ -793,7 +772,7 @@ table MEASURES_TABLE
 			    CONCATENATEX(
 			        TopTerritories,
 			        "(" &
-			        'GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME] &
+			        'Z2T_TARGET_LIST_Q2_2026'[TERRITORY] &
 			        ")",
 			        ", ",
 			        [Total Zenpep RX],
@@ -806,7 +785,7 @@ table MEASURES_TABLE
 			COALESCE(
 			    COUNTROWS(
 			        FILTER(
-			            VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
+			            VALUES(Z2T_TARGET_LIST_Q2_2026[TERRITORY_ID]),
 			            [Execution Priority] = "High Priority"
 			        )
 			    ),
@@ -893,14 +872,14 @@ table MEASURES_TABLE
 			VAR RetailMetricTxt =
 			    "<b>" &
 			    FORMAT(
-			        DIVIDE([Total Zenpep RX], 1000000),
-			        "0.00"
+			        [Total Zenpep RX],
+			        "#,##0"
 			    ) &
-			    "M</b>"
+			    "</b>"
 			
 			VAR RetailShareTxt =
 			    "<b>" &
-			    FORMAT([Zenpep Retail Share], "0.0%") &
+			    FORMAT([Zenpep RX Share], "0.0%") &
 			    "</b>"
 			
 			VAR Top3Txt =
@@ -916,22 +895,22 @@ table MEASURES_TABLE
 			RETURN
 			    "For the selected period (" &
 			    PeriodTxt &
-			    "), Zenpep achieved a Retail Metric of " &
+			    "), Zenpep achieved a total RX of " &
 			    RetailMetricTxt &
 			    ", representing " &
 			    RetailShareTxt &
-			    " of the total Retail Metric. The strongest performance was driven by " &
+			    " of the Total RX. The strongest performance was driven by " &
 			    Top3Txt &
 			    ", which together accounted for " &
 			    Top3ShareTxt &
-			    " of the total Zenpep Retail Metric."
+			    " of the Total Zenpep RX."
 		lineageTag: 87539bec-865f-49d2-89bb-0d2f42189e09
 
 	measure 'Low Potential Territories' =
 			
 			COUNTROWS(
 			    FILTER(
-			        VALUES('GOLD_LAYER_TERRITORY_HIERARCHY'[TERRITORY_NAME]),
+			        VALUES(Z2T_TARGET_LIST_Q2_2026[TERRITORY_ID]),
 			        [High Potential Territory Flag] = 0
 			    )
 			)
@@ -958,38 +937,38 @@ table MEASURES_TABLE
 			FORMAT([Total Zenpep RX], "#,##0")
 		lineageTag: b5b66e95-e559-470f-a32d-7fb056ca2d28
 
-	measure 'Paid % Display' =
+	measure 'Paid Claim Count Display' =
 			
 			FORMAT(
-			    [Paid %],
-			    "0.00%"
+			    [Paid Claim Count],
+			    "#,##0"
 			)
 		lineageTag: 7d9df360-5ebe-47ed-bd95-156718fc14e2
 
-	measure 'Rejected Claim % Display' =
+	measure 'Rejected Claim Count Display' =
 			
 			FORMAT(
-			    [Rejected Claim %],
-			    "0.00%"
+			    [Rejected Claim Count],
+			    "#,##0"
 			)
 		lineageTag: f4088595-4a5f-48d1-9ae6-8e352cb52213
 
-	measure 'Reversed Claim % Display' =
+	measure 'Reversed Claim Count Display' =
 			
 			FORMAT(
-			    [Reversed Claim %],
-			    "0.00%"
+			    [Reversed Claim Count],
+			    "#,##0"
 			)
 		lineageTag: 4a399bcd-2860-4e83-abc2-aaa5c8f27f0b
 
 	measure 'Average Copay Display' =
 			
-			FORMAT([Average Copay], "$#,##0.0")
+			FORMAT([Average Copay], "$ #,##0.0")
 		lineageTag: 18dba199-b07d-44d4-a3f5-3799e97f2bd4
 
 	measure 'Average OOP Display' =
 			
-			FORMAT([Average OOP], "$#,##0.0")
+			FORMAT([Average OOP], "$ #,##0.0")
 		lineageTag: 1693028b-ad64-4a72-b47f-42d98d2c8b4f
 
 	measure 'Execution Priority Sort' =
@@ -1018,6 +997,103 @@ table MEASURES_TABLE
 			"🟢 High Potential" & UNICHAR(10) &
 			"🔴 Low Potential"
 		lineageTag: 8fb3dbfd-1ba5-4cd1-9ca5-4a528e3d1b2a
+
+	measure 'Total RX Count (Coalesce)' =
+			
+			COALESCE(
+			    SUM(GOLD_LAYER_FINAL_STATUS[RX_COUNT]),
+			    0
+			)
+		formatString: #,##0.0
+		lineageTag: 0e8193f6-4f64-4f8b-b5c4-03a8f20d00ef
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Patients (Coalesce)' =
+			
+			COALESCE(
+			    DISTINCTCOUNT(GOLD_LAYER_FINAL_STATUS[PATIENT_ID]),
+			    0
+			)
+		formatString: #,##0
+		lineageTag: 6660c285-a269-4017-b44c-7876188a642e
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Claim Count (Coalesce)' =
+			
+			COALESCE(
+			    COUNTROWS(GOLD_LAYER_FINAL_STATUS),
+			    0
+			)
+		formatString: #,##0.0
+		lineageTag: 7eef7d27-30d4-4492-aac2-6d2cc84e5515
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Average OOP (Coalesce)' =
+			
+			COALESCE(
+			    AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_OUT_OF_POCKET]),
+			    0
+			)
+		formatString: $#,##0.0
+		lineageTag: ad898def-6c8e-4c4d-9936-de7bb0d16898
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Total Zenpep RX (Coalesce)' =
+			
+			COALESCE(
+			    CALCULATE(
+			        [Total RX Count],
+			        'GOLD_LAYER_DRUG'[DRUG_NAME] = "ZENPEP"
+			    ),
+			    0
+			)
+		formatString: #,##0.0
+		lineageTag: c4f7717c-0ae2-4731-92b1-c296c86dfc41
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Average Copay (Coalesce)' =
+			
+			COALESCE(
+			    AVERAGE(GOLD_LAYER_FINAL_STATUS[PATIENT_PAY]),
+			    0
+			)
+		formatString: $#,##0.0
+		lineageTag: 0aa5e643-d516-4214-8c08-b6de127ff2e6
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Paid Claim Count (Coalesce)' =
+			
+			COALESCE(
+			    CALCULATE(
+			        [Total Claim Count],
+			        'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 1
+			    ),
+			    0
+			)
+		formatString: #,##0
+		lineageTag: 75bea41b-2f58-43e5-812e-6fbce8238cf2
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Reversed Claim Count (Coalesce)' =
+			
+			COALESCE(
+			    CALCULATE(
+			        [Total Claim Count],
+			        'CLAIM_STATUS'[CLAIM_STATUS_NUM] = 2
+			    ),
+			    0
+			)
+		formatString: #,##0
+		lineageTag: 5723cd73-bf1c-4315-a921-8c2ab4fe3883
+
+		annotation PBI_FormatHint = {"isCustom":true}
 
 	column MeasureHolder
 		lineageTag: 5a40b498-eaac-4a8a-ac7e-f53edae50171

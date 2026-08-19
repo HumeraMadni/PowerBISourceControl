@@ -7,7 +7,7 @@
     "z": 24000,
     "height": 243.37349397590361,
     "width": 603.61445783132535,
-    "tabOrder": 20000
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6865",
@@ -154,5 +154,96 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2724e56b2a1c4abdea94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Story Insights HTML"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a5b8629c45d7939703d4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

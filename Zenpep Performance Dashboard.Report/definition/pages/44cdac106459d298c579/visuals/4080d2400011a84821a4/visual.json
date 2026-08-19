@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4080d2400011a84821a4",
   "position": {
-    "x": 2140,
-    "y": 515,
-    "z": 19000,
-    "height": 160,
-    "width": 750,
-    "tabOrder": 15000
+    "x": 2212.2184719164816,
+    "y": 514.53015226392779,
+    "z": 10000,
+    "height": 159.32151922893198,
+    "width": 673.85167149285974,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -119,7 +119,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "NEW DRUG NAME"
+                            "0": "DRUG NAME"
                           }
                         ]
                       }

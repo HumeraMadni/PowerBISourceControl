@@ -8,6 +8,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: PLAN_ID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PLAN_NAME
@@ -15,6 +17,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 47449b27-9288-4cf7-b469-0aa2fcb9294e
 		summarizeBy: none
 		sourceColumn: PLAN_NAME
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -24,6 +28,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: PLAN_TYPE
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PLAN_TYPE_DESCRIPTION
@@ -31,6 +37,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 7298cfe7-65d2-4b73-b166-7243e5ecb811
 		summarizeBy: none
 		sourceColumn: PLAN_TYPE_DESCRIPTION
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -40,6 +48,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: PLAN_SUBTYPE
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PAYMENT_TYPE
@@ -47,6 +57,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 958ec96e-95c9-40bb-b21a-82ca05a13963
 		summarizeBy: none
 		sourceColumn: PAYMENT_TYPE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -56,6 +68,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: NATIONAL_INSURER_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column NATIONAL_TYPE
@@ -63,6 +77,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 5f6f9d72-fb3d-4090-89fa-09fc9aab53df
 		summarizeBy: none
 		sourceColumn: NATIONAL_TYPE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -72,6 +88,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: REGIONAL_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column REGIONAL_TYPE
@@ -79,6 +97,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 180a7f5f-01a7-42e8-800f-2ac0396d9acf
 		summarizeBy: none
 		sourceColumn: REGIONAL_TYPE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -88,6 +108,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: ORGANIZATION_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ORGANIZATION_TYPE
@@ -95,6 +117,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 37a88a07-cf24-40da-88c8-ebf6572fcd11
 		summarizeBy: none
 		sourceColumn: ORGANIZATION_TYPE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -104,6 +128,8 @@ table GOLD_LAYER_PLAN
 		summarizeBy: none
 		sourceColumn: ADMIN_NAME
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column ADMIN_TYPE
@@ -111,6 +137,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: f7ee535b-42e3-4dfd-a34a-b94abb806ec7
 		summarizeBy: none
 		sourceColumn: ADMIN_TYPE
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -120,6 +148,8 @@ table GOLD_LAYER_PLAN
 		lineageTag: 8382d5b0-45fe-46e6-8af2-455120936864
 		summarizeBy: none
 		sourceColumn: LOAD_TS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -134,6 +164,8 @@ table GOLD_LAYER_PLAN
 				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_PLAN_Table,{{"PLAN_ID", Int64.Type}})
 				in
 				    #"Changed Type"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navigation
 

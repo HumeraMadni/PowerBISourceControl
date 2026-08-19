@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e271114810e8ac4c948e",
   "position": {
-    "x": 0,
+    "x": 1.5873015873015872,
     "y": 0,
     "z": 27250,
-    "height": 705.19360970183,
-    "width": 1418.2227039559025,
+    "height": 704.7619047619047,
+    "width": 1419.047619047619,
     "tabOrder": 1000
   },
   "visual": {
@@ -379,6 +379,13 @@
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
             }
           }
         }
@@ -571,7 +578,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             },
@@ -612,5 +619,124 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "3ad1a6c37413aed8800d",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "09dca9f790a559fea44c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_DATE"
+              }
+            },
+            "Property": "Month Year"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e4354c2630d80c8e9e36",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CLAIM_STATUS"
+              }
+            },
+            "Property": "CLAIM_STATUS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3b543b111ce3b16f3d3a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4fce8e73dfaade4abfa2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
   "isHidden": true
 }

@@ -40,7 +40,7 @@ table 'Drug Parameter'
 		mode: import
 		source =
 				{
-				    ("NEW DRUG NAME", NAMEOF('GOLD_LAYER_DRUG'[NEW_DRUG_NAME]), 0),
+				    ("DRUG NAME", NAMEOF('GOLD_LAYER_DRUG'[NEW_DRUG_NAME]), 0),
 				    ("NDC11", NAMEOF('GOLD_LAYER_DRUG'[NDC11]), 1),
 				    ("DRUG STRENGTH", NAMEOF('GOLD_LAYER_DRUG'[DRUG_STRENGTH]), 2),
 				    ("PACKAGE SIZE", NAMEOF('GOLD_LAYER_DRUG'[PACKAGE_SIZE]), 3)

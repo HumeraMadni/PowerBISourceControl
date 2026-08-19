@@ -4,10 +4,10 @@
   "position": {
     "x": 2242.8696412948384,
     "y": 317.14785651793528,
-    "z": 36000,
+    "z": 27000,
     "height": 65.966754155730541,
     "width": 317.14785651793528,
-    "tabOrder": 36000
+    "tabOrder": 27000
   },
   "visual": {
     "visualType": "shape",
@@ -105,7 +105,7 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Rejected Claim % Display"
+                  "Property": "Rejected Claim Count Display"
                 }
               }
             },

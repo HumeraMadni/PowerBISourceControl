@@ -23,11 +23,11 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total Patients"
+                  "Property": "Total Patients (Coalesce)"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total Patients",
-              "nativeQueryRef": "Total Patients"
+              "queryRef": "MEASURES_TABLE.Total Patients (Coalesce)",
+              "nativeQueryRef": "Total Patients (Coalesce)"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "MEASURES_TABLE"
                   }
                 },
-                "Property": "Total Patients"
+                "Property": "Total Patients (Coalesce)"
               }
             },
             "direction": "Descending"
@@ -223,6 +223,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "44cabae0432773608952",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Patients (Coalesce)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

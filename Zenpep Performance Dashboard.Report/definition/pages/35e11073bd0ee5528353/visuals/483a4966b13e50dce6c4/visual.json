@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "483a4966b13e50dce6c4",
   "position": {
-    "x": 3.0090270812437314,
-    "y": 5.2212804093464777,
+    "x": 3.5943001462323183,
+    "y": 2.7414334116486518,
     "z": 2000,
-    "height": 517.77871959065362,
-    "width": 1465.3961885656972,
-    "tabOrder": 1000
+    "height": 515.2585665883513,
+    "width": 1465.7142857142858
   },
   "visual": {
     "visualType": "tableEx",
@@ -50,13 +49,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "TERRITORY_NAME"
+                  "Property": "TERRITORY"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME",
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.TERRITORY",
               "nativeQueryRef": "Territory",
               "displayName": "Territory"
             },
@@ -1000,20 +999,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "221.45817582869128D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "GOLD_LAYER_TERRITORY_HIERARCHY.TERRITORY_NAME"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "214.0396707126364D"
                 }
               }
@@ -1063,6 +1048,20 @@
           },
           "selector": {
             "metadata": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "228.36972705930123D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Z2T_TARGET_LIST_Q2_2026.TERRITORY"
           }
         }
       ]
@@ -1304,7 +1303,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6ea8d0c47795e3c643dd",
+        "name": "d28552695acae4e458cc",
         "type": "Exclude",
         "filter": {
           "Version": 2,
@@ -1315,8 +1314,8 @@
               "Type": 0
             },
             {
-              "Name": "g1",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -1351,10 +1350,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "g1"
+                                "Source": "z"
                               }
                             },
-                            "Property": "TERRITORY_NAME"
+                            "Property": "TERRITORY"
                           }
                         }
                       ],

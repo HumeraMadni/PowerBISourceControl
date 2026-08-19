@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "96e0318e0bd9ba84adc2",
   "position": {
-    "x": 290,
-    "y": 74.285714285714292,
+    "x": 243.90243902439025,
+    "y": 74.390243902439025,
     "z": 4000,
-    "height": 85.714285714285722,
-    "width": 260,
+    "height": 87.8048780487805,
+    "width": 230,
     "tabOrder": 4000
   },
   "visual": {
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                      "Entity": "Z2T_TARGET_LIST_Q2_2026"
                     }
                   },
-                  "Property": "DISTRICT_NAME"
+                  "Property": "DISTRICT"
                 }
               },
-              "queryRef": "GOLD_LAYER_TERRITORY_HIERARCHY.DISTRICT_NAME",
-              "nativeQueryRef": "DISTRICT",
-              "active": true,
-              "displayName": "DISTRICT"
+              "queryRef": "Z2T_TARGET_LIST_Q2_2026.DISTRICT",
+              "nativeQueryRef": "DISTRICT1",
+              "active": true
             }
           ]
         }
@@ -206,14 +205,14 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "05f1536ab894e375ea16",
+        "name": "12124bcac8093216ecb3",
         "type": "Exclude",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "g",
-              "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+              "Name": "z",
+              "Entity": "Z2T_TARGET_LIST_Q2_2026",
               "Type": 0
             }
           ],
@@ -228,10 +227,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "g"
+                                "Source": "z"
                               }
                             },
-                            "Property": "DISTRICT_NAME"
+                            "Property": "DISTRICT"
                           }
                         }
                       ],

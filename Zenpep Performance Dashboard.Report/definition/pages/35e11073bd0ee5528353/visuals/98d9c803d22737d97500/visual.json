@@ -23,11 +23,11 @@
                       "Entity": "GOLD_LAYER_FINAL_STATUS"
                     }
                   },
-                  "Property": "PATIENT_OOP Bin Label"
+                  "Property": "PATIENT_OOP Bin"
                 }
               },
               "queryRef": "GOLD_LAYER_FINAL_STATUS.PATIENT_OOP Bin Label",
-              "nativeQueryRef": "PATIENT_OOP Bin Label",
+              "nativeQueryRef": "PATIENT_OOP Bin",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "GOLD_LAYER_FINAL_STATUS"
                         }
                       },
-                      "Property": "PATIENT_OOP Bin Label"
+                      "Property": "PATIENT_OOP Bin"
                     }
                   },
                   "Function": 3
                 }
               },
               "queryRef": "Min(GOLD_LAYER_FINAL_STATUS.PATIENT_OOP Bin Label)",
-              "nativeQueryRef": "First PATIENT_OOP Bin Label"
+              "nativeQueryRef": "First PATIENT_OOP Bin"
             },
             {
               "field": {
@@ -87,24 +87,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MEASURES_TABLE"
-                  }
-                },
-                "Property": "Total Claim Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -261,6 +243,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -623,7 +612,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -665,7 +654,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -720,7 +709,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -762,7 +751,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -804,7 +793,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -846,7 +835,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -888,7 +877,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -930,7 +919,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -972,7 +961,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1014,7 +1003,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1056,7 +1045,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1098,7 +1087,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1140,7 +1129,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1182,7 +1171,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1224,7 +1213,7 @@
                             "Entity": "GOLD_LAYER_FINAL_STATUS"
                           }
                         },
-                        "Property": "PATIENT_PAY Bin Label"
+                        "Property": "PATIENT_PAY Bin"
                       }
                     },
                     "Right": {
@@ -1631,7 +1620,7 @@
             "sentenceTemplate": {
               "expr": {
                 "Literal": {
-                  "Value": "'{Total Claim Count} claims are within the {PATIENT_OOP Bin Label} OOP range.'"
+                  "Value": "'{Total Claim Count} claims are within the {PATIENT_OOP Bin} OOP range.'"
                 }
               }
             },
@@ -1663,7 +1652,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a423ff9266a60778c9ab",
+        "name": "a1130e527aa84f745a7d",
         "field": {
           "Column": {
             "Expression": {
@@ -1671,10 +1660,10 @@
                 "Entity": "GOLD_LAYER_FINAL_STATUS"
               }
             },
-            "Property": "PATIENT_PAY"
+            "Property": "PATIENT_OOP Bin"
           }
         },
-        "type": "Advanced",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -1687,21 +1676,30 @@
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "g"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PATIENT_OOP Bin"
+                          }
                         }
-                      },
-                      "Property": "PATIENT_PAY"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "100L"
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
                     }
                   }
                 }
@@ -1709,7 +1707,127 @@
             }
           ]
         },
-        "howCreated": "User"
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "bd76f4d61feda39c94e1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "GOLD_LAYER_FINAL_STATUS"
+                  }
+                },
+                "Property": "PATIENT_OOP Bin"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "34be0c433d86fc5bf667",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MEASURES_TABLE"
+              }
+            },
+            "Property": "Total Claim Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "700440ff6380ed255e88",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "GOLD_LAYER_HCP_SHORT"
+              }
+            },
+            "Property": "PRACTITIONER_ID"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "g",
+              "Entity": "GOLD_LAYER_HCP_SHORT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "g"
+                              }
+                            },
+                            "Property": "PRACTITIONER_ID"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

@@ -8,6 +8,8 @@ table GOLD_LAYER_PDRP
 		summarizeBy: none
 		sourceColumn: NPI
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PDRP_FLAG
@@ -17,6 +19,8 @@ table GOLD_LAYER_PDRP
 		sourceColumn: PDRP_FLAG
 
 		changedProperty = DataType
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

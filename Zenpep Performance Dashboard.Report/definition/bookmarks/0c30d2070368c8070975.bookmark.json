@@ -3,8 +3,11 @@
   "displayName": "Rolling 12 Months",
   "name": "0c30d2070368c8070975",
   "options": {
+    "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
-      "483a4966b13e50dce6c4"
+      "483a4966b13e50dce6c4",
+      "476429d5db1cd62ec798",
+      "dde3c8068ad90580db6b"
     ],
     "suppressData": true
   },
@@ -52,7 +55,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "300L"
+                                "Value": "200L"
                               }
                             }
                           }
@@ -131,7 +134,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "292b8d9004ded02b65e7",
+                  "name": "a43d52ec7062e15d10f0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -146,7 +149,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "484faa0477ac89583190",
+                  "name": "b6401efe4b6abca40bd3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -161,7 +164,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7b12b7109a7ab86210d4",
+                  "name": "8914639de287e034a84a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -176,7 +179,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5cdd0524a56453ab07e2",
+                  "name": "deb62c4925668dd1d96f",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -219,6 +222,12 @@
             }
           },
           "05131fc9430e2d40c00e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "10633bbc871c4c6b01e5": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -446,7 +455,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "c38d55b2233c56acdc3b",
+                  "name": "439cc57d9235bb3b58f7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -496,119 +505,21 @@
               }
             }
           },
-          "29ae7300ed5d1095c329": {
+          "1bf6f91c06181194d2e6": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "22226000e19e068de265": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "256837f1b1cc06e48b0a": {
             "singleVisual": {
               "visualType": "image",
-              "objects": {}
-            }
-          },
-          "922b228c30d46035d14c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "718e051038a03e4c2402",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_HCP_SHORT",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "PRACTITIONER_ID"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "PRACTITIONER_ID"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "0fd161e69067dc3cc5da",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total RX Count"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total RX Count"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "9f80339625279d8102d3": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "abbc76000d4b394107d6": {
-            "singleVisual": {
-              "visualType": "shape",
               "objects": {}
             }
           },
@@ -616,7 +527,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b363ac17b102cd04be20",
+                  "name": "b01adee7b8952b59dbe2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -717,47 +628,18 @@
               }
             }
           },
-          "2ae3ba74270970329354": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "42c083b4e78e3970710e": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "43697274c3aa270c32c4": {
+          "2855b18a93ec419b0ec6": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "8871d4485a2e9771db20",
+                  "name": "223b0cac7131d6d8c952",
                   "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-                        }
-                      },
-                      "Property": "REGION_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ],
-              "byType": [
-                {
-                  "name": "8478f637dce591108480",
-                  "type": "Exclude",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Entity": "GOLD_LAYER_FINAL_STATUS",
                         "Type": 0
                       }
                     ],
@@ -775,7 +657,7 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "REGION_NAME"
+                                      "Property": "PLAN_PAY"
                                     }
                                   }
                                 ],
@@ -795,7 +677,148 @@
                       }
                     ]
                   },
-                  "howCreated": 4
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PLAN_PAY"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "365868c084e2872a0486",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PLAN_PAY Bin"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "09292d8c8d4e93e3f792",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "GOLD_LAYER_FINAL_STATUS"
+                            }
+                          },
+                          "Property": "PLAN_PAY Bin"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7ad506bf007ccf6436be",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PLAN_PAY Bin"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "29ae7300ed5d1095c329": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "2ae3ba74270970329354": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "4246204710e6e66c0881": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "42c083b4e78e3970710e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "43697274c3aa270c32c4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "74af34783253cffb6a70",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Property": "REGION"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -824,10 +847,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Property": "REGION_NAME"
+                      "Property": "REGION"
                     }
                   }
                 ]
@@ -838,7 +861,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ec21e0e0117ad28e0178",
+                  "name": "440b296287f773272557",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -951,7 +974,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "413600da077199cb26a0",
+                  "name": "6fc5d2b78029400c084e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -966,7 +989,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5613514ea9bc09b2dc30",
+                  "name": "04905ac3fc6c2ed38f9b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1016,276 +1039,11 @@
               }
             }
           },
-          "4854d21ba420d66c3b60": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "4b43ab084cd9bd67471d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "256837f1b1cc06e48b0a": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
-          },
-          "602c90264bcdadc7c0d0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7830b1a10913b2bd5ce0": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "6268dbfda2c92d6705a7",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_HCP_SHORT",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "PRACTITIONER_ID"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "PRACTITIONER_ID"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "fc1893b00d90ecaa292c",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Reversed %"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Reversed %"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "a0f3a831b0e005a961bb": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5012e4784607d0775812": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "2b4f1d5d22be6e64d4b9",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DIM_DATE"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "d",
-                                "Entity": "DIM_DATE",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Comparison": {
-                                    "ComparisonKind": 2,
-                                    "Left": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "d"
-                                          }
-                                        },
-                                        "Property": "Date"
-                                      }
-                                    },
-                                    "Right": {
-                                      "Literal": {
-                                        "Value": "datetime'2024-01-01T00:00:00'"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "startDate": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "datetime'2024-01-01T00:00:00'"
-                            }
-                          }
-                        },
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Between'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DIM_DATE"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "DIM_DATE"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "502c0b83e2b73ea35d85": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "5546ebb395c7a76d0930": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "6041397c525262da9bd4": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "476429d5db1cd62ec798": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "30117d93bb663910acce",
+                  "name": "60ad50cd5112ac11addf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1300,7 +1058,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9d520186682b25ec8d26",
+                  "name": "0f3f2650344b0698c77b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1315,22 +1073,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "75159c378dc55437c910",
+                  "name": "fb5b91220b678710d949",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Property": "TERRITORY_NAME"
+                      "Property": "TERRITORY"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "21dd9db7188ed2c16800",
+                  "name": "3e4039c9b51aa8c83bfd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1345,7 +1103,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "14e4f7d718c704b8e09d",
+                  "name": "58a6e1527a55d6afb028",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1360,7 +1118,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fe381005594ca1062011",
+                  "name": "44ce809fff390f568ec7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1377,7 +1135,7 @@
               ],
               "byType": [
                 {
-                  "name": "ef55c010e3380e9d080d",
+                  "name": "c9ce737cef7eb9c83e7b",
                   "type": "Exclude",
                   "filter": {
                     "Version": 2,
@@ -1388,8 +1146,8 @@
                         "Type": 0
                       },
                       {
-                        "Name": "g1",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Name": "z",
+                        "Entity": "Z2T_TARGET_LIST_Q2_2026",
                         "Type": 0
                       }
                     ],
@@ -1407,17 +1165,7 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "SPECIALTY_DESCRIPTION"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g1"
-                                        }
-                                      },
-                                      "Property": "TERRITORY_NAME"
+                                      "Property": "HCP_FULL_NAME"
                                     }
                                   },
                                   {
@@ -1427,7 +1175,17 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "HCP_FULL_NAME"
+                                      "Property": "SPECIALTY_DESCRIPTION"
+                                    }
+                                  },
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "z"
+                                        }
+                                      },
+                                      "Property": "TERRITORY"
                                     }
                                   }
                                 ],
@@ -1488,7 +1246,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "18ffd05cadb0ec9492aa",
+                  "name": "4e6959dd405d4905b701",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1503,7 +1261,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "43bfecb3b96a960e0d3c",
+                  "name": "96454ef06bf53806fc9c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1518,22 +1276,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "61d65d50b9142dd82384",
+                  "name": "5440fc45d82c6abefc85",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Property": "TERRITORY_NAME"
+                      "Property": "TERRITORY"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "ede7e572e7003b0253dc",
+                  "name": "f4b8ce1596d61948c227",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1548,7 +1306,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8b708eeeeab8c5b100b0",
+                  "name": "e3f91848c2db7c5ed0ff",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1563,7 +1321,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "46d1c6848eb46527d699",
+                  "name": "da7adc63d4bac49fe0a0",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1580,7 +1338,7 @@
               ],
               "byType": [
                 {
-                  "name": "6ea8d0c47795e3c643dd",
+                  "name": "d28552695acae4e458cc",
                   "type": "Exclude",
                   "filter": {
                     "Version": 2,
@@ -1591,8 +1349,8 @@
                         "Type": 0
                       },
                       {
-                        "Name": "g1",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Name": "z",
+                        "Entity": "Z2T_TARGET_LIST_Q2_2026",
                         "Type": 0
                       }
                     ],
@@ -1627,10 +1385,10 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Source": "g1"
+                                          "Source": "z"
                                         }
                                       },
-                                      "Property": "TERRITORY_NAME"
+                                      "Property": "TERRITORY"
                                     }
                                   }
                                 ],
@@ -1684,115 +1442,24 @@
               ]
             }
           },
-          "dde3c8068ad90580db6b": {
+          "4b43ab084cd9bd67471d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "4cf8ad1b856c30e2a579": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "0b370f2005bb63004459",
+                  "name": "786ea32cbcca97b03cdd",
                   "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "HCP_FULL_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "2d66f553a58881e1a441",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "SPECIALTY_DESCRIPTION"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a3ceb56965112c506183",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-                        }
-                      },
-                      "Property": "TERRITORY_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "716ab405cb840c9ab25e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Rolling 1M - Previous"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "890ca57e85746eeee681",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Rolling 1M - Current"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9b1dc0327a89130bc220",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Rolling 1M - MoM Display"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ],
-              "byType": [
-                {
-                  "name": "b79b28085e98be355030",
-                  "type": "Exclude",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
                         "Name": "g",
                         "Entity": "GOLD_LAYER_HCP_SHORT",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "g1",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
                         "Type": 0
                       }
                     ],
@@ -1810,42 +1477,12 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "SPECIALTY_DESCRIPTION"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g1"
-                                        }
-                                      },
-                                      "Property": "TERRITORY_NAME"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "HCP_FULL_NAME"
+                                      "Property": "PRACTITIONER_ID"
                                     }
                                   }
                                 ],
                                 "Values": [
                                   [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    },
                                     {
                                       "Literal": {
                                         "Value": "null"
@@ -1860,12 +1497,37 @@
                       }
                     ]
                   },
-                  "howCreated": 4
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "PRACTITIONER_ID"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b9fe5273a6c607794d04",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
             "singleVisual": {
-              "visualType": "tableEx",
+              "visualType": "card",
               "objects": {},
               "orderBy": [
                 {
@@ -1877,95 +1539,30 @@
                           "Entity": "MEASURES_TABLE"
                         }
                       },
-                      "Property": "Rolling 1M - Current"
+                      "Property": "Total Claim Count"
                     }
                   }
                 }
-              ],
-              "display": {
-                "mode": "hidden"
-              }
+              ]
             }
           },
-          "6cb4b8e0e3d50d756d29": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "70d3b7fe8c6c530b98e8": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "7289dbda3d2163be63e3": {
+          "5012e4784607d0775812": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "986bbdf22eac1ba937a1",
+                  "name": "a17158fa2fb586deebcf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_PLAN"
+                          "Entity": "DIM_DATE"
                         }
                       },
-                      "Property": "PAYMENT_TYPE"
+                      "Property": "Date"
                     }
                   },
                   "howCreated": 0
-                }
-              ],
-              "byType": [
-                {
-                  "name": "df4eda1d4e0079659a32",
-                  "type": "Exclude",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_PLAN",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "PAYMENT_TYPE"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "howCreated": 4
                 }
               ]
             },
@@ -1973,13 +1570,62 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "DIM_DATE",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 2,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Property": "Date"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "datetime'2025-10-01T00:00:00'"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
+                        "startDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2025-10-01T00:00:00'"
+                            }
+                          }
+                        },
                         "mode": {
                           "expr": {
                             "Literal": {
-                              "Value": "'Dropdown'"
+                              "Value": "'Between'"
                             }
                           }
                         }
@@ -1988,23 +1634,50 @@
                   ]
                 }
               },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DIM_DATE"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                }
+              ],
               "activeProjections": {
                 "Values": [
                   {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_PLAN"
+                          "Entity": "DIM_DATE"
                         }
                       },
-                      "Property": "PAYMENT_TYPE"
+                      "Property": "Date"
                     }
                   }
                 ]
               }
             }
           },
-          "82b83b764aea029741c7": {
+          "502c0b83e2b73ea35d85": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "51f6cc6264713c370651": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "5546ebb395c7a76d0930": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -2348,268 +2021,50 @@
               }
             }
           },
-          "f9756090d4d25533e801": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "281efb2d7ba02d40cc59",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_FINAL_STATUS",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "PRACTITIONER_ID"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PRACTITIONER_ID"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "f6337c890a0079da8eb5",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "HCP_FULL_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ed0d938ad287e2968be1",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "HCP Conversion Icon"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b71f05e10a7190a7d68d",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Zenpep RX"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "8653132409956c16d62e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Zenpep New to Brand RX"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0b5b928212e252c25cbc",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Zenpep Refill Volume"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "3a519650d5bc372193c8",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "% Refill"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a23c374c1bb001b9a586",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b9a8fe497cea891c072d",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Claim % (HCP)"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "58bfaa1e3c7cceed1118",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Paid %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "66ad6ee92761cc9cd9ae",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Reversed Claim %"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "357fc8672101c00c8b8a",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Rejected Claim %"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
+          "602c90264bcdadc7c0d0": {
             "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Zenpep RX"
-                    }
-                  }
-                }
-              ]
+              "visualType": "shape",
+              "objects": {}
             }
           },
-          "96e0318e0bd9ba84adc2": {
+          "6041397c525262da9bd4": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "620ccb616959e6e24806": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "6cb4b8e0e3d50d756d29": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "70d3b7fe8c6c530b98e8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "7289dbda3d2163be63e3": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "05f55456e854080e521a",
+                  "name": "91c38f58afef50157907",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "GOLD_LAYER_PLAN"
                         }
                       },
-                      "Property": "DISTRICT_NAME"
+                      "Property": "PAYMENT_TYPE"
                     }
                   },
                   "howCreated": 0
@@ -2617,14 +2072,14 @@
               ],
               "byType": [
                 {
-                  "name": "05f1536ab894e375ea16",
+                  "name": "df4eda1d4e0079659a32",
                   "type": "Exclude",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Entity": "GOLD_LAYER_PLAN",
                         "Type": 0
                       }
                     ],
@@ -2642,7 +2097,7 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "DISTRICT_NAME"
+                                      "Property": "PAYMENT_TYPE"
                                     }
                                   }
                                 ],
@@ -2691,13 +2146,466 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "GOLD_LAYER_PLAN"
                         }
                       },
-                      "Property": "DISTRICT_NAME"
+                      "Property": "PAYMENT_TYPE"
                     }
                   }
                 ]
+              }
+            }
+          },
+          "7830b1a10913b2bd5ce0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6268dbfda2c92d6705a7",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "PRACTITIONER_ID"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "PRACTITIONER_ID"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a70aae985d8e0c2066b8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Reversed %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Reversed %"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "82b83b764aea029741c7": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "8848b90c51acc91c3022": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "88e9d842b8bb9c2b01b0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "922b228c30d46035d14c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "718e051038a03e4c2402",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "PRACTITIONER_ID"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "PRACTITIONER_ID"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a51a367e223b76e9f702",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total RX Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total RX Count"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "96e0318e0bd9ba84adc2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "643a0efa6209fd46b0d5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Property": "DISTRICT"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Property": "DISTRICT"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "98d9c803d22737d97500": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a423ff9266a60778c9ab",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_FINAL_STATUS",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 1,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "g"
+                                  }
+                                },
+                                "Property": "PATIENT_PAY"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "100L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PATIENT_PAY"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a1130e527aa84f745a7d",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_FINAL_STATUS",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "PATIENT_OOP Bin"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PATIENT_OOP Bin"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f3b7fff4a9e8e82c8d41",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "GOLD_LAYER_FINAL_STATUS"
+                            }
+                          },
+                          "Property": "PATIENT_OOP Bin"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "39d5bcf8027477b47fb1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PATIENT_OOP Bin"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -2705,7 +2613,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d637d5ec52c4253ca1d6",
+                  "name": "e4acf5bfb3c6a4d527bb",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -2812,13 +2720,25 @@
               "objects": {}
             }
           },
-          "4246204710e6e66c0881": {
+          "9f80339625279d8102d3": {
             "singleVisual": {
-              "visualType": "image",
+              "visualType": "shape",
               "objects": {}
             }
           },
-          "88e9d842b8bb9c2b01b0": {
+          "a0f3a831b0e005a961bb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "aa04d5d82da658267309": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
+          "abbc76000d4b394107d6": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
@@ -2830,11 +2750,17 @@
               "objects": {}
             }
           },
-          "f1e670550b7103a168b6": {
+          "af8f1bb8ce49b6992ba3": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "b49c2e13224459a5e133": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "718e051038a03e4c2402",
+                  "name": "62ca066559b0b06c133d",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -2892,75 +2818,88 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "a2f400030a890d8d29cc",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Patients"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Patients"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "2855b18a93ec419b0ec6": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "223b0cac7131d6d8c952",
-                  "type": "Advanced",
+                  "name": "db47cc075c620f9d6f58",
+                  "type": "TopN",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
+                        "Name": "subquery",
+                        "Expression": {
+                          "Subquery": {
+                            "Query": {
+                              "Version": 2,
+                              "From": [
+                                {
+                                  "Name": "g",
+                                  "Entity": "GOLD_LAYER_PLAN",
+                                  "Type": 0
+                                },
+                                {
+                                  "Name": "m",
+                                  "Entity": "MEASURES_TABLE",
+                                  "Type": 0
+                                }
+                              ],
+                              "Select": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "g"
+                                      }
+                                    },
+                                    "Property": "PLAN_NAME"
+                                  },
+                                  "Name": "field"
+                                }
+                              ],
+                              "OrderBy": [
+                                {
+                                  "Direction": 2,
+                                  "Expression": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "m"
+                                        }
+                                      },
+                                      "Property": "Total Claim Count"
+                                    }
+                                  }
+                                }
+                              ],
+                              "Top": 10
+                            }
+                          }
+                        },
+                        "Type": 2
+                      },
+                      {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_FINAL_STATUS",
+                        "Entity": "GOLD_LAYER_PLAN",
                         "Type": 0
                       }
                     ],
                     "Where": [
                       {
                         "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 1,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "g"
-                                  }
-                                },
-                                "Property": "PLAN_PAY"
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "g"
+                                    }
+                                  },
+                                  "Property": "PLAN_NAME"
+                                }
                               }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "100L"
+                            ],
+                            "Table": {
+                              "SourceRef": {
+                                "Source": "subquery"
                               }
                             }
                           }
@@ -2972,51 +2911,16 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          "Entity": "GOLD_LAYER_PLAN"
                         }
                       },
-                      "Property": "PLAN_PAY"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "902bc3dd3eb205ab8003",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PLAN_PAY Bin Label"
+                      "Property": "PLAN_NAME"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "1092249b9222a12d711e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "GOLD_LAYER_FINAL_STATUS"
-                            }
-                          },
-                          "Property": "PLAN_PAY Bin Label"
-                        }
-                      },
-                      "Function": 3
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "6bf90607d78de4c6b8c0",
+                  "name": "759631580788c4e7751b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3033,7 +2937,7 @@
               ]
             },
             "singleVisual": {
-              "visualType": "columnChart",
+              "visualType": "treemap",
               "objects": {},
               "orderBy": [
                 {
@@ -3051,640 +2955,19 @@
                 }
               ],
               "activeProjections": {
-                "Category": [
+                "Group": [
                   {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                          "Entity": "GOLD_LAYER_PLAN"
                         }
                       },
-                      "Property": "PLAN_PAY Bin Label"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "69363acc12e73c493750": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "d50a1a0bc5e5b3443278",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PLAN_PAY (bins)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "g",
-                                "Entity": "GOLD_LAYER_FINAL_STATUS",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Comparison": {
-                                    "ComparisonKind": 4,
-                                    "Left": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "g"
-                                          }
-                                        },
-                                        "Property": "PLAN_PAY (bins)"
-                                      }
-                                    },
-                                    "Right": {
-                                      "Literal": {
-                                        "Value": "15000D"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "numericEnd": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "15000D"
-                            }
-                          }
-                        },
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Between'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PLAN_PAY (bins)"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "78bd22f2038ec8771716": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "5449e4a25a8148eda070",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_OUT_OF_POCKET (bins)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "g",
-                                "Entity": "GOLD_LAYER_FINAL_STATUS",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Comparison": {
-                                    "ComparisonKind": 4,
-                                    "Left": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "g"
-                                          }
-                                        },
-                                        "Property": "PATIENT_OUT_OF_POCKET (bins)"
-                                      }
-                                    },
-                                    "Right": {
-                                      "Literal": {
-                                        "Value": "15000D"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "numericEnd": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "15000D"
-                            }
-                          }
-                        },
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Between'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_OUT_OF_POCKET (bins)"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "98d9c803d22737d97500": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "a423ff9266a60778c9ab",
-                  "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_FINAL_STATUS",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 1,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "g"
-                                  }
-                                },
-                                "Property": "PATIENT_PAY"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "100L"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "d5585a6e10931b29a07e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_OOP Bin Label"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "8e19dc04aee452a54e85",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "GOLD_LAYER_FINAL_STATUS"
-                            }
-                          },
-                          "Property": "PATIENT_OOP Bin Label"
-                        }
-                      },
-                      "Function": 3
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "92c41278b6c0a251c810",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_OOP Bin Label"
-                    }
-                  }
-                ]
-              },
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "c2132c436611e69e3062": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "f3eb925d951a285e70b1",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY (bins)"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "g",
-                                "Entity": "GOLD_LAYER_FINAL_STATUS",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Comparison": {
-                                    "ComparisonKind": 4,
-                                    "Left": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "g"
-                                          }
-                                        },
-                                        "Property": "PATIENT_PAY (bins)"
-                                      }
-                                    },
-                                    "Right": {
-                                      "Literal": {
-                                        "Value": "15000D"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "numericEnd": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "15000D"
-                            }
-                          }
-                        },
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Between'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY (bins)"
+                      "Property": "PLAN_NAME"
                     }
                   }
                 ]
               }
-            }
-          },
-          "d4867f9018c2b9496481": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "eeff1a80cb02506343e2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY (bins)"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "a423ff9266a60778c9ab",
-                  "type": "Advanced",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_FINAL_STATUS",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Comparison": {
-                            "ComparisonKind": 1,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "g"
-                                  }
-                                },
-                                "Property": "PATIENT_PAY"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "100L"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "4640146be30c00aa8bc0",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY Bin Label"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4295e3f411e89008ea03",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "GOLD_LAYER_FINAL_STATUS"
-                            }
-                          },
-                          "Property": "PATIENT_PAY Bin Label"
-                        }
-                      },
-                      "Function": 3
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b3948be26d802004dabe",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_FINAL_STATUS"
-                        }
-                      },
-                      "Property": "PATIENT_PAY Bin Label"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "aa04d5d82da658267309": {
-            "singleVisual": {
-              "visualType": "bookmarkNavigator",
-              "objects": {}
             }
           },
           "b8cec133be9dc8ae912c": {
@@ -3693,127 +2976,11 @@
               "objects": {}
             }
           },
-          "22226000e19e068de265": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "4cf8ad1b856c30e2a579": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "786ea32cbcca97b03cdd",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "g",
-                        "Entity": "GOLD_LAYER_HCP_SHORT",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "g"
-                                        }
-                                      },
-                                      "Property": "PRACTITIONER_ID"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
-                        }
-                      },
-                      "Property": "PRACTITIONER_ID"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "b64604d07cbd2130c96e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "MEASURES_TABLE"
-                        }
-                      },
-                      "Property": "Total Claim Count"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "51f6cc6264713c370651": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
-          },
-          "8848b90c51acc91c3022": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "cc092bbcb7b0ea115620": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "c6e604a903c2d844741e",
+                  "name": "f59434e77b3749cafb0c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3920,18 +3087,6 @@
               "objects": {}
             }
           },
-          "1bf6f91c06181194d2e6": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "620ccb616959e6e24806": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "ccd7701820c0800d882a": {
             "filters": {
               "byExpr": [
@@ -3994,7 +3149,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "6161fc292c80a909b11b",
+                  "name": "632cf7f697dc80803f4d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -4030,47 +3185,24 @@
               ]
             }
           },
-          "e6925018046c4bb9caed": {
+          "cd6ee0f8412ae4699030": {
             "singleVisual": {
-              "visualType": "image",
+              "visualType": "actionButton",
               "objects": {}
             }
           },
-          "e2be848405de92666535": {
-            "singleVisual": {
-              "visualType": "bookmarkNavigator",
-              "objects": {}
-            }
-          },
-          "e9ee20a10ca64040137b": {
+          "d4867f9018c2b9496481": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "951be1d744497b5aeaed",
+                  "name": "8cb5907777c5c3e9c3cc",
                   "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
-                        }
-                      },
-                      "Property": "TERRITORY_NAME"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ],
-              "byType": [
-                {
-                  "name": "b46a6d2aa7563e7e9e97",
-                  "type": "Exclude",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY",
+                        "Entity": "GOLD_LAYER_FINAL_STATUS",
                         "Type": 0
                       }
                     ],
@@ -4088,7 +3220,7 @@
                                           "Source": "g"
                                         }
                                       },
-                                      "Property": "TERRITORY_NAME"
+                                      "Property": "PATIENT_PAY Bin"
                                     }
                                   }
                                 ],
@@ -4108,7 +3240,425 @@
                       }
                     ]
                   },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PATIENT_PAY Bin"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3de6fba4c631a5bf169f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "GOLD_LAYER_FINAL_STATUS"
+                            }
+                          },
+                          "Property": "PATIENT_PAY Bin"
+                        }
+                      },
+                      "Function": 3
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c88d5f75277d8bf307ed",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
+                        }
+                      },
+                      "Property": "PATIENT_PAY Bin"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "d818549e91340673d976": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "dde3c8068ad90580db6b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1a7506e679e31738b8b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "HCP_FULL_NAME"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b0eddb7b68a528cd0b93",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "SPECIALTY_DESCRIPTION"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "770a188c27eca9238c4a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Property": "TERRITORY"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0b78b1f8ba131ea98001",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Rolling 1M - Previous"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fd943816b584184a11cf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Rolling 1M - Current"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "29e8666a9d7772d5d313",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Rolling 1M - MoM Display"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ],
+              "byType": [
+                {
+                  "name": "9bcc325ce295ca755e75",
+                  "type": "Exclude",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "z",
+                        "Entity": "Z2T_TARGET_LIST_Q2_2026",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "HCP_FULL_NAME"
+                                    }
+                                  },
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "SPECIALTY_DESCRIPTION"
+                                    }
+                                  },
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "z"
+                                        }
+                                      },
+                                      "Property": "TERRITORY"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    },
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    },
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "howCreated": 4
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Rolling 1M - Current"
+                    }
+                  }
+                }
+              ],
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e219d352377355eb0c90": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "858c443b1b2d8a1a9037",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "PRACTITIONER_ID"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "PRACTITIONER_ID"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "bd09d12414ec17b60027",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Paid %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Paid %"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e2be848405de92666535": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
+          "e6925018046c4bb9caed": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "e9ee20a10ca64040137b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "563c8ed82e029218cd44",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
+                        }
+                      },
+                      "Property": "TERRITORY"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -4137,21 +3687,119 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_TERRITORY_HIERARCHY"
+                          "Entity": "Z2T_TARGET_LIST_Q2_2026"
                         }
                       },
-                      "Property": "TERRITORY_NAME"
+                      "Property": "TERRITORY"
                     }
                   }
                 ]
               }
             }
           },
+          "f1e670550b7103a168b6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "718e051038a03e4c2402",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "g",
+                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "g"
+                                        }
+                                      },
+                                      "Property": "PRACTITIONER_ID"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "PRACTITIONER_ID"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "1c762832835e7401a2cb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Patients"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Patients"
+                    }
+                  }
+                }
+              ]
+            }
+          },
           "f2bd7c0b9a76417b3dc3": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "64eb9743b005d93060e8",
+                  "name": "1dca605d910f9be9f4fb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -4252,36 +3900,18 @@
               }
             }
           },
-          "10633bbc871c4c6b01e5": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "af8f1bb8ce49b6992ba3": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "d818549e91340673d976": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
-          },
-          "e219d352377355eb0c90": {
+          "f9756090d4d25533e801": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "858c443b1b2d8a1a9037",
+                  "name": "281efb2d7ba02d40cc59",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
                     "From": [
                       {
                         "Name": "g",
-                        "Entity": "GOLD_LAYER_HCP_SHORT",
+                        "Entity": "GOLD_LAYER_FINAL_STATUS",
                         "Type": 0
                       }
                     ],
@@ -4323,7 +3953,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                          "Entity": "GOLD_LAYER_FINAL_STATUS"
                         }
                       },
                       "Property": "PRACTITIONER_ID"
@@ -4332,7 +3962,127 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "0c44d7ec5362bbc0e006",
+                  "name": "e610ce826679cacae5a6",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "GOLD_LAYER_HCP_SHORT"
+                        }
+                      },
+                      "Property": "HCP_FULL_NAME"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f9a8eace9ebe852fa8a8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "HCP Conversion Icon"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e6c3b71b7716f5b75229",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Zenpep RX"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "07471d67a4d62266125a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Zenpep New to Brand RX"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f52dda794dd20a3adccb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Zenpep Refill Volume"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a72a2448d897bac056eb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "% Refill"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "abdbf893175905b84ad0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Total Claim Count"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "827b572596ae01d31028",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Claim % (HCP)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6da2c3ee91371a9dd394",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -4345,11 +4095,41 @@
                     }
                   },
                   "howCreated": 0
+                },
+                {
+                  "name": "a664dbc39aba56faf828",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Reversed Claim %"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5af629c8683ca87ad7cf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "MEASURES_TABLE"
+                        }
+                      },
+                      "Property": "Rejected Claim %"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
             "singleVisual": {
-              "visualType": "card",
+              "visualType": "tableEx",
               "objects": {},
               "orderBy": [
                 {
@@ -4361,7 +4141,7 @@
                           "Entity": "MEASURES_TABLE"
                         }
                       },
-                      "Property": "Paid %"
+                      "Property": "Total Zenpep RX"
                     }
                   }
                 }

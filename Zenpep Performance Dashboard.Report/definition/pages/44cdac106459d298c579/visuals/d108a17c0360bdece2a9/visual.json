@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d108a17c0360bdece2a9",
   "position": {
-    "x": 1373,
-    "y": 515,
-    "z": 17000,
-    "height": 160,
-    "width": 757,
-    "tabOrder": 14000
+    "x": 1441.7291576126302,
+    "y": 517.14198044800867,
+    "z": 8000,
+    "height": 159.32151922893198,
+    "width": 749.59468883120451,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -116,7 +116,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''GOLD_LAYER_REJECT_CODES_SHORT''[REJECT_CODE]'"
+                                "Value": "'''GOLD_LAYER_PLAN''[PLAN_NAME]'"
                               }
                             }
                           ]

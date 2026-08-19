@@ -7,6 +7,8 @@ table GOLD_LAYER_REJECT_CODES_SHORT
 		summarizeBy: none
 		sourceColumn: REJECT_CODE
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column REJECT_DESCRIPTION
@@ -14,6 +16,8 @@ table GOLD_LAYER_REJECT_CODES_SHORT
 		lineageTag: 5bbb49c2-fd85-41bb-8025-74c0f01703d2
 		summarizeBy: none
 		sourceColumn: REJECT_DESCRIPTION
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -23,6 +27,8 @@ table GOLD_LAYER_REJECT_CODES_SHORT
 		lineageTag: b4dda9b2-f6ca-492a-b4ae-4403e615512d
 		summarizeBy: none
 		sourceColumn: LOAD_TS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -36,6 +42,8 @@ table GOLD_LAYER_REJECT_CODES_SHORT
 				    GOLD_LAYER_REJECT_CODES_SHORT_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_REJECT_CODES_SHORT",Kind="Table"]}[Data]
 				in
 				    GOLD_LAYER_REJECT_CODES_SHORT_Table
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navigation
 
