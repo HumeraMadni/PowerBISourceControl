@@ -5,7 +5,7 @@ table GOLD_LAYER_MEDICARE_PATIENTS
 		dataType: int64
 		formatString: 0
 		lineageTag: e97777dc-ab67-4b4b-9b59-543a9dd70753
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: PATIENT_ID
 
 		annotation SummarizationSetBy = Automatic
@@ -13,7 +13,7 @@ table GOLD_LAYER_MEDICARE_PATIENTS
 	column MPD_YEAR
 		dataType: double
 		lineageTag: 9a3d85b7-ee81-4d87-aae0-368cb4ef07aa
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: MPD_YEAR
 
 		annotation SummarizationSetBy = Automatic
@@ -28,9 +28,11 @@ table GOLD_LAYER_MEDICARE_PATIENTS
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Patient Year Key' = GOLD_LAYER_MEDICARE_PATIENTS[PATIENT_ID] * 10000 + GOLD_LAYER_MEDICARE_PATIENTS[MPD_YEAR]
-		lineageTag: 8b8bdb7f-bd41-438c-b30e-e19ecfb3ed40
-		summarizeBy: none
+	column 'Patient Year Key'
+		dataType: double
+		lineageTag: e619b5d5-47c2-4803-8ae7-091647a4beb9
+		summarizeBy: count
+		sourceColumn: Patient Year Key
 
 		annotation SummarizationSetBy = Automatic
 
@@ -44,9 +46,12 @@ table GOLD_LAYER_MEDICARE_PATIENTS
 				    RAW_NESTLE_Database = Source{[Name="RAW_NESTLE",Kind="Database"]}[Data],
 				    SYMPHONY_ZENPEP_Schema = RAW_NESTLE_Database{[Name="SYMPHONY_ZENPEP",Kind="Schema"]}[Data],
 				    GOLD_LAYER_MEDICARE_PATIENTS_Table = SYMPHONY_ZENPEP_Schema{[Name="GOLD_LAYER_MEDICARE_PATIENTS",Kind="Table"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_MEDICARE_PATIENTS_Table,{{"PATIENT_ID", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(GOLD_LAYER_MEDICARE_PATIENTS_Table,{{"PATIENT_ID", Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each [MPD_YEAR] >= 2024),
+				    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Patient Year Key", each [PATIENT_ID] * 10000 + [MPD_YEAR]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"Patient Year Key", type number}})
 				in
-				    #"Changed Type"
+				    #"Changed Type2"
 
 	annotation PBI_NavigationStepName = Navigation
 

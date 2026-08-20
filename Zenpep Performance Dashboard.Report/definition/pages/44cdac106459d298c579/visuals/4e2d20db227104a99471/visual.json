@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''MEASURES_TABLE''[Total RX Count]'"
+                                "Value": "'''MEASURES_TABLE''[Total Zenpep RX]'"
                               }
                             }
                           ]
@@ -131,7 +131,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''MEASURES_TABLE''[Total RX Count]'"
+                                      "Value": "'''MEASURES_TABLE''[Total Zenpep RX]'"
                                     }
                                   }
                                 ]
@@ -161,7 +161,7 @@
                             "0": "TOTAL PATIENTS"
                           },
                           {
-                            "0": "TOTAL RX COUNT"
+                            "0": "TOTAL ZENPEP RX"
                           }
                         ]
                       }

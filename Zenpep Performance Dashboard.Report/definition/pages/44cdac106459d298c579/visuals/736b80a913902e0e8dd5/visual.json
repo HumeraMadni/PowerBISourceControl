@@ -38,27 +38,12 @@
                       "Entity": "GOLD_LAYER_HCP_SHORT"
                     }
                   },
-                  "Property": "HCP_FULL_NAME"
+                  "Property": "PRACTITIONER_ID"
                 }
               },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.HCP_FULL_NAME",
-              "nativeQueryRef": "HCP NAME",
-              "displayName": "HCP NAME"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "GOLD_LAYER_HCP_SHORT"
-                    }
-                  },
-                  "Property": "NPI"
-                }
-              },
-              "queryRef": "GOLD_LAYER_HCP_SHORT.NPI",
-              "nativeQueryRef": "NPI",
-              "displayName": "NPI"
+              "queryRef": "GOLD_LAYER_HCP_SHORT.PRACTITIONER_ID",
+              "nativeQueryRef": "PRACTITIONER ID",
+              "displayName": "PRACTITIONER ID"
             },
             {
               "field": {
@@ -128,12 +113,12 @@
                       "Entity": "MEASURES_TABLE"
                     }
                   },
-                  "Property": "Total RX Count"
+                  "Property": "Total Zenpep RX"
                 }
               },
-              "queryRef": "MEASURES_TABLE.Total RX Count",
-              "nativeQueryRef": "TOTAL RX COUNT",
-              "displayName": "TOTAL RX COUNT"
+              "queryRef": "MEASURES_TABLE.Total Zenpep RX",
+              "nativeQueryRef": "TOTAL ZENPEP RX",
+              "displayName": "TOTAL ZENPEP RX"
             }
           ],
           "fieldParameters": [
@@ -163,7 +148,7 @@
                 }
               },
               "index": 1,
-              "length": 2
+              "length": 1
             },
             {
               "parameterExpr": {

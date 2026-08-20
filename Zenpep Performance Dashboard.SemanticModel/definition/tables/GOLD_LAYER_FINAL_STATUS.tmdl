@@ -1,6 +1,16 @@
 table GOLD_LAYER_FINAL_STATUS
 	lineageTag: 6f1d2c4a-6bfe-4408-95f0-cbe81c28d50a
 
+	column FINAL_CLAIM_ID
+		dataType: string
+		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
+		summarizeBy: none
+		sourceColumn: FINAL_CLAIM_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	column PATIENT_ID
 		dataType: int64
 		formatString: 0
@@ -18,6 +28,17 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: c07abdf1-4055-4c9e-9bdb-abc2d488d4b3
 		summarizeBy: none
 		sourceColumn: DRUG_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRACTITIONER_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
+		summarizeBy: none
+		sourceColumn: PRACTITIONER_ID
 
 		changedProperty = IsHidden
 
@@ -61,6 +82,20 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column NEW_TO_PRODUCT
+		dataType: int64
+		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
+		summarizeBy: none
+		sourceColumn: NEW_TO_PRODUCT
+
+		changedProperty = DataType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column EVENT_LENGTH
 		dataType: int64
 		lineageTag: 30a84343-27ff-4bdf-a5ea-a5ee44df669f
@@ -74,16 +109,6 @@ table GOLD_LAYER_FINAL_STATUS
 		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column FINAL_CLAIM_ID
-		dataType: string
-		lineageTag: a1449f21-816c-4501-998a-515ee53cb0a1
-		summarizeBy: none
-		sourceColumn: FINAL_CLAIM_ID
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
 
 	column DAY_0_STATUS
 		dataType: string
@@ -105,32 +130,11 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column DAY_0_REJECT_CODE
-		dataType: string
-		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
-		summarizeBy: none
-		sourceColumn: DAY_0_REJECT_CODE
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
 	column FINAL_REJECT_CODE
 		dataType: string
 		lineageTag: ce1c8569-eb3f-45a4-89a2-185c20ff5825
 		summarizeBy: none
 		sourceColumn: FINAL_REJECT_CODE
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-	column PRACTITIONER_ID
-		dataType: int64
-		formatString: 0
-		lineageTag: a96791a0-d62f-46e2-b372-6bb43524d706
-		summarizeBy: none
-		sourceColumn: PRACTITIONER_ID
 
 		changedProperty = IsHidden
 
@@ -179,20 +183,6 @@ table GOLD_LAYER_FINAL_STATUS
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column NEW_TO_PRODUCT
-		dataType: int64
-		lineageTag: 4561cf12-a4a9-4509-bf86-5cff303da9e9
-		summarizeBy: none
-		sourceColumn: NEW_TO_PRODUCT
-
-		changedProperty = DataType
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = User
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -262,6 +252,16 @@ table GOLD_LAYER_FINAL_STATUS
 		lineageTag: f72bb90e-d966-469e-a0bf-ca08ae74d03e
 		summarizeBy: sum
 		sourceColumn: RX_COUNT
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY_0_REJECT_CODE
+		dataType: string
+		lineageTag: 888be18b-ae81-4272-8507-719f29f44ee9
+		summarizeBy: none
+		sourceColumn: DAY_0_REJECT_CODE
 
 		changedProperty = IsHidden
 
@@ -412,24 +412,6 @@ table GOLD_LAYER_FINAL_STATUS
 
 		annotation SummarizationSetBy = Automatic
 
-	column Year = YEAR(GOLD_LAYER_FINAL_STATUS[FINAL_TX])
-		formatString: 0
-		lineageTag: cae4081a-48cf-4e98-be74-1b91febf246a
-		summarizeBy: sum
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Patient Year Key' = GOLD_LAYER_FINAL_STATUS[PATIENT_ID] * 10000 + GOLD_LAYER_FINAL_STATUS[Year]
-		formatString: 0
-		lineageTag: 6e13490d-ae8a-4dd6-900c-8481509e614a
-		summarizeBy: none
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
 	partition GOLD_LAYER_FINAL_STATUS = m
 		mode: import
 		source =
@@ -443,9 +425,12 @@ table GOLD_LAYER_FINAL_STATUS
 				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "DATE_KEY", each Date.Year([FINAL_TX]) * 10000
 				        + Date.Month([FINAL_TX]) * 100
 				        + Date.Day([FINAL_TX])),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"DATE_KEY", Int64.Type}})
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"DATE_KEY", Int64.Type}}),
+				    #"Added Custom1" = Table.AddColumn(#"Changed Type1", "Patient Year Key", each [PATIENT_ID] * 10000 + Date.Year([FINAL_TX])),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom1",{{"Patient Year Key", type number}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type2",{"Patient Year Key"})
 				in
-				    #"Changed Type1"
+				    #"Removed Columns1"
 
 	changedProperty = IsHidden
 
